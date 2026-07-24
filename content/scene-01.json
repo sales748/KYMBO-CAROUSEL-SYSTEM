@@ -1,0 +1,66 @@
+{
+  "id": "scene-01",
+  "mode": "scene",
+  "pillar": "The Problem",
+  "title": "You're not fully booked. You're fully rented.",
+  "note": "Path B — organic/photographic. Kim generates each background in ChatGPT from the prompt below; Claude layers the type + organic accents on top. Palette-lock every render to navy #262B38 shadows + warm cream #F7F8EA, muted/desaturated so lime + text pop. 4:5 (1080x1350). No text, no logos, no watermarks in the image. Generic scenes only — never a real, identifiable person.",
+  "assetDir": "assets/scene-01",
+  "slides": [
+    {
+      "scene": true, "layout": "cover", "anchor": "top", "scrim": "top",
+      "imageId": "SCENE-01 / 1",
+      "kicker": "THE PROBLEM",
+      "headline": "You're not fully booked.\nYou're ==fully rented==.",
+      "sub": "A boutique-hotel owner's quiet, expensive truth.",
+      "bg": "assets/scene-01/s1.png",
+      "imagePrompt": "Editorial cinematic photo, 4:5 vertical. A boutique-hotel owner (40s, ambiguous, warm) standing behind a minimalist reception desk at blue hour, softly lit by a warm lamp, looking down at a tablet with a calm, slightly weary expression. Scandinavian-boho lobby, wood + cream tones. IMPORTANT: leave the entire TOP HALF of the frame as calm, empty dark wall / negative space for text. Subject positioned low and to the right. Color grade to deep navy shadows (#262B38) and warm cream neutrals (#F7F8EA), muted and desaturated. Shot on 35mm, shallow depth of field, natural grain. No text, no signage, no logos."
+    },
+    {
+      "scene": true, "layout": "point", "anchor": "bottom", "scrim": "bottom",
+      "imageId": "SCENE-01 / 2",
+      "index": "01",
+      "title": "Every booking feels like a __win__.",
+      "body": "Until you count how little of it you actually keep.",
+      "bg": "assets/scene-01/s2.png",
+      "imagePrompt": "Close-up editorial photo, 4:5 vertical. Two hands holding a smartphone that shows a generic booking-confirmation notification (blurred, unreadable UI, no real brand), morning light, a flat-white coffee and a linen napkin nearby on a warm wooden café table. Cozy, hopeful mood. Keep the UPPER THIRD calm and dark for text. Color grade to navy shadows and warm cream, muted, desaturated, cinematic. Shallow depth of field, 50mm, subtle grain. No readable text, no logos."
+    },
+    {
+      "scene": true, "layout": "point", "anchor": "top", "scrim": "top",
+      "imageId": "SCENE-01 / 3",
+      "index": "02",
+      "title": "==25%== of that win was never yours.",
+      "body": "The middleman took his cut before the money ever reached you.",
+      "arrow": true,
+      "bg": "assets/scene-01/s3.png",
+      "imagePrompt": "Still-life editorial photo, 4:5 vertical. A tidy reception desk corner: a small stack of printed folios/receipts, a brass bell, a pen, and neatly fanned banknotes partly tucked under a ledger, warm side light. Quiet, slightly tense mood. Composition leaves the TOP HALF as empty dark surface for text; objects sit in the lower portion, right-of-centre. Color grade navy + warm cream, muted and desaturated. 35mm, shallow depth of field, fine grain. No text, no logos, no currency symbols visible clearly."
+    },
+    {
+      "scene": true, "layout": "point", "anchor": "bottom", "scrim": "bottom",
+      "imageId": "SCENE-01 / 4",
+      "index": "03",
+      "title": "The guest searched your name.",
+      "body": "The platform just ~~introduced~~ charged you for a guest you already had.",
+      "bg": "assets/scene-01/s4.png",
+      "imagePrompt": "Cinematic editorial photo, 4:5 vertical. A traveller with a weekend bag walking into a warm boutique-hotel lobby, seen from behind / three-quarter, glancing at their phone. Soft golden interior light, plants, wood, cream walls. Sense of arrival. Keep UPPER THIRD calm and darker for text overlay; subject centred-lower. Color grade to navy shadows and warm cream, muted, desaturated, filmic. 35mm, shallow depth of field, natural grain. No text, no logos, face not clearly identifiable."
+    },
+    {
+      "scene": true, "layout": "point", "anchor": "top", "scrim": "top",
+      "imageId": "SCENE-01 / 5",
+      "index": "04",
+      "title": "Your best month can be your\n==most expensive==.",
+      "body": "More OTA bookings just means a bigger cut skimmed off the top.",
+      "bg": "assets/scene-01/s5.png",
+      "imagePrompt": "Editorial photo, 4:5 vertical. A wall-mounted key rack in a boutique hotel with most keys gone (rooms occupied) — only two keys left hanging, warm tungsten light, aged brass hooks, textured cream plaster wall. Quiet 'fully booked' storytelling. Leave the TOP HALF as calm negative space (plain wall) for text; key rack sits in the lower portion. Color grade navy + warm cream, muted, desaturated, cinematic, fine grain. No text, no numbers, no logos."
+    },
+    {
+      "scene": true, "layout": "cta", "anchor": "bottom", "scrim": "bottom",
+      "imageId": "SCENE-01 / 6",
+      "kicker": "THE FIX",
+      "headline": "Own the booking.\n==Keep the guest.==",
+      "sub": "OTAs take 15–30%. Your own site takes 0%.",
+      "action": "Comment DIRECT and we'll map your first move",
+      "bg": "assets/scene-01/s6.png",
+      "imagePrompt": "Warm, optimistic editorial photo, 4:5 vertical. A hotel owner at a clean desk smiling gently at a laptop that shows a generic, blurred booking website (no real brand), plant and coffee nearby, bright morning light through a window. Hopeful, in-control mood. Keep the UPPER portion calm and darker for text; subject lower-left. Color grade to navy shadows and warm cream, muted, desaturated, filmic, shallow depth of field, subtle grain. No readable text, no logos."
+    }
+  ]
+}

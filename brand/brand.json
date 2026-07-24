@@ -1,0 +1,54 @@
+{
+  "brand": "Kymbo",
+  "campaign": "Fire Your Middleman — Hotels & STR",
+  "designSystem": "KYMBO FEED OS — an original social/feed design language built from scratch on the brand's foundation.",
+  "note": "Only the FOUNDATION is inherited from brand guidelines: color, typography, the pixel motif, and the campaign message. Everything below — the surface rhythm, cover archetypes, layout grid, and visual furniture — is original design, not a reproduction of any prior style set.",
+  "voice": "Profesional pero amigable — direct, numbers-first, confident, never salesy.",
+  "message": "OTAs take 15–30%. Airbnb 15.5%. Your website takes 0%. Fire your middleman.",
+
+  "foundation": {
+    "colors": {
+      "mediaNoche": { "hex": "#262B38", "role": "Primary dark surface / ink on light." },
+      "pantalla":   { "hex": "#F7F8EA", "role": "Primary light surface / text on dark." },
+      "verdePixel": { "hex": "#9BEC00", "role": "Single accent. One hero element per slide. Never body copy." }
+    },
+    "typography": {
+      "display": "Satoshi (licensed) — stand-in Onest Variable. Oversized, tight, geometric.",
+      "mono": "Space Grotesk Variable — kickers, indices, units, the technical/pixel voice.",
+      "note": "CSS references 'Satoshi' first; drop the licensed woff2 into /fonts and it takes over with no code change."
+    },
+    "motif": "The pixel square — Kymbo's signature tell. Used as data cells, corner mark, bullets, and progress ticks."
+  },
+
+  "myDesignLanguage": {
+    "principle": "Type-forward, editorial, high-contrast. One idea per slide, colossal type, generous negative space, exactly one lime accent.",
+    "surfaces": {
+      "dark": "Media Noche field, Pantalla type.",
+      "light": "Pantalla field, Media Noche type.",
+      "rhythm": "Surfaces alternate by post order. In a 3-wide profile grid this yields a deliberate checkerboard."
+    },
+    "furniture": {
+      "kicker": "Bracketed mono label, top-left. e.g. [ THE MATH ]",
+      "index": "Mono slide counter, e.g. 01 / 06.",
+      "kMark": "Flat K in a bordered square, one corner, no shadow.",
+      "footer": "@kymbo handle + pixel progress ticks, identical placement every slide.",
+      "swipe": "Lime pixel-arrow affordance on non-final slides."
+    },
+    "coverArchetypes": {
+      "STAT": "One colossal figure dominates; everything else whispers.",
+      "INDEX": "Editorial — bracket kicker, ghosted giant index numeral behind a left-aligned headline.",
+      "MATRIX": "The pixel grid as the hero visual (data / gallery energy).",
+      "SEAM": "Hard split between dark and light surfaces; headline straddles a lime seam.",
+      "STATEMENT": "The headline fills the whole canvas, tight leading, one lime word."
+    },
+    "interiorLayouts": ["POINT (indexed argument)", "STAT (figure + label + note)", "LIST (pixel-bullet checklist)", "DRAIN (pixel data-grid viz)", "MOCKUP (in-brand device/UI, drawn in CSS — no stock photos)", "QUOTE (pull quote)", "CTA (close + comment action)"]
+  },
+
+  "gridRules": [
+    "Never two identical surfaces adjacent in the profile grid (checkerboard).",
+    "Rotate the five cover archetypes so no two adjacent posts share one.",
+    "Verde Pixel is an accent only — one hero element per slide.",
+    "All visuals are designed/drawn — no stock or AI photography. Product shots are CSS mockups."
+  ],
+  "format": { "aspect": "4:5", "px": "1080 x 1350", "platform": "Instagram carousel (primary), reusable for TikTok slides" }
+}

@@ -1,0 +1,258 @@
+/* ============================================================
+   Slide templates — pure functions -> HTML string.
+   One function per layout in the KYMBO FEED OS design language.
+   ============================================================ */
+
+const esc = (s = '') => String(s)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+/* organic inline markup for scene copy:
+   ==text== marker box · __text__ scribble underline · ~~text~~ strikethrough */
+function rich(s = '') {
+  let t = esc(s);
+  t = t.replace(/==(.+?)==/g, '<span class="marker">$1</span>');
+  t = t.replace(/__(.+?)__/g, '<span class="uline">$1</span>');
+  t = t.replace(/~~(.+?)~~/g, '<span class="strike">$1</span>');
+  return t;
+}
+
+const ARROW = `<svg class="scribble-arrow" viewBox="0 0 200 90" style="right:90px;top:38%"><path d="M6 20 C70 4 150 18 176 54 M176 54 L150 40 M176 54 L156 74"/></svg>`;
+
+// highlight one substring in verde
+function hi(text, word) {
+  if (!word) return esc(text);
+  const i = text.indexOf(word);
+  if (i < 0) return esc(text);
+  return esc(text.slice(0, i)) + `<span class="hi">${esc(word)}</span>` + esc(text.slice(i + word.length));
+}
+
+const kicker = (t) => t
+  ? `<div class="kicker"><span class="br">[</span> ${esc(t)} <span class="br">]</span></div>`
+  : `<div></div>`;
+
+const kmark = (cls = '') => `<div class="kmark ${cls}">K</div>`;
+
+const ticks = (total, idx) => {
+  let out = '<div class="ticks">';
+  for (let i = 0; i < total; i++) out += `<span class="tick${i === idx ? ' on' : ''}"></span>`;
+  return out + '</div>';
+};
+
+const footer = (ctx) => {
+  const swipe = ctx.isLast
+    ? ''
+    : `<div class="swipe"><span class="px"></span><span class="px"></span>SWIPE →</div>`;
+  return `<footer class="ft">
+    <span class="handle">@kymbo · fire your middleman</span>
+    <div style="display:flex;align-items:center;gap:26px">${swipe}${ticks(ctx.total, ctx.index)}</div>
+  </footer>`;
+};
+
+function matrix(total, filled) {
+  const cols = total <= 16 ? 4 : total <= 36 ? 6 : 10;
+  const width = cols <= 4 ? 560 : cols <= 6 ? 720 : 880;
+  let cells = '';
+  for (let i = 0; i < total; i++) {
+    let c = 'cell';
+    if (i < filled) c += (i % 7 === 3 ? ' hot' : ' on');
+    cells += `<div class="${c}"></div>`;
+  }
+  return `<div class="matrix" style="grid-template-columns:repeat(${cols},1fr);width:${width}px">${cells}</div>`;
+}
+
+function drainGrid(total, filled) {
+  let cells = '';
+  for (let i = 0; i < total; i++) {
+    cells += `<div class="cell${i >= filled ? ' lost' : ''}"></div>`;
+  }
+  return `<div class="d-grid">${cells}</div>`;
+}
+
+/* ---------------- COVERS ---------------- */
+
+function coverStat(s) {
+  const raw = (s.stat || '').replace(/[^0-9%$]/g, '');
+  const sz = raw.length <= 2 ? 'lg' : raw.length <= 4 ? 'md' : 'sm';
+  return `
+    <div class="figure ${sz}">${esc(s.stat)}</div>
+    <h1>${esc(s.headline)}</h1>
+    ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}`;
+}
+
+function coverStatement(s) {
+  return `
+    <h1>${hi(s.headline, s.hi)}</h1>
+    ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}`;
+}
+
+function coverIndex(s) {
+  return `
+    ${s.ghost ? `<div class="ghost">${esc(s.ghost)}</div>` : ''}
+    <h1>${esc(s.headline)}</h1>
+    ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}`;
+}
+
+function coverMatrix(s) {
+  const g = s.grid || { total: 16, filled: 16 };
+  return `
+    <div>
+      <h1>${esc(s.headline)}</h1>
+      ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}
+    </div>
+    ${matrix(g.total, g.filled)}`;
+}
+
+/* ---------------- INTERIOR ---------------- */
+
+const point = (s) => `
+  <div class="p-index"><span class="px"></span>${esc(s.index || '')}</div>
+  <div class="p-title">${esc(s.title)}</div>
+  <div class="p-body">${esc(s.body)}</div>`;
+
+const stat = (s) => `
+  <div class="st-value${(s.value || '').length > 4 ? ' long' : ''}">${esc(s.value)}</div>
+  <div class="st-label">${esc(s.label)}</div>
+  ${s.note ? `<div class="st-note">${esc(s.note)}</div>` : ''}`;
+
+const list = (s) => `
+  <div class="list-title">${esc(s.title)}</div>
+  <div class="list-items">
+    ${s.items.map((it) => `<div class="li"><span class="px"></span><span>${esc(it)}</span></div>`).join('')}
+  </div>`;
+
+const drain = (s) => `
+  <div class="d-title">${esc(s.title)}</div>
+  ${drainGrid(s.total, s.filled)}
+  <div class="d-cap">${esc(s.caption)}</div>`;
+
+function mockup(s) {
+  const ui = s.ui || {};
+  const inner = `
+    <div class="mk-hero"><span class="corner"></span></div>
+    <div class="mk-brand">${esc(ui.brandline || '')}</div>
+    <div class="mk-price"><b>${esc(ui.price || '')}</b><span>${esc(ui.unit || '')}</span></div>
+    <div class="mk-cta">${esc(ui.cta || 'Book direct')}</div>`;
+  const device = s.device === 'mobile'
+    ? `<div class="phone"><div class="notch"></div><div class="win">${inner}</div></div>`
+    : `<div class="browser"><div class="bar"><span class="px"></span><span class="px"></span><span class="px"></span><span class="url">yourhotel.com/book</span></div><div class="win">${inner}</div></div>`;
+  return `
+    <div class="mk-title">${esc(s.title)}</div>
+    <div class="mk-stage">${device}</div>
+    <div class="mk-cap">${esc(s.caption)}</div>`;
+}
+
+const quote = (s) => `
+  <div class="q-mark">“</div>
+  <div class="q-text">${esc(s.text)}</div>
+  ${s.attribution ? `<div class="q-attr">— ${esc(s.attribution)}</div>` : ''}`;
+
+const cta = (s, message) => `
+  <div class="cta-h">${hi(s.headline, s.hiWord)}</div>
+  ${s.sub ? `<div class="cta-sub">${esc(s.sub)}</div>` : ''}
+  <div class="cta-action"><span class="px"></span>${esc(s.action)}</div>
+  <div class="cta-tag">${esc(message || '')}</div>`;
+
+/* ---------------- ASSEMBLY ---------------- */
+
+const COVER_CLASS = {
+  STAT: 'cover-stat', STATEMENT: 'cover-statement',
+  INDEX: 'cover-index', MATRIX: 'cover-matrix',
+};
+
+function coverBody(s) {
+  switch (s.variant) {
+    case 'STAT': return coverStat(s);
+    case 'STATEMENT': return coverStatement(s);
+    case 'INDEX': return coverIndex(s);
+    case 'MATRIX': return coverMatrix(s);
+    default: return coverStatement(s);
+  }
+}
+
+// SEAM cover is bespoke full-bleed (own furniture)
+function seamSlide(s, ctx) {
+  return `<div class="slide cover-seam" data-idx="${ctx.index}">
+    <div class="seam-l">
+      <div class="kicker kicker-abs"><span class="br">[</span> ${esc(s.kicker)} <span class="br">]</span></div>
+      <div class="seam-label">${esc(s.leftLabel || 'VIA OTA')}</div>
+      <div class="seam-big">${esc(s.left)}</div>
+    </div>
+    <div class="divider"></div>
+    <div class="seam-r">
+      ${kmark('darkmark seam-kmark')}
+      <div class="seam-label">${esc(s.rightLabel || 'DIRECT')}</div>
+      <div class="seam-big">${esc(s.right)}</div>
+    </div>
+    ${s.sub ? `<div class="seam-sub">${esc(s.sub)}</div>` : ''}
+  </div>`;
+}
+
+const BODY = { point, stat, list, drain, mockup, quote };
+
+/* ---------------- SCENE (Path B: on top of AI images) ---------------- */
+function sceneBody(s) {
+  switch (s.layout) {
+    case 'cover':
+      return `${s.kicker ? `<div class="kicker" style="margin-bottom:24px"><span class="br">[</span> ${esc(s.kicker)} <span class="br">]</span></div>` : ''}
+        <h1>${rich(s.headline)}</h1>
+        ${s.sub ? `<div class="sub" style="margin-top:28px">${rich(s.sub)}</div>` : ''}`;
+    case 'point':
+      return `<div class="p-index"><span class="px"></span>${esc(s.index || '')}</div>
+        <div class="p-title">${rich(s.title)}</div>
+        ${s.body ? `<div class="p-body" style="opacity:1">${rich(s.body)}</div>` : ''}`;
+    case 'list':
+      return list ? `<div class="list-title">${rich(s.title)}</div>
+        <div class="list-items">${s.items.map((it) => `<div class="li"><span class="px"></span><span>${rich(it)}</span></div>`).join('')}</div>` : '';
+    case 'cta':
+      return `<div class="cta-h">${rich(s.headline)}</div>
+        ${s.sub ? `<div class="cta-sub" style="opacity:1">${rich(s.sub)}</div>` : ''}
+        <div class="cta-action"><span class="px"></span>${esc(s.action)}</div>`;
+    default:
+      return `<h1>${rich(s.headline || s.title || '')}</h1>`;
+  }
+}
+
+function sceneSlide(s, ctx) {
+  const coverCls = s.layout === 'cover' ? 'cover-statement' : (s.layout || 'point');
+  const anchor = s.anchor || (s.layout === 'cover' ? 'top' : 'bottom');
+  const scrim = s.scrim || (anchor === 'top' ? 'top' : 'bottom');
+  const bg = s.bg
+    ? `<img src="${esc(s.bg)}" alt="">`
+    : `<div class="await">Scene image pending<br>${esc(s.imageId || '')}</div>`;
+  return `<div class="slide scene ${ctx.surface || ''} ${coverCls}" data-idx="${ctx.index}">
+    <div class="layer-bg">${bg}</div>
+    <div class="layer-scrim ${scrim}"></div>
+    <header class="hd">${kicker(s.layout === 'cover' ? '' : (s.kicker || ctx.pillar))}${kmark()}</header>
+    <main class="bd anchor-${anchor}">${sceneBody(s)}${s.arrow ? ARROW : ''}</main>
+    ${footer(ctx)}
+  </div>`;
+}
+
+export function renderSlide(slide, ctx) {
+  // Path B — scene slide built on an AI image
+  if (slide.scene) return sceneSlide(slide, ctx);
+  // bespoke SEAM cover
+  if (slide.type === 'cover' && slide.variant === 'SEAM') return seamSlide(slide, ctx);
+
+  let bodyHTML, coverCls = '', headKicker;
+
+  if (slide.type === 'cover') {
+    coverCls = COVER_CLASS[slide.variant] || 'cover-statement';
+    bodyHTML = coverBody(slide);
+    headKicker = slide.kicker;
+  } else if (slide.type === 'cta') {
+    bodyHTML = cta(slide, ctx.message);
+    coverCls = 'cta';
+    headKicker = ctx.pillar;
+  } else {
+    bodyHTML = (BODY[slide.type] || point)(slide);
+    coverCls = slide.type;
+    headKicker = ctx.pillar;
+  }
+
+  return `<div class="slide ${ctx.surface} ${coverCls}" data-idx="${ctx.index}">
+    <header class="hd">${kicker(headKicker)}${kmark()}</header>
+    <main class="bd">${bodyHTML}</main>
+    ${footer(ctx)}
+  </div>`;
+}
