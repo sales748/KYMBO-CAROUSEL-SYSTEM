@@ -209,13 +209,48 @@
 .scene .bd.anchor-center{ justify-content:center; }
 .scene.cover-statement h1, .scene.cover-stat h1, .scene .p-title, .scene .list-title, .scene .cta-h{ text-shadow:0 3px 40px rgba(0,0,0,.55); }
 
-/* ---- organic hand-made accents (the "alive" layer) ---- */
-.marker{ background:var(--verde); color:var(--noche); padding:.02em .22em; box-decoration-break:clone; -webkit-box-decoration-break:clone; text-shadow:none; }
-.uline{ background:linear-gradient(var(--verde),var(--verde)) no-repeat; background-size:100% .16em; background-position:0 92%; padding-bottom:.04em; }
-.strike{ text-decoration:line-through; text-decoration-color:var(--verde); text-decoration-thickness:.09em; }
-.scene .scribble-arrow{ position:absolute; z-index:3; width:200px; height:auto; }
-.scene .scribble-arrow path{ fill:none; stroke:var(--verde); stroke-width:9; stroke-linecap:round; }
+/* ============================================================
+   ORGANIC HAND-MADE ACCENTS — "the alive layer"
+   Every accent is a hand-drawn stroke (irregular SVG path,
+   wobble + rough ends), NOT a geometric rectangle/line. This
+   is what makes a scene feel marked-up by a person, in brand.
+   Strokes are inline SVG data-URIs tinted Verde Pixel (%239BEC00).
+   ============================================================ */
+
+/* marker swipe — a torn-edge highlighter band behind the word */
+.marker{
+  color:var(--noche); text-shadow:none; padding:.05em .3em .12em; margin:0 .02em;
+  box-decoration-break:clone; -webkit-box-decoration-break:clone;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 58' preserveAspectRatio='none'%3E%3Cpath d='M3,13 C52,5 96,10 138,7 C168,5 190,4 197,7 L196,45 C190,53 150,50 112,52 C74,54 40,51 4,53 Z' fill='%239BEC00'/%3E%3C/svg%3E");
+  background-size:100% 100%; background-repeat:no-repeat;
+}
+/* hand-drawn underline — a single wobbly marker pass */
+.uline{
+  padding-bottom:.16em;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 24' preserveAspectRatio='none'%3E%3Cpath d='M5,15 C48,6 78,20 120,12 C162,4 196,21 236,12 C266,6 287,17 296,11' fill='none' stroke='%239BEC00' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size:100% .34em; background-position:0 100%; background-repeat:no-repeat;
+}
+/* hand-drawn strikethrough — wavy pen line across the word */
+.strike{ position:relative; text-decoration:none; }
+.strike::after{
+  content:""; position:absolute; left:-.06em; right:-.06em; top:44%; height:.42em;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 22' preserveAspectRatio='none'%3E%3Cpath d='M4,12 C64,5 96,17 150,10 C208,3 250,17 296,9' fill='none' stroke='%239BEC00' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size:100% 100%; background-repeat:no-repeat; pointer-events:none;
+}
+/* hand-drawn circle — a scribbled loop around the word */
+.circle{
+  position:relative; padding:.12em .4em; margin:0 .04em;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 150' preserveAspectRatio='none'%3E%3Cpath d='M150,12 C64,10 20,46 22,78 C24,114 92,138 158,134 C236,130 287,96 279,62 C272,30 210,8 138,16' fill='none' stroke='%239BEC00' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size:100% 100%; background-repeat:no-repeat;
+}
+/* hand-drawn arrows (SVG injected by template) */
+.scene .scribble-arrow{ position:absolute; z-index:3; width:220px; height:auto; }
+.scene .scribble-arrow path{ fill:none; stroke:var(--verde); stroke-width:8; stroke-linecap:round; stroke-linejoin:round; }
+/* torn strip of "tape" — soft, slightly rotated */
 .tape{ position:absolute; z-index:3; width:150px; height:44px; background:rgba(155,236,0,.55); transform:rotate(-4deg); }
+/* cut-out subject halo — when Kim drops a masked PNG (subject.png),
+   it sits above the scrim with a rough cream outline like the refs */
+.scene .cutout{ position:absolute; z-index:2; bottom:0; height:76%; filter:drop-shadow(0 0 3px var(--pantalla)) drop-shadow(0 0 3px var(--pantalla)) drop-shadow(0 0 22px rgba(0,0,0,.5)); }
 /* placeholder shown until a real render is dropped in */
 .scene .await{
   position:absolute; inset:0; z-index:1; display:grid; place-items:center;

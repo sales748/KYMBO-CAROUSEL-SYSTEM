@@ -6,17 +6,25 @@
 const esc = (s = '') => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-/* organic inline markup for scene copy:
-   ==text== marker box · __text__ scribble underline · ~~text~~ strikethrough */
+/* organic inline markup for scene copy (the hand-made "alive" layer):
+   ==text== marker swipe · __text__ hand underline
+   ~~text~~ hand strikethrough · ((text)) scribbled circle */
 function rich(s = '') {
   let t = esc(s);
   t = t.replace(/==(.+?)==/g, '<span class="marker">$1</span>');
+  t = t.replace(/\(\((.+?)\)\)/g, '<span class="circle">$1</span>');
   t = t.replace(/__(.+?)__/g, '<span class="uline">$1</span>');
   t = t.replace(/~~(.+?)~~/g, '<span class="strike">$1</span>');
   return t;
 }
 
-const ARROW = `<svg class="scribble-arrow" viewBox="0 0 200 90" style="right:90px;top:38%"><path d="M6 20 C70 4 150 18 176 54 M176 54 L150 40 M176 54 L156 74"/></svg>`;
+/* hand-drawn arrows — wobbly shaft + open two-stroke head, in brand lime */
+const ARROWS = {
+  right:    `<svg class="scribble-arrow" viewBox="0 0 210 96" style="right:82px;top:34%"><path d="M8 30 C64 12 138 20 182 52 M182 52 L150 44 M182 52 L160 78"/></svg>`,
+  downLeft: `<svg class="scribble-arrow" viewBox="0 0 200 130" style="left:120px;top:24%"><path d="M150 12 C120 44 70 70 40 112 M40 112 L36 78 M40 112 L74 108"/></svg>`,
+  down:     `<svg class="scribble-arrow" viewBox="0 0 110 150" style="left:50%;top:20%;width:120px"><path d="M54 8 C44 46 62 78 52 120 M52 120 L30 96 M52 120 L76 98"/></svg>`,
+};
+const arrowFor = (a) => ARROWS[a] || (a ? ARROWS.right : '');
 
 // highlight one substring in verde
 function hi(text, word) {
@@ -223,7 +231,7 @@ function sceneSlide(s, ctx) {
     <div class="layer-bg">${bg}</div>
     <div class="layer-scrim ${scrim}"></div>
     <header class="hd">${kicker(s.layout === 'cover' ? '' : (s.kicker || ctx.pillar))}${kmark()}</header>
-    <main class="bd anchor-${anchor}">${sceneBody(s)}${s.arrow ? ARROW : ''}</main>
+    <main class="bd anchor-${anchor}">${sceneBody(s)}${arrowFor(s.arrow)}</main>
     ${footer(ctx)}
   </div>`;
 }

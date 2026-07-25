@@ -86,14 +86,21 @@ hand-made accents — highlighter marker boxes, scribble underlines,
 strikethroughs, hand-drawn arrows). The image layer is generated in ChatGPT by
 Kim; the type + accent layer is designed here and composited on top.
 
-Organic accents are written directly in the copy with lightweight markup:
+Organic accents are written directly in the copy with lightweight markup.
+Each one renders as a genuine **hand-drawn stroke** (irregular, wobbly, rough
+ends) — not a clean rectangle — so the slide reads as marked-up by a person:
 
 ```
-==text==   → lime marker/highlighter box
-__text__   → lime scribble underline
-~~text~~   → strikethrough (lime)
-"arrow": true → hand-drawn lime arrow accent
+==text==   → torn-edge highlighter swipe
+__text__   → wobbly hand underline
+~~text~~   → wavy pen strikethrough
+((text))   → scribbled circle around the word
+"arrow": "right" | "down" | "downLeft"   → hand-drawn lime arrow
+subject.png (masked) → cut-out subject with a rough cream halo
 ```
+
+Restraint is the rule: **one or two accents per slide, max** — the accent
+points at the single idea; over-marking kills it.
 
 ---
 

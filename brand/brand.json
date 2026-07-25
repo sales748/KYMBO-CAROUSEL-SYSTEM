@@ -41,14 +41,34 @@
       "SEAM": "Hard split between dark and light surfaces; headline straddles a lime seam.",
       "STATEMENT": "The headline fills the whole canvas, tight leading, one lime word."
     },
-    "interiorLayouts": ["POINT (indexed argument)", "STAT (figure + label + note)", "LIST (pixel-bullet checklist)", "DRAIN (pixel data-grid viz)", "MOCKUP (in-brand device/UI, drawn in CSS — no stock photos)", "QUOTE (pull quote)", "CTA (close + comment action)"]
+    "interiorLayouts": ["POINT (indexed argument)", "STAT (figure + label + note)", "LIST (pixel-bullet checklist)", "DRAIN (pixel data-grid viz)", "MOCKUP (in-brand device/UI, drawn in CSS — no stock photos)", "QUOTE (pull quote)", "CTA (close + comment action)"],
+    "note2": "Archetypes and layouts are a KIT the designer composes from with world-class judgement — not a rigid template rotation. The goal is bespoke, editorial craft that still reads as one brand; never a mechanical fill-in-the-blank."
+  },
+
+  "productionPaths": {
+    "note": "Two ways to produce a carousel. Both share the same type system, furniture, palette and voice — so a scene post and an HTML post sit in one feed as one brand.",
+    "A_html": "Pure design, drawn 100% in code. Text, spacing, typography and colour are perfectly consistent because they're systemised. Fully automatic — deliver immediately.",
+    "B_scene": "Built ON TOP of AI-generated background images. Claude writes the complete vision first (structure + copy + layout + an exact per-slide image prompt), Kim generates the images in ChatGPT and sends them back, then Claude composites the type + hand-made organic accents on top, one slide at a time.",
+    "organicTouch": "Path B is where the feed breathes — real scenes + a human, marked-up layer (marker swipes, hand underlines, strikethroughs, scribbled circles, hand-drawn arrows, cut-out subjects with a rough halo). Inspiration for the ENERGY only; the look stays 100% Kymbo (navy/cream/lime, geometric type, pixel motif) — never a copy of any reference account's style.",
+    "batchWorkflow": "Work in batches of ~12 carousels. 1) Ship all Path-A (HTML) carousels first for approval. 2) Then name which ones need scenes and produce them one at a time: prompts → Kim generates → composite → next."
+  },
+
+  "organicAccents": {
+    "note": "The hand-made 'alive' layer used mainly on scene slides. Every accent is a hand-drawn stroke (irregular, wobbly, rough-ended) tinted Verde Pixel — never a clean geometric rectangle.",
+    "marker": "==text== → torn-edge highlighter swipe behind the word.",
+    "underline": "__text__ → single wobbly marker underline.",
+    "strike": "~~text~~ → wavy pen strikethrough.",
+    "circle": "((text)) → scribbled loop around the word.",
+    "arrow": "slide.arrow: 'right' | 'down' | 'downLeft' → hand-drawn arrow.",
+    "cutout": "optional subject.png (masked) composited above the scrim with a rough cream halo.",
+    "restraint": "One or two accents per slide, maximum. The accent points at the ONE idea — over-marking kills it."
   },
 
   "gridRules": [
-    "Never two identical surfaces adjacent in the profile grid (checkerboard).",
-    "Rotate the five cover archetypes so no two adjacent posts share one.",
+    "Never two identical surfaces adjacent in the profile grid (checkerboard) — applies to HTML posts; scene posts read as full-bleed images and add texture to the grid.",
+    "Vary the cover treatment post-to-post so the feed never looks samey while staying one brand.",
     "Verde Pixel is an accent only — one hero element per slide.",
-    "All visuals are designed/drawn — no stock or AI photography. Product shots are CSS mockups."
+    "Path A visuals are designed/drawn — no stock or AI photography; product shots are CSS mockups. Path B uses AI-generated SCENE backgrounds only (never fake UI, logos, text, or a real identifiable person baked into the image)."
   ],
   "format": { "aspect": "4:5", "px": "1080 x 1350", "platform": "Instagram carousel (primary), reusable for TikTok slides" }
 }
