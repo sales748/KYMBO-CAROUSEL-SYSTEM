@@ -38,23 +38,14 @@ const kicker = (t) => t
   ? `<div class="kicker"><span class="br">[</span> ${esc(t)} <span class="br">]</span></div>`
   : `<div></div>`;
 
-const kmark = (cls = '') => `<div class="kmark ${cls}">K</div>`;
-
 const ticks = (total, idx) => {
   let out = '<div class="ticks">';
   for (let i = 0; i < total; i++) out += `<span class="tick${i === idx ? ' on' : ''}"></span>`;
   return out + '</div>';
 };
 
-const footer = (ctx) => {
-  const swipe = ctx.isLast
-    ? ''
-    : `<div class="swipe"><span class="px"></span><span class="px"></span>SWIPE →</div>`;
-  return `<footer class="ft">
-    <span class="handle">@kymbo · fire your middleman</span>
-    <div style="display:flex;align-items:center;gap:26px">${swipe}${ticks(ctx.total, ctx.index)}</div>
-  </footer>`;
-};
+// footer: progress squares only — no handle, no swipe text, no logo
+const footer = (ctx) => `<footer class="ft">${ticks(ctx.total, ctx.index)}</footer>`;
 
 function matrix(total, filled) {
   const cols = total <= 16 ? 4 : total <= 36 ? 6 : 10;
@@ -157,8 +148,7 @@ const quote = (s) => `
 const cta = (s, message) => `
   <div class="cta-h">${hi(s.headline, s.hiWord)}</div>
   ${s.sub ? `<div class="cta-sub">${esc(s.sub)}</div>` : ''}
-  <div class="cta-action"><span class="px"></span>${esc(s.action)}</div>
-  <div class="cta-tag">${esc(message || '')}</div>`;
+  <div class="cta-action"><span class="px"></span>${esc(s.action)}</div>`;
 
 /* ---------------- ASSEMBLY ---------------- */
 
@@ -187,7 +177,6 @@ function seamSlide(s, ctx) {
     </div>
     <div class="divider"></div>
     <div class="seam-r">
-      ${kmark('darkmark seam-kmark')}
       <div class="seam-label">${esc(s.rightLabel || 'DIRECT')}</div>
       <div class="seam-big">${esc(s.right)}</div>
     </div>
@@ -230,7 +219,7 @@ function sceneSlide(s, ctx) {
   return `<div class="slide scene ${ctx.surface || ''} ${coverCls}" data-idx="${ctx.index}">
     <div class="layer-bg">${bg}</div>
     <div class="layer-scrim ${scrim}"></div>
-    <header class="hd">${kicker(s.layout === 'cover' ? '' : (s.kicker || ctx.pillar))}${kmark()}</header>
+    <header class="hd">${kicker(s.layout === 'cover' ? '' : (s.kicker || ctx.pillar))}</header>
     <main class="bd anchor-${anchor}">${sceneBody(s)}${arrowFor(s.arrow)}</main>
     ${footer(ctx)}
   </div>`;
@@ -259,7 +248,7 @@ export function renderSlide(slide, ctx) {
   }
 
   return `<div class="slide ${ctx.surface} ${coverCls}" data-idx="${ctx.index}">
-    <header class="hd">${kicker(headKicker)}${kmark()}</header>
+    <header class="hd">${kicker(headKicker)}</header>
     <main class="bd">${bodyHTML}</main>
     ${footer(ctx)}
   </div>`;

@@ -49,19 +49,11 @@
   padding-top:8px;
 }
 .kicker .br{ color:var(--verde); }
-.kmark{
-  width:66px; height:66px; border:3px solid var(--fg);
-  display:grid; place-items:center; font-weight:800; font-size:40px; line-height:1;
-  flex:0 0 auto;
-}
 .bd{ flex:1; display:flex; flex-direction:column; min-height:0; padding-bottom:34px; }
-.ft{ display:flex; align-items:center; justify-content:space-between; height:40px; }
-.handle{ font-family:var(--font-mono); font-size:24px; letter-spacing:.02em; color:var(--muted); }
+.ft{ display:flex; align-items:center; height:40px; }
 .ticks{ display:flex; gap:9px; align-items:center; }
 .tick{ width:14px; height:14px; background:var(--line); }
 .tick.on{ background:var(--verde); }
-.swipe{ font-family:var(--font-mono); font-size:23px; letter-spacing:.22em; color:var(--verde); display:flex; align-items:center; gap:12px; }
-.swipe .px{ width:13px; height:13px; background:var(--verde); }
 
 /* ---------- COVER: STAT ---------- */
 .cover-stat .bd{ justify-content:center; }
@@ -106,8 +98,6 @@
 .seam-label{ font-family:var(--font-mono); font-size:26px; letter-spacing:.24em; text-transform:uppercase; opacity:.62; }
 .seam-big{ font-size:150px; font-weight:800; letter-spacing:-.04em; line-height:.9; margin-top:18px; }
 .seam-l .kicker-abs{ position:absolute; top:86px; left:72px; }
-.seam-kmark{ position:absolute; top:86px; right:72px; }
-.kmark.darkmark{ border-color:var(--noche); color:var(--noche); }
 .seam-sub{
   position:absolute; left:50%; bottom:74px; transform:translateX(-50%);
   background:var(--verde); color:var(--noche); font-family:var(--font-mono);
@@ -184,7 +174,6 @@
   font-size:32px; letter-spacing:.02em; padding:28px 40px; margin-top:56px;
 }
 .cta-action .px{ width:18px; height:18px; background:var(--noche); }
-.cta-tag{ font-family:var(--font-mono); font-size:24px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-top:64px; }
 
 /* ============================================================
    SCENE MODE — carousels built ON TOP of AI-generated scene
