@@ -209,6 +209,28 @@ function sceneBody(s) {
   }
 }
 
+/* DEVICE slide — the real booking-app render (iPhone 17 / laptop) is the
+   hero, composited from build/app/img. No AI image, no fake UI: what shows
+   on screen is our designed product, and it matches the slide's message. */
+function deviceSlide(s, ctx) {
+  const theme = ctx.appTheme || 'pa';
+  const isPhone = s.app.startsWith('phone');
+  const src = `../app/img/${theme}-${s.app}.png`;
+  const kick = s.kicker
+    ? `<div class="kicker"><span class="br">[</span> ${esc(s.kicker)} <span class="br">]</span></div>`
+    : '<div></div>';
+  const copy = `<div class="dev-copy">
+      ${s.headline ? `<h1>${rich(s.headline)}</h1>` : ''}
+      ${s.sub ? `<div class="sub">${rich(s.sub)}</div>` : ''}
+      ${s.action ? `<div class="cta-action"><span class="px"></span>${esc(s.action)}</div>` : ''}
+    </div>`;
+  return `<div class="slide dark dev-slide ${isPhone ? 'dev-phone' : 'dev-laptop'}" data-idx="${ctx.index}">
+    <header class="hd">${kick}</header>
+    <main class="bd">${copy}<div class="dev-stage"><img src="${src}" alt="">${arrowFor(s.arrow)}</div></main>
+    ${footer(ctx)}
+  </div>`;
+}
+
 function sceneSlide(s, ctx) {
   const coverCls = s.layout === 'cover' ? 'cover-statement' : (s.layout || 'point');
   const anchor = s.anchor || (s.layout === 'cover' ? 'top' : 'bottom');
@@ -226,6 +248,8 @@ function sceneSlide(s, ctx) {
 }
 
 export function renderSlide(slide, ctx) {
+  // device slide — the booking-app render is the hero
+  if (slide.layout === 'device') return deviceSlide(slide, ctx);
   // Path B — scene slide built on an AI image
   if (slide.scene) return sceneSlide(slide, ctx);
   // bespoke SEAM cover

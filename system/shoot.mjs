@@ -3,7 +3,7 @@
    Uses the pre-installed browser (no download).
    ============================================================ */
 import { chromium } from 'playwright-core';
-import { readdirSync } from 'node:fs';
+import { readdirSync, existsSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -11,6 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
 const build = join(root, 'build');
 const carouselsDir = join(build, 'carousels');
+const appDir = join(build, 'app');
 const EXE = process.env.PW_CHROMIUM || '/opt/pw-browsers/chromium';
 
 const browser = await chromium.launch({
@@ -42,6 +43,23 @@ for (const file of readdirSync(carouselsDir).filter((f) => f.endsWith('.html')).
     count++;
   }
   console.log(`${id}: ${slides.length} slides`);
+}
+
+// ---- booking-app prototypes: screenshot each [data-shot] with alpha ----
+if (existsSync(appDir)) {
+  const appPage = await browser.newPage({ viewport: { width: 1400, height: 1400 }, deviceScaleFactor: 2 });
+  for (const file of readdirSync(appDir).filter((f) => f.endsWith('.html')).sort()) {
+    await appPage.goto(pathToFileURL(join(appDir, file)).href, { waitUntil: 'networkidle' });
+    await appPage.evaluate(() => document.fonts.ready);
+    const shots = await appPage.$$('[data-shot]');
+    for (const el of shots) {
+      const name = await el.getAttribute('data-shot');
+      await el.screenshot({ path: join(appDir, 'img', `${name}.png`), omitBackground: true });
+      count++;
+    }
+    console.log(`app ${file}: ${shots.length} screens`);
+  }
+  await appPage.close();
 }
 
 // feed grid preview

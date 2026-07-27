@@ -154,7 +154,7 @@ function sceneDoc(c) {
   const total = c.slides.length;
   const slides = c.slides.map((s, i) => renderSlide(s, {
     surface: '', index: i, total, isLast: i === total - 1,
-    pillar: c.pillar, message: data.message,
+    pillar: c.pillar, message: data.message, appTheme: c.appTheme || 'pa',
   })).join('\n');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <title>Kymbo · ${c.title}</title>${head}
@@ -163,6 +163,7 @@ function sceneDoc(c) {
 }
 
 function promptSheet(c) {
+  const photoSlides = c.slides.filter((s) => s.imagePrompt);
   const lines = [
     `# ${c.title}`,
     ``,
@@ -170,21 +171,28 @@ function promptSheet(c) {
     ``,
     `> ${c.note}`,
     ``,
-    `Drop each render into \`${c.assetDir}/\` as \`s1.png … s${c.slides.length}.png\`, then re-run \`npm run build\`.`,
+    `## STYLE LINE — paste this into ChatGPT once, keep it on every image`,
+    ``,
+    `> ${c.styleLine || ''}`,
+    ``,
+    `You only need to generate the ${photoSlides.length} PHOTO slides below. Slides marked APP need no image — they build from our booking-app design automatically.`,
     ``,
     `---`,
   ];
   c.slides.forEach((s, i) => {
+    const isPhoto = !!s.imagePrompt;
     lines.push(
       ``,
-      `## Slide ${i + 1} — ${s.layout.toUpperCase()}  ·  \`s${i + 1}.png\``,
+      `## Slide ${i + 1} — ${(s.imageId || s.layout || '').toString()}`,
       ``,
       `**On-slide copy:** ${s.headline || s.title || ''}${s.body ? `  —  ${s.body}` : ''}${s.action ? `  —  CTA: ${s.action}` : ''}`,
       ``,
-      '```text',
-      s.imagePrompt || '(no image — pure type slide)',
-      '```',
     );
+    if (isPhoto) {
+      lines.push(`Save as \`s${i + 1}.png\` in \`${c.assetDir}/\`.`, ``, '```text', s.imagePrompt, '```');
+    } else {
+      lines.push(`> **APP slide — no image needed.** Shows our \`${s.app}\` booking-app screen (Prototype ${(c.appTheme || 'pa') === 'pa' ? 'A' : 'B'}).`);
+    }
   });
   return lines.join('\n');
 }

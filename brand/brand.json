@@ -53,6 +53,16 @@
     "batchWorkflow": "Work in batches of ~12 carousels. 1) Ship all Path-A (HTML) carousels first for approval. 2) Then name which ones need scenes and produce them one at a time: prompts → Kim generates → composite → next."
   },
 
+  "bookingApp": {
+    "note": "The direct-booking PRODUCT shown inside slides. Whenever a phone or laptop appears in a carousel, the screen shows THIS designed app — never a fake or blurred UI, never AI-drawn. One demo hotel (Marlowe House) is used all month for consistency.",
+    "source": "content/booking-app.json (data) + system/app.mjs (design) → build/app/img/*.png",
+    "prototypes": { "A": "pa — warm editorial (light, boutique, serif accents)", "B": "pb — dark premium (navy, sleek, geometric)" },
+    "device": "Phone frame is iPhone 17 (Dynamic Island, thin bezels). Laptop is a browser window (marlowehouse.com).",
+    "screens": "phone: hero · rooms(rate-compare) · checkout · confirm · dashboard. laptop: hero · dashboard. Each is a distinct booking-flow STATE so the screen always matches the slide's message.",
+    "usage": "A slide with layout:'device' + app:'<device>-<screen>' composites the render as the hero. Set carousel.appTheme to 'pa' or 'pb' to pick the prototype for the month.",
+    "rule": "Choose ONE prototype per month for a consistent feed."
+  },
+
   "organicAccents": {
     "note": "The hand-made 'alive' layer used mainly on scene slides. Every accent is a hand-drawn stroke (irregular, wobbly, rough-ended) tinted Verde Pixel — never a clean geometric rectangle.",
     "marker": "==text== → torn-edge highlighter swipe behind the word.",

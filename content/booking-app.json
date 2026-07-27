@@ -1,0 +1,50 @@
+{
+  "note": "The demo direct-booking product Kymbo shows inside scene/mockup slides. ONE demo hotel is used all month for consistency. Two prototypes (A warm-editorial, B dark-premium) render from this same data. Fictional hotel — not a real property.",
+  "hotel": {
+    "name": "Marlowe House",
+    "kind": "Boutique hotel",
+    "place": "Lisbon, Alfama",
+    "tagline": "A quiet corner of the old town.",
+    "rating": "4.9",
+    "reviews": "128",
+    "url": "marlowehouse.com",
+    "amenities": ["Fast Wi-Fi", "Rooftop breakfast", "Late checkout", "Courtyard garden"]
+  },
+  "stay": { "checkin": "Fri 12 Sep", "checkout": "Sun 14 Sep", "nights": 2, "guests": "2 guests" },
+  "rooms": [
+    { "id": "garden",   "name": "Garden Studio",  "sqm": "24m²", "beds": "1 queen",       "direct": 180, "ota": 232, "note": "Ground floor · opens to the courtyard" },
+    { "id": "loft",     "name": "Loft King",      "sqm": "31m²", "beds": "1 king",        "direct": 240, "ota": 310, "note": "Top floor · skylight · rooftop access" },
+    { "id": "suite",    "name": "Courtyard Suite","sqm": "42m²", "beds": "1 king + sofa", "direct": 320, "ota": 413, "note": "Two rooms · private terrace" }
+  ],
+  "selected": "loft",
+  "checkout": {
+    "room": "Loft King",
+    "lineItems": [
+      { "label": "$240 × 2 nights", "value": "$480" },
+      { "label": "Cleaning", "value": "$28" },
+      { "label": "City tax", "value": "$8" }
+    ],
+    "total": "$516",
+    "otaTotal": "$664",
+    "saved": "$148"
+  },
+  "confirmation": {
+    "ref": "MH-4821",
+    "room": "Loft King",
+    "dates": "12–14 Sep",
+    "saved": "$148",
+    "vs": "vs Booking.com"
+  },
+  "dashboard": {
+    "month": "September",
+    "directRevenue": "$18,400",
+    "directShare": 62,
+    "commissionSaved": "$4,120",
+    "occupancy": 88,
+    "channels": [
+      { "label": "Direct", "pct": 62, "hot": true },
+      { "label": "Booking.com", "pct": 24, "hot": false },
+      { "label": "Airbnb", "pct": 14, "hot": false }
+    ]
+  }
+}

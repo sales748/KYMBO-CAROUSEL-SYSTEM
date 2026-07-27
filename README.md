@@ -104,6 +104,30 @@ points at the single idea; over-marking kills it.
 
 ---
 
+## The booking app (what shows on every phone / laptop)
+
+When a slide shows a device, the screen shows **our own designed direct-booking
+product** — never a fake, blurred, or AI-drawn UI. It's a real design system,
+saved and reused all month for consistency.
+
+- **Data:** `content/booking-app.json` (one demo hotel — *Marlowe House*).
+- **Design:** `system/app.mjs` → `build/app/img/*.png`.
+- **Two prototypes:** `pa` warm-editorial (light) · `pb` dark-premium (navy).
+- **Devices:** iPhone 17 (Dynamic Island, thin bezels) + laptop browser.
+- **Booking-flow states** (so the screen always matches the slide's message):
+  phone → hero · rooms (direct-vs-OTA rate compare) · checkout · confirmation ·
+  owner dashboard; laptop → hero · owner dashboard.
+
+Use it in a carousel with a `device` slide:
+
+```json
+{ "layout": "device", "app": "phone-confirm", "headline": "..." }
+```
+
+Set `"appTheme": "pa"` (or `"pb"`) on the carousel to pick the month's prototype.
+
+---
+
 ## The batch workflow (how we actually run a batch of ~12)
 
 1. **Build all Path-A (HTML-only) carousels first.** They complete immediately

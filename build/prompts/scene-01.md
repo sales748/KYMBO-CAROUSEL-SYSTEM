@@ -2,59 +2,67 @@
 
 **Carousel:** scene-01 · **Pillar:** The Problem · **Path B (scene / organic)**
 
-> Path B — scene/organic. Kim generates each background in ChatGPT from the prompt below; Claude composites the type + hand-made accents on top. Every render: 4:5 (1080x1350), grade to navy shadows + warm cream, one natural green cue OK. Leave the stated SAFE ZONE (top or bottom third) calm and darker so text is legible. No text, no signage, no logos, no readable UI, no real identifiable person's face.
+> Path B — scene/organic. Slides 1,3,4,5 are AI photographic scenes Kim generates. Slides 2 & 6 are DEVICE slides — they use our own designed booking-app render (Prototype A/B), so NO image is needed for those. When a phone appears anywhere it is an iPhone 17. Kim drops photo renders into assets/scene-01/ as s1,s3,s4,s5 .png; slides 2 & 6 build automatically.
 
-Drop each render into `assets/scene-01/` as `s1.png … s6.png`, then re-run `npm run build`.
+## STYLE LINE — paste this into ChatGPT once, keep it on every image
+
+> ONE CONSISTENT LINE ACROSS ALL 6 IMAGES (this is critical — the last set drifted). Every photo: cinematic editorial, shot as if by the SAME photographer on the SAME 35mm lens, same warm color grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich and natural. NOT an Instagram filter, NOT washed-out, NOT HDR-crunchy. Modern boutique-hotel world only: walnut wood, cream plaster, greenery, brass-free modern fixtures. NO dated props (no key racks, no service bells, no fountain pens, no paper ledgers, no printed folios, no cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no readable UI baked in, no clearly identifiable faces.
+
+You only need to generate the 4 PHOTO slides below. Slides marked APP need no image — they build from our booking-app design automatically.
 
 ---
 
-## Slide 1 — COVER  ·  `s1.png`
+## Slide 1 — SCENE-01 / 1  (PHOTO)
 
 **On-slide copy:** You're not fully booked.
 You're ==fully rented==.
 
-```text
-Bold editorial cinematic photo, 4:5 vertical. A boutique-hotel owner (40s, warm, characterful, seen three-quarter so the face isn't a clear identifiable portrait) standing behind a beautiful minimalist reception desk at blue hour, lit by a warm brass lamp and a small green neon glow. Rich Scandinavian-boho lobby: walnut wood, cream plaster walls, a large leafy monstera. Confident magazine-cover composition, strong directional light, deep contrast. SAFE ZONE: keep the TOP THIRD a calm, darker wall / negative space for the headline; place the subject lower-right. Grade to deep navy shadows (#262B38) and warm cream highlights (#F7F8EA), colours rich and punchy (not desaturated). Shot on 35mm, shallow depth of field, subtle film grain. No text, no signage, no logos.
-```
-
-## Slide 2 — POINT  ·  `s2.png`
-
-**On-slide copy:** Every booking feels like a ((win)).  —  Until you count how little of it you actually keep.
+Save as `s1.png` in `assets/scene-01/`.
 
 ```text
-Bold editorial close-up photo, 4:5 vertical. Two hands joyfully holding a smartphone showing a generic booking-confirmation glow (screen light on the face of the phone only, UI blurred and unreadable, no real brand), bright morning window light, a flat-white coffee with latte art and a linen napkin on a warm walnut cafe table, a small potted plant in soft focus behind. Hopeful, celebratory micro-moment, vivid and warm. SAFE ZONE: keep the BOTTOM THIRD calm and darker for text. Grade to navy shadows and warm cream highlights, rich punchy colour. 50mm, shallow depth of field, subtle grain. No readable text, no logos.
+A boutique-hotel owner (40s, warm, three-quarter so not a clear identifiable portrait) standing behind a beautiful minimalist modern reception desk at blue hour, lit by a warm modern lamp and a small green neon glow. Rich modern Scandinavian-boho lobby: walnut wood, cream plaster walls, a large leafy monstera. Confident magazine-cover composition, strong directional light. LEAVE THE TOP THIRD a calm darker wall / negative space for the headline; subject lower-right. [Apply the shared STYLE LINE.]
 ```
 
-## Slide 3 — POINT  ·  `s3.png`
+## Slide 2 — SCENE-01 / 2  (APP — iPhone 17, no photo needed)
+
+**On-slide copy:** Every booking feels like a ((win)).
+
+> **APP slide — no image needed.** Shows our `phone-confirm` booking-app screen (Prototype A).
+
+## Slide 3 — SCENE-01 / 3  (PHOTO — modern, reconceived)
 
 **On-slide copy:** ==25%== of that win was never yours.  —  The middleman took his cut before the money ever reached you.
 
+Save as `s3.png` in `assets/scene-01/`.
+
 ```text
-Bold still-life editorial photo, 4:5 vertical. A characterful reception desk corner shot from above at a slight angle: a neat stack of printed folios, a polished brass bell, a fountain pen, and a fanned stack of cream banknotes partly slid under a leather ledger, dramatic warm side-light and crisp shadows. Quiet tension, high production value. SAFE ZONE: keep the TOP THIRD an empty darker desk surface for text; objects sit lower-right. Grade to navy shadows + warm cream, rich saturated warmth. 35mm, shallow depth of field, fine grain. No readable text, no logos, no clear currency symbols or numbers.
+Modern editorial still-life, shot from a slight overhead angle: a guest's hand tapping a sleek matte-black contactless card on a minimalist modern payment terminal at a beautiful cream-and-walnut hotel reception, warm directional light, a small potted plant softly out of focus behind. Clean, contemporary, premium — the quiet moment money changes hands. LEAVE THE TOP THIRD a calm darker surface for text; the hand + terminal sit lower-right. NO cash, no coins, no old objects. [Apply the shared STYLE LINE.]
 ```
 
-## Slide 4 — POINT  ·  `s4.png`
+## Slide 4 — SCENE-01 / 4  (PHOTO)
 
 **On-slide copy:** The guest searched your name.  —  The platform just ~~introduced~~ charged you for a guest you already had.
 
+Save as `s4.png` in `assets/scene-01/`.
+
 ```text
-Bold cinematic editorial photo, 4:5 vertical. A stylish traveller with a weekend duffel walking into a warm boutique-hotel lobby, seen from behind / three-quarter (face not identifiable), glancing at their phone. Golden interior light, lush plants, walnut and cream, a green neon accent by the desk. Strong sense of arrival, magazine energy, vivid colour. SAFE ZONE: keep the BOTTOM THIRD calm and darker for text; subject centred, upper-mid. Grade to navy shadows + warm cream, rich and punchy. 35mm, shallow depth of field, natural grain. No text, no logos.
+A stylish traveller with a modern weekend duffel walking into a warm modern boutique-hotel lobby, seen from behind / three-quarter (face not identifiable), glancing at an iPhone 17 held naturally (screen not readable, just ambient glow). Golden interior light, lush plants, walnut and cream, a soft green neon accent by the desk. Strong sense of arrival. LEAVE THE BOTTOM THIRD calm and darker for text; subject centred, upper-mid. [Apply the shared STYLE LINE.]
 ```
 
-## Slide 5 — POINT  ·  `s5.png`
+## Slide 5 — SCENE-01 / 5  (PHOTO — modern, reconceived)
 
 **On-slide copy:** Your best month can be your
 ==most expensive==.  —  More OTA bookings just means a bigger cut skimmed off the top.
 
+Save as `s5.png` in `assets/scene-01/`.
+
 ```text
-Bold editorial photo, 4:5 vertical. A characterful wall-mounted brass key rack in a boutique hotel with almost every key gone (fully booked) — only two keys left hanging, warm tungsten spotlight, aged brass hooks, richly textured cream plaster wall, a trailing plant in the corner. Confident 'sold out' storytelling with dramatic light. SAFE ZONE: keep the TOP THIRD calm negative space (plain warm wall) for text; key rack sits lower. Grade to navy shadows + warm cream, rich punchy colour, fine grain. No text, no numbers, no logos.
+A serene, immaculately styled modern boutique-hotel bedroom at golden hour — crisp cream linens, a walnut headboard, a trailing plant, soft evening light and long shadows through a large window, one bedside lamp glowing warm. Calm 'sold-out luxury' storytelling: the room is perfect and clearly occupied-ready. LEAVE THE TOP THIRD calm negative space (plain warm wall / ceiling) for text; the bed and window sit lower. NO keys, no numbers, no signage. [Apply the shared STYLE LINE.]
 ```
 
-## Slide 6 — CTA  ·  `s6.png`
+## Slide 6 — SCENE-01 / 6  (APP — laptop, no photo needed)
 
 **On-slide copy:** Own the booking.
 ==Keep the guest.==  —  CTA: Comment DIRECT and we'll map your first move
 
-```text
-Bold, optimistic editorial photo, 4:5 vertical. A hotel owner (three-quarter, face not clearly identifiable) leaning back confidently at a clean walnut desk, smiling gently at a laptop that shows a generic blurred booking website (no real brand, unreadable UI), a leafy plant and a coffee nearby, bright hopeful morning light streaming through a window, a soft green plant glow. In-control, winning mood, vivid and warm. SAFE ZONE: keep the BOTTOM THIRD calm and darker for text; subject upper-left. Grade to navy shadows + warm cream highlights, rich punchy colour, shallow depth of field, subtle grain. No readable text, no logos.
-```
+> **APP slide — no image needed.** Shows our `laptop-hero` booking-app screen (Prototype A).
