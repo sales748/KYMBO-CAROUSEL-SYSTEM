@@ -104,27 +104,33 @@ points at the single idea; over-marking kills it.
 
 ---
 
-## The booking app (what shows on every phone / laptop)
+## The booking app (composited onto devices in scenes)
 
-When a slide shows a device, the screen shows **our own designed direct-booking
-product** — never a fake, blurred, or AI-drawn UI. It's a real design system,
-saved and reused all month for consistency.
+When a scene shows a phone or laptop, we generate it with a **blank white
+screen** and composite **our own designed booking product** onto it — never a
+fake or AI-drawn UI. The design language matches the **Kalido / Smithe House**
+booking engine (warm off-white + butter-yellow accent, elegant serif + grotesk,
+the 5-step Dates·Categories·Rates·Summary·Details flow).
 
-- **Data:** `content/booking-app.json` (one demo hotel — *Marlowe House*).
-- **Design:** `system/app.mjs` → `build/app/img/*.png`.
-- **Two prototypes:** `pa` warm-editorial (light) · `pb` dark-premium (navy).
-- **Devices:** iPhone 17 (Dynamic Island, thin bezels) + laptop browser.
-- **Booking-flow states** (so the screen always matches the slide's message):
-  phone → hero · rooms (direct-vs-OTA rate compare) · checkout · confirmation ·
-  owner dashboard; laptop → hero · owner dashboard.
+- **Data:** `content/booking-app.json` (demo hotel — *Marlowe House*, fictional).
+- **Design:** `system/app.mjs` → `build/app/img/<device>-<screen>.png`.
+- **Bare screens** (no device frame): laptop `1440×900` (rates `1440×1080`),
+  phone `460×996`.
+- **Screens:** laptop → hero · categories (rate compare) · rates · modal
+  (email capture) · dashboard (owner); phone → hero · rates · confirmation.
+- **Interior photos:** Kim generates into `assets/app/<slot>.png`
+  (hero, studio, twobed, lifestyle); prompts in `build/app/photo-prompts.md`.
 
-Use it in a carousel with a `device` slide:
+Composite onto a device in a scene slide:
 
 ```json
-{ "layout": "device", "app": "phone-confirm", "headline": "..." }
+{ "scene": true, "bg": "assets/scene-01/s6.png",
+  "screen": { "app": "laptop-hero", "quad": [[x,y],[x,y],[x,y],[x,y]] } }
 ```
 
-Set `"appTheme": "pa"` (or `"pb"`) on the carousel to pick the month's prototype.
+`quad` = the screen's four corners (TL, TR, BR, BL) in slide pixels
+(1080×1350), read off the generated photo. A perspective transform maps the
+UI onto the screen — even at an angle.
 
 ---
 

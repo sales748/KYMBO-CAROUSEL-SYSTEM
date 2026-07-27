@@ -189,9 +189,10 @@ function promptSheet(c) {
       ``,
     );
     if (isPhoto) {
+      if (s.screen) lines.push(`> **Composite slide.** Generate this photo with a BLANK WHITE device screen; we then composite the \`${s.screen.app}\` booking-app UI onto it.`, ``);
       lines.push(`Save as \`s${i + 1}.png\` in \`${c.assetDir}/\`.`, ``, '```text', s.imagePrompt, '```');
     } else {
-      lines.push(`> **APP slide — no image needed.** Shows our \`${s.app}\` booking-app screen (Prototype ${(c.appTheme || 'pa') === 'pa' ? 'A' : 'B'}).`);
+      lines.push(`> **No image needed.**`);
     }
   });
   return lines.join('\n');

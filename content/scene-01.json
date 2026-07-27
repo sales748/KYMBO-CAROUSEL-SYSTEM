@@ -4,63 +4,90 @@
   "pillar": "The Problem",
   "batch": "01",
   "pathBofBatch": "1 of 4",
-  "appTheme": "pa",
   "title": "You're not fully booked. You're fully rented.",
-  "styleLine": "ONE CONSISTENT LINE ACROSS ALL 6 IMAGES (this is critical — the last set drifted). Every photo: cinematic editorial, shot as if by the SAME photographer on the SAME 35mm lens, same warm color grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich and natural. NOT an Instagram filter, NOT washed-out, NOT HDR-crunchy. Modern boutique-hotel world only: walnut wood, cream plaster, greenery, brass-free modern fixtures. NO dated props (no key racks, no service bells, no fountain pens, no paper ledgers, no printed folios, no cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no readable UI baked in, no clearly identifiable faces.",
-  "note": "Path B — scene/organic. Slides 1,3,4,5 are AI photographic scenes Kim generates. Slides 2 & 6 are DEVICE slides — they use our own designed booking-app render (Prototype A/B), so NO image is needed for those. When a phone appears anywhere it is an iPhone 17. Kim drops photo renders into assets/scene-01/ as s1,s3,s4,s5 .png; slides 2 & 6 build automatically.",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade \u2014 deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
+  "note": "Path B \u2014 scene/organic. Slides 1,3,4,5 are pure AI photos. Slides 2 & 6 are DEVICE-COMPOSITE: generate a photo where an iPhone 17 (s2) or a laptop (s6) has a BLANK PURE-WHITE screen, then Claude composites the saved booking-app UI onto that screen (screen.app tells which). When Kim sends each device photo, Claude reads the 4 screen-corner coordinates and sets `screen.quad` to composite it in perspective. Drop photos into assets/scene-01/ as s1,s2,s3,s4,s5,s6 .png.",
   "assetDir": "assets/scene-01",
   "slides": [
     {
-      "scene": true, "layout": "cover", "anchor": "top", "scrim": "top",
+      "scene": true,
+      "layout": "cover",
+      "anchor": "top",
+      "scrim": "top",
       "imageId": "SCENE-01 / 1  (PHOTO)",
       "kicker": "THE PROBLEM",
       "headline": "You're not fully booked.\nYou're ==fully rented==.",
       "sub": "A boutique-hotel owner's quiet, expensive truth.",
       "bg": "assets/scene-01/s1.png",
-      "imagePrompt": "A boutique-hotel owner (40s, warm, three-quarter so not a clear identifiable portrait) standing behind a beautiful minimalist modern reception desk at blue hour, lit by a warm modern lamp and a small green neon glow. Rich modern Scandinavian-boho lobby: walnut wood, cream plaster walls, a large leafy monstera. Confident magazine-cover composition, strong directional light. LEAVE THE TOP THIRD a calm darker wall / negative space for the headline; subject lower-right. [Apply the shared STYLE LINE.]"
+      "imagePrompt": "A boutique-hotel owner (40s, warm, three-quarter so not a clear identifiable portrait) standing behind a beautiful minimalist modern reception desk at blue hour, lit by a warm modern lamp and a small green neon glow. Rich modern Scandinavian-boho lobby: walnut wood, cream plaster walls, a large leafy monstera. LEAVE THE TOP THIRD a calm darker wall / negative space for the headline; subject lower-right. [Apply the STYLE LINE.]"
     },
     {
-      "layout": "device", "app": "phone-confirm",
-      "imageId": "SCENE-01 / 2  (APP — iPhone 17, no photo needed)",
-      "kicker": "THE PROBLEM",
-      "headline": "Every booking feels like a ((win)).",
-      "sub": "Until you count how little of it you actually keep."
+      "scene": true,
+      "layout": "point",
+      "anchor": "bottom",
+      "scrim": "bottom",
+      "imageId": "SCENE-01 / 2  (PHOTO + COMPOSITE \u2014 iPhone 17, blank white screen)",
+      "index": "01",
+      "title": "Every booking feels like a ((win)).",
+      "body": "Until you count how little of it you actually keep.",
+      "bg": "assets/scene-01/s2.png",
+      "screen": {
+        "app": "phone-confirm"
+      },
+      "imagePrompt": "Close-up: two hands holding an iPhone 17 (Dynamic Island, thin bezels) at a warm walnut cafe table, morning light, a flat-white with latte art and a linen napkin, a small plant softly behind. IMPORTANT FOR COMPOSITING: the phone is held nearly FLAT and FRONT-ON to the camera, and its screen is a solid PURE-WHITE rectangle (#FFFFFF) \u2014 completely blank, no UI, no reflections, fully unobstructed by fingers. Keep the BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]"
     },
     {
-      "scene": true, "layout": "point", "anchor": "top", "scrim": "top",
-      "imageId": "SCENE-01 / 3  (PHOTO — modern, reconceived)",
+      "scene": true,
+      "layout": "point",
+      "anchor": "top",
+      "scrim": "top",
+      "imageId": "SCENE-01 / 3  (PHOTO \u2014 modern)",
       "index": "02",
       "title": "==25%== of that win was never yours.",
       "body": "The middleman took his cut before the money ever reached you.",
       "arrow": "downLeft",
       "bg": "assets/scene-01/s3.png",
-      "imagePrompt": "Modern editorial still-life, shot from a slight overhead angle: a guest's hand tapping a sleek matte-black contactless card on a minimalist modern payment terminal at a beautiful cream-and-walnut hotel reception, warm directional light, a small potted plant softly out of focus behind. Clean, contemporary, premium — the quiet moment money changes hands. LEAVE THE TOP THIRD a calm darker surface for text; the hand + terminal sit lower-right. NO cash, no coins, no old objects. [Apply the shared STYLE LINE.]"
+      "imagePrompt": "Modern editorial still-life, slight overhead angle: a guest's hand tapping a sleek matte-black contactless card on a minimalist modern payment terminal at a cream-and-walnut hotel reception, warm directional light, a small potted plant softly out of focus behind. Contemporary and premium. LEAVE THE TOP THIRD a calm darker surface for text; hand + terminal lower-right. NO cash, no coins, no old objects. [Apply the STYLE LINE.]"
     },
     {
-      "scene": true, "layout": "point", "anchor": "bottom", "scrim": "bottom",
+      "scene": true,
+      "layout": "point",
+      "anchor": "bottom",
+      "scrim": "bottom",
       "imageId": "SCENE-01 / 4  (PHOTO)",
       "index": "03",
       "title": "The guest searched your name.",
       "body": "The platform just ~~introduced~~ charged you for a guest you already had.",
       "bg": "assets/scene-01/s4.png",
-      "imagePrompt": "A stylish traveller with a modern weekend duffel walking into a warm modern boutique-hotel lobby, seen from behind / three-quarter (face not identifiable), glancing at an iPhone 17 held naturally (screen not readable, just ambient glow). Golden interior light, lush plants, walnut and cream, a soft green neon accent by the desk. Strong sense of arrival. LEAVE THE BOTTOM THIRD calm and darker for text; subject centred, upper-mid. [Apply the shared STYLE LINE.]"
+      "imagePrompt": "A stylish traveller with a modern weekend duffel walking into a warm modern boutique-hotel lobby, seen from behind / three-quarter (face not identifiable), glancing at an iPhone 17 held naturally (screen not readable, ambient glow only). Golden interior light, lush plants, walnut and cream, a soft green neon accent by the desk. LEAVE THE BOTTOM THIRD calm and darker for text; subject centred, upper-mid. [Apply the STYLE LINE.]"
     },
     {
-      "scene": true, "layout": "point", "anchor": "top", "scrim": "top",
-      "imageId": "SCENE-01 / 5  (PHOTO — modern, reconceived)",
+      "scene": true,
+      "layout": "point",
+      "anchor": "top",
+      "scrim": "top",
+      "imageId": "SCENE-01 / 5  (PHOTO \u2014 modern)",
       "index": "04",
       "title": "Your best month can be your\n==most expensive==.",
       "body": "More OTA bookings just means a bigger cut skimmed off the top.",
       "bg": "assets/scene-01/s5.png",
-      "imagePrompt": "A serene, immaculately styled modern boutique-hotel bedroom at golden hour — crisp cream linens, a walnut headboard, a trailing plant, soft evening light and long shadows through a large window, one bedside lamp glowing warm. Calm 'sold-out luxury' storytelling: the room is perfect and clearly occupied-ready. LEAVE THE TOP THIRD calm negative space (plain warm wall / ceiling) for text; the bed and window sit lower. NO keys, no numbers, no signage. [Apply the shared STYLE LINE.]"
+      "imagePrompt": "A serene, immaculately styled modern boutique-hotel bedroom at golden hour \u2014 crisp cream linens, a walnut headboard, a trailing plant, soft evening light and long shadows through a large window, one bedside lamp glowing warm. Calm 'sold-out luxury' storytelling. LEAVE THE TOP THIRD calm negative space (plain warm wall / ceiling) for text; bed and window lower. NO keys, no numbers, no signage. [Apply the STYLE LINE.]"
     },
     {
-      "layout": "device", "app": "laptop-hero",
-      "imageId": "SCENE-01 / 6  (APP — laptop, no photo needed)",
+      "scene": true,
+      "layout": "cta",
+      "anchor": "bottom",
+      "scrim": "bottom",
+      "imageId": "SCENE-01 / 6  (PHOTO + COMPOSITE \u2014 laptop, blank white screen)",
       "kicker": "THE FIX",
       "headline": "Own the booking.\n==Keep the guest.==",
-      "sub": "OTAs take 15–30%. Your own site takes 0%.",
-      "action": "Comment DIRECT and we'll map your first move"
+      "sub": "OTAs take 15\u201330%. Your own site takes 0%.",
+      "action": "Comment DIRECT and we'll map your first move",
+      "bg": "assets/scene-01/s6.png",
+      "screen": {
+        "app": "laptop-hero"
+      },
+      "imagePrompt": "A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled boutique-hotel back office, morning light, a coffee and a small notebook beside it. IMPORTANT FOR COMPOSITING: the laptop is FRONT-ON to the camera (screen facing us as square as possible), and the screen is a solid PURE-WHITE rectangle (#FFFFFF) \u2014 completely blank, no UI, no glare, fully unobstructed. LEAVE THE BOTTOM THIRD / right side calm for text. [Apply the STYLE LINE.]"
     }
   ]
 }

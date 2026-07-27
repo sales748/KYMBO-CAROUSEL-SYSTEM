@@ -1,39 +1,44 @@
 {
-  "note": "The demo direct-booking product Kymbo shows inside scene/mockup slides. ONE demo hotel is used all month for consistency. Two prototypes (A warm-editorial, B dark-premium) render from this same data. Fictional hotel — not a real property.",
+  "note": "The demo direct-booking product Kymbo shows inside slides. Design language matches the Kalido / Smithe House booking engine (warm off-white + butter-yellow accent, serif display + grotesk UI, 5-step flow). Fictional demo hotel (Marlowe House) — the DESIGN is replicated, not the client's brand. One demo used all month for consistency.",
   "hotel": {
     "name": "Marlowe House",
-    "kind": "Boutique hotel",
-    "place": "Lisbon, Alfama",
-    "tagline": "A quiet corner of the old town.",
+    "monogram": "M",
+    "kind": "Boutique apartment hotel",
+    "place": "Yaletown",
+    "headline": "Boutique apartment hotel in Alfama",
+    "tagline": "MAKE OUR HOUSE YOUR HOME",
     "rating": "4.9",
     "reviews": "128",
     "url": "marlowehouse.com",
-    "amenities": ["Fast Wi-Fi", "Rooftop breakfast", "Late checkout", "Courtyard garden"]
+    "currency": "USD",
+    "lang": "English (United States)"
   },
-  "stay": { "checkin": "Fri 12 Sep", "checkout": "Sun 14 Sep", "nights": 2, "guests": "2 guests" },
+  "stay": { "checkin": "Tue 7/28/2026", "checkout": "Fri 7/31/2026", "nights": 3, "guests": "Adults 2", "guestCount": 2 },
+  "steps": ["Dates", "Categories", "Rates", "Summary", "Details"],
   "rooms": [
-    { "id": "garden",   "name": "Garden Studio",  "sqm": "24m²", "beds": "1 queen",       "direct": 180, "ota": 232, "note": "Ground floor · opens to the courtyard" },
-    { "id": "loft",     "name": "Loft King",      "sqm": "31m²", "beds": "1 king",        "direct": 240, "ota": 310, "note": "Top floor · skylight · rooftop access" },
-    { "id": "suite",    "name": "Courtyard Suite","sqm": "42m²", "beds": "1 king + sofa", "direct": 320, "ota": 413, "note": "Two rooms · private terrace" }
+    { "id": "studio", "name": "Studio Apartment", "max": 2, "sqft": "347–558 Sq ft", "bed": "1 King bed", "direct": 490, "ota": 636, "photo": "studio" },
+    { "id": "twobed", "name": "Two Bedroom + Office Apartment", "max": 5, "sqft": "690–920 Sq ft", "bed": "2 Queen + sofa", "direct": 786, "ota": 1021, "photo": "twobed" }
   ],
-  "selected": "loft",
+  "selected": "studio",
+  "addons": [
+    { "name": "Pet Fee — Whole Stay", "desc": "Bringing your pet along? Includes a bed, bowls and pup treats for one small pet.", "price": "$50.00", "per": "nightly" },
+    { "name": "Parking — Whole Stay", "desc": "Secure underground parking, come and go for the duration of your stay.", "price": "$30.00", "per": "nightly" }
+  ],
+  "rates": [
+    { "name": "Book Direct", "desc": "Our most flexible rate. Priority early check-in (based on availability) and free cancellation up to 48 hours before arrival.", "price": "$490.00", "per": "nightly", "cta": "Book now" },
+    { "name": "Stay Longer & Save", "desc": "Unlock a special rate on stays of 3+ nights. Non-refundable, prepayment required.", "was": "$490.00", "price": "$417.00", "per": "nightly", "cta": "Book now" }
+  ],
   "checkout": {
-    "room": "Loft King",
-    "lineItems": [
-      { "label": "$240 × 2 nights", "value": "$480" },
-      { "label": "Cleaning", "value": "$28" },
-      { "label": "City tax", "value": "$8" }
-    ],
-    "total": "$516",
-    "otaTotal": "$664",
-    "saved": "$148"
+    "room": "Studio Apartment",
+    "total": "$1,470",
+    "otaTotal": "$1,908",
+    "saved": "$438"
   },
-  "confirmation": {
-    "ref": "MH-4821",
-    "room": "Loft King",
-    "dates": "12–14 Sep",
-    "saved": "$148",
-    "vs": "vs Booking.com"
+  "confirmation": { "ref": "MH-4821", "room": "Studio Apartment", "dates": "28–31 Jul", "saved": "$438", "vs": "vs Booking.com" },
+  "modal": {
+    "title": "Before You Head Out …",
+    "body": "You'll find our best rates & most flexible terms right here. That means more time for you, less time searching.",
+    "cta": "Get me the best rates"
   },
   "dashboard": {
     "month": "September",
@@ -46,5 +51,18 @@
       { "label": "Booking.com", "pct": 24, "hot": false },
       { "label": "Airbnb", "pct": 14, "hot": false }
     ]
+  },
+  "photoSlots": {
+    "hero": "Full-bleed hero — warm apartment-hotel living room.",
+    "studio": "Studio apartment interior.",
+    "twobed": "Two-bedroom apartment open living/kitchen.",
+    "lifestyle": "Guest relaxing (for the email-capture modal)."
+  },
+  "photoStyleLine": "Warm, editorial real-estate/hotel photography — natural daylight, walnut wood + cream + soft greenery, calm and premium, lightly desaturated, no people-faces-in-focus, no text/logos. Consistent grade across all four.",
+  "photoPrompts": {
+    "hero": "LANDSCAPE 16:10. A warm boutique apartment-hotel living room by a large window with sheer curtains and a soft city view, a linen sofa, a leafy plant, framed art on a shelf, natural morning light. Calm, editorial, inviting. Leave the upper area relatively simple. [Apply photo STYLE LINE.]",
+    "studio": "LANDSCAPE 4:3. A modern studio apartment interior: a neatly made bed with crisp white linens beside a small lounge area, walnut and cream tones, a big window with daylight, a plant, minimalist wall art. Editorial hotel photography. [Apply photo STYLE LINE.]",
+    "twobed": "LANDSCAPE 4:3. A modern two-bedroom apartment open-plan living/kitchen/dining: pale wood cabinetry, a dining table with chairs, a lounge with a sofa and TV, big windows with city view, warm daylight, a plant. Editorial hotel photography. [Apply photo STYLE LINE.]",
+    "lifestyle": "PORTRAIT 4:5. A relaxed guest sitting on a linen sofa by a bright window reading, holding a coffee, warm calm mood, soft daylight, plant nearby (face soft / not the focus). Editorial lifestyle. [Apply photo STYLE LINE.]"
   }
 }

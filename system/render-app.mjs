@@ -1,9 +1,13 @@
 /* ============================================================
-   render-app.mjs — build the two direct-booking prototypes to
-   HTML (build/app/pa.html, pb.html). Screens are captured by
-   shoot.mjs into build/app/img/<theme>-<device>-<screen>.png.
+   render-app.mjs — build the direct-booking app (Kalido-style)
+   to HTML (build/app/app.html). Screens render as BARE SCREENS
+   captured by shoot.mjs into build/app/img/<device>-<screen>.png
+   for compositing onto white-screened devices in scene images.
+
+   Room/hero PHOTOS: drop into assets/app/<slot>.png (hero, studio,
+   twobed, lifestyle). Absent → a warm gradient placeholder.
    ============================================================ */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { fontFaceCss } from './fonts.mjs';
@@ -15,9 +19,28 @@ const appDir = join(root, 'build', 'app');
 mkdirSync(join(appDir, 'img'), { recursive: true });
 
 const data = JSON.parse(readFileSync(join(root, 'content/booking-app.json'), 'utf8'));
-const fonts = fontFaceCss();
 
-for (const theme of ['pa', 'pb']) {
-  writeFileSync(join(appDir, `${theme}.html`), appPage(theme, data, fonts));
+// resolve photo slots from assets/app (relative to build/app/app.html)
+const photos = {};
+for (const slot of Object.keys(data.photoSlots || {})) {
+  const p = join(root, 'assets', 'app', `${slot}.png`);
+  if (existsSync(p)) photos[slot] = `../../assets/app/${slot}.png`;
 }
-console.log('Rendered booking-app prototypes: build/app/pa.html, pb.html');
+
+writeFileSync(join(appDir, 'app.html'), appPage(data, fontFaceCss(), photos));
+
+// image-prompt sheet for the app's interior photos (Kim generates → assets/app/)
+if (data.photoPrompts) {
+  const lines = [
+    '# Booking-app interior photos', '',
+    'Generate each, drop into `assets/app/<slot>.png`, then re-run `npm run build`.', '',
+    '## STYLE LINE (paste once, keep on every image)', '', `> ${data.photoStyleLine || ''}`, '', '---',
+  ];
+  for (const [slot, prompt] of Object.entries(data.photoPrompts)) {
+    lines.push('', `## ${slot}  ·  \`assets/app/${slot}.png\``, '', '```text', prompt, '```');
+  }
+  writeFileSync(join(appDir, 'photo-prompts.md'), lines.join('\n'));
+}
+
+const have = Object.keys(photos);
+console.log(`Rendered booking-app (Kalido-style): build/app/app.html · photos: ${have.length ? have.join(', ') : 'none yet (gradient placeholders)'}`);

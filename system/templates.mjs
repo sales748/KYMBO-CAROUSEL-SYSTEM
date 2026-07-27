@@ -209,26 +209,39 @@ function sceneBody(s) {
   }
 }
 
-/* DEVICE slide — the real booking-app render (iPhone 17 / laptop) is the
-   hero, composited from build/app/img. No AI image, no fake UI: what shows
-   on screen is our designed product, and it matches the slide's message. */
-function deviceSlide(s, ctx) {
-  const theme = ctx.appTheme || 'pa';
-  const isPhone = s.app.startsWith('phone');
-  const src = `../app/img/${theme}-${s.app}.png`;
-  const kick = s.kicker
-    ? `<div class="kicker"><span class="br">[</span> ${esc(s.kicker)} <span class="br">]</span></div>`
-    : '<div></div>';
-  const copy = `<div class="dev-copy">
-      ${s.headline ? `<h1>${rich(s.headline)}</h1>` : ''}
-      ${s.sub ? `<div class="sub">${rich(s.sub)}</div>` : ''}
-      ${s.action ? `<div class="cta-action"><span class="px"></span>${esc(s.action)}</div>` : ''}
-    </div>`;
-  return `<div class="slide dark dev-slide ${isPhone ? 'dev-phone' : 'dev-laptop'}" data-idx="${ctx.index}">
-    <header class="hd">${kick}</header>
-    <main class="bd">${copy}<div class="dev-stage"><img src="${src}" alt="">${arrowFor(s.arrow)}</div></main>
-    ${footer(ctx)}
-  </div>`;
+/* ---- SCREEN COMPOSITING ----
+   Map a bare booking-app render onto the blank white screen of a device
+   inside a scene photo, via a projective (perspective) transform. The
+   slide declares the screen's four corners in slide px (1080x1350):
+     screen: { app:'laptop-hero', quad:[[x,y]TL,[x,y]TR,[x,y]BR,[x,y]BL] }
+   Corners are read off the generated photo once Kim sends it. */
+const SCREEN_DIMS = {
+  'laptop-hero': [1440, 900], 'laptop-categories': [1440, 900], 'laptop-rates': [1440, 1080],
+  'laptop-modal': [1440, 900], 'laptop-dashboard': [1440, 900],
+  'phone-hero': [460, 996], 'phone-rates': [460, 996], 'phone-confirm': [460, 996],
+};
+const _adj = (m) => [
+  m[4] * m[8] - m[5] * m[7], m[2] * m[7] - m[1] * m[8], m[1] * m[5] - m[2] * m[4],
+  m[5] * m[6] - m[3] * m[8], m[0] * m[8] - m[2] * m[6], m[2] * m[3] - m[0] * m[5],
+  m[3] * m[7] - m[4] * m[6], m[1] * m[6] - m[0] * m[7], m[0] * m[4] - m[1] * m[3]];
+const _mm = (a, b) => { const c = []; for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) { let s = 0; for (let k = 0; k < 3; k++) s += a[3 * i + k] * b[3 * k + j]; c[3 * i + j] = s; } return c; };
+const _mv = (m, v) => [m[0] * v[0] + m[1] * v[1] + m[2] * v[2], m[3] * v[0] + m[4] * v[1] + m[5] * v[2], m[6] * v[0] + m[7] * v[1] + m[8] * v[2]];
+function _basis(p) {
+  const m = [p[0][0], p[1][0], p[2][0], p[0][1], p[1][1], p[2][1], 1, 1, 1];
+  const v = _mv(_adj(m), [p[3][0], p[3][1], 1]);
+  return _mm(m, [v[0], 0, 0, 0, v[1], 0, 0, 0, v[2]]);
+}
+function quadMatrix(w, h, quad) {
+  const src = [[0, 0], [w, 0], [w, h], [0, h]];
+  const H = _mm(_basis(quad), _adj(_basis(src)));
+  for (let i = 0; i < 9; i++) H[i] /= H[8];
+  const t = [H[0], H[3], 0, H[6], H[1], H[4], 0, H[7], 0, 0, 1, 0, H[2], H[5], 0, H[8]];
+  return `matrix3d(${t.join(',')})`;
+}
+function screenOverlay(s) {
+  if (!s.screen || !s.screen.app || !s.screen.quad) return '';
+  const [w, h] = SCREEN_DIMS[s.screen.app] || [1440, 900];
+  return `<img class="screen-ovl" style="width:${w}px;height:${h}px;transform:${quadMatrix(w, h, s.screen.quad)};transform-origin:0 0" src="../app/img/${esc(s.screen.app)}.png" alt="">`;
 }
 
 function sceneSlide(s, ctx) {
@@ -237,9 +250,10 @@ function sceneSlide(s, ctx) {
   const scrim = s.scrim || (anchor === 'top' ? 'top' : 'bottom');
   const bg = s.bg
     ? `<img src="${esc(s.bg)}" alt="">`
-    : `<div class="await">Scene image pending<br>${esc(s.imageId || '')}</div>`;
+    : `<div class="await">Scene image pending<br>${esc(s.imageId || '')}${s.screen ? `<br><br>+ composite: ${esc(s.screen.app)}` : ''}</div>`;
   return `<div class="slide scene ${ctx.surface || ''} ${coverCls}" data-idx="${ctx.index}">
     <div class="layer-bg">${bg}</div>
+    ${screenOverlay(s)}
     <div class="layer-scrim ${scrim}"></div>
     <header class="hd">${kicker(s.layout === 'cover' ? '' : (s.kicker || ctx.pillar))}</header>
     <main class="bd anchor-${anchor}">${sceneBody(s)}${arrowFor(s.arrow)}</main>
@@ -248,9 +262,7 @@ function sceneSlide(s, ctx) {
 }
 
 export function renderSlide(slide, ctx) {
-  // device slide — the booking-app render is the hero
-  if (slide.layout === 'device') return deviceSlide(slide, ctx);
-  // Path B — scene slide built on an AI image
+  // Path B — scene slide built on an AI image (with optional screen composite)
   if (slide.scene) return sceneSlide(slide, ctx);
   // bespoke SEAM cover
   if (slide.type === 'cover' && slide.variant === 'SEAM') return seamSlide(slide, ctx);

@@ -1,303 +1,347 @@
 /* ============================================================
-   app.mjs — the DIRECT-BOOKING PRODUCT shown inside slides.
-   One demo hotel (content/booking-app.json), two prototypes:
-     .pa  Prototype A — warm editorial (light, boutique, serif accents)
-     .pb  Prototype B — dark premium (navy, sleek, geometric)
-   Rendered on an iPhone-17 frame and a laptop/browser frame.
-   Every screen is a distinct booking-flow STATE so the render
-   shown in a slide always matches the slide's message.
+   app.mjs — the DIRECT-BOOKING PRODUCT (design language matched
+   to the Kalido / Smithe House booking engine).
+
+   These render as BARE SCREENS (no device frame) so they can be
+   composited onto the blank white screen of a laptop/phone inside
+   an AI scene image when building carousels.
+
+     laptop screens → 1440×900  (browser window)
+     phone screens  → 460×996   (mobile app)
+
+   Data: content/booking-app.json.  Photos: assets/app/<slot>.png
+   (passed in via `photos`; warm gradient fallback if absent).
    ============================================================ */
 
 const esc = (s = '') => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-/* ---------------- design system ---------------- */
 export const APP_CSS = `
-:root{ --verde:#9BEC00; }
+:root{
+  --paper:#FFFFFF; --wash:#F1F0EA; --ink:#17171A; --muted:#7C7C77;
+  --line:#E6E4DA; --butter:#E7E4A6; --btn:#141414;
+  --serif:'Canela','GT Super Display','Freight Display Pro',Georgia,'Times New Roman',serif;
+  --sans:'Onest Variable','Onest',system-ui,-apple-system,sans-serif;
+}
 .app,.app *{ box-sizing:border-box; margin:0; padding:0; }
-.app{ font-family:'Onest Variable','Onest',system-ui,sans-serif; }
+.app{ font-family:var(--sans); color:var(--ink); }
+.cap{ position:relative; overflow:hidden; background:var(--wash); }
+.serif{ font-family:var(--serif); font-weight:500; }
+.caps{ text-transform:uppercase; letter-spacing:.18em; }
 
-/* themes */
-.pa{ --bg:#F5F6E8; --card:#FFFFFF; --ink:#262B38; --muted:#727788; --line:#E7E8D8; --accent:#9BEC00; --aink:#232838; --shadow:rgba(38,43,56,.14); --serif:'Playfair Display',Georgia,'Times New Roman',serif; }
-.pb{ --bg:#171A22; --card:#262B38; --ink:#F7F8EA; --muted:rgba(247,248,234,.6); --line:rgba(247,248,234,.13); --accent:#9BEC00; --aink:#1b1f29; --shadow:rgba(0,0,0,.45); --serif:'Onest Variable','Onest',sans-serif; }
+/* photo fill */
+.pfill{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.pgrad{ position:absolute; inset:0; }
+.g-hero{ background:linear-gradient(150deg,#c8c3b4,#a99f8b 55%,#7d715c); }
+.g-studio{ background:linear-gradient(150deg,#eae6db,#c9c1ad); }
+.g-twobed{ background:linear-gradient(150deg,#e4e0d4,#bcae95); }
+.g-life{ background:linear-gradient(150deg,#c9c3b6,#8f836c); }
+.phcap{ position:absolute; inset:0; z-index:1; display:grid; place-items:center; color:rgba(255,255,255,.7); font-family:var(--sans); letter-spacing:.2em; font-size:15px; text-transform:uppercase; }
 
-/* device: iPhone 17 */
-.shot{ padding:64px; background:transparent; display:inline-block; }
-.iphone{ width:402px; height:872px; border-radius:56px; background:#05060a;
-  padding:13px; box-shadow:0 40px 90px -30px var(--shadow), 0 0 0 2px rgba(255,255,255,.06) inset;
-  position:relative; }
-.iphone .screen{ width:100%; height:100%; border-radius:44px; overflow:hidden; background:var(--bg); color:var(--ink); position:relative; }
-.island{ position:absolute; top:15px; left:50%; transform:translateX(-50%); width:112px; height:33px; background:#05060a; border-radius:20px; z-index:40; }
-.sbar{ height:54px; display:flex; align-items:center; justify-content:space-between; padding:16px 30px 0; font-size:15px; font-weight:700; color:var(--ink); position:relative; z-index:30; }
-.sbar .r{ display:flex; align-items:center; gap:7px; }
-.sbar .bat{ width:26px; height:13px; border:1.5px solid var(--ink); border-radius:4px; position:relative; opacity:.9; }
-.sbar .bat::after{ content:''; position:absolute; inset:2px; right:8px; background:var(--ink); border-radius:1px; }
-.sbar .bat::before{ content:''; position:absolute; right:-4px; top:4px; width:2px; height:5px; background:var(--ink); border-radius:2px; }
-.sbar .wifi,.sbar .cell{ font-size:13px; letter-spacing:1px; }
-.home{ position:absolute; bottom:9px; left:50%; transform:translateX(-50%); width:134px; height:5px; border-radius:3px; background:var(--ink); opacity:.35; z-index:40; }
+/* buttons */
+.btn-yellow{ background:var(--butter); color:var(--ink); border:none; font-family:var(--sans); font-weight:600; border-radius:12px; padding:14px 22px; font-size:16px; display:inline-flex; align-items:center; justify-content:center; }
+.btn-black{ background:var(--btn); color:#fff; border-radius:14px; padding:16px 30px; font-weight:600; font-size:16px; letter-spacing:.02em; }
+.btn-outline{ background:transparent; border:1px solid var(--butter); color:#8a8636; border-radius:12px; padding:13px; font-weight:600; font-size:15px; width:100%; text-align:center; }
 
-/* device: laptop / browser */
-.laptop{ width:1180px; border-radius:18px; overflow:hidden; background:var(--card);
-  box-shadow:0 50px 120px -40px var(--shadow), 0 0 0 1px var(--line); }
-.wtop{ height:52px; background:var(--card); border-bottom:1px solid var(--line); display:flex; align-items:center; gap:9px; padding:0 22px; }
-.wtop .dot{ width:13px; height:13px; border-radius:50%; background:var(--line); }
-.wtop .url{ margin-left:16px; flex:1; max-width:520px; height:32px; border-radius:9px; background:var(--bg); border:1px solid var(--line);
-  display:flex; align-items:center; gap:9px; padding:0 15px; font-size:15px; color:var(--muted); }
-.wtop .url .lock{ width:11px; height:11px; border:2px solid var(--muted); border-radius:3px; }
-.wview{ background:var(--bg); color:var(--ink); }
+/* ---------- booking-flow chrome ---------- */
+.topbar{ height:78px; background:var(--paper); border-bottom:1px solid var(--line); display:flex; align-items:center; padding:0 34px; gap:16px; }
+.mono{ font-family:var(--serif); font-weight:600; font-size:34px; line-height:1; }
+.topbar .name{ font-size:20px; font-weight:500; }
+.topbar .sp{ flex:1; }
+.sel{ height:44px; border:1px solid var(--line); border-radius:10px; display:flex; align-items:center; gap:12px; padding:0 14px; font-size:15px; color:var(--ink); }
+.sel .cv{ color:var(--muted); font-size:12px; }
+.xbtn{ width:38px; height:38px; display:grid; place-items:center; font-size:24px; color:var(--ink); }
 
-/* photo blocks (elegant warm duotone stand-ins) */
-.photo{ position:relative; background:#3a2f28; overflow:hidden; }
-.photo::after{ content:''; position:absolute; inset:0; background:radial-gradient(120% 90% at 70% 15%, rgba(255,240,214,.42), transparent 55%), linear-gradient(0deg, rgba(15,12,10,.5), transparent 60%); }
-.ph-hero{ background:linear-gradient(155deg,#2e2620,#7a5638 45%,#c79a68 105%); }
-.ph-garden{ background:linear-gradient(155deg,#243024,#4f6a44 55%,#9fb47e 110%); }
-.ph-loft{ background:linear-gradient(155deg,#332620,#8a5a38 55%,#d7a06a 110%); }
-.ph-suite{ background:linear-gradient(155deg,#241f2b,#5a4360 55%,#a98fb0 110%); }
+.stepper{ background:var(--paper); padding:26px 60px 30px; display:flex; align-items:flex-start; }
+.step{ flex:1; display:flex; flex-direction:column; align-items:center; position:relative; }
+.step .dot{ width:30px; height:30px; border-radius:50%; display:grid; place-items:center; font-size:14px; font-weight:700; background:var(--paper); border:2px solid var(--line); color:var(--muted); z-index:2; }
+.step.done .dot{ background:var(--ink); border-color:var(--ink); color:#fff; }
+.step.active .dot{ background:var(--butter); border-color:var(--butter); color:var(--ink); }
+.step .lbl{ margin-top:12px; font-size:16px; color:var(--muted); }
+.step.done .lbl,.step.active .lbl{ color:var(--ink); }
+.step::before{ content:''; position:absolute; top:15px; left:-50%; width:100%; height:2px; background:var(--line); z-index:1; }
+.step:first-child::before{ display:none; }
+.step.done::before,.step.active::before{ background:var(--butter); }
 
-/* shared bits */
-.wordmark{ font-family:var(--serif); font-weight:600; letter-spacing:.01em; }
-.pill{ display:inline-flex; align-items:center; gap:7px; padding:7px 13px; border-radius:100px; font-size:14px; font-weight:600; }
-.pill.rate{ background:var(--accent); color:var(--aink); }
-.pill.glass{ background:rgba(255,255,255,.16); color:#fff; backdrop-filter:blur(6px); }
-.star{ color:var(--accent); }
-.btn{ display:flex; align-items:center; justify-content:center; gap:10px; width:100%; height:58px; border-radius:15px;
-  background:var(--accent); color:var(--aink); font-size:19px; font-weight:700; }
-.btn.sec{ background:transparent; color:var(--ink); border:1.5px solid var(--line); }
-.chip{ display:inline-flex; align-items:center; gap:8px; padding:9px 14px; border-radius:11px; background:var(--card); border:1px solid var(--line); font-size:14.5px; color:var(--ink); }
-.kx{ font-family:'Space Grotesk Variable','Space Grotesk',monospace; letter-spacing:.04em; }
-.strike{ text-decoration:line-through; color:var(--muted); text-decoration-color:var(--accent); }
+.page{ background:var(--wash); padding:34px 60px 60px; }
+.sumcard{ background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:24px 28px; display:flex; align-items:center; gap:40px; margin-bottom:26px; }
+.sumcard .col .k{ font-weight:600; font-size:17px; }
+.sumcard .col .v{ color:var(--muted); font-size:16px; margin-top:4px; }
+.sumcard .edit{ margin-left:auto; border:1px solid var(--line); border-radius:10px; padding:10px 20px; font-size:15px; }
 
-/* app gallery page */
-.gallery{ background:#0e1016; min-height:100vh; padding:70px 40px; }
-.gallery h1{ color:#F7F8EA; font-family:'Onest Variable',sans-serif; font-size:46px; letter-spacing:-.02em; margin-bottom:6px; }
-.gallery h1 b{ color:var(--verde); }
-.gallery .sub{ color:rgba(247,248,234,.55); font-family:'Space Grotesk Variable',monospace; font-size:17px; margin-bottom:40px; }
-.gallery .row{ display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
+.rooms{ display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+.rcard{ background:var(--paper); border:1px solid var(--line); border-radius:18px; overflow:hidden; }
+.rcard .img{ position:relative; height:280px; }
+.rcard .dots{ position:absolute; bottom:14px; left:50%; transform:translateX(-50%); display:flex; gap:7px; z-index:2; }
+.rcard .dots i{ width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,.55); }
+.rcard .dots i.on{ background:#fff; }
+.rcard .body{ padding:26px 28px 28px; }
+.rcard h3{ font-size:26px; font-weight:600; }
+.rcard .max{ display:flex; align-items:center; gap:10px; color:var(--muted); font-size:16px; margin:16px 0; }
+.rcard .more{ color:var(--muted); font-size:16px; display:flex; align-items:center; gap:8px; }
+.rcard .from{ color:var(--muted); font-size:15px; margin-top:22px; }
+.rcard .price{ font-size:34px; font-weight:700; letter-spacing:-.02em; margin-top:2px; }
+.rcard .price s{ color:var(--muted); font-weight:400; font-size:22px; margin-left:10px; }
+.rcard .tax{ color:var(--muted); font-size:13px; }
+.rcard .foot{ display:flex; align-items:flex-end; justify-content:space-between; margin-top:8px; }
+.ico{ width:20px; height:20px; display:inline-block; opacity:.7; }
+
+/* rates */
+.h-center{ text-align:center; font-size:34px; font-weight:700; margin:6px 0 26px; }
+.ratecard{ background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:26px 28px; margin-bottom:18px; }
+.ratecard h4{ font-size:22px; font-weight:700; }
+.ratecard p{ color:var(--muted); font-size:16px; line-height:1.5; margin:12px 0 18px; max-width:560px; }
+.ratecard .rrow{ display:flex; align-items:flex-end; justify-content:space-between; }
+.ratecard .rp{ font-size:34px; font-weight:700; letter-spacing:-.02em; }
+.ratecard .rp small{ font-size:17px; font-weight:500; color:var(--muted); }
+.ratecard .rp s{ display:block; font-size:19px; color:var(--muted); font-weight:400; }
+.twocol{ display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+.h-sub{ text-align:center; font-size:26px; font-weight:700; margin:8px 0 22px; }
+.addon{ background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:22px 24px; margin-bottom:16px; }
+.addon h5{ font-size:19px; font-weight:700; }
+.addon p{ color:var(--muted); font-size:15px; line-height:1.45; margin:8px 0 14px; }
+.addon .pr{ font-weight:700; font-size:18px; }
+.addon .per{ color:var(--muted); font-size:14px; margin-bottom:14px; }
+.occ{ background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:22px 24px; }
+.stepnum{ display:flex; align-items:center; border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+.stepnum b{ flex:1; text-align:center; font-size:20px; font-weight:600; }
+.stepnum span{ width:56px; height:52px; display:grid; place-items:center; font-size:24px; color:var(--muted); }
+
+/* hero (website) */
+.hero{ position:relative; }
+.hero .nav{ position:absolute; top:0; left:0; right:0; z-index:5; display:flex; align-items:center; padding:30px 40px; color:#fff; }
+.hero .burger{ display:flex; flex-direction:column; gap:5px; }
+.hero .burger i{ width:26px; height:2px; background:#fff; }
+.hero .wm{ position:absolute; left:50%; transform:translateX(-50%); font-family:var(--serif); letter-spacing:.28em; font-size:24px; }
+.hero .booknow{ position:absolute; right:0; top:44%; background:var(--butter); color:var(--ink); writing-mode:vertical-rl; padding:26px 12px; font-weight:600; letter-spacing:.16em; font-size:15px; border-radius:8px 0 0 8px; }
+.hero .scrim{ position:absolute; inset:0; z-index:2; background:linear-gradient(90deg,rgba(20,18,14,.5),rgba(20,18,14,.12) 55%),linear-gradient(0deg,rgba(20,18,14,.4),transparent 55%); }
+.hero .copy{ position:absolute; z-index:3; left:56px; bottom:170px; color:#fff; }
+.hero .copy h1{ font-family:var(--serif); font-weight:500; font-size:82px; line-height:1.02; max-width:820px; }
+.hero .copy .sub{ margin-top:22px; letter-spacing:.2em; font-size:18px; }
+.searchbar{ position:absolute; z-index:4; left:56px; right:56px; bottom:48px; background:var(--paper); border-radius:16px; padding:14px; display:flex; align-items:center; gap:10px; box-shadow:0 30px 60px -30px rgba(0,0,0,.4); }
+.sfield{ flex:1; display:flex; align-items:center; gap:12px; padding:14px 16px; border-radius:12px; }
+.sfield .lb{ color:var(--muted); letter-spacing:.12em; font-size:14px; }
+.sfield .chev{ margin-left:auto; color:var(--muted); }
+.sfield.div{ border-right:1px solid var(--line); }
+.guestpm{ display:flex; align-items:center; gap:14px; margin-left:auto; }
+.guestpm b{ font-size:18px; }
+.guestpm span{ width:30px; height:30px; border:1px solid var(--line); border-radius:50%; display:grid; place-items:center; color:var(--muted); }
+
+/* modal */
+.modalwrap{ position:absolute; inset:0; background:rgba(20,20,20,.4); display:grid; place-items:center; z-index:8; }
+.modal{ width:900px; height:560px; display:flex; border-radius:6px; overflow:hidden; box-shadow:0 40px 90px -30px rgba(0,0,0,.5); }
+.modal .ml{ width:46%; position:relative; }
+.modal .mr{ flex:1; background:#0c0c0c; color:#fff; padding:64px 56px; position:relative; display:flex; flex-direction:column; justify-content:center; }
+.modal .mr h2{ font-family:var(--serif); font-weight:500; font-size:46px; }
+.modal .mr p{ color:rgba(255,255,255,.8); font-size:18px; line-height:1.5; margin:22px 0 34px; }
+.modal .mr .em{ background:#fff; border-radius:8px; padding:18px 20px; color:var(--muted); font-size:16px; letter-spacing:.06em; }
+.modal .mr .go{ background:#fff; color:#111; border-radius:8px; padding:18px; text-align:center; font-weight:600; letter-spacing:.06em; margin-top:14px; text-transform:uppercase; font-size:15px; }
+.modal .mr .x{ position:absolute; top:20px; right:20px; width:40px; height:40px; background:#e9e9e9; border-radius:8px; display:grid; place-items:center; color:#111; font-size:22px; }
+
+/* confirmation */
+.confirm{ height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 42px; background:var(--wash); }
+.confirm .tick{ width:104px; height:104px; border-radius:50%; background:var(--butter); display:grid; place-items:center; margin-bottom:30px; }
+.confirm h1{ font-family:var(--serif); font-weight:500; font-size:46px; }
+.confirm .meta{ color:var(--muted); font-size:19px; margin-top:14px; line-height:1.5; }
+.confirm .meta b{ color:var(--ink); }
+.confirm .save{ margin-top:30px; background:var(--butter); border-radius:14px; padding:18px 26px; font-weight:700; font-size:19px; }
+
+/* owner dashboard (our addition, same design language) */
+.dash{ padding:40px 54px; background:var(--wash); }
+.dash .top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:26px; }
+.dash .top .k{ color:var(--muted); letter-spacing:.14em; font-size:15px; margin-top:6px; }
+.dbig{ background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:30px 32px; }
+.dbig .k{ color:var(--muted); font-size:17px; }
+.dbig .v{ font-size:60px; font-weight:700; letter-spacing:-.03em; margin-top:4px; }
+.dbig .s{ color:var(--muted); font-size:16px; }
+.dcard{ background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:26px 30px; }
+.dcard h4{ font-size:20px; font-weight:700; margin-bottom:20px; }
+.bar{ margin-bottom:16px; }
+.bar .r{ display:flex; justify-content:space-between; font-size:16px; margin-bottom:8px; }
+.bar .track{ height:14px; border-radius:8px; background:var(--line); overflow:hidden; }
+.bar .fill{ height:100%; border-radius:8px; }
+.ring{ width:190px; height:190px; border-radius:50%; display:grid; place-items:center; }
+.ring .in{ width:74%; height:74%; border-radius:50%; background:var(--paper); display:grid; place-items:center; }
+
+.gallery{ padding:60px 40px; display:flex; flex-wrap:wrap; gap:40px; align-items:flex-start; }
 `;
 
-/* ---------------- phone screens ---------------- */
-const statusbar = () => `<div class="sbar"><span>9:41</span><div class="r"><span class="cell">▪▪▪</span><span class="wifi">≋</span><span class="bat"></span></div></div>`;
-const stars = '★★★★★';
+/* ---------- svg icons ---------- */
+const IC = {
+  cal: `<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>`,
+  user: `<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.5 7-5.5s7 1.9 7 5.5"/></svg>`,
+  tag: `<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7l6-4h12v12l-4 6-3-3M3 7v6l8 8"/></svg>`,
+};
 
-function pHero(d) {
-  const h = d.hotel, from = Math.min(...d.rooms.map(r => r.direct));
-  return `<div class="screen">${statusbar()}
-    <div class="photo ph-hero" style="height:430px">
-      <div style="position:absolute;inset:0;z-index:2;padding:34px 30px;display:flex;flex-direction:column;justify-content:space-between">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="pill glass">${stars} ${esc(h.rating)}</span>
-          <span class="pill rate">Best rate · direct</span>
-        </div>
-        <div>
-          <div class="wordmark" style="color:#fff;font-size:46px;line-height:1">${esc(h.name)}</div>
-          <div style="color:rgba(255,255,255,.86);font-size:16px;margin-top:8px" class="kx">${esc(h.place).toUpperCase()}</div>
-        </div>
-      </div>
-    </div>
-    <div style="padding:26px 26px 0">
-      <div style="font-family:var(--serif);font-size:25px;line-height:1.25;color:var(--ink)">${esc(h.tagline)}</div>
-      <div style="display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 22px">
-        ${h.amenities.map(a => `<span class="chip">${esc(a)}</span>`).join('')}
-      </div>
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px">
-        <div><div style="color:var(--muted);font-size:14px">From</div>
-        <div style="font-size:34px;font-weight:800;letter-spacing:-.02em">$${from}<span style="font-size:16px;color:var(--muted);font-weight:600"> / night</span></div></div>
-        <div style="color:var(--muted);font-size:13.5px;text-align:right;max-width:150px">You always get the<br>lowest price here.</div>
-      </div>
-      <div class="btn">Check availability</div>
-    </div>
-    <div class="home"></div></div>`;
+/* ---------- shared components ---------- */
+const photo = (photos, slot, grad, cls = 'pfill') =>
+  (photos && photos[slot])
+    ? `<img class="${cls}" src="${photos[slot]}" alt="">`
+    : `<div class="pgrad g-${grad}"></div><div class="phcap">${slot} photo</div>`;
+
+const topbar = (h) => `<div class="topbar">
+  <span class="mono">${esc(h.monogram)}</span><span class="name">${esc(h.name)}</span><span class="sp"></span>
+  <span class="sel">${esc(h.lang)} <span class="cv">▾</span></span>
+  <span class="sel">${esc(h.currency)} <span class="cv">▾</span></span>
+  <span class="xbtn">×</span></div>`;
+
+const stepper = (steps, active) => `<div class="stepper">${steps.map((s, i) => {
+  const cls = i < active ? 'done' : i === active ? 'active' : '';
+  const inner = i < active ? '✓' : (i + 1);
+  return `<div class="step ${cls}"><span class="dot">${inner}</span><span class="lbl">${esc(s)}</span></div>`;
+}).join('')}</div>`;
+
+const sumcard = (st) => `<div class="sumcard">
+  <div class="col"><div class="k">Nights selected ${st.nights}</div><div class="v">${esc(st.checkin)} → ${esc(st.checkout)}</div></div>
+  <div class="col"><div class="k">Guests selected ${st.guestCount}</div><div class="v">${esc(st.guests)}</div></div>
+  <span class="edit">Edit</span></div>`;
+
+/* ---------- LAPTOP SCREENS (1440×900) ---------- */
+function lHero(d, photos) {
+  const h = d.hotel;
+  return `<div class="cap app" style="width:1440px;height:900px"><div class="hero" style="height:100%">
+    ${photo(photos, 'hero', 'hero')}
+    <div class="scrim"></div>
+    <div class="nav"><span class="burger"><i></i><i></i><i></i></span>
+      <span class="wm">${esc(h.name).toUpperCase()}</span></div>
+    <div class="booknow">BOOK NOW</div>
+    <div class="copy"><h1>${esc(h.headline)}</h1><div class="sub caps">${esc(h.tagline)}</div></div>
+    <div class="searchbar">
+      <div class="sfield div">${IC.cal}<span class="lb caps">CHECK IN</span><span class="chev">▾</span></div>
+      <div class="sfield div">${IC.cal}<span class="lb caps">CHECK OUT</span><span class="chev">▾</span></div>
+      <div class="sfield div">${IC.user}<span class="lb caps">GUEST</span><span class="guestpm"><span>−</span><b>1</b><span>+</span></span></div>
+      <div class="sfield">${IC.tag}<span class="lb caps">PROMO CODE</span></div>
+      <span class="btn-black">SEARCH</span>
+    </div></div></div>`;
 }
 
-function pRooms(d) {
-  const s = d.stay;
-  const card = (r) => {
-    const off = Math.round((1 - r.direct / r.ota) * 100);
-    const sel = r.id === d.selected;
-    return `<div style="border:1.5px solid ${sel ? 'var(--accent)' : 'var(--line)'};border-radius:18px;overflow:hidden;background:var(--card);${sel ? 'box-shadow:0 0 0 3px rgba(155,236,0,.25)' : ''}">
-      <div class="photo ph-${r.id}" style="height:120px">
-        <span class="pill rate" style="position:absolute;top:12px;left:12px;z-index:3;font-size:12.5px">Direct saves ${off}%</span>
-      </div>
-      <div style="padding:16px 17px 17px">
-        <div style="display:flex;justify-content:space-between;align-items:baseline">
-          <div style="font-size:20px;font-weight:700">${esc(r.name)}</div>
-          <div style="text-align:right"><span class="strike" style="font-size:14px">$${r.ota}</span>
-          <div style="font-size:23px;font-weight:800;letter-spacing:-.02em">$${r.direct}<span style="font-size:13px;color:var(--muted);font-weight:600">/night</span></div></div>
-        </div>
-        <div style="color:var(--muted);font-size:14px;margin-top:5px">${esc(r.sqm)} · ${esc(r.beds)} · ${esc(r.note)}</div>
-      </div></div>`;
-  };
-  return `<div class="screen">${statusbar()}
-    <div style="padding:8px 24px 18px">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
-        <div class="wordmark" style="font-size:24px">${esc(d.hotel.name)}</div>
-        <span class="pill" style="background:var(--card);border:1px solid var(--line);color:var(--muted);font-size:13px">${esc(d.hotel.url)}</span>
-      </div>
-      <span class="chip kx" style="font-size:13.5px">${esc(s.checkin)} → ${esc(s.checkout)} · ${esc(s.nights)} nights · ${esc(s.guests)}</span>
-    </div>
-    <div style="padding:0 24px;display:flex;flex-direction:column;gap:15px">${d.rooms.map(card).join('')}</div>
-    <div style="padding:18px 24px 0"><div style="background:var(--accent);color:var(--aink);border-radius:13px;padding:14px 16px;font-size:15px;font-weight:600;text-align:center">Booked here, every euro stays with the hotel.</div></div>
-    <div class="home"></div></div>`;
+function roomCard(r, photos) {
+  const off = Math.round((1 - r.direct / r.ota) * 100);
+  return `<div class="rcard"><div class="img">${photo(photos, r.photo, r.photo)}
+      <span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
+    <div class="body"><h3>${esc(r.name)}</h3>
+      <div class="max">${IC.user} Maximum persons: ${r.max}</div>
+      <div class="more">More ▾</div>
+      <div class="foot"><div><div class="from">From</div>
+        <div class="price">$${r.direct}.00 <s>$${r.ota}</s></div>
+        <div class="tax">per suite/nightly · Taxes excluded · direct saves ${off}%</div></div>
+        <span class="btn-yellow">Show rates</span></div></div></div>`;
+}
+const lCategories = (d, photos) => `<div class="cap app" style="width:1440px;height:900px">
+  ${topbar(d.hotel)}${stepper(d.steps, 1)}
+  <div class="page">${sumcard(d.stay)}<div class="rooms">${d.rooms.map((r) => roomCard(r, photos)).join('')}</div></div></div>`;
+
+function lRates(d, photos) {
+  const sel = d.rooms.find((r) => r.id === d.selected) || d.rooms[0];
+  const rate = (rt) => `<div class="ratecard"><h4>${esc(rt.name)}</h4><p>${esc(rt.desc)}</p>
+    <div class="rrow"><div class="rp">${rt.was ? `<s>${esc(rt.was)}</s>` : ''}${esc(rt.price)} <small>${esc(rt.per)}</small></div>
+    <span class="btn-yellow">${esc(rt.cta)}</span></div></div>`;
+  const addon = (a) => `<div class="addon"><h5>${esc(a.name)}</h5><p>${esc(a.desc)}</p>
+    <div class="pr">${esc(a.price)}</div><div class="per">Taxes excluded · ${esc(a.per)}</div>
+    <div class="btn-outline">Add</div></div>`;
+  return `<div class="cap app" style="width:1440px;height:1080px">
+    ${topbar(d.hotel)}${stepper(d.steps, 2)}
+    <div class="page"><div class="h-center">Select rate</div>${sumcard(d.stay)}
+      <div class="ratecard" style="display:flex;gap:24px;align-items:center">
+        <div style="width:300px;height:180px;border-radius:12px;overflow:hidden;position:relative;flex:0 0 auto">${photo(photos, sel.photo, sel.photo)}</div>
+        <div><h4 style="font-size:24px">${esc(sel.name)}</h4>
+          <div class="max">${IC.user} Maximum persons: ${sel.max}</div>
+          <div style="color:var(--muted);font-size:16px">[${esc(sel.sqft)}] · ${esc(sel.bed)}</div></div></div>
+      <div class="twocol"><div><div class="h-sub">Enhance your stay</div>${d.addons.map(addon).join('')}</div>
+        <div><div class="h-sub">Rates</div>${d.rates.map(rate).join('')}</div></div></div></div>`;
 }
 
-function pCheckout(d) {
-  const c = d.checkout;
-  return `<div class="screen">${statusbar()}
-    <div style="padding:8px 26px 0">
-      <div style="color:var(--muted);font-size:14px" class="kx">CONFIRM & PAY</div>
-      <div style="font-size:27px;font-weight:800;letter-spacing:-.02em;margin-top:6px">${esc(c.room)}</div>
-      <div style="color:var(--muted);font-size:15px;margin-top:3px">${esc(d.stay.checkin)} → ${esc(d.stay.checkout)} · ${esc(d.stay.guests)}</div>
-    </div>
-    <div style="padding:22px 26px 0">
-      <div style="background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 6px">
-        ${c.lineItems.map(li => `<div style="display:flex;justify-content:space-between;font-size:16px;margin-bottom:13px"><span style="color:var(--muted)">${esc(li.label)}</span><span style="font-weight:600">${esc(li.value)}</span></div>`).join('')}
-        <div style="border-top:1px solid var(--line);padding-top:14px;margin-top:2px;display:flex;justify-content:space-between;align-items:baseline">
-          <span style="font-size:18px;font-weight:700">Total</span>
-          <span style="font-size:28px;font-weight:800;letter-spacing:-.02em">${esc(c.total)}</span>
-        </div>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;margin:16px 2px;font-size:15px">
-        <span style="color:var(--muted)">On Booking.com</span>
-        <span class="strike">${esc(c.otaTotal)}</span>
-        <span class="pill rate" style="font-size:13px;margin-left:auto">You save ${esc(c.saved)}</span>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:11px;margin-top:6px">
-        <div class="chip" style="justify-content:flex-start;height:52px;border-radius:13px;color:var(--muted)">Full name</div>
-        <div class="chip" style="justify-content:flex-start;height:52px;border-radius:13px;color:var(--muted)">Card number &nbsp;·&nbsp; No booking fees</div>
-      </div>
-      <div class="btn" style="margin-top:16px">Confirm & pay ${esc(c.total)}</div>
-    </div>
-    <div class="home"></div></div>`;
+function lModal(d, photos) {
+  const m = d.modal;
+  return `<div class="cap app" style="width:1440px;height:900px">
+    ${topbar(d.hotel)}${stepper(d.steps, 2)}
+    <div class="page" style="filter:blur(1px);opacity:.6">${sumcard(d.stay)}</div>
+    <div class="modalwrap"><div class="modal"><div class="ml">${photo(photos, 'lifestyle', 'life')}</div>
+      <div class="mr"><span class="x">×</span><h2>${esc(m.title)}</h2><p>${esc(m.body)}</p>
+        <div class="em">EMAIL</div><div class="go">${esc(m.cta)}</div></div></div></div></div>`;
 }
+
+function lDashboard(d) {
+  const b = d.dashboard;
+  const bar = (c) => `<div class="bar"><div class="r"><span>${esc(c.label)}</span><b>${c.pct}%</b></div>
+    <div class="track"><div class="fill" style="width:${c.pct}%;background:${c.hot ? 'var(--butter)' : '#c9c7bd'}"></div></div></div>`;
+  return `<div class="cap app" style="width:1440px;height:900px">${topbar(d.hotel)}
+    <div class="dash"><div class="top"><div><div class="mono" style="font-size:30px">${esc(d.hotel.name)}</div>
+      <div class="k caps">OWNER · ${esc(b.month)}</div></div><span class="btn-yellow">Direct is winning</span></div>
+    <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div class="dbig"><div class="k">Direct revenue this month</div><div class="v">${esc(b.directRevenue)}</div>
+          <div class="s">${b.directShare}% of all bookings came direct</div></div>
+        <div class="dcard"><h4>Where your bookings came from</h4>${b.channels.map(bar).join('')}</div></div>
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div class="dcard" style="display:flex;justify-content:center">
+          <div class="ring" style="background:conic-gradient(var(--butter) ${b.occupancy}%, var(--line) 0)"><div class="in">
+            <div style="text-align:center"><div style="font-size:44px;font-weight:700">${b.occupancy}%</div><div class="s">occupancy</div></div></div></div></div>
+        <div class="dbig"><div class="k">Commission saved</div><div class="v" style="font-size:48px">${esc(b.commissionSaved)}</div></div>
+      </div></div></div></div>`;
+}
+
+/* ---------- PHONE SCREENS (460×996) ---------- */
+const sbar = () => `<div style="height:46px;display:flex;align-items:center;justify-content:space-between;padding:14px 26px 0;font-size:15px;font-weight:700"><span>9:41</span><span style="letter-spacing:2px">▪▪▪ ≋ ▭</span></div>`;
 
 function pConfirm(d) {
   const c = d.confirmation;
-  return `<div class="screen"><div style="height:100%;display:flex;flex-direction:column">${statusbar()}
-    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 34px;text-align:center">
-      <div style="width:104px;height:104px;border-radius:50%;background:var(--accent);display:grid;place-items:center;margin-bottom:28px">
-        <svg viewBox="0 0 48 48" width="52" height="52"><path d="M12 25 L21 34 L37 15" fill="none" stroke="#1b1f29" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <div style="font-size:34px;font-weight:800;letter-spacing:-.02em">You're booked!</div>
-      <div style="color:var(--muted);font-size:16px;margin-top:10px">${esc(c.room)} · ${esc(c.dates)}<br>Confirmation <b class="kx" style="color:var(--ink)">${esc(c.ref)}</b></div>
-      <div style="margin-top:26px;background:var(--accent);color:var(--aink);border-radius:14px;padding:16px 22px;font-size:17px;font-weight:700">Booked direct — you saved ${esc(c.saved)} ${esc(c.vs)}</div>
-      <div style="color:var(--muted);font-size:14px;margin-top:22px">A confirmation is on its way to your inbox.</div>
-    </div>
-    <div style="padding:0 26px 30px"><div class="btn sec">Add to calendar</div></div>
-    <div class="home"></div></div></div>`;
+  return `<div class="cap app" style="width:460px;height:996px">${sbar()}
+    <div class="confirm" style="height:calc(100% - 46px)">
+      <div class="tick"><svg viewBox="0 0 48 48" width="52" height="52"><path d="M12 25 L21 34 L37 15" fill="none" stroke="#17171A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h1>You're booked!</h1>
+      <div class="meta">${esc(c.room)} · ${esc(c.dates)}<br>Confirmation <b>${esc(c.ref)}</b></div>
+      <div class="save">Booked direct — you saved ${esc(c.saved)} ${esc(c.vs)}</div>
+      <div class="meta" style="margin-top:22px">A confirmation is on its way to your inbox.</div></div></div>`;
 }
 
-function dashInner(d, wide) {
-  const b = d.dashboard;
-  const bar = (c) => `<div style="margin-bottom:15px">
-      <div style="display:flex;justify-content:space-between;font-size:15px;margin-bottom:7px"><span>${esc(c.label)}</span><span style="font-weight:700" class="kx">${c.pct}%</span></div>
-      <div style="height:14px;border-radius:8px;background:var(--line);overflow:hidden"><div style="height:100%;width:${c.pct}%;background:${c.hot ? 'var(--accent)' : 'var(--muted)'};border-radius:8px"></div></div>
-    </div>`;
-  const ring = `<div style="width:${wide ? 180 : 150}px;height:${wide ? 180 : 150}px;border-radius:50%;background:conic-gradient(var(--accent) ${b.occupancy}%, var(--line) 0);display:grid;place-items:center">
-      <div style="width:74%;height:74%;border-radius:50%;background:var(--bg);display:grid;place-items:center;text-align:center">
-        <div><div style="font-size:${wide ? 40 : 34}px;font-weight:800;letter-spacing:-.02em">${b.occupancy}%</div><div style="color:var(--muted);font-size:13px">occupancy</div></div></div></div>`;
-  const stat = (label, val, hot) => `<div style="flex:1;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px">
-      <div style="color:var(--muted);font-size:14px">${label}</div>
-      <div style="font-size:${wide ? 34 : 27}px;font-weight:800;letter-spacing:-.02em;margin-top:6px;color:${hot ? 'var(--accent)' : 'var(--ink)'}">${val}</div></div>`;
-  if (wide) return `<div style="padding:40px 46px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:26px">
-        <div><div class="wordmark" style="font-size:26px">${esc(d.hotel.name)}</div><div style="color:var(--muted);font-size:15px" class="kx">OWNER · ${esc(b.month).toUpperCase()}</div></div>
-        <span class="pill rate">Direct is winning</span>
-      </div>
-      <div style="display:flex;gap:22px">
-        <div style="flex:1.4">
-          <div style="background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin-bottom:20px">
-            <div style="color:var(--muted);font-size:15px">Direct revenue this month</div>
-            <div style="font-size:56px;font-weight:800;letter-spacing:-.03em;color:var(--accent)">${esc(b.directRevenue)}</div>
-            <div style="color:var(--muted);font-size:15px;margin-top:2px">${b.directShare}% of all bookings came direct</div>
-          </div>
-          <div style="background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 28px">
-            <div style="font-size:17px;font-weight:700;margin-bottom:18px">Where your bookings came from</div>
-            ${b.channels.map(bar).join('')}
-          </div>
-        </div>
-        <div style="flex:1;display:flex;flex-direction:column;gap:20px;align-items:center">
-          <div style="background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;width:100%;display:flex;justify-content:center">${ring}</div>
-          <div style="display:flex;gap:16px;width:100%">${stat('Commission saved', esc(b.commissionSaved), true)}</div>
-        </div>
-      </div>
-    </div>`;
-  return `<div class="screen">${statusbar()}
-    <div style="padding:6px 26px 0">
-      <div class="wordmark" style="font-size:23px">${esc(d.hotel.name)}</div>
-      <div style="color:var(--muted);font-size:14px" class="kx">OWNER · ${esc(b.month).toUpperCase()}</div>
-    </div>
-    <div style="padding:20px 26px 0">
-      <div style="background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px">
-        <div style="color:var(--muted);font-size:15px">Direct revenue this month</div>
-        <div style="font-size:46px;font-weight:800;letter-spacing:-.03em;color:var(--accent)">${esc(b.directRevenue)}</div>
-        <div style="color:var(--muted);font-size:14px">${b.directShare}% of bookings came direct</div>
-      </div>
-      <div style="display:flex;gap:14px;margin:16px 0">${stat('Commission saved', esc(b.commissionSaved), true)}${stat('Occupancy', b.occupancy + '%')}</div>
-      <div style="background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px">
-        <div style="font-size:16px;font-weight:700;margin-bottom:16px">Where bookings came from</div>
-        ${b.channels.map(bar).join('')}
-      </div>
-    </div>
-    <div class="home"></div></div>`;
+function pHero(d, photos) {
+  const h = d.hotel;
+  return `<div class="cap app" style="width:460px;height:996px"><div class="hero" style="height:100%">
+    ${photo(photos, 'hero', 'hero')}<div class="scrim"></div>
+    <div style="position:absolute;top:0;left:0;right:0;z-index:5;color:#fff">${sbar()}
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:6px 26px">
+        <span class="burger" style="display:flex;flex-direction:column;gap:5px"><i style="width:24px;height:2px;background:#fff;display:block"></i><i style="width:24px;height:2px;background:#fff;display:block"></i><i style="width:24px;height:2px;background:#fff;display:block"></i></span>
+        <span style="font-family:var(--serif);letter-spacing:.24em;font-size:18px">${esc(h.name).toUpperCase()}</span><span style="width:24px"></span></div></div>
+    <div style="position:absolute;z-index:3;left:30px;right:30px;bottom:230px;color:#fff">
+      <h1 style="font-family:var(--serif);font-weight:500;font-size:46px;line-height:1.03">${esc(h.headline)}</h1>
+      <div class="caps" style="margin-top:16px;font-size:14px">${esc(h.tagline)}</div></div>
+    <div style="position:absolute;z-index:4;left:24px;right:24px;bottom:34px;background:var(--paper);border-radius:16px;padding:10px;display:flex;flex-direction:column;gap:8px">
+      <div class="sfield" style="border:1px solid var(--line)">${IC.cal}<span class="lb caps">CHECK IN</span><span class="chev">▾</span></div>
+      <div class="sfield" style="border:1px solid var(--line)">${IC.cal}<span class="lb caps">CHECK OUT</span><span class="chev">▾</span></div>
+      <div class="sfield" style="border:1px solid var(--line)">${IC.user}<span class="lb caps">GUEST</span><span class="guestpm"><span>−</span><b>1</b><span>+</span></span></div>
+      <span class="btn-black" style="border-radius:12px">SEARCH</span></div></div></div>`;
 }
-const pDashboard = (d) => dashInner(d, false);
 
-/* ---------------- laptop screens ---------------- */
-function lHero(d) {
-  const h = d.hotel, from = Math.min(...d.rooms.map(r => r.direct));
-  return `<div class="laptop"><div class="wtop"><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-      <span class="url"><span class="lock"></span>${esc(h.url)}/book</span></div>
-    <div class="wview"><div class="photo ph-hero" style="height:700px">
-      <div style="position:absolute;inset:0;z-index:2;padding:54px 60px 170px;display:flex;flex-direction:column;justify-content:space-between">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <div class="wordmark" style="color:#fff;font-size:34px">${esc(h.name)}</div>
-          <span class="pill rate">Best rate, always — book direct</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:flex-end">
-          <div>
-            <div style="color:#fff;font-family:var(--serif);font-size:62px;line-height:1.02;max-width:620px">${esc(h.tagline)}</div>
-            <div class="pill glass" style="margin-top:20px">${stars} ${esc(h.rating)} · ${esc(h.reviews)} reviews · ${esc(h.place)}</div>
-          </div>
-        </div>
-        <div style="position:absolute;left:60px;right:60px;bottom:40px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -30px var(--shadow);padding:18px 20px;display:flex;gap:16px;align-items:center;z-index:5">
-          <div style="flex:1"><div style="color:var(--muted);font-size:13px">Dates</div><div style="font-size:18px;font-weight:700">${esc(d.stay.checkin)} → ${esc(d.stay.checkout)}</div></div>
-          <div style="width:1px;height:38px;background:var(--line)"></div>
-          <div style="flex:1"><div style="color:var(--muted);font-size:13px">Guests</div><div style="font-size:18px;font-weight:700">${esc(d.stay.guests)}</div></div>
-          <div style="width:1px;height:38px;background:var(--line)"></div>
-          <div style="flex:1"><div style="color:var(--muted);font-size:13px">From</div><div style="font-size:18px;font-weight:700">$${from}/night</div></div>
-          <div class="btn" style="width:220px">Check availability</div>
-        </div>
-      </div>
-    </div></div></div></div>`;
+function pRates(d, photos) {
+  const sel = d.rooms.find((r) => r.id === d.selected) || d.rooms[0];
+  const off = Math.round((1 - sel.direct / sel.ota) * 100);
+  return `<div class="cap app" style="width:460px;height:996px;background:var(--wash)">${sbar()}
+    <div style="padding:6px 22px 0"><div style="display:flex;align-items:center;gap:10px"><span class="mono" style="font-size:26px">${esc(d.hotel.monogram)}</span><span style="font-weight:500;font-size:18px">${esc(d.hotel.name)}</span></div></div>
+    <div style="padding:16px 22px">
+      <div class="sumcard" style="gap:20px;padding:16px 18px;margin-bottom:18px"><div class="col"><div class="k" style="font-size:15px">${sel.nights || d.stay.nights} nights</div><div class="v" style="font-size:14px">${esc(d.stay.checkin)}→${esc(d.stay.checkout)}</div></div><span class="edit" style="padding:8px 14px;font-size:14px">Edit</span></div>
+      <div class="rcard"><div class="img" style="height:200px">${photo(photos, sel.photo, sel.photo)}<span class="dots"><i class="on"></i><i></i><i></i></span></div>
+        <div class="body" style="padding:20px"><h3 style="font-size:23px">${esc(sel.name)}</h3>
+          <div class="max" style="margin:12px 0">${IC.user} Maximum persons: ${sel.max}</div>
+          <div class="from">From</div><div class="price" style="font-size:30px">$${sel.direct}.00 <s>$${sel.ota}</s></div>
+          <div class="tax">per suite/nightly · direct saves ${off}%</div>
+          <div class="btn-yellow" style="width:100%;margin-top:16px">Book now</div></div></div></div></div>`;
 }
-const lDashboard = (d) => `<div class="laptop"><div class="wtop"><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-    <span class="url"><span class="lock"></span>${esc(d.hotel.url)}/owner</span></div><div class="wview">${dashInner(d, true)}</div></div>`;
 
-/* ---------------- registry + page ---------------- */
+/* ---------- registry + page ---------- */
 export const SCREENS = {
-  phone: { hero: pHero, rooms: pRooms, checkout: pCheckout, confirm: pConfirm, dashboard: pDashboard },
-  laptop: { hero: lHero, dashboard: lDashboard },
+  laptop: { hero: lHero, categories: lCategories, rates: lRates, modal: lModal, dashboard: lDashboard },
+  phone: { hero: pHero, rates: pRates, confirm: pConfirm },
 };
 
-export function appPage(theme, data, fontsCss) {
-  const label = theme === 'pa' ? 'Prototype A — warm editorial' : 'Prototype B — dark premium';
+export function appPage(data, fontsCss, photos) {
   const shots = [];
   for (const [device, screens] of Object.entries(SCREENS)) {
     for (const [name, fn] of Object.entries(screens)) {
-      const attr = `data-shot="${theme}-${device}-${name}"`;
-      const frame = device === 'phone'
-        ? `<div class="iphone" ${attr}><div class="island"></div>${fn(data)}</div>`
-        : fn(data).replace('<div class="laptop">', `<div class="laptop" ${attr}>`);
-      shots.push(`<div class="shot">${frame}</div>`);
+      shots.push(`<div data-shot="${device}-${name}">${fn(data, photos)}</div>`);
     }
   }
-  // NOTE: page + gallery backgrounds are transparent so element screenshots
-  // (omitBackground) yield true alpha — the device drops cleanly onto any slide.
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Marlowe House · ${label}</title>
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Marlowe House · booking app (Kalido-style)</title>
 <style>${fontsCss}\n${APP_CSS}</style></head>
-<body class="app ${theme}" style="background:transparent">
-  <div class="gallery" style="background:transparent">
-    <div class="row">${shots.join('')}</div>
-  </div>
-</body></html>`;
+<body class="app" style="background:#2a2a2a"><div class="gallery">${shots.join('')}</div></body></html>`;
 }

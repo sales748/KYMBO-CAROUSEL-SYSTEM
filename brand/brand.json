@@ -54,13 +54,12 @@
   },
 
   "bookingApp": {
-    "note": "The direct-booking PRODUCT shown inside slides. Whenever a phone or laptop appears in a carousel, the screen shows THIS designed app — never a fake or blurred UI, never AI-drawn. One demo hotel (Marlowe House) is used all month for consistency.",
-    "source": "content/booking-app.json (data) + system/app.mjs (design) → build/app/img/*.png",
-    "prototypes": { "A": "pa — warm editorial (light, boutique, serif accents)", "B": "pb — dark premium (navy, sleek, geometric)" },
-    "device": "Phone frame is iPhone 17 (Dynamic Island, thin bezels). Laptop is a browser window (marlowehouse.com).",
-    "screens": "phone: hero · rooms(rate-compare) · checkout · confirm · dashboard. laptop: hero · dashboard. Each is a distinct booking-flow STATE so the screen always matches the slide's message.",
-    "usage": "A slide with layout:'device' + app:'<device>-<screen>' composites the render as the hero. Set carousel.appTheme to 'pa' or 'pb' to pick the prototype for the month.",
-    "rule": "Choose ONE prototype per month for a consistent feed."
+    "note": "The direct-booking PRODUCT shown inside slides. Design language matches the Kalido / Smithe House booking engine (warm off-white + butter-yellow accent, elegant serif display + grotesk UI, 5-step flow: Dates·Categories·Rates·Summary·Details). Fictional demo hotel (Marlowe House) — the DESIGN is replicated, not a real client's brand. One demo, all month, for consistency.",
+    "source": "content/booking-app.json (data) + system/app.mjs (design) → build/app/img/<device>-<screen>.png",
+    "renderMode": "BARE SCREENS (no device frame) — laptop 1440x900 (rates 1440x1080), phone 460x996 — so they composite onto the blank white screen of a device inside a scene photo.",
+    "screens": "laptop: hero · categories(rate-compare) · rates · modal(email-capture) · dashboard(owner). phone: hero · rates · confirm.",
+    "photos": "Interior photos are Kim-generated into assets/app/<slot>.png (hero, studio, twobed, lifestyle); prompts in build/app/photo-prompts.md. Warm gradient placeholders until then.",
+    "composite": "In a scene slide, `screen:{app:'laptop-hero', quad:[TL,TR,BR,BL] in slide px}` maps the UI onto the device's white screen via a perspective transform. Generate the scene with a BLANK WHITE device screen; read the 4 corners off the render to set the quad."
   },
 
   "organicAccents": {
