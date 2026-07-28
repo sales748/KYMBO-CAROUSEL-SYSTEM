@@ -28,25 +28,27 @@ kicker, no frame counter.
 Hook → 4 confirmations (EMA 200 · fib 0.6 weekly · +24% to ATH · earnings beat)
 → CTA (CDT vs +24%).
 
-**Post copy (TikTok / IG):**
+**Post copy (TikTok / IG) — de-risked, educational framing (see
+`system/trading-content-safety.md`):**
 
 - **Título (on-screen / primer comentario):**
-  `Google ($GOOG) tiene un setup casi perfecto 📉`
+  `Cómo analizo un gráfico: 4 señales técnicas en Google 📊`
 
 - **Descripción / caption:**
-  > Junté 4 confirmaciones antes de mirar $GOOG con otros ojos 👀
-  > 1️⃣ Tocó la EMA 200 (históricamente +20%)
-  > 2️⃣ 60% del último fractal alcista (semanal)
-  > 3️⃣ +24% de proyección hasta su ATH
-  > 4️⃣ Venció los earnings (ingresos ~$110B → ~$120B)
+  > Te muestro 4 señales técnicas que estudié en el gráfico de Google 👇
+  > (esto es análisis educativo, NO una recomendación de compra)
+  > 1️⃣ Reacción en su media de 200
+  > 2️⃣ Retroceso al 60% del último impulso (Fibonacci)
+  > 3️⃣ Cotiza con descuento frente a su máximo histórico (contexto)
+  > 4️⃣ Resultados trimestrales por encima de lo estimado
   >
-  > ¿Tú qué prefieres: 10% en un CDT o esto? 👇
-  > Guárdalo y sígueme para el siguiente movimiento.
+  > Guárdalo para estudiarlo y sígueme para aprender a leer gráficos 📈
   >
-  > ⚠️ Educación financiera, no asesoría de inversión. Cifras ilustrativas.
+  > ⚠️ Contenido 100% educativo. No es asesoría financiera ni recomendación de
+  > inversión. Consulta a un asesor certificado; cada quien es responsable de
+  > sus decisiones.
   >
-  > #GOOG #Google #Alphabet #bolsadevalores #inversiones #trading
-  > #educacionfinanciera #accionesUSA #mercadodevalores #randyortegar
+  > #educacionfinanciera #analisistecnico #aprenderainvertir #graficas #bolsa
 
 ## Regenerating the export images
 

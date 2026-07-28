@@ -27,6 +27,7 @@ system/                     ← SHARED ENGINE (profile-agnostic)
   shoot.mjs                    headless Chromium → 1 PNG per slide
   templates.mjs · styles.css   slide templates + Kymbo design tokens
   fonts.mjs                    embeds woff2 as base64 (self-contained HTML)
+  trading-content-safety.md    platform rules for finance/trading posts (anti-shadowban)
 fonts/                      ← SHARED type files (woff2)
 
 profiles/
