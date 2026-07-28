@@ -6,6 +6,7 @@
   "subject": {
     "name": "Randy Ortega",
     "role": "Economista e inversionista de la bolsa de valores de EE. UU.",
+    "handle": "@randyortegar",
     "platform": "TikTok (primary), reusable for Instagram carousels",
     "mission": "Compartir, educar y entretener sobre inversiones en la bolsa: buenos hábitos, mecánica de mercado y contrarian takes.",
     "audience": "Retail investors hispanohablantes interesados en el mercado de EE. UU.",
@@ -27,14 +28,18 @@
       "note": "CSS references 'Archivo' first; drop a licensed Neue Haas/Helvetica Now woff2 into /fonts and add a face to have it take over."
     },
     "motifs": {
-      "swipe": "(→) flecha entre paréntesis — el tell de la marca. 'sigue / el siguiente movimiento'.",
+      "swipe": "(→) flecha — el tell de la marca. 'sigue / el siguiente movimiento'.",
       "registration": "Cuadros de registro ▪ en las esquinas — precisión, 'verificado'.",
-      "kicker": "Etiqueta de pilar entre corchetes rojos: [ CONTRARIAN ], arriba-izquierda.",
-      "frame": "Código de release R-NN + contador NN/12, arriba-derecha.",
       "signalBlock": "Bloque rojo sólido — enmarca la cifra héroe.",
       "delta": "Triángulos ▲▼ alza/baja. Verde nunca; la alza es rojo señal.",
-      "geoStamp": "40°42′N · NYSE — coordenadas de Wall St. en el footer.",
-      "tickerRule": "Cinta de datos entre hairlines. Siempre ilustrativa, nunca precios en vivo."
+      "geoStamp": "40°42′N · NYSE — coordenadas de Wall St. (opcional).",
+      "tickerRule": "Cinta de datos entre hairlines. Siempre ilustrativa, nunca precios en vivo.",
+      "handleFooter": "Único elemento fijo del footer: ▪ @randyortegar (mono, abajo-izquierda) + swipe (→) abajo-derecha."
+    },
+    "retiredMotifs": {
+      "kicker": "RETIRADO por Randy — antes: etiqueta de pilar [ CONTRARIAN ]. Ya no se usa.",
+      "frame": "RETIRADO por Randy — antes: código R-NN + contador NN/12. Ya no se usa.",
+      "note": "El footer lleva SOLO el handle @randyortegar (+ swipe). Sin kicker de pilar ni contador de frame."
     }
   },
 
@@ -92,5 +97,29 @@
     "Toda cifra es ilustrativa y se marca como tal; incluir 'No es asesoría financiera'."
   ],
   "format": { "aspect": "4:5", "px": "1080 x 1350", "platform": "Instagram carousel / TikTok slides" },
-  "deliverable": "build/randy/brandbook-feed.html"
+
+  "carousels": [
+    {
+      "id": "carousel-01-goog",
+      "file": "build/randy/carousel-01-goog.html",
+      "ticker": "$GOOG",
+      "thesis": "Setup casi perfecto en Alphabet — 4 confirmaciones (técnicas + fundamental) alineadas.",
+      "path": "A (HTML puro, con zonas de gráfica para pegar capturas de TradingView)",
+      "slides": [
+        { "n": 1, "role": "HOOK",        "archetype": "STATEMENT", "surface": "ink",      "copy": "Google tiene un setup casi perfecto." },
+        { "n": 2, "role": "FACTOR X",    "archetype": "INDEX",     "surface": "bone",     "copy": "Reuní 4 confirmaciones de calidad (4 tarjetas ‘?’, teaser)." },
+        { "n": 3, "role": "CONF 01",     "archetype": "TICKER",    "surface": "concrete", "copy": "Tocó la EMA 200 → históricamente +20%. [foto 1]" },
+        { "n": 4, "role": "CONF 02",     "archetype": "STATEMENT", "surface": "ink",      "copy": "60% del último fractal alcista (fib 0.6, semanal). [foto 2]" },
+        { "n": 5, "role": "CONF 03",     "archetype": "TICKER",    "surface": "bone",     "copy": "+24% de proyección hasta el ATH (~$326 → ~$405)." },
+        { "n": 6, "role": "CONF 04",     "archetype": "STATEMENT", "surface": "concrete", "copy": "Venció earnings: ingresos ~$110B ▲ ~$120B. [foto 4]" },
+        { "n": 7, "role": "CTA",         "archetype": "SIGNAL",    "surface": "signal",   "copy": "¿Qué prefieres? 10% CDT anual — o — +24%." }
+      ],
+      "verifyBeforePublish": ["ATH exacto y % de upside", "cifras de ingresos del trimestre", "los % históricos de la EMA 200"]
+    }
+  ],
+
+  "deliverables": {
+    "brandbook": "build/randy/brandbook-feed.html",
+    "carousel01": "build/randy/carousel-01-goog.html"
+  }
 }
