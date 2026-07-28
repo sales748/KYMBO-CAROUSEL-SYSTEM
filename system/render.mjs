@@ -13,12 +13,15 @@ import { renderSlide } from './templates.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
-const build = join(root, 'build');
+// Active profile: this JS pipeline drives the Kymbo profile. The shared engine
+// (system/, fonts/) lives at root; per-profile inputs/outputs live under it.
+const profile = join(root, 'profiles', 'kymbo');
+const build = join(profile, 'build');
 mkdirSync(join(build, 'carousels'), { recursive: true });
 mkdirSync(join(build, 'img'), { recursive: true });
 mkdirSync(join(build, 'prompts'), { recursive: true });
 
-const data = JSON.parse(readFileSync(join(root, 'content/carousels.json'), 'utf8'));
+const data = JSON.parse(readFileSync(join(profile, 'content/carousels.json'), 'utf8'));
 const styles = readFileSync(join(root, 'system/styles.css'), 'utf8');
 const head = `<style>${fontFaceCss()}\n${styles}</style>`;
 
@@ -140,7 +143,7 @@ writeFileSync(join(build, 'feed.html'), feedDoc());
 function resolveScene(c) {
   for (const s of c.slides) {
     if (!s.scene) continue;
-    if (s.bg && existsSync(join(root, s.bg))) {
+    if (s.bg && existsSync(join(profile, s.bg))) {
       s.bg = `../../${s.bg}`;          // real image, relative to build/carousels/
     } else {
       s._pending = true;
@@ -198,11 +201,11 @@ function promptSheet(c) {
   return lines.join('\n');
 }
 
-const sceneFiles = readdirSync(join(root, 'content'))
+const sceneFiles = readdirSync(join(profile, 'content'))
   .filter((f) => /^scene-.*\.json$/.test(f)).sort();
 const scenes = [];
 for (const f of sceneFiles) {
-  const c = resolveScene(JSON.parse(readFileSync(join(root, 'content', f), 'utf8')));
+  const c = resolveScene(JSON.parse(readFileSync(join(profile, 'content', f), 'utf8')));
   writeFileSync(join(build, 'carousels', `${c.id}.html`), sceneDoc(c));
   writeFileSync(join(build, 'prompts', `${c.id}.md`), promptSheet(c));
   scenes.push(c);

@@ -101,7 +101,7 @@
   "carousels": [
     {
       "id": "carousel-01-goog",
-      "file": "build/randy/carousel-01-goog.html",
+      "file": "profiles/randyortegar/carousel-01-goog.html",
       "ticker": "$GOOG",
       "thesis": "Setup casi perfecto en Alphabet — 4 confirmaciones (técnicas + fundamental) alineadas.",
       "path": "A (HTML puro, con zonas de gráfica para pegar capturas de TradingView)",
@@ -119,7 +119,7 @@
   ],
 
   "deliverables": {
-    "brandbook": "build/randy/brandbook-feed.html",
-    "carousel01": "build/randy/carousel-01-goog.html"
+    "brandbook": "profiles/randyortegar/brandbook-feed.html",
+    "carousel01": "profiles/randyortegar/carousel-01-goog.html"
   }
 }

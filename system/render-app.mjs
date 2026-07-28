@@ -15,15 +15,16 @@ import { appPage } from './app.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
-const appDir = join(root, 'build', 'app');
+const profile = join(root, 'profiles', 'kymbo');
+const appDir = join(profile, 'build', 'app');
 mkdirSync(join(appDir, 'img'), { recursive: true });
 
-const data = JSON.parse(readFileSync(join(root, 'content/booking-app.json'), 'utf8'));
+const data = JSON.parse(readFileSync(join(profile, 'content/booking-app.json'), 'utf8'));
 
 // resolve photo slots from assets/app (relative to build/app/app.html)
 const photos = {};
 for (const slot of Object.keys(data.photoSlots || {})) {
-  const p = join(root, 'assets', 'app', `${slot}.png`);
+  const p = join(profile, 'assets', 'app', `${slot}.png`);
   if (existsSync(p)) photos[slot] = `../../assets/app/${slot}.png`;
 }
 

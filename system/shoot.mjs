@@ -9,7 +9,8 @@ import { dirname, join } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
-const build = join(root, 'build');
+const profile = join(root, 'profiles', 'kymbo');
+const build = join(profile, 'build');
 const carouselsDir = join(build, 'carousels');
 const appDir = join(build, 'app');
 const EXE = process.env.PW_CHROMIUM || '/opt/pw-browsers/chromium';

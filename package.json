@@ -1,7 +1,7 @@
 {
   "name": "kymbo-carousel-system",
   "version": "1.0.0",
-  "description": "",
+  "description": "In-code carousel creation system — shared engine, two brand profiles (Kymbo, Randy Ortega).",
   "main": "index.js",
   "scripts": {
     "render": "node system/render.mjs && node system/render-app.mjs",
