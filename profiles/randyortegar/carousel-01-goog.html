@@ -84,6 +84,28 @@ body{padding:64px 20px 120px;display:flex;flex-direction:column;align-items:cent
 .note{width:min(90vw,440px);font-family:var(--mono);font-size:11.5px;line-height:1.8;color:var(--steel);
   margin-top:40px;border-top:1px solid #2a2a28;padding-top:20px;letter-spacing:.02em;}
 .note b{color:var(--bone);font-weight:700;} .note .sig{color:var(--signal);}
+
+/* ---- TikTok top safe-zone: push important text below the search/music UI ---- */
+.pad.safe{padding-top:250px;}
+
+/* ---- confirmation slides: black fade from top so the chart sits cleanly
+        over the scene and doesn't clash with the laptop behind ---- */
+.fade-top{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(180deg, rgba(8,6,5,.96) 0%, rgba(8,6,5,.93) 32%,
+  rgba(8,6,5,.74) 58%, rgba(8,6,5,.34) 80%, rgba(8,6,5,0) 95%);}
+/* light text when it sits over the dark fade */
+.on-dark .badge{color:var(--bone);}
+.on-dark .h{color:var(--bone);}
+.on-dark .sub{color:#dcd8cf;}
+.on-dark .reg::before,.on-dark .reg::after{background:rgba(237,233,223,.4);}
+/* chart image panel (drop the real TradingView screenshot here) */
+.chart{margin-top:30px;width:100%;height:508px;border:2px solid rgba(237,233,223,.16);
+  background:#0d0b09 center/cover no-repeat;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 18px 52px rgba(0,0,0,.5);}
+.chart img{width:100%;height:100%;object-fit:contain;display:block;}
+.chart .ph{font-family:var(--mono);font-size:22px;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(237,233,223,.42);text-align:center;line-height:1.7;padding:0 24px;}
+.chart .ph b{color:var(--signal);display:block;font-size:17px;margin-top:10px;letter-spacing:.16em;}
 </style>
 
 <div class="pagehead">
@@ -127,52 +149,56 @@ body{padding:64px 20px 120px;display:flex;flex-direction:column;align-items:cent
 
 <!-- ===== SLIDE 03 · CONF 01 ===== -->
 <div class="slidecap"><span><span class="n">03</span> · CONFIRMACIÓN 01</span><span>ESCENA · GOOG</span></div>
-<div class="stage"><div class="frame">
-  <div class="scene"></div><div class="scrim"></div>
+<div class="stage"><div class="frame on-dark">
+  <div class="scene"></div><div class="scrim"></div><div class="fade-top"></div>
   <span class="reg tl"></span><span class="reg tr"></span>
-  <div class="pad"><div class="top">
+  <div class="pad safe"><div class="top">
     <div class="badge"><span class="num">01</span> Soporte dinámico</div>
-    <div class="h h-md" style="margin-top:26px;">Tocó la <span class="hi">EMA 200</span>.</div>
-    <div class="sub" style="margin-top:28px;">Históricamente, cada vez que <b>$GOOG</b> toca su media de 200 ha subido <b>+20%</b>.<br>Rendimiento pasado ≠ resultado futuro.</div>
+    <div class="h h-md" style="margin-top:22px;">Tocó la <span class="hi">EMA 200</span>.</div>
+    <div class="chart"><span class="ph">Gráfica 01 · EMA 200<b>sube a assets/conf-01.jpg</b></span></div>
+    <div class="sub" style="margin-top:24px;">Cada vez que <b>$GOOG</b> ha tocado su media de 200, históricamente ha subido <b>+20%</b>. Rendimiento pasado ≠ resultado futuro.</div>
   </div>
   <div class="foot"><span class="han"><i></i>@randyortegar</span><span class="sw">→</span></div></div>
 </div></div>
 
 <!-- ===== SLIDE 04 · CONF 02 ===== -->
 <div class="slidecap"><span><span class="n">04</span> · CONFIRMACIÓN 02</span><span>ESCENA · GOOG</span></div>
-<div class="stage"><div class="frame">
-  <div class="scene"></div><div class="scrim"></div>
+<div class="stage"><div class="frame on-dark">
+  <div class="scene"></div><div class="scrim"></div><div class="fade-top"></div>
   <span class="reg tl"></span><span class="reg tr"></span>
-  <div class="pad"><div class="top">
+  <div class="pad safe"><div class="top">
     <div class="badge"><span class="num">02</span> Retroceso</div>
-    <div class="h h-md" style="margin-top:26px;">En el <span class="hi">60%</span> del último fractal alcista.</div>
-    <div class="sub" style="margin-top:28px;">En la gráfica <b>semanal</b>, el precio descansa en el nivel <b>0.6</b> de Fibonacci — zona de descuento donde las tendencias retoman fuerza.</div>
+    <div class="h h-md" style="margin-top:22px;">En el <span class="hi">60%</span> del último fractal.</div>
+    <div class="chart"><span class="ph">Gráfica 02 · Fib 0.6 · semanal<b>sube a assets/conf-02.jpg</b></span></div>
+    <div class="sub" style="margin-top:24px;">En la <b>semanal</b>, el precio descansa en el nivel <b>0.6</b> de Fibonacci — zona de descuento donde las tendencias retoman fuerza.</div>
   </div>
   <div class="foot"><span class="han"><i></i>@randyortegar</span><span class="sw">→</span></div></div>
 </div></div>
 
 <!-- ===== SLIDE 05 · CONF 03 ===== -->
 <div class="slidecap"><span><span class="n">05</span> · CONFIRMACIÓN 03</span><span>ESCENA · GOOG</span></div>
-<div class="stage"><div class="frame">
-  <div class="scene"></div><div class="scrim"></div>
+<div class="stage"><div class="frame on-dark">
+  <div class="scene"></div><div class="scrim"></div><div class="fade-top"></div>
   <span class="reg tl"></span><span class="reg tr"></span>
-  <div class="pad"><div class="top">
-    <div class="badge"><span class="num">03</span> Proyección</div>
-    <div class="big" style="font-size:250px;margin-top:20px;">+24%</div>
-    <div class="sub" style="margin-top:14px;">Del precio actual <b>(~$326)</b> a su último ATH <b>(~$405)</b> hay más de <b>+20%</b> de recorrido. Descuento frente a máximos.</div>
+  <div class="pad safe"><div class="top">
+    <div class="badge"><span class="num">03</span> Proyección &nbsp;·&nbsp; <span class="big" style="font-size:60px;line-height:1;">+24%</span></div>
+    <div class="h h-md" style="margin-top:20px;">Descuento hasta el <span class="hi">ATH</span>.</div>
+    <div class="chart"><span class="ph">Gráfica 03 · Proyección a ATH<b>sube a assets/conf-03.jpg</b></span></div>
+    <div class="sub" style="margin-top:24px;">Del precio actual <b>(~$326)</b> a su último ATH <b>(~$405)</b> hay más de <b>+20%</b> de recorrido al alza.</div>
   </div>
   <div class="foot"><span class="han"><i></i>@randyortegar</span><span class="sw">→</span></div></div>
 </div></div>
 
 <!-- ===== SLIDE 06 · CONF 04 ===== -->
 <div class="slidecap"><span><span class="n">06</span> · CONFIRMACIÓN 04</span><span>ESCENA · GOOG</span></div>
-<div class="stage"><div class="frame">
-  <div class="scene"></div><div class="scrim"></div>
+<div class="stage"><div class="frame on-dark">
+  <div class="scene"></div><div class="scrim"></div><div class="fade-top"></div>
   <span class="reg tl"></span><span class="reg tr"></span>
-  <div class="pad"><div class="top">
+  <div class="pad safe"><div class="top">
     <div class="badge"><span class="num">04</span> Fundamental</div>
-    <div class="h h-md" style="margin-top:26px;">Venció los <span class="hi">earnings</span>.</div>
-    <div class="sub" style="margin-top:28px;font-size:34px;">Ingresos trimestrales: <b>$110B ▲ $120B</b>.<br>Superó las estimaciones del mercado. Técnico y fundamental, al mismo lado.</div>
+    <div class="h h-md" style="margin-top:22px;">Venció los <span class="hi">earnings</span>.</div>
+    <div class="chart"><span class="ph">Gráfica 04 · Beneficios e ingresos<b>sube a assets/conf-04.jpg</b></span></div>
+    <div class="sub" style="margin-top:24px;">Los ingresos pasaron de <b>~$110B</b> a <b>~$120B</b>, superando las estimaciones. Técnico y fundamental, al mismo lado.</div>
   </div>
   <div class="foot"><span class="han"><i></i>@randyortegar</span><span class="sw">→</span></div></div>
 </div></div>
@@ -182,7 +208,7 @@ body{padding:64px 20px 120px;display:flex;flex-direction:column;align-items:cent
 <div class="stage"><div class="frame">
   <div class="scene"></div><div class="scrim"></div>
   <span class="reg tl"></span><span class="reg tr"></span>
-  <div class="pad"><div class="top">
+  <div class="pad safe"><div class="top">
     <div class="eyebrow">La pregunta</div>
     <div class="rule"></div>
     <div class="h h-lg" style="margin-top:34px;">¿10% CDT anual<br>o <span class="hi">+24%</span>?</div>
@@ -195,6 +221,8 @@ body{padding:64px 20px 120px;display:flex;flex-direction:column;align-items:cent
   <b>NOTAS DE PRODUCCIÓN</b><br>
   · <span class="sig">Fondo</span> — foto real incrustada (self-contained). Fuente también en <b>profiles/randyortegar/assets/scene-goog.jpg</b>.<br>
   · Texto compuesto en la <b>zona superior</b> (pared) — la escena queda visible debajo. Un solo acento rojo por slide.<br>
+  · <span class="sig">Confirmaciones (03–06)</span> — cada una lleva su gráfica: sube tus 4 capturas a <b>assets/conf-01…04.jpg</b> (01 EMA 200 · 02 fib 0.6 semanal · 03 proyección ATH · 04 earnings). El fade negro desde arriba las integra sobre la escena.<br>
+  · <span class="sig">Zona segura</span> — texto de slides 03–07 bajado bajo la barra/buscador de TikTok.<br>
   · <span class="sig">9:16</span> nativo de TikTok; recorta al centro para 4:5 en IG.<br>
   · Verifica antes de publicar: <b>+24% / ~$405 ATH</b> y los ingresos <b>$110B→$120B</b> con tus cifras exactas.
 </div>
