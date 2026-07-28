@@ -18,13 +18,13 @@ kicker, no frame counter.
 | `brand.json` | Machine-readable brand foundation + carousel records |
 | `brandbook-feed.html` | Brandbook (color / type / symbols) + 12-cover feed example |
 | `carousel-01-goog.html` | Finished Carousel 01 (self-contained: fonts + scene photo embedded) |
-| `assets/scene-goog.jpg` | The recurring scene photo (1080×1920) |
-| `export/` | Ready-to-post slides — `goog-slide-01…07` as 1080×1920 JPG + 2x PNG masters |
+| `assets/scene-goog-34.jpg` | The recurring scene photo, 3:4 (1080×1440) — embedded in the carousel |
+| `export/` | Ready-to-post slides — `goog-slide-01…07` as 1080×1440 JPG + 2x PNG masters |
 
 ## Carousels
 
 ### Carousel 01 — `$GOOG` · "Un setup casi perfecto"
-7 slides, 9:16, single recurring scene with typography composed on top.
+7 slides, 3:4 (1080×1440), single recurring scene with typography composed on top.
 Hook → 4 confirmations (EMA 200 · fib 0.6 weekly · +24% to ATH · earnings beat)
 → CTA (CDT vs +24%).
 
@@ -51,5 +51,5 @@ Hook → 4 confirmations (EMA 200 · fib 0.6 weekly · +24% to ATH · earnings b
 ## Regenerating the export images
 
 The carousel HTML is the source of truth. To re-shoot the slides after editing
-copy or design, render each `.frame` at 1080×1920 with headless Chromium and
+copy or design, render each `.frame` at 1080×1440 with headless Chromium and
 save to `export/` (JPG for posting, 2x PNG as master).

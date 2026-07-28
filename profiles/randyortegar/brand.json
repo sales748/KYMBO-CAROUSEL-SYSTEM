@@ -96,7 +96,7 @@
     "Varía el arquetipo post-a-post; ninguna portada repite arquetipo con su vecina.",
     "Toda cifra es ilustrativa y se marca como tal; incluir 'No es asesoría financiera'."
   ],
-  "format": { "aspect": "4:5", "px": "1080 x 1350", "platform": "Instagram carousel / TikTok slides" },
+  "format": { "aspect": "3:4", "px": "1080 x 1440", "platform": "TikTok slides / carruseles (el 3:4 es el que sirve en ambos)" },
 
   "carousels": [
     {
