@@ -1,0 +1,96 @@
+{
+  "brand": "Randy Ortega",
+  "tagline": "The Signal System",
+  "designSystem": "THE SIGNAL SYSTEM — a financial-terminal design language for an organic personal brand. Brutalist-technical, editorial, mono-annotated.",
+  "note": "Original system inspired by the ENERGY of technical/broadcast brand references (signal red, mono furniture, registration marks, frame counters) — not a copy of any account. Built for Randy Ortega's personal brand.",
+  "subject": {
+    "name": "Randy Ortega",
+    "role": "Economista e inversionista de la bolsa de valores de EE. UU.",
+    "platform": "TikTok (primary), reusable for Instagram carousels",
+    "mission": "Compartir, educar y entretener sobre inversiones en la bolsa: buenos hábitos, mecánica de mercado y contrarian takes.",
+    "audience": "Retail investors hispanohablantes interesados en el mercado de EE. UU.",
+    "disclaimer": "No es asesoría financiera — solo educación. Toda cifra mostrada es ilustrativa."
+  },
+  "voice": "Sharp, precise, contrarian, un poco rebelde pero humano. Español con furniture técnico en inglés/mono (tickers, códigos, coordenadas).",
+
+  "foundation": {
+    "colors": {
+      "ink":      { "hex": "#121212", "role": "Superficie oscura primaria / tinta sobre claro." },
+      "bone":     { "hex": "#EDE9DF", "role": "Papel cálido / superficie clara / texto sobre oscuro." },
+      "signal":   { "hex": "#F42B16", "role": "El único acento. Un elemento héroe por slide — la cifra que importa, la señal contrarian. Nunca body copy." },
+      "concrete": { "hex": "#C4C1B7", "role": "Gris cálido / tercera superficie / paneles y datos." },
+      "steel":    { "hex": "#6E6C64", "role": "Mono apagado / etiquetas técnicas y anotaciones." }
+    },
+    "typography": {
+      "display": "Archivo (bundled stand-in) — licenciar → Neue Haas Grotesk Display / Helvetica Now Display. Neo-grotesca, pesos 600–900, mayúsculas, tracking negativo, tabular figures.",
+      "mono": "Space Mono — la voz de terminal: kickers, tickers, timestamps, códigos de release, coordenadas, contadores de frame, footers.",
+      "note": "CSS references 'Archivo' first; drop a licensed Neue Haas/Helvetica Now woff2 into /fonts and add a face to have it take over."
+    },
+    "motifs": {
+      "swipe": "(→) flecha entre paréntesis — el tell de la marca. 'sigue / el siguiente movimiento'.",
+      "registration": "Cuadros de registro ▪ en las esquinas — precisión, 'verificado'.",
+      "kicker": "Etiqueta de pilar entre corchetes rojos: [ CONTRARIAN ], arriba-izquierda.",
+      "frame": "Código de release R-NN + contador NN/12, arriba-derecha.",
+      "signalBlock": "Bloque rojo sólido — enmarca la cifra héroe.",
+      "delta": "Triángulos ▲▼ alza/baja. Verde nunca; la alza es rojo señal.",
+      "geoStamp": "40°42′N · NYSE — coordenadas de Wall St. en el footer.",
+      "tickerRule": "Cinta de datos entre hairlines. Siempre ilustrativa, nunca precios en vivo."
+    }
+  },
+
+  "myDesignLanguage": {
+    "principle": "Type-forward, editorial, altísimo contraste. Una idea por slide, tipografía colosal, aire generoso, exactamente un acento rojo.",
+    "surfaces": {
+      "ink": "Campo Ink, tipo Bone.",
+      "bone": "Campo Bone, tipo Ink.",
+      "concrete": "Campo Concrete (gris), tipo Ink — para mecánica/datos.",
+      "signal": "Campo Signal (rojo), tipo Ink, palabra héroe en blanco — puntuación del feed (takes contrarian, CTA).",
+      "rhythm": "Las superficies alternan por orden de post → checkerboard en el grid 3-wide, con el rojo puntuando (p. ej. posts 05 y 12)."
+    },
+    "coverArchetypes": {
+      "STATEMENT": "El titular llena el lienzo, una palabra en rojo.",
+      "TICKER": "Una cifra colosal domina (stat), etiqueta mono debajo.",
+      "SIGNAL": "Campo rojo como héroe; take contrarian o CTA.",
+      "INDEX": "Editorial — kicker entre corchetes + numeral índice gigante fantasma detrás del titular.",
+      "TAPE": "Campo concrete/bone con una regla de ticker; el titular manda."
+    },
+    "note2": "Los arquetipos son un KIT que el diseñador compone con criterio editorial — nunca un rellenado mecánico. Bespoke pero siempre una sola marca."
+  },
+
+  "feedBatch01": [
+    { "n": 1,  "pillar": "Contrarian", "archetype": "STATEMENT", "surface": "ink",      "cover": "El 90% pierde. Tú no." },
+    { "n": 2,  "pillar": "Educa·101",  "archetype": "INDEX",     "surface": "bone",     "cover": "¿Qué es un ETF?" },
+    { "n": 3,  "pillar": "Hábitos",    "archetype": "STATEMENT", "surface": "concrete", "cover": "Invierte antes de gastar" },
+    { "n": 4,  "pillar": "El poder del tiempo", "archetype": "TICKER", "surface": "ink", "cover": "$1.2M — así trabaja el interés compuesto (ilustrativo)" },
+    { "n": 5,  "pillar": "Contrarian", "archetype": "SIGNAL",    "surface": "signal",   "cover": "Deja de ver el precio cada 5 minutos" },
+    { "n": 6,  "pillar": "Mentalidad", "archetype": "STATEMENT", "surface": "ink",      "cover": "El mercado no te debe nada" },
+    { "n": 7,  "pillar": "Educa",      "archetype": "INDEX",     "surface": "bone",     "cover": "3 errores que te cuestan miles" },
+    { "n": 8,  "pillar": "La matemática", "archetype": "TICKER", "surface": "concrete", "cover": "−37% — lo que te quitan las comisiones (ilustrativo)" },
+    { "n": 9,  "pillar": "Hábitos",    "archetype": "STATEMENT", "surface": "ink",      "cover": "Automatiza. Luego olvídalo." },
+    { "n": 10, "pillar": "Contrarian", "archetype": "TAPE",      "surface": "bone",     "cover": "Las noticias son ruido" },
+    { "n": 11, "pillar": "Historia·POV","archetype": "INDEX",    "surface": "ink",      "cover": "Cómo perdí $4,000 a los 22" },
+    { "n": 12, "pillar": "Empieza",    "archetype": "SIGNAL",    "surface": "signal",   "cover": "Hoy. No mañana." }
+  ],
+
+  "productionPaths": {
+    "note": "Mismo sistema de tipo, furniture, paleta y voz para ambos.",
+    "A_html": "Diseño puro, 100% en código. Consistencia perfecta. Entrega inmediata.",
+    "B_scene": "Sobre imágenes generadas por IA (img→img en ChatGPT por Randy/Kim). Claude escribe la visión completa (estructura + copy + layout + prompt exacto por slide); Randy genera; Claude compone tipo + acentos encima.",
+    "method": [
+      "STEP 01 — Fundación de marca (este doc) ✓",
+      "STEP 02 — Estructura + script del carrusel (Randy/Kim)",
+      "STEP 03 — Prompts de imagen por slide (Claude)",
+      "STEP 04 — Generas escenas en ChatGPT img→img (Randy/Kim)",
+      "STEP 05 — Compongo diseño + acentos (Claude)"
+    ]
+  },
+
+  "gridRules": [
+    "Nunca dos superficies idénticas adyacentes en el grid (checkerboard).",
+    "El rojo puntúa, no rellena — un elemento héroe por slide.",
+    "Varía el arquetipo post-a-post; ninguna portada repite arquetipo con su vecina.",
+    "Toda cifra es ilustrativa y se marca como tal; incluir 'No es asesoría financiera'."
+  ],
+  "format": { "aspect": "4:5", "px": "1080 x 1350", "platform": "Instagram carousel / TikTok slides" },
+  "deliverable": "build/randy/brandbook-feed.html"
+}
