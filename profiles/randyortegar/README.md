@@ -50,6 +50,35 @@ Hook → 4 confirmations (EMA 200 · fib 0.6 weekly · +24% to ATH · earnings b
   >
   > #educacionfinanciera #analisistecnico #aprenderainvertir #graficas #bolsa
 
+### X / Twitter deck (English, uncensored)
+
+`carousel-01-goog-x-en.html` — **4 slides = the 4 confirmations only** (X allows
+max 4 images). Hook, context and CTA go in the tweet body. X permits finance
+content TikTok suppresses, so this version keeps the real figures.
+Exports in `export/x-en/`.
+
+**Tweet copy:**
+> Google ($GOOG) has a near-perfect setup. I lined up 4 quality confirmations 👇
+>
+> 1) Tapped the 200 EMA (historically +20% each time)
+> 2) 60% retracement of the last bullish leg (weekly, 0.6 fib)
+> 3) ~+24% projection to its all-time high (~$326 → ~$405)
+> 4) Beat earnings — revenue ~$110B → ~$120B
+>
+> Safe 10% in a CD, or this? Your call.
+> Not financial advice — educational. Figures illustrative.
+>
+> #GOOG #Alphabet #stocks #investing #technicalanalysis
+
+## Delivery standard (every carousel, going forward)
+
+Each carousel ships in **two versions**:
+
+| Version | Platform | Language | Slides | Framing |
+|---|---|---|---|---|
+| **TikTok** | TikTok / IG | Spanish | full (7) | de-risked / educational (see `system/trading-content-safety.md`) |
+| **X** | X / Twitter | English | ≤4 (confirmations) | uncensored, rest in the tweet body |
+
 ## Regenerating the export images
 
 The carousel HTML is the source of truth. To re-shoot the slides after editing

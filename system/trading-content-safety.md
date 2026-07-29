@@ -59,6 +59,35 @@ moderate content that could cause "financial harm". The triggers:
 | ¿10% CDT o +24%? | ¿conocías estas señales? guárdalo para tu análisis |
 | esto va a subir / cómpralo | esto es lo que yo observo (análisis, no consejo) |
 
+## Delivery standard: two versions per carousel
+
+Trading carousels ship in **two cuts**, because the platforms have opposite rules:
+
+- **TikTok / IG (Spanish)** — full deck, **de-risked**: education framing, no
+  return promises, no buy/sell calls, on-slide disclaimer. (This whole guide.)
+- **X / Twitter (English)** — **uncensored**, **max 4 slides** (X's image limit).
+  Use the 4 confirmations as the slides; put the hook, context and CTA in the
+  tweet body. X allows finance content TikTok suppresses, so keep the real
+  figures. A short "Not financial advice" line is still good practice.
+
+## Suspected chart-related triggers (TikTok)
+
+If a de-risked deck is still suppressed, the remaining likely causes are visual,
+not textual:
+
+1. **Trading-terminal screenshots** — even de-watermarked, a raw candlestick/
+   TradingView-style chart can trip the "financial/trading" visual classifier.
+   Experiment: redraw the key idea as a clean, branded mini-chart instead of a
+   literal platform screenshot.
+2. **Recognizable platform in the scene photo** — if the laptop screen shows a
+   trading site URL/logo, OCR/logo detection can flag it. Use a scene whose
+   screen is neutral or off.
+3. **Near-identical frames** — the same background on every slide can read as
+   duplicate/low-effort. Vary the composition across slides.
+4. **Account-level throttle** — after repeated flags the account itself is
+   limited; new posts start suppressed regardless of content. Cooldown + a run
+   of clean educational posts is the only fix.
+
 ## If a post is suppressed (0 views for hours)
 
 1. **Delete or set the post to private** (a flagged post can drag the account).
