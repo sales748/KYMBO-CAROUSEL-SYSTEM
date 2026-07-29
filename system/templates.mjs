@@ -253,8 +253,9 @@ function sceneSlide(s, ctx) {
     : `<div class="await">Scene image pending<br>${esc(s.imageId || '')}${s.screen ? `<br><br>+ composite: ${esc(s.screen.app)}` : ''}</div>`;
   return `<div class="slide scene ${ctx.surface || ''} ${coverCls}" data-idx="${ctx.index}">
     <div class="layer-bg">${bg}</div>
-    ${screenOverlay(s)}
     <div class="layer-scrim ${scrim}"></div>
+    ${screenOverlay(s)}
+    <div class="layer-textscrim ${scrim}"></div>
     <header class="hd">${kicker(s.layout === 'cover' ? '' : (s.kicker || ctx.pillar))}</header>
     <main class="bd anchor-${anchor}">${sceneBody(s)}${arrowFor(s.arrow)}</main>
     ${footer(ctx)}

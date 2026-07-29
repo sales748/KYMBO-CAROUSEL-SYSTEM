@@ -15,7 +15,7 @@ import { appPage } from './app.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
-const profile = join(root, 'profiles', 'kymbo');
+const profile = join(root, 'profiles', process.env.PROFILE || 'kymbo');
 const appDir = join(profile, 'build', 'app');
 mkdirSync(join(appDir, 'img'), { recursive: true });
 

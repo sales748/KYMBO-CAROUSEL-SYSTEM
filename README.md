@@ -57,6 +57,10 @@ npm install        # once (fonts + headless Chromium renderer)
 npm run build      # render HTML + screenshot every slide → profiles/kymbo/build/img/*.png
 ```
 
+The shared engine is **profile-agnostic** — it selects which profile to build
+from the `PROFILE` env var (default `kymbo`), e.g. `PROFILE=kymbo npm run build`.
+No client name is hard-coded in `system/`.
+
 `npm run render` writes the HTML only; `npm run shoot` screenshots it.
 Review everything in `profiles/kymbo/build/index.html` (gallery) and
 `profiles/kymbo/build/feed.html` (Instagram grid mock).
@@ -85,3 +89,20 @@ to post to TikTok/IG. See
 
 > Adding a third profile = add `profiles/<name>/` with its own `brand.json`.
 > The shared `system/` engine stays untouched.
+
+---
+
+## System design rules (shared — apply to every profile)
+
+These live in the engine so both clients inherit them automatically:
+
+- **Scene text legibility.** On any scene slide, text is protected by a
+  *text-legibility scrim* (`.layer-textscrim`) that sits **above** the photo and
+  any composited device screen. White type never clashes with a bright
+  background — including the white screen of a phone/laptop we composite onto.
+  When adding scenes for a profile that hand-composes HTML, reproduce the same
+  gradient behind the text.
+- **Device screens = real UI, composited.** Generate the scene with a blank
+  white device screen; the designed UI is mapped onto it in perspective
+  (`screen.quad`). Never bake a fake UI into the photo.
+- **One accent per slide; hand-made accents stay restrained** (1–2 max).

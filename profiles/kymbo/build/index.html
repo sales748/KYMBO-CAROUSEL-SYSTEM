@@ -207,12 +207,19 @@
 .scene .layer-scrim.bottom{ background:linear-gradient(to top, rgba(18,21,28,.94) 4%, rgba(18,21,28,.5) 38%, rgba(18,21,28,.08) 76%); }
 .scene .layer-scrim.top{ background:linear-gradient(to bottom, rgba(18,21,28,.92) 2%, rgba(18,21,28,.45) 40%, rgba(18,21,28,.06) 80%); }
 .scene .layer-scrim.soft{ background:linear-gradient(to top, rgba(18,21,28,.7), rgba(18,21,28,.28) 50%, rgba(18,21,28,.55)); }
-.scene .hd, .scene .bd, .scene .ft{ position:relative; z-index:2; }
-.scene .bd{ text-shadow:0 2px 34px rgba(0,0,0,.5); }
+/* TEXT-LEGIBILITY SCRIM (system rule): sits ABOVE the composited device
+   screen so white type never clashes with a bright screen or bright photo.
+   Any scene slide with text gets this on its anchored edge. */
+.scene .layer-textscrim{ position:absolute; inset:0; z-index:3; pointer-events:none; }
+.scene .layer-textscrim.bottom{ background:linear-gradient(to top, rgba(13,16,22,.97) 0%, rgba(13,16,22,.9) 17%, rgba(13,16,22,.52) 37%, rgba(13,16,22,.12) 52%, transparent 63%); }
+.scene .layer-textscrim.top{ background:linear-gradient(to bottom, rgba(13,16,22,.97) 0%, rgba(13,16,22,.9) 15%, rgba(13,16,22,.5) 35%, rgba(13,16,22,.12) 50%, transparent 62%); }
+.scene .layer-textscrim.soft{ background:radial-gradient(130% 75% at 50% 92%, rgba(13,16,22,.72), transparent 72%); }
+.scene .hd, .scene .bd, .scene .ft{ position:relative; z-index:4; }
+.scene .bd{ text-shadow:0 2px 18px rgba(0,0,0,.6); }
 .scene .bd.anchor-top{ justify-content:flex-start; }
 .scene .bd.anchor-bottom{ justify-content:flex-end; }
 .scene .bd.anchor-center{ justify-content:center; }
-.scene.cover-statement h1, .scene.cover-stat h1, .scene .p-title, .scene .list-title, .scene .cta-h{ text-shadow:0 3px 40px rgba(0,0,0,.55); }
+.scene.cover-statement h1, .scene.cover-stat h1, .scene .p-title, .scene .list-title, .scene .cta-h{ text-shadow:0 2px 14px rgba(0,0,0,.7), 0 1px 3px rgba(0,0,0,.6); }
 
 /* ============================================================
    ORGANIC HAND-MADE ACCENTS — "the alive layer"

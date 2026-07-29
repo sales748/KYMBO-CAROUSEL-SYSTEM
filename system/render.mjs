@@ -13,9 +13,10 @@ import { renderSlide } from './templates.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
-// Active profile: this JS pipeline drives the Kymbo profile. The shared engine
-// (system/, fonts/) lives at root; per-profile inputs/outputs live under it.
-const profile = join(root, 'profiles', 'kymbo');
+// The shared engine (system/, fonts/) lives at root; per-profile inputs/outputs
+// live under profiles/<name>. Pick the profile with PROFILE=<name> (default kymbo).
+const PROFILE = process.env.PROFILE || 'kymbo';
+const profile = join(root, 'profiles', PROFILE);
 const build = join(profile, 'build');
 mkdirSync(join(build, 'carousels'), { recursive: true });
 mkdirSync(join(build, 'img'), { recursive: true });
