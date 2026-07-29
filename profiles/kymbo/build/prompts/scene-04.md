@@ -1,0 +1,68 @@
+# Every month you wait, the middleman keeps his cut.
+
+**Carousel:** scene-04 · **Pillar:** The Decision · **Path B (scene / organic)**
+
+> Path B — scene/organic. Pure-photo slides + one DEVICE-COMPOSITE (blank white laptop screen → composite laptop-dashboard). Drop photos into assets/scene-04/ as s1..s5 .png.
+
+## STYLE LINE — paste this into ChatGPT once, keep it on every image
+
+> ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props, no cash. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
+
+You only need to generate the 5 PHOTO slides below. Slides marked APP need no image — they build from our booking-app design automatically.
+
+---
+
+## Slide 1 — SCENE-04 / 1  (PHOTO)
+
+**On-slide copy:** Every month you wait,
+the middleman ==keeps his cut==.
+
+Save as `s1.png` in `assets/scene-04/`.
+
+```text
+A boutique-hotel owner late in the evening reviewing numbers by warm lamp light at a modern walnut desk, pensive, a laptop glowing softly (screen not readable), plant nearby, deep navy shadows (face soft / not identifiable). LEAVE THE TOP THIRD a calm darker wall for the headline; subject lower. [Apply the STYLE LINE.]
+```
+
+## Slide 2 — SCENE-04 / 2  (PHOTO)
+
+**On-slide copy:** ==$2,000+== leaves your account
+every month you delay.  —  For a mid-size property. The system that stops it takes weeks to build.
+
+Save as `s2.png` in `assets/scene-04/`.
+
+```text
+A quiet modern reception desk at dusk, empty and still, one warm lamp glowing, a leafy plant, deep shadows, a sense of money quietly slipping away. LEAVE THE BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]
+```
+
+## Slide 3 — SCENE-04 / 3  (PHOTO)
+
+**On-slide copy:** The cost of waiting is ((not zero)).  —  “We'll do it next quarter” is a decision to pay commission for another quarter.
+
+Save as `s3.png` in `assets/scene-04/`.
+
+```text
+A sunlit modern room with long dramatic shadows moving across a wall — a visual of time passing — a single chair, a plant, warm cream plaster. Contemplative. LEAVE THE TOP THIRD a calm wall for text. [Apply the STYLE LINE.]
+```
+
+## Slide 4 — SCENE-04 / 4  (PHOTO)
+
+**On-slide copy:** The best time was last year.
+The __second-best__ is now.  —  Every booking from today can be one you actually own.
+
+Save as `s4.png` in `assets/scene-04/`.
+
+```text
+A fresh bright morning in a modern boutique lobby, glass doors opening to golden daylight, plants, walnut and cream, a hopeful new-day feeling. LEAVE THE BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]
+```
+
+## Slide 5 — SCENE-04 / 5  (PHOTO + COMPOSITE — laptop, blank white screen)
+
+**On-slide copy:** ==Stop the meter.==  —  CTA: Comment START to begin
+
+> **Composite slide.** Generate this photo with a BLANK WHITE device screen; we then composite the `laptop-dashboard` booking-app UI onto it.
+
+Save as `s5.png` in `assets/scene-04/`.
+
+```text
+A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled boutique-hotel office, morning light, a coffee beside it. IMPORTANT FOR COMPOSITING: laptop FRONT-ON to the camera, screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no glare, unobstructed. LEAVE THE BOTTOM THIRD calm for text. [Apply the STYLE LINE.]
+```
