@@ -32,7 +32,25 @@
       "body": "Until you count how little of it you actually keep.",
       "bg": "assets/scene-01/s2.png",
       "screen": {
-        "app": "phone-confirm"
+        "app": "phone-confirm",
+        "quad": [
+          [
+            350,
+            166
+          ],
+          [
+            740,
+            174
+          ],
+          [
+            738,
+            1028
+          ],
+          [
+            348,
+            1028
+          ]
+        ]
       },
       "imagePrompt": "Close-up: two hands holding an iPhone 17 (Dynamic Island, thin bezels) at a warm walnut cafe table, morning light, a flat-white with latte art and a linen napkin, a small plant softly behind. IMPORTANT FOR COMPOSITING: the phone is held nearly FLAT and FRONT-ON to the camera, and its screen is a solid PURE-WHITE rectangle (#FFFFFF) \u2014 completely blank, no UI, no reflections, fully unobstructed by fingers. Keep the BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]"
     },
@@ -85,7 +103,25 @@
       "action": "Comment DIRECT and we'll map your first move",
       "bg": "assets/scene-01/s6.png",
       "screen": {
-        "app": "laptop-hero"
+        "app": "laptop-hero",
+        "quad": [
+          [
+            158,
+            311
+          ],
+          [
+            891,
+            311
+          ],
+          [
+            891,
+            802
+          ],
+          [
+            158,
+            807
+          ]
+        ]
       },
       "imagePrompt": "A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled boutique-hotel back office, morning light, a coffee and a small notebook beside it. IMPORTANT FOR COMPOSITING: the laptop is FRONT-ON to the camera (screen facing us as square as possible), and the screen is a solid PURE-WHITE rectangle (#FFFFFF) \u2014 completely blank, no UI, no glare, fully unobstructed. LEAVE THE BOTTOM THIRD / right side calm for text. [Apply the STYLE LINE.]"
     }
