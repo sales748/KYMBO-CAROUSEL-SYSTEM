@@ -240,8 +240,24 @@ function quadMatrix(w, h, quad) {
 }
 function screenOverlay(s) {
   if (!s.screen || !s.screen.app || !s.screen.quad) return '';
-  const [w, h] = SCREEN_DIMS[s.screen.app] || [1440, 900];
-  return `<img class="screen-ovl" style="width:${w}px;height:${h}px;transform:${quadMatrix(w, h, s.screen.quad)};transform-origin:0 0" src="../app/img/${esc(s.screen.app)}.png" alt="">`;
+  const [w] = SCREEN_DIMS[s.screen.app] || [1440, 900];
+  let q = s.screen.quad;
+  // overscan: expand the quad slightly from its centroid so the UI fully covers
+  // the screen with no exposed rim (bezel/white edge)
+  const over = s.screen.overscan ?? 0.012;
+  if (over) {
+    const cx = (q[0][0] + q[1][0] + q[2][0] + q[3][0]) / 4;
+    const cy = (q[0][1] + q[1][1] + q[2][1] + q[3][1]) / 4;
+    q = q.map(([x, y]) => [cx + (x - cx) * (1 + over), cy + (y - cy) * (1 + over)]);
+  }
+  // Match the element to the SCREEN's aspect and use object-fit:cover so the UI
+  // is never stretched — it fills by cropping, like a real screenshot on a device.
+  const d = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
+  const aspect = ((d(q[0], q[1]) + d(q[3], q[2])) / 2) / ((d(q[0], q[3]) + d(q[1], q[2])) / 2);
+  const elW = w, elH = Math.max(1, Math.round(w / aspect));
+  const isPhone = s.screen.app.startsWith('phone');
+  const radius = s.screen.radius ?? (isPhone ? 44 : 14);
+  return `<img class="screen-ovl" style="width:${elW}px;height:${elH}px;object-fit:cover;border-radius:${radius}px;transform:${quadMatrix(elW, elH, q)};transform-origin:0 0" src="../app/img/${esc(s.screen.app)}.png" alt="">`;
 }
 
 function sceneSlide(s, ctx) {

@@ -35,20 +35,20 @@
         "app": "phone-confirm",
         "quad": [
           [
-            350,
-            166
+            325,
+            141
           ],
           [
-            740,
-            174
+            748,
+            141
           ],
           [
-            738,
-            1028
+            748,
+            1051
           ],
           [
-            348,
-            1028
+            325,
+            1051
           ]
         ]
       },
@@ -63,7 +63,6 @@
       "index": "02",
       "title": "==25%== of that win was never yours.",
       "body": "The middleman took his cut before the money ever reached you.",
-      "arrow": "downLeft",
       "bg": "assets/scene-01/s3.png",
       "imagePrompt": "Modern editorial still-life, slight overhead angle: a guest's hand tapping a sleek matte-black contactless card on a minimalist modern payment terminal at a cream-and-walnut hotel reception, warm directional light, a small potted plant softly out of focus behind. Contemporary and premium. LEAVE THE TOP THIRD a calm darker surface for text; hand + terminal lower-right. NO cash, no coins, no old objects. [Apply the STYLE LINE.]"
     },
@@ -107,19 +106,19 @@
         "quad": [
           [
             158,
-            311
+            305
           ],
           [
-            891,
-            311
+            893,
+            305
           ],
           [
-            891,
-            802
+            893,
+            810
           ],
           [
             158,
-            807
+            810
           ]
         ]
       },
