@@ -127,3 +127,7 @@ These live in the engine so both clients inherit them automatically:
 - **Post every finished image into the chat.** Whenever a slide/carousel image
   is rendered, deliver the PNG in the conversation so it's easy to download —
   don't just commit it to the repo.
+- **Always hand over COMPLETE image prompts.** When asking the client to generate
+  an image, give a self-contained, copy-paste-ready prompt with the full style
+  line spelled out inline — never shorthand or "apply the style line separately."
+  The prompt sheets already expand the style line into every prompt.

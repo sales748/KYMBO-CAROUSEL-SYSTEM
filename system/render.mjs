@@ -177,6 +177,15 @@ function sceneDoc(c) {
 </head><body>${slides}</body></html>`;
 }
 
+// Each prompt is expanded into a COMPLETE, copy-paste-ready prompt: the marker
+// `[Apply the STYLE LINE.]` is replaced with the full style line so every prompt
+// is self-contained (never a shorthand or a "apply it separately" reference).
+function fullPrompt(imagePrompt, styleLine) {
+  const sl = styleLine || '';
+  return imagePrompt.includes('[Apply the STYLE LINE.]')
+    ? imagePrompt.replace('[Apply the STYLE LINE.]', sl)
+    : `${imagePrompt} ${sl}`.trim();
+}
 function promptSheet(c) {
   const photoSlides = c.slides.filter((s) => s.imagePrompt);
   const lines = [
@@ -186,11 +195,7 @@ function promptSheet(c) {
     ``,
     `> ${c.note}`,
     ``,
-    `## STYLE LINE — paste this into ChatGPT once, keep it on every image`,
-    ``,
-    `> ${c.styleLine || ''}`,
-    ``,
-    `You only need to generate the ${photoSlides.length} PHOTO slides below. Slides marked APP need no image — they build from our booking-app design automatically.`,
+    `You need to generate the ${photoSlides.length} PHOTO slides below. Each fenced prompt is COMPLETE and copy-paste-ready — the full style line is already baked in, so consistency holds across every image. Slides marked "no image" build from our booking-app design automatically.`,
     ``,
     `---`,
   ];
@@ -205,7 +210,7 @@ function promptSheet(c) {
     );
     if (isPhoto) {
       if (s.screen) lines.push(`> **Composite slide.** Generate this photo with a BLANK WHITE device screen; we then composite the \`${s.screen.app}\` booking-app UI onto it.`, ``);
-      lines.push(`Save as \`s${i + 1}.png\` in \`${c.assetDir}/\`.`, ``, '```text', s.imagePrompt, '```');
+      lines.push(`Save as \`s${i + 1}.png\` in \`${c.assetDir}/\`.`, ``, '```text', fullPrompt(s.imagePrompt, c.styleLine), '```');
     } else {
       lines.push(`> **No image needed.**`);
     }

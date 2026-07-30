@@ -4,11 +4,7 @@
 
 > Path B — scene/organic. Pure-photo slides. For the FEED proposal only the cover (s1) is needed first. Drop photos into assets/scene-05/ as s1..s6 .png.
 
-## STYLE LINE — paste this into ChatGPT once, keep it on every image
-
-> ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
-
-You only need to generate the 6 PHOTO slides below. Slides marked APP need no image — they build from our booking-app design automatically.
+You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE and copy-paste-ready — the full style line is already baked in, so consistency holds across every image. Slides marked "no image" build from our booking-app design automatically.
 
 ---
 
@@ -20,7 +16,7 @@ addicted to OTAs.
 Save as `s1.png` in `assets/scene-05/`.
 
 ```text
-A boutique-hotel owner (three-quarter, face not clearly identifiable) pausing thoughtfully — mid-doubt — at a beautiful modern reception or lounge, warm lamp light, plants, walnut and cream, a small green neon glow. Quietly skeptical, reflective mood. LEAVE THE TOP THIRD a calm darker wall for the headline; subject lower-right. [Apply the STYLE LINE.]
+A boutique-hotel owner (three-quarter, face not clearly identifiable) pausing thoughtfully — mid-doubt — at a beautiful modern reception or lounge, warm lamp light, plants, walnut and cream, a small green neon glow. Quietly skeptical, reflective mood. LEAVE THE TOP THIRD a calm darker wall for the headline; subject lower-right. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 2 — SCENE-05 / 2  (PHOTO)
@@ -30,7 +26,7 @@ A boutique-hotel owner (three-quarter, face not clearly identifiable) pausing th
 Save as `s2.png` in `assets/scene-05/`.
 
 ```text
-A traveller on a sofa searching a hotel name on a phone (screen not readable, ambient glow), warm evening light, plant nearby, cosy modern interior. LEAVE THE BOTTOM THIRD calm and darker for text; subject upper-mid. [Apply the STYLE LINE.]
+A traveller on a sofa searching a hotel name on a phone (screen not readable, ambient glow), warm evening light, plant nearby, cosy modern interior. LEAVE THE BOTTOM THIRD calm and darker for text; subject upper-mid. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 3 — SCENE-05 / 3  (PHOTO)
@@ -40,7 +36,7 @@ A traveller on a sofa searching a hotel name on a phone (screen not readable, am
 Save as `s3.png` in `assets/scene-05/`.
 
 ```text
-A calm modern hotel back-office desk with a laptop (screen ambient, not readable), a plant and coffee, soft daylight — a sense of quiet numbers. LEAVE THE TOP THIRD calm for text; desk lower. [Apply the STYLE LINE.]
+A calm modern hotel back-office desk with a laptop (screen ambient, not readable), a plant and coffee, soft daylight — a sense of quiet numbers. LEAVE THE TOP THIRD calm for text; desk lower. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 4 — SCENE-05 / 4  (PHOTO)
@@ -50,7 +46,7 @@ A calm modern hotel back-office desk with a laptop (screen ambient, not readable
 Save as `s4.png` in `assets/scene-05/`.
 
 ```text
-A guest relaxed and confident completing something on a phone at a warm café table (screen not readable), latte and plant nearby, reassured mood. LEAVE THE BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]
+A guest relaxed and confident completing something on a phone at a warm café table (screen not readable), latte and plant nearby, reassured mood. LEAVE THE BOTTOM THIRD calm and darker for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 5 — SCENE-05 / 5  (PHOTO)
@@ -60,7 +56,7 @@ A guest relaxed and confident completing something on a phone at a warm café ta
 Save as `s5.png` in `assets/scene-05/`.
 
 ```text
-A warm welcome moment — a host offering a small upgrade gesture (a glass of wine, a room key card) to a guest at a beautiful modern reception, golden light, plants (faces not identifiable). LEAVE THE TOP THIRD calm for text. [Apply the STYLE LINE.]
+A warm welcome moment — a host offering a small upgrade gesture (a glass of wine, a room key card) to a guest at a beautiful modern reception, golden light, plants (faces not identifiable). LEAVE THE TOP THIRD calm for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 6 — SCENE-05 / 6  (PHOTO — cta)
@@ -71,5 +67,5 @@ A warm welcome moment — a host offering a small upgrade gesture (a glass of wi
 Save as `s6.png` in `assets/scene-05/`.
 
 ```text
-A calm, confident boutique-hotel owner at ease in their beautiful property at warm evening hour, reassured (face soft / not identifiable), plants, soft lamp glow. LEAVE THE BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]
+A calm, confident boutique-hotel owner at ease in their beautiful property at warm evening hour, reassured (face soft / not identifiable), plants, soft lamp glow. LEAVE THE BOTTOM THIRD calm and darker for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
