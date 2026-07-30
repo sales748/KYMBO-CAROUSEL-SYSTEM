@@ -90,10 +90,21 @@ function galleryDoc() {
 writeFileSync(join(build, 'index.html'), galleryDoc());
 
 /* ---------- Instagram profile grid (feed.html) ---------- */
+// Curated one-month feed: organic SCENE covers interwoven with systemized HTML
+// covers. The 4 topics that have a scene version (Problem, Proof, POV, Decision)
+// use the scene cover — the flat HTML twin is dropped so nothing repeats.
+// Organic tiles sit one-per-row in a C1·C3·C1·C3 zigzag so the grid breathes.
+const FEED = [
+  'scene-01', 'c02', 'c04',
+  'c03', 'c05', 'scene-03',
+  'scene-02', 'c08', 'c09',
+  'c11', 'c12', 'scene-04',
+];
+const SCENE_SET = new Set(['scene-01', 'scene-02', 'scene-03', 'scene-04']);
 function feedDoc() {
-  const tiles = data.carousels.map((c) =>
-    `<a class="tile" href="index.html">
-       <img src="${imgName(c.id, 0)}" alt="${c.title}">
+  const tiles = FEED.map((base) =>
+    `<a class="tile${SCENE_SET.has(base) ? ' organic' : ''}" href="index.html">
+       <img src="img/${base}-s1.png" alt="${base}">
        <span class="car">▤</span>
      </a>`).join('');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
