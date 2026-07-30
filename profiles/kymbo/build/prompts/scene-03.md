@@ -52,7 +52,7 @@ A tidy, minimalist modern desk from above: a closed laptop, a cup of coffee, a s
 Save as `s4.png` in `assets/scene-03/`.
 
 ```text
-A modern open laptop (MacBook-style) on a walnut desk in a warm boutique-hotel back office, plants, morning light, a coffee beside it. IMPORTANT FOR COMPOSITING: laptop FRONT-ON to the camera, screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no glare, unobstructed. LEAVE THE BOTTOM THIRD calm for text. [Apply the STYLE LINE.]
+A modern open laptop (MacBook-style) on a walnut desk in a warm boutique-hotel back office, plants, morning light, a coffee beside it. IMPORTANT FOR COMPOSITING: laptop FRONT-ON to the camera, screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no glare, unobstructed. LEAVE THE BOTTOM THIRD calm for text. CRITICAL COMPOSITION: the device occupies only the UPPER ~55% of the frame; keep the LOWER ~40% a clean, empty, softly-shadowed darker surface (nothing on it) for text. All four screen corners visible. [Apply the STYLE LINE.]
 ```
 
 ## Slide 5 — SCENE-03 / 5  (PHOTO)

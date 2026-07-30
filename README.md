@@ -104,5 +104,20 @@ These live in the engine so both clients inherit them automatically:
   gradient behind the text.
 - **Device screens = real UI, composited.** Generate the scene with a blank
   white device screen; the designed UI is mapped onto it in perspective
-  (`screen.quad`). Never bake a fake UI into the photo.
+  (`screen.quad`). Never bake a fake UI into the photo. Measure the quad with
+  `python3 system/detect-screen.py <photo>` (finds the white screen, prints the
+  quad in slide coords). The engine matches the overlay to the screen aspect
+  (`object-fit:cover`, no distortion), adds overscan (no rim) and a corner radius.
+- **Device photo composition.** The device must occupy only the **upper ~55–60%**
+  of the frame, leaving a **clean, uncluttered, darker lower ~40%** for text.
+  A device that fills the frame forces text onto it and gets muddied by the
+  legibility scrim. (This is baked into every DEVICE-COMPOSITE image prompt.)
 - **One accent per slide; hand-made accents stay restrained** (1–2 max).
+
+---
+
+## Working agreements (client delivery)
+
+- **Post every finished image into the chat.** Whenever a slide/carousel image
+  is rendered, deliver the PNG in the conversation so it's easy to download —
+  don't just commit it to the repo.

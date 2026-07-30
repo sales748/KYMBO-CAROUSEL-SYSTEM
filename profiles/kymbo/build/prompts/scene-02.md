@@ -42,7 +42,7 @@ A first-time guest arriving at a modern boutique apartment building with a weeke
 Save as `s3.png` in `assets/scene-02/`.
 
 ```text
-Close-up: a returning guest, comfortable on a linen sofa at home, holding an iPhone 17 (Dynamic Island, thin bezels) about to book again, warm evening lamp light, a mug and a plant nearby. IMPORTANT FOR COMPOSITING: the phone is held nearly FLAT and FRONT-ON, its screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no reflections, unobstructed. Keep the BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]
+Close-up: a returning guest, comfortable on a linen sofa at home, holding an iPhone 17 (Dynamic Island, thin bezels) about to book again, warm evening lamp light, a mug and a plant nearby. IMPORTANT FOR COMPOSITING: the phone is held nearly FLAT and FRONT-ON, its screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no reflections, unobstructed. Keep the BOTTOM THIRD calm and darker for text. CRITICAL COMPOSITION: the device occupies only the UPPER ~55% of the frame; keep the LOWER ~40% a clean, empty, softly-shadowed darker surface (nothing on it) for text. All four screen corners visible. [Apply the STYLE LINE.]
 ```
 
 ## Slide 4 — SCENE-02 / 4  (PHOTO)
@@ -76,5 +76,5 @@ A host calmly working at a modern desk in a plant-filled home office, a laptop o
 Save as `s6.png` in `assets/scene-02/`.
 
 ```text
-A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled home office, morning light, coffee beside it. IMPORTANT FOR COMPOSITING: laptop FRONT-ON to the camera, screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no glare, unobstructed. LEAVE THE BOTTOM THIRD calm for text. [Apply the STYLE LINE.]
+A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled home office, morning light, coffee beside it. IMPORTANT FOR COMPOSITING: laptop FRONT-ON to the camera, screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no glare, unobstructed. LEAVE THE BOTTOM THIRD calm for text. CRITICAL COMPOSITION: the device occupies only the UPPER ~55% of the frame; keep the LOWER ~40% a clean, empty, softly-shadowed darker surface (nothing on it) for text. All four screen corners visible. [Apply the STYLE LINE.]
 ```

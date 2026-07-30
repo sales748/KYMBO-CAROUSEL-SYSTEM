@@ -64,5 +64,5 @@ A fresh bright morning in a modern boutique lobby, glass doors opening to golden
 Save as `s5.png` in `assets/scene-04/`.
 
 ```text
-A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled boutique-hotel office, morning light, a coffee beside it. IMPORTANT FOR COMPOSITING: laptop FRONT-ON to the camera, screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no glare, unobstructed. LEAVE THE BOTTOM THIRD calm for text. [Apply the STYLE LINE.]
+A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled boutique-hotel office, morning light, a coffee beside it. IMPORTANT FOR COMPOSITING: laptop FRONT-ON to the camera, screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no glare, unobstructed. LEAVE THE BOTTOM THIRD calm for text. CRITICAL COMPOSITION: the device occupies only the UPPER ~55% of the frame; keep the LOWER ~40% a clean, empty, softly-shadowed darker surface (nothing on it) for text. All four screen corners visible. [Apply the STYLE LINE.]
 ```
