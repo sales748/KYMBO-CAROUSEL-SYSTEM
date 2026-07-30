@@ -95,12 +95,12 @@ writeFileSync(join(build, 'index.html'), galleryDoc());
 // use the scene cover — the flat HTML twin is dropped so nothing repeats.
 // Organic tiles sit one-per-row in a C1·C3·C1·C3 zigzag so the grid breathes.
 const FEED = [
-  'scene-01', 'c02', 'c04',
-  'c03', 'c05', 'scene-03',
-  'scene-02', 'c08', 'c09',
-  'c11', 'c12', 'scene-04',
+  'scene-01', 'c04', 'scene-05',
+  'c05', 'scene-03', 'c08',
+  'scene-02', 'c03', 'scene-06',
+  'c11', 'scene-04', 'c12',
 ];
-const SCENE_SET = new Set(['scene-01', 'scene-02', 'scene-03', 'scene-04']);
+const SCENE_SET = new Set(['scene-01', 'scene-02', 'scene-03', 'scene-04', 'scene-05', 'scene-06']);
 function feedDoc() {
   const tiles = FEED.map((base) =>
     `<a class="tile${SCENE_SET.has(base) ? ' organic' : ''}" href="index.html">
