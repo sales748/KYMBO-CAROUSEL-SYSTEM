@@ -52,7 +52,7 @@
           ]
         ]
       },
-      "imagePrompt": "Close-up: two hands holding an iPhone 17 (Dynamic Island, thin bezels) at a warm walnut cafe table, morning light, a flat-white with latte art and a linen napkin, a small plant softly behind. IMPORTANT FOR COMPOSITING: the phone is held nearly FLAT and FRONT-ON to the camera, and its screen is a solid PURE-WHITE rectangle (#FFFFFF) \u2014 completely blank, no UI, no reflections, fully unobstructed by fingers. Keep the BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]"
+      "imagePrompt": "Camera pulled BACK (not a tight close-up). Two hands holding an iPhone 17 (Dynamic Island, thin bezels) UP in the TOP portion of the frame at a warm walnut cafe table, morning light, a flat-white and a small plant softly out of focus to the sides. CRITICAL COMPOSITION: the phone occupies only the UPPER ~60% of the image; the LOWER 40% is a clean, empty, softly-shadowed dark walnut table surface (nothing on it) reserved for text. The phone is FRONT-ON and its screen is a solid PURE-WHITE rectangle (#FFFFFF) \u2014 completely blank, no UI, no reflections, fully unobstructed by fingers, all four screen corners visible. [Apply the STYLE LINE.]"
     },
     {
       "scene": true,

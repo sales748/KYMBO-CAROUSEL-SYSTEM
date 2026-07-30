@@ -244,7 +244,7 @@ function screenOverlay(s) {
   let q = s.screen.quad;
   // overscan: expand the quad slightly from its centroid so the UI fully covers
   // the screen with no exposed rim (bezel/white edge)
-  const over = s.screen.overscan ?? 0.012;
+  const over = s.screen.overscan ?? 0.018;
   if (over) {
     const cx = (q[0][0] + q[1][0] + q[2][0] + q[3][0]) / 4;
     const cy = (q[0][1] + q[1][1] + q[2][1] + q[3][1]) / 4;
