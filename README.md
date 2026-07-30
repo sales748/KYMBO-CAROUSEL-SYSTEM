@@ -108,6 +108,12 @@ These live in the engine so both clients inherit them automatically:
   `python3 system/detect-screen.py <photo>` (finds the white screen, prints the
   quad in slide coords). The engine matches the overlay to the screen aspect
   (`object-fit:cover`, no distortion), adds overscan (no rim) and a corner radius.
+  - **Minimal screens (e.g. a phone confirmation) = TRANSPARENT overlay.** Put
+    only the letters/design elements on a transparent background so the photo's
+    own white screen (and its perfect rounded corners + Dynamic Island) shows
+    through — never a pasted white rectangle. Set `screen.overscan: 0` for these.
+    Requires the app page body to be transparent so `omitBackground` yields true
+    alpha. **Full pages (a website/dashboard) = opaque**, they fill the screen.
 - **Device photo composition.** The device must occupy only the **upper ~55–60%**
   of the frame, leaving a **clean, uncluttered, darker lower ~40%** for text.
   A device that fills the frame forces text onto it and gets muddied by the

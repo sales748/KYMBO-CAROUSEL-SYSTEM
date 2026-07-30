@@ -300,7 +300,7 @@ const sbar = () => `<div style="height:46px;display:flex;align-items:center;just
 
 function pConfirm(d) {
   const c = d.confirmation;
-  return `<div class="cap app" style="width:460px;height:996px;background:#fff">${sbar()}
+  return `<div class="cap app" style="width:460px;height:996px;background:transparent">${sbar()}
     <div class="cf2">
       <div class="cf-top">
         <div class="cf-wm">${esc(d.hotel.name)}</div>
@@ -366,5 +366,5 @@ export function appPage(data, fontsCss, photos) {
   }
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Marlowe House · booking app (Kalido-style)</title>
 <style>${fontsCss}\n${APP_CSS}</style></head>
-<body class="app" style="background:#2a2a2a"><div class="gallery">${shots.join('')}</div></body></html>`;
+<body class="app" style="background:transparent"><div class="gallery">${shots.join('')}</div></body></html>`;
 }
