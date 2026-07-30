@@ -33,20 +33,9 @@ await page.locator('div').first().screenshot({ path: join(build, 'img', '_scene-
 console.log('_scene-ph.png (placeholder)');
 
 let count = 0;
-for (const file of readdirSync(carouselsDir).filter((f) => f.endsWith('.html')).sort()) {
-  const id = file.replace('.html', '');            // "c01" or "scene-01"
-  await page.goto(pathToFileURL(join(carouselsDir, file)).href, { waitUntil: 'networkidle' });
-  await page.evaluate(() => document.fonts.ready);
-  const slides = await page.$$('.slide');
-  for (let i = 0; i < slides.length; i++) {
-    const name = /^c\d+$/.test(id) ? `${id}-s${i + 1}` : `${id}-s${i + 1}`;
-    await slides[i].screenshot({ path: join(build, 'img', `${name}.png`) });
-    count++;
-  }
-  console.log(`${id}: ${slides.length} slides`);
-}
 
-// ---- booking-app prototypes: screenshot each [data-shot] with alpha ----
+// ---- booking-app screens FIRST: carousels composite these onto device
+// screens, so the PNGs must be freshly rendered BEFORE the carousel loop ----
 if (existsSync(appDir)) {
   const appPage = await browser.newPage({ viewport: { width: 1400, height: 1400 }, deviceScaleFactor: 2 });
   for (const file of readdirSync(appDir).filter((f) => f.endsWith('.html')).sort()) {
@@ -61,6 +50,19 @@ if (existsSync(appDir)) {
     console.log(`app ${file}: ${shots.length} screens`);
   }
   await appPage.close();
+}
+
+for (const file of readdirSync(carouselsDir).filter((f) => f.endsWith('.html')).sort()) {
+  const id = file.replace('.html', '');            // "c01" or "scene-01"
+  await page.goto(pathToFileURL(join(carouselsDir, file)).href, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  const slides = await page.$$('.slide');
+  for (let i = 0; i < slides.length; i++) {
+    const name = /^c\d+$/.test(id) ? `${id}-s${i + 1}` : `${id}-s${i + 1}`;
+    await slides[i].screenshot({ path: join(build, 'img', `${name}.png`) });
+    count++;
+  }
+  console.log(`${id}: ${slides.length} slides`);
 }
 
 // feed grid preview

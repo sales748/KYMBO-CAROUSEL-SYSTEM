@@ -145,6 +145,20 @@ export const APP_CSS = `
 .confirm .meta{ color:var(--muted); font-size:19px; margin-top:14px; line-height:1.5; }
 .confirm .meta b{ color:var(--ink); }
 .confirm .save{ margin-top:30px; background:var(--butter); border-radius:14px; padding:18px 26px; font-weight:700; font-size:19px; }
+/* phone confirmation v2 — balanced top→bottom, fills the screen elegantly */
+.cf2{ height:calc(100% - 46px); display:flex; flex-direction:column; align-items:center; text-align:center; padding:34px 34px 44px; }
+.cf-wm{ font-family:var(--serif); font-weight:600; font-size:27px; }
+.cf-kick{ font-family:var(--sans); letter-spacing:.24em; font-size:13px; color:var(--muted); margin-top:8px; }
+.cf-mid{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.cf-tick{ width:120px; height:120px; border-radius:50%; background:var(--butter); display:grid; place-items:center; margin-bottom:30px; }
+.cf-h{ font-family:var(--serif); font-weight:500; font-size:50px; line-height:1; }
+.cf-meta{ font-size:20px; color:var(--muted); margin-top:20px; }
+.cf-ref{ font-size:18px; color:var(--muted); margin-top:8px; }
+.cf-ref b{ color:var(--ink); }
+.cf-save{ width:100%; background:var(--butter); border-radius:20px; padding:24px; margin-bottom:16px; }
+.cf-save-big{ font-size:32px; font-weight:800; letter-spacing:-.02em; }
+.cf-save-sub{ font-size:16px; color:rgba(0,0,0,.62); margin-top:4px; }
+.cf-btn{ width:100%; background:var(--btn); color:#fff; border-radius:16px; padding:22px; font-size:19px; font-weight:600; }
 
 /* owner dashboard (our addition, same design language) */
 .dash{ padding:40px 54px; background:var(--wash); }
@@ -286,13 +300,22 @@ const sbar = () => `<div style="height:46px;display:flex;align-items:center;just
 
 function pConfirm(d) {
   const c = d.confirmation;
-  return `<div class="cap app" style="width:460px;height:996px">${sbar()}
-    <div class="confirm" style="height:calc(100% - 46px)">
-      <div class="tick"><svg viewBox="0 0 48 48" width="52" height="52"><path d="M12 25 L21 34 L37 15" fill="none" stroke="#17171A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <h1>You're booked!</h1>
-      <div class="meta">${esc(c.room)} · ${esc(c.dates)}<br>Confirmation <b>${esc(c.ref)}</b></div>
-      <div class="save">Booked direct — you saved ${esc(c.saved)} ${esc(c.vs)}</div>
-      <div class="meta" style="margin-top:22px">A confirmation is on its way to your inbox.</div></div></div>`;
+  return `<div class="cap app" style="width:460px;height:996px;background:#fff">${sbar()}
+    <div class="cf2">
+      <div class="cf-top">
+        <div class="cf-wm">${esc(d.hotel.name)}</div>
+        <div class="cf-kick">BOOKING CONFIRMED</div>
+      </div>
+      <div class="cf-mid">
+        <div class="cf-tick"><svg viewBox="0 0 48 48" width="60" height="60"><path d="M12 25 L21 34 L37 15" fill="none" stroke="#17171A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="cf-h">You're booked!</div>
+        <div class="cf-meta">${esc(c.room)} · ${esc(c.dates)}</div>
+        <div class="cf-ref">Confirmation <b>${esc(c.ref)}</b></div>
+      </div>
+      <div class="cf-save"><div class="cf-save-big">You saved ${esc(c.saved)}</div>
+        <div class="cf-save-sub">by booking direct ${esc(c.vs)}</div></div>
+      <div class="cf-btn">View your booking</div>
+    </div></div>`;
 }
 
 function pHero(d, photos) {
