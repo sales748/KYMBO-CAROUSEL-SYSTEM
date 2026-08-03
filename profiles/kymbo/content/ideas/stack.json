@@ -1,60 +1,166 @@
 {
-  "note": "The tech stack the technical topics rest on. SPLIT INTO TWO PARTS ON PURPOSE: `industry` is the generic architecture every hotel/STR has (safe to publish, sourced below), and `kymbo` is what KYMBO ITSELF builds with — which is NOT yet verified. Do not put a tool name from `kymbo` into a published slide until `verified` is true for that entry.",
+  "note": "Kymbo's real tech stack and offer, read from the Notion workspace 'Kymbo Devs' (teamspace KYMBO) on 2026-08-03. Split into `industry` (generic, publishable) and `kymbo` (our own tooling, now VERIFIED from source). Source pages are cited per section.",
 
   "verificationStatus": {
-    "industry": "researched — public sources listed per topic in the topic banks",
-    "kymbo": "UNVERIFIED — pending a read of the Notion workspace. The Notion connector is installed for the org but was toggled off for this chat, so the workspace could not be read. Enable it and this file gets filled from source.",
-    "howToFill": "Once Notion is readable: pull the tools/stack pages, replace each null below, set verified:true, then flip needsStack:false on the topics that depend on it."
+    "industry": "researched from public sources — see `sources`",
+    "kymbo": "VERIFIED against Notion 2026-08-03",
+    "reReadWhen": "The campaign brief is live (Jul 1 – Aug 31 2026) and pre-launch gates are still open. Re-read before writing copy that quotes price, SKU or guarantee."
   },
 
-  "industry": {
-    "note": "The five-layer stack any independent property runs, whoever supplies it. This is the spine of most technical topics.",
-    "layers": [
-      { "layer": "PMS", "role": "Property management system — the hub. Rooms, rates, availability, guest records, folio.", "note": "Hub-and-spoke: everything else integrates to this." },
-      { "layer": "Channel manager", "role": "Pushes availability/rates out to OTAs and pulls their bookings back in.", "note": "Two-way sync is the whole point; one-way sync is how double bookings happen." },
-      { "layer": "Booking engine", "role": "The direct-booking checkout on the hotel's own site.", "note": "This is the layer Kymbo sells. Commission-free by definition." },
-      { "layer": "Payments", "role": "Gateway + processor + merchant account. Authorization, capture, refunds, disputes.", "note": "PCI scope lives here." },
-      { "layer": "CRM / guest data", "role": "Profiles, segmentation, pre-stay and post-stay email, loyalty.", "note": "The asset an OTA booking denies you." }
-    ],
-    "distributionSurfaces": [
-      { "name": "OTA", "model": "commission 15–30%+", "note": "Booking.com, Expedia, Airbnb (~15.5%)." },
-      { "name": "Metasearch (paid)", "model": "CPC / commission-per-stay", "note": "Google Hotel Ads, Trivago, Kayak." },
-      { "name": "Google free booking links", "model": "zero cost per click", "note": "Requires a connectivity partner (PMS, channel manager or booking engine) sending live rates + availability to Google. Shows as 'Official site'." },
-      { "name": "Direct", "model": "0%", "note": "The website. The whole campaign thesis." }
-    ],
-    "webLayer": {
-      "cms": ["WordPress (dominant in this market)", "headless CMS + JS framework (Next.js) for larger builds"],
-      "seoCritical": ["JSON-LD schema: Hotel, LocalBusiness, AggregateRating, Offer, FAQPage", "Core Web Vitals: LCP < 2.5s, INP < 200ms, CLS", "canonical + sitemap ownership"],
-      "infra": ["domain / DNS", "hosting", "CDN + edge caching", "TLS certificate", "staging + backups"]
-    }
+  "campaign": {
+    "source": "Notion → 📣 Fire Your Middleman — Hotels & STR — July 2026",
+    "window": "2026-07-01 → 2026-08-31 (60-day outbound)",
+    "keyMessage": "OTAs take 15–30%. Airbnb takes 15.5%. Your website takes 0%. Fire your middleman.",
+    "objectives": ["Contract 5 hospitality websites (floor 3, stretch 7)", "Schedule 15 qualified discovery calls — the main KPI", "$7.3K–$10.4K build revenue + $900–$1,300 MRR", "Validate hospitality as a repeatable niche"],
+    "audience": "Independent & boutique hotels, Airbnb/STR operators, buildings operating as hospitality, hospitality groups. US/Canada primary, Colombia secondary.",
+    "channels": { "primary": "Upwork (highest intent)", "secondary": "LinkedIn outreach", "support": "LinkedIn organic, ~3 posts/week" },
+    "contentCadence": "FYM Content DB runs a 5-week arc: W1 Problem · W2 Math · W3 Alternative · W4 Proof · W5 Decision — the same five pillars this carousel system uses.",
+    "creativeStyles": "FYM Content DB `Style` = Night · Day · Real-B · Text/POV · Poll. 'Day' is the light/bright treatment — the slot an educational (white-cover) carousel occupies.",
+    "painPoints": ["15–30% OTA commission on bookings the site should win", "Site doesn't convert — no booking engine, weak CTAs, slow pages", "STR operators absorbing Airbnb's 15.5% host-only fee since Oct 2025", "No guest data ownership; ~2x cancellation rates", "Groups with no unified maintained platform", "Wants a reliable technical partner without agency overhead"]
   },
 
-  "kymbo": {
-    "note": "What Kymbo actually builds with. EVERY FIELD BELOW IS A PLACEHOLDER pending Notion.",
-    "verified": false,
-    "siteStack": { "cms": null, "theme_or_framework": null, "hosting": null, "cdn": null },
-    "bookingEngine": { "product": null, "integrations": null, "commissionModel": null },
-    "integrations": { "pms": null, "channelManager": null, "payments": null, "crm_email": null, "analytics": null },
-    "delivery": { "widgetOffering": "Path 01 — booking widget dropped into an existing site (referenced on carousel c12)", "fullBuildOffering": "Path 02 — full build (referenced on carousel c12)", "timeline": "45 days, in writing (referenced on carousel 06 / scene-03)" },
-    "openQuestions": [
-      "Which PMS/channel managers are actually supported today?",
-      "Is the booking engine proprietary or a white-labelled partner product?",
-      "Is WordPress the delivery platform, and if so which builder/theme?",
-      "What does the 45-day guarantee cover exactly — launch, or launch + first bookings?",
-      "Which payment processors are wired in, and who holds PCI scope?"
+  "offer": {
+    "source": "Notion → campaign brief § Offer & Pricing",
+    "model": "One productized offer, two tiers, recurring plan included by default.",
+    "tiers": [
+      { "name": "Launch", "setup": "$999", "sku": "PENDING creation in Shopify", "includes": "Template-based 5-page site, SEO-ready, tracking installed, Guesty Booking Engine WIDGET embedded and configured (real-time availability + direct bookings synced to the client's Guesty calendar; free for all Guesty users).", "recurring": "$99/mo Care Plan (SKU pending) — WP Engine hosting, core/plugin updates, security, backups, uptime monitoring, monthly health report pulled directly from WP Engine." },
+      { "name": "Growth", "setup": "$2,149", "sku": "live in Shopify (Custom WordPress Site, 5 Pages)", "includes": "Custom design, GA4 + heatmaps, CRO baseline, speed optimization, FULL Guesty Pro integration (API-connected, real-time calendar + pricing sync, payment flow configured, staging tested before go-live to prevent double-booking).", "recurring": "$300/mo Full Maintenance — live in Shopify (Web maintenance, 14 dev hours/month). 'Accumulable/rollover hours' claim: confirm with ops before promising in writing." },
+      { "name": "Hosting-only", "setup": null, "recurring": "$20/mo — WP Engine partner infrastructure, ~$5/mo less than WP Engine's entry plan direct.", "sku": "live in Shopify (Managed hosting)" }
     ]
   },
 
+  "proof": {
+    "source": "Notion → campaign brief § Proof — Kalido Portfolio",
+    "portfolio": "Kalido Hospitality Group (Vancouver) — boutique hotels, aparthotels, lodges, STRs",
+    "sites": [
+      { "url": "kalidohospitality.com", "status": "verified live" },
+      { "url": "kalidohotels.com", "status": "verified live", "note": "Homepage pitches 'Book direct and save up to 35%' — the campaign thesis in production." },
+      { "url": "smithehouse.com → kalidohotels.com/smithe-house/", "status": "verified", "note": "WordPress build. This is the design language the demo booking app replicates." },
+      { "url": "keeferhouse.com → kalidohotels.com/keefer-house/", "status": "PRESUMED — verify before publishing" },
+      { "url": "kalidohotels.com/block-house/", "status": "verified", "note": "NEVER use blockhouse.com — that domain belongs to a furniture company." }
+    ],
+    "press": "Block House — Hotel Management, Daily Hive, Retail Insider (Gastown opening, Mar 2026). Smithe House — Condé Nast Traveler, WSJ, National Geographic.",
+    "kalidoEngine": "Kalido runs MEWS, not Guesty (see Notion tickets 'Mews Booking Engine not loading' and 'Kalido — THN Connect AI'). Do not imply the portfolio was built on the Guesty offer."
+  },
+
+  "guardrails": {
+    "source": "Notion → campaign brief § Other considerations",
+    "rules": [
+      "AI-assisted development is a proof point for SPEED and PRICE only — never the headline.",
+      "Monthly health reports are pulled directly from WP Engine — never promise manual reporting.",
+      "Never use blockhouse.com in any asset.",
+      "'Accumulable/rollover' maintenance hours: do not promise in writing until ops confirms.",
+      "Launch $999 and $99/mo Care Plan SKUs are NOT yet created in Shopify — do not publish a buy path for them.",
+      "KPI targets are pending team ratification."
+    ]
+  },
+
+  "kymbo": {
+    "verified": true,
+    "cms": {
+      "source": "Notion → 📝 CMS (category)",
+      "default": "WordPress — 'Kymbo's bread and butter' for marketing sites, blogs, mid-complexity",
+      "alternatives": { "Strapi": "headless / multi-channel, Node teams", "Sanity": "headless, structured content", "Contentful": "enterprise headless", "Webflow": "designer-led, no devs", "Ghost": "newsletter-first" },
+      "buildPaths": ["Elementor + premium Envato/ThemeForest templates — fast turnaround path", "Custom WordPress theme — 33/33/33 payment terms", "Template WordPress — 60–120 hours"]
+    },
+    "hosting": {
+      "source": "Notion → ⚡ WordPress Performance and Core Web Vitals; Hostinger (stack); Wordpress SOW/Handoff",
+      "tiers": { "budget": "SiteGround — informational sites", "mid": "Cloudways — control over stack (managed Linode/Vultr/DO)", "premium": "Kinsta / WP Engine — higher traffic" },
+      "hostinger": "Kymbo's go-to managed hosting for general WordPress and simple PHP — cheap, fast enough, easy for clients to take over (Business Web Hosting plan). Recommended in the WordPress SOW/pricing template.",
+      "wpEngine": "The host behind the FYM Care Plan and the $20/mo hosting-only SKU — Kymbo is a WP Engine partner.",
+      "rejected": "Shared hosting (GoDaddy, Bluehost) is rejected for any Kymbo build — too slow."
+    },
+    "performanceBudget": {
+      "source": "Notion → ⚡ WordPress Performance and Core Web Vitals",
+      "targets": { "LCP": "< 2.5s", "CLS": "< 0.1", "INP": "< 200ms", "TBT": "< 200ms", "TTI": "< 4s", "lighthouse": "≥ 80", "pageWeightFirstLoad": "< 2MB excluding video", "htmlCompressed": "< 100KB" },
+      "caching": "WP Rocket (default) · W3 Total Cache (free alt) · host-native. Cache page + browser + object (Redis/Memcached) + CDN.",
+      "images": "Compress before upload (Squoosh/TinyPNG); WebP via Imagify/ShortPixel; lazy-load below fold; LCP image gets loading=eager + fetchpriority=high; width/height on every img to prevent CLS.",
+      "javascript": "Vanilla ES2020+ first, no jQuery in custom theme code; defer non-critical; IntersectionObserver for section JS; dequeue unused.",
+      "pluginCap": "Max 15 active plugins on custom builds, max 25 on Elementor. Audit quarterly. Plugin sprawl is the single biggest cause of slow WP sites.",
+      "thirdParty": "Each third-party script costs 50–200ms TBT. Required: GA4, Search Console. Case-by-case: Meta Pixel, Hotjar, Klaviyo, chat. Rejected by default: full-page A/B testing, generic chat.",
+      "database": "WP_POST_REVISIONS = 5; clean transients; OPTIMIZE TABLE before launch.",
+      "tooling": "Query Monitor + Plugin Performance Profiler (dev); Lighthouse + WebPageTest + real-device mobile (DevTools mobile mode is not enough)."
+    },
+    "seoQaGate": {
+      "source": "Notion → 🔍 Wordpress SEO QA",
+      "note": "SEO lead runs this before the build can move to client presentation. Any unchecked item fails the gate.",
+      "killers": ["'Discourage search engines' left ON", "robots.txt Disallow: / left from staging", "noindex left from staging plugin", "missing 301s on migration", "staging URLs leaked"],
+      "schemaTypes": ["Organization (site-wide)", "Article (blog)", "LocalBusiness (location-based — hotels)", "Breadcrumb (inner pages)", "FAQPage (if FAQs present)"],
+      "seoPlugins": ["Yoast", "Rank Math"],
+      "urlRules": "Permalinks /%postname%/, lowercase, hyphen-separated, canonical present, no redirect chains (A→C not A→B→C), custom 404.",
+      "meta": "Unique title < 60 chars, unique description < 155 chars, one H1 per page, alt text on meaningful images."
+    },
+    "hospitalityVendors": {
+      "source": "Notion → 🏨 Hospitality management (category)",
+      "table": [
+        { "vendor": "Cloudbeds", "bestFor": "Indie hotels and B&Bs; all-in-one PMS + channel + booking engine", "cost": "$200–$1,500+/mo" },
+        { "vendor": "Mews", "bestFor": "Modern indie boutique to small chain", "cost": "quote-based" },
+        { "vendor": "Little Hotelier", "bestFor": "Small properties under 20 rooms", "cost": "$150–$300/mo" },
+        { "vendor": "Hostaway", "bestFor": "Vacation rental managers", "cost": "$169+/mo" },
+        { "vendor": "Guesty", "bestFor": "Multi-unit short-term rentals", "cost": "quote-based" },
+        { "vendor": "Oracle Opera Cloud", "bestFor": "Mid-market to enterprise hotels", "cost": "quote-based" }
+      ],
+      "decisionRules": ["Independent boutique hotel → Cloudbeds or Mews", "B&B under 20 rooms → Little Hotelier", "Vacation rental management → Hostaway or Guesty", "Branded chain → brand standards, usually Opera"],
+      "commonIntegrations": ["OTAs (Booking.com, Expedia, Airbnb, Vrbo)", "booking engine (often included)", "payments (Stripe, Adyen, regional)", "F&B POS", "accounting (QuickBooks, Xero)", "smart door locks", "RMS dynamic pricing", "email (Mailchimp, Revinate)", "reviews (TrustYou, Revinate)"],
+      "pitfalls": ["Inventory sync errors between PMS and OTAs (overbooking)", "Rate parity issues (OTAs penalize)", "Skipping PCI compliance", "Not training front desk — the PMS is their main tool"]
+    },
+    "customDevStack": {
+      "source": "Notion → Development wiki, '(stack)' pages",
+      "frontend": ["Next.js (marketing + SSR-for-SEO)", "React + Vite (SPA/internal tools)", "React Router v7 framework mode"],
+      "backend": ["Python + FastAPI (httpx not requests; asyncpg via SQLAlchemy)"],
+      "infra": ["Cloudflare (Workers/Pages, wrangler)", "Vercel", "Netlify", "Railway (dev→staging→prod)", "AWS (CDK for new infra)"],
+      "notForKymbo": "Vercel not for heavy custom infra (use Cloudflare); AWS not for small projects"
+    }
+  },
+
+  "industry": {
+    "note": "The five-layer stack any independent property runs, whoever supplies it.",
+    "layers": [
+      { "layer": "PMS", "role": "The hub. Rooms, rates, availability, guest records, folio." },
+      { "layer": "Channel manager", "role": "Pushes availability/rates to OTAs, pulls their bookings back. Two-way sync is the point." },
+      { "layer": "Booking engine", "role": "The direct checkout on the hotel's own site — the layer Kymbo sells." },
+      { "layer": "Payments", "role": "Gateway + processor + merchant account. PCI scope lives here." },
+      { "layer": "CRM / guest data", "role": "Profiles, segmentation, pre/post-stay email, loyalty — the asset an OTA booking denies you." }
+    ],
+    "distributionSurfaces": [
+      { "name": "OTA", "model": "commission 15–30%+" },
+      { "name": "Metasearch (paid)", "model": "CPC / commission-per-stay — Google Hotel Ads, Trivago, Kayak" },
+      { "name": "Google free booking links", "model": "zero cost per click; needs a connectivity partner sending live rates + availability; shows as 'Official site'" },
+      { "name": "Direct", "model": "0%" }
+    ]
+  },
+
+  "verifiedStats": {
+    "note": "Campaign-approved numbers WITH sources. Use these verbatim; do not round or restate without the source.",
+    "stats": [
+      { "claim": "Hotel websites averaged $516 per booking vs $312 via OTAs in 2025", "why": "guests book better rooms, stay longer, add extras", "source": "SiteMinder, 130M+ bookings", "usedIn": "c08" },
+      { "claim": "OTA bookings cancel at 21.8% vs 10.6% direct — roughly 2x", "source": "Cloudbeds, 30,000+ hotels, 2025", "usedIn": null },
+      { "claim": "Since Oct 27 2025, Airbnb charges PMS-connected hosts a 15.5% host-only fee — $155 per $1,000 booking; ~$4,650/yr on $30K revenue", "source": "PriceLabs, TabiVista", "usedIn": "partially — scene-02" },
+      { "claim": "65% of direct bookings start with discovery on an OTA — the website only has to win the handoff", "source": "ZUZU Hospitality", "usedIn": null },
+      { "claim": "Skift Research projects direct digital channels surpass OTAs by 2030 ($409B vs $333B gross bookings)", "source": "Skift Research", "usedIn": null }
+    ]
+  },
+
+  "openIssues": [
+    "UNSOURCED CLAIM IN SHIPPED CREATIVE: carousel c06 / scene-03 states '45 days, in writing' and 'If your direct site isn't live and taking bookings, you don't pay.' No 45-day guarantee appears anywhere in the campaign brief, the offer tiers or the SOW templates. Verify with leadership or pull the claim.",
+    "PLATFORM MISMATCH: this carousel system renders an INSTAGRAM profile grid (@kymbo, 1080x1350 4:5), but every row currently in the FYM Content DB is Platform=LinkedIn. The DB does allow Instagram and TikTok. Confirm which platform the feed is actually for — LinkedIn carousels are PDF-based and typically 1200x1500 or 1080x1080.",
+    "Launch $999 + $99/mo Care Plan Shopify SKUs still pending creation — no buy path in creative yet.",
+    "keeferhouse.com redirect is presumed, not verified — do not publish as proof until checked."
+  ],
+
   "sources": [
+    "Notion → 📣 Fire Your Middleman — Hotels & STR — July 2026",
+    "Notion → 📝 CMS (category)",
+    "Notion → 🏨 Hospitality management (category)",
+    "Notion → ⚡ WordPress Performance and Core Web Vitals",
+    "Notion → 🔍 Wordpress SEO QA",
+    "Notion → Hostinger (stack), Next.js (stack), Cloudflare (stack), AWS (stack), Vercel (stack), Railway (stack), Netlify (stack), React + Vite (stack), Python + FastAPI (stack)",
+    "Notion → Wordpress SOW / Pricing / Site Brief / Launch Checklist / Handoff / Elementor with Envato",
     "https://www.cloudbeds.com/articles/hotel-booking-engine-guide/",
-    "https://chargeautomation.com/hospitality-tech-stack-independent-hotels/",
-    "https://hoteltechinsight.com/answers/how-is-a-hotel-tech-stack-interconnected/",
     "https://www.cloudbeds.com/articles/googles-free-hotel-booking-links/",
-    "https://www.cloudbeds.com/online-travel-agencies/commissions/",
     "https://www.siteminder.com/r/hotel-rate-parity/",
     "https://hotelrank.ai/learn/schema-markup-hotels",
     "https://seoparity.com/blog/headless-wordpress-seo",
-    "https://scalemyhotel.com/blog/hotel-website/hotel-website-core-web-vitals/",
-    "https://motopress.com/blog/best-free-wordpress-booking-plugins-for-hotels/"
+    "https://scalemyhotel.com/blog/hotel-website/hotel-website-core-web-vitals/"
   ]
 }
