@@ -1,0 +1,62 @@
+{
+  "category": "Educational / Technical",
+  "note": "Teach-the-craft carousels. Same design system, light cover always, diagram-forward interiors. See ideas/README.md for the design direction and feed rules. `needsStack:true` means the topic asserts something about Kymbo's own tooling — verify against stack.json before writing copy.",
+  "pillars": {
+    "The Stack": "What the tools are and how they connect.",
+    "The Build": "How a thing actually gets made, step by step.",
+    "The Standard": "What 'good' means technically, with a number attached.",
+    "The Fix": "A specific failure, its cause, and the repair.",
+    "The Tradeoff": "Two valid options and how to choose."
+  },
+  "coverRule": "surface is ALWAYS light. These are the tiles that fill the feed's light slots.",
+
+  "topics": [
+    { "id": "edu-01", "title": "The five layers of a hotel tech stack", "pillar": "The Stack", "hook": "Your hotel runs on 5 systems. Most owners can only name 2.", "angle": "Name the layers, then show that the booking engine is the only one that decides who owns the guest.", "slides": 7, "cover": "INDEX", "surface": "light", "path": "A", "proof": ["PMS · channel manager · booking engine · payments · CRM", "hub-and-spoke: the PMS is the hub"], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-02", "title": "Hub and spoke: why the PMS sits in the middle", "pillar": "The Stack", "hook": "Every integration you'll ever buy plugs into one box.", "angle": "Diagram the spoke pattern — it explains why 'does it integrate with my PMS' is the only question that matters when buying anything.", "slides": 6, "cover": "MATRIX", "surface": "light", "path": "A", "proof": ["5 primary integrations radiate from the PMS"], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-03", "title": "What happens between 'Book now' and your inbox", "pillar": "The Build", "hook": "Nine things happen in the 3 seconds after a guest hits Book.", "angle": "Walk the request lifecycle: availability check → hold → payment authorization → PMS write → channel push → confirmation. Demystifies the product Kymbo sells.", "slides": 7, "cover": "INDEX", "surface": "light", "path": "A", "proof": ["auth vs capture are two different moments"], "needsStack": true, "usedIn": null },
+
+    { "id": "edu-04", "title": "Two-way vs one-way sync (this is how double bookings happen)", "pillar": "The Fix", "hook": "One-way sync tells the OTA nothing. That's the bug.", "angle": "The single most expensive misconfiguration in small-property tech, explained in one diagram.", "slides": 6, "cover": "STATEMENT", "surface": "light", "path": "A", "proof": ["proper channel manager integration drops overbookings by 90%+", "iCal sync is often one-way by default"], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-05", "title": "Widget or full build — how to choose", "pillar": "The Tradeoff", "hook": "You don't always need a new website.", "angle": "Decision tree, not a sales pitch: when a widget on the existing site genuinely wins, and the three conditions that force a full build.", "slides": 6, "cover": "SEAM", "surface": "light", "path": "A", "proof": ["Path 01 widget vs Path 02 full build"], "needsStack": true, "usedIn": null },
+
+    { "id": "edu-06", "title": "WordPress vs headless: who owns your SEO output", "pillar": "The Tradeoff", "hook": "Going headless silently breaks your schema. Here's why.", "angle": "The real distinction isn't speed, it's which system emits the canonical, the sitemap and the JSON-LD. Strong, genuinely non-obvious.", "slides": 6, "cover": "SEAM", "surface": "light", "path": "A", "proof": ["WordPress owns content fields; Next.js owns URL, metadata, canonical, JSON-LD, sitemap, redirects", "a headless migration is where schema breaks silently"], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-07", "title": "The 5 schema types every hotel site needs", "pillar": "The Standard", "hook": "Schema is how AI search learns your hotel exists.", "angle": "Very timely: JSON-LD is now the input for AI Overviews and chat-search citations, not just rich snippets.", "slides": 7, "cover": "INDEX", "surface": "light", "path": "A", "proof": ["Hotel · LocalBusiness · AggregateRating · Offer · FAQPage", "JSON-LD is Google's recommended format", "most hospitality sites implement one type or none"], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-08", "title": "Your site takes 6.3 seconds. Google wants 2.5.", "pillar": "The Standard", "hook": "The average hotel page loads in 6.3s. The bar is 2.5s.", "angle": "Lead with the industry-average gap — it lands harder than generic 'speed matters' advice.", "slides": 6, "cover": "STAT", "surface": "light", "path": "A", "proof": ["average hotel page load 6.3s vs 2.5s 'Good' LCP", "53% of mobile visitors abandon after 3s", "1s delay ≈ 7% fewer conversions"], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-09", "title": "LCP, INP, CLS — explained without the jargon", "pillar": "The Standard", "hook": "Three letters decide whether Google shows your hotel.", "angle": "Define each by what the guest actually feels, then attach the threshold. INP matters most for a booking engine — date pickers are interaction-heavy.", "slides": 6, "cover": "INDEX", "surface": "light", "path": "A", "proof": ["LCP < 2.5s", "INP < 200ms", "INP above 300ms → 34% lower completion rate"], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-10", "title": "The image pipeline that costs you bookings", "pillar": "The Fix", "hook": "Your room photos are the reason the page is slow.", "angle": "Hotels are photo-heavy by nature, so this is the highest-leverage speed fix for this specific audience. WebP/AVIF, srcset, lazy-loading below the fold, never lazy-load the hero.", "slides": 6, "cover": "STATEMENT", "surface": "light", "path": "A", "proof": ["WebP compression + edge CDN + script deferral → up to 28% more direct conversions"], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-11", "title": "Google free booking links: zero commission, most hotels miss it", "pillar": "The Build", "hook": "There's a free slot on Google labelled 'Official site'.", "angle": "Genuinely actionable and under-used by independents. Explain the connectivity-partner requirement — that's the part that stops people.", "slides": 6, "cover": "STAT", "surface": "light", "path": "A", "proof": ["clicks are free", "needs a connectivity partner sending live rates + availability", "listed as 'Official site' under All options"], "needsStack": true, "usedIn": null },
+
+    { "id": "edu-12", "title": "OTA, metasearch, direct — three different money models", "pillar": "The Stack", "hook": "Three ways a guest arrives. Three completely different bills.", "angle": "Commission vs CPC vs free. Most owners treat all traffic as one thing; the pricing model is the whole story.", "slides": 6, "cover": "MATRIX", "surface": "light", "path": "A", "proof": ["OTA 15–30%+", "metasearch CPC or commission-per-stay", "free booking links 0"], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-13", "title": "Gateway, processor, merchant account — who's who", "pillar": "The Stack", "hook": "Three companies touch every card payment. You're paying all three.", "angle": "Nobody explains this cleanly to small operators, and it's where hidden per-booking cost lives.", "slides": 6, "cover": "INDEX", "surface": "light", "path": "A", "proof": ["authorization vs capture", "a connected gateway improves authorization rates and simplifies reconciliation"], "needsStack": true, "usedIn": null },
+
+    { "id": "edu-14", "title": "PCI basics for a property taking cards", "pillar": "The Standard", "hook": "If you email a card number, you own the breach.", "angle": "Scope reduction is the lesson: use a hosted/tokenized field and your PCI burden collapses. Concrete and slightly scary — good retention.", "slides": 6, "cover": "STATEMENT", "surface": "light", "path": "A", "proof": ["tokenization keeps card data out of your systems"], "needsStack": true, "usedIn": null },
+
+    { "id": "edu-15", "title": "What a channel manager does when you change one rate", "pillar": "The Build", "hook": "You change €10. Watch what fires.", "angle": "Trace one edit across every connected surface. Makes an invisible system visible — perfect diagram carousel.", "slides": 6, "cover": "MATRIX", "surface": "light", "path": "A", "proof": ["30% less manual OTA management within a quarter"], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-16", "title": "Domain, DNS, hosting, CDN — the four people confuse", "pillar": "The Stack", "hook": "Your domain is not your hosting. This costs people weeks.", "angle": "Foundational, evergreen, and the reason migrations go wrong. Frame as four boxes and who you pay for each.", "slides": 6, "cover": "INDEX", "surface": "light", "path": "A", "proof": [], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-17", "title": "A booking form without HTTPS is a dead form", "pillar": "The Standard", "hook": "One browser warning ends the booking.", "angle": "Short, absolute, easy to verify — pairs well as a quick-hit carousel between heavier ones.", "slides": 5, "cover": "STATEMENT", "surface": "light", "path": "A", "proof": [], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-18", "title": "The 5-step mobile booking flow that converts", "pillar": "The Build", "hook": "Dates. Rooms. Rate. Summary. Details. Nothing else.", "angle": "Directly mirrors the flow in our own demo product — the carousel doubles as a product demo without being an ad.", "slides": 7, "cover": "INDEX", "surface": "light", "path": "A", "proof": ["every extra step is an abandonment opportunity"], "needsStack": true, "usedIn": null },
+
+    { "id": "edu-19", "title": "How abandoned-booking recovery actually fires", "pillar": "The Build", "hook": "They left at the payment step. You have about an hour.", "angle": "Explain the trigger mechanics — the event, the delay window, the consent requirement. Most people think it's magic.", "slides": 6, "cover": "STATEMENT", "surface": "light", "path": "A", "proof": [], "needsStack": true, "usedIn": null },
+
+    { "id": "edu-20", "title": "GDPR for guest data, in five plain rules", "pillar": "The Standard", "hook": "You collected the email. Now you're responsible for it.", "angle": "Consent, purpose limitation, retention, access, deletion — applied to a hotel CRM specifically. Unsexy, high-trust, very shareable with owners.", "slides": 6, "cover": "INDEX", "surface": "light", "path": "A", "proof": [], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-21", "title": "The GA4 events that actually measure a booking funnel", "pillar": "The Build", "hook": "Pageviews tell you nothing. Six events tell you everything.", "angle": "Name the events and where each fires in the flow. Turns analytics from decoration into diagnosis.", "slides": 6, "cover": "INDEX", "surface": "light", "path": "A", "proof": ["search → view_item → begin_checkout → add_payment_info → purchase"], "needsStack": true, "usedIn": null },
+
+    { "id": "edu-22", "title": "How to read your booking engine's conversion rate", "pillar": "The Standard", "hook": "2% doesn't mean anything until you know the denominator.", "angle": "Sessions vs searches vs availability-found — three denominators, three wildly different numbers, and vendors quote whichever flatters them.", "slides": 6, "cover": "STAT", "surface": "light", "path": "A", "proof": [], "needsStack": false, "usedIn": null },
+
+    { "id": "edu-23", "title": "Staging, backups, uptime — the boring stuff that saves you", "pillar": "The Fix", "hook": "The worst time to learn you have no backup is Friday.", "angle": "Frame as three cheap insurances with the cost of skipping each. Good candidate for a QUOTE-layout interior.", "slides": 5, "cover": "STATEMENT", "surface": "light", "path": "A", "proof": [], "needsStack": true, "usedIn": null },
+
+    { "id": "edu-24", "title": "Anatomy of a booking page that converts", "pillar": "The Build", "hook": "Nine elements. Miss three and the page leaks.", "angle": "Labelled teardown of a real page — our own demo product, annotated. Strong device-composite candidate.", "slides": 7, "cover": "MATRIX", "surface": "light", "path": "A", "proof": [], "needsStack": true, "usedIn": null }
+  ]
+}

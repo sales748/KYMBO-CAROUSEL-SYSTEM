@@ -5,12 +5,20 @@
   "note": "Only the FOUNDATION is inherited from brand guidelines: color, typography, the pixel motif, and the campaign message. Everything below — the surface rhythm, cover archetypes, layout grid, and visual furniture — is original design, not a reproduction of any prior style set.",
   "voice": "Profesional pero amigable — direct, numbers-first, confident, never salesy.",
   "message": "OTAs take 15–30%. Airbnb 15.5%. Your website takes 0%. Fire your middleman.",
-
   "foundation": {
     "colors": {
-      "mediaNoche": { "hex": "#262B38", "role": "Primary dark surface / ink on light." },
-      "pantalla":   { "hex": "#F7F8EA", "role": "Primary light surface / text on dark." },
-      "verdePixel": { "hex": "#9BEC00", "role": "Single accent. One hero element per slide. Never body copy." }
+      "mediaNoche": {
+        "hex": "#262B38",
+        "role": "Primary dark surface / ink on light."
+      },
+      "pantalla": {
+        "hex": "#F7F8EA",
+        "role": "Primary light surface / text on dark."
+      },
+      "verdePixel": {
+        "hex": "#9BEC00",
+        "role": "Single accent. One hero element per slide. Never body copy."
+      }
     },
     "typography": {
       "display": "Satoshi (licensed) — stand-in Onest Variable. Oversized, tight, geometric.",
@@ -19,20 +27,19 @@
     },
     "motif": "The pixel square — Kymbo's signature tell. Used as data cells, corner mark, bullets, and progress ticks."
   },
-
   "myDesignLanguage": {
     "principle": "Type-forward, editorial, high-contrast. One idea per slide, colossal type, generous negative space, exactly one lime accent.",
     "surfaces": {
       "dark": "Media Noche field, Pantalla type.",
       "light": "Pantalla field, Media Noche type.",
-      "rhythm": "Surfaces alternate by post order. In a 3-wide profile grid this yields a deliberate checkerboard."
+      "rhythm": "Surfaces alternate by post order — in a 3-wide profile grid this yields a deliberate checkerboard. MEASURED CONSTRAINT: with 6 dark organic covers, a 12-tile month needs at least FOUR light covers to avoid both an all-dark column and a 3-dark row (three is provably not enough). Educational carousels ship a light cover by definition, so four of them per twelve resolves it."
     },
     "furniture": {
-      "kicker": "Bracketed mono label, top-left. e.g. [ THE MATH ]",
+      "kicker": "Bracketed mono label, top-left. e.g. [ THE MATH ] — must name a REGISTERED pillar (see `pillars`).",
       "index": "Mono slide counter, e.g. 01 / 06.",
-      "kMark": "Flat K in a bordered square, one corner, no shadow.",
-      "footer": "@kymbo handle + pixel progress ticks, identical placement every slide.",
-      "swipe": "Lime pixel-arrow affordance on non-final slides."
+      "footer": "Pixel progress ticks only. Identical placement every slide.",
+      "removed": "No K logo, no @kymbo handle, no SWIPE text, no CTA tagline — stripped by direction. Do not reintroduce.",
+      "safeZone": "Instagram stamps a carousel glyph into the TOP-RIGHT corner of every tile. Cover headlines that start at the top must keep ~150x112px clear there (handled in styles.css by a float shim)."
     },
     "coverArchetypes": {
       "STAT": "One colossal figure dominates; everything else whispers.",
@@ -41,10 +48,37 @@
       "SEAM": "Hard split between dark and light surfaces; headline straddles a lime seam.",
       "STATEMENT": "The headline fills the whole canvas, tight leading, one lime word."
     },
-    "interiorLayouts": ["POINT (indexed argument)", "STAT (figure + label + note)", "LIST (pixel-bullet checklist)", "DRAIN (pixel data-grid viz)", "MOCKUP (in-brand device/UI, drawn in CSS — no stock photos)", "QUOTE (pull quote)", "CTA (close + comment action)"],
-    "note2": "Archetypes and layouts are a KIT the designer composes from with world-class judgement — not a rigid template rotation. The goal is bespoke, editorial craft that still reads as one brand; never a mechanical fill-in-the-blank."
+    "interiorLayouts": [
+      "POINT (indexed argument)",
+      "STAT (figure + label + note)",
+      "LIST (pixel-bullet checklist)",
+      "DRAIN (pixel data-grid viz)",
+      "MOCKUP (in-brand device/UI, drawn in CSS — no stock photos)",
+      "QUOTE (pull quote)",
+      "CTA (close + comment action)"
+    ],
+    "note2": "Archetypes and layouts are a KIT the designer composes from with world-class judgement — not a rigid template rotation. The goal is bespoke, editorial craft that still reads as one brand; never a mechanical fill-in-the-blank.",
+    "pillars": {
+      "note": "Every kicker must come from this list. Batch 01 drifted and rendered [ EDUCATION ], [ MYTH-BUSTING ] and [ THE OFFER ] unregistered; they are now registered rather than silently reused.",
+      "fireYourMiddleman": [
+        "THE PROBLEM",
+        "THE MATH",
+        "THE ALTERNATIVE",
+        "THE PROOF",
+        "THE DECISION",
+        "MYTH-BUSTING",
+        "THE OFFER"
+      ],
+      "educational": [
+        "THE STACK",
+        "THE BUILD",
+        "THE STANDARD",
+        "THE FIX",
+        "THE TRADEOFF",
+        "EDUCATION"
+      ]
+    }
   },
-
   "productionPaths": {
     "note": "Two ways to produce a carousel. Both share the same type system, furniture, palette and voice — so a scene post and an HTML post sit in one feed as one brand.",
     "A_html": "Pure design, drawn 100% in code. Text, spacing, typography and colour are perfectly consistent because they're systemised. Fully automatic — deliver immediately.",
@@ -52,7 +86,6 @@
     "organicTouch": "Path B is where the feed breathes — real scenes + a human, marked-up layer (marker swipes, hand underlines, strikethroughs, scribbled circles, hand-drawn arrows, cut-out subjects with a rough halo). Inspiration for the ENERGY only; the look stays 100% Kymbo (navy/cream/lime, geometric type, pixel motif) — never a copy of any reference account's style.",
     "batchWorkflow": "Work in batches of ~12 carousels. 1) Ship all Path-A (HTML) carousels first for approval. 2) Then name which ones need scenes and produce them one at a time: prompts → Kim generates → composite → next."
   },
-
   "bookingApp": {
     "note": "The direct-booking PRODUCT shown inside slides. Design language matches the Kalido / Smithe House booking engine (warm off-white + butter-yellow accent, elegant serif display + grotesk UI, 5-step flow: Dates·Categories·Rates·Summary·Details). Fictional demo hotel (Marlowe House) — the DESIGN is replicated, not a real client's brand. One demo, all month, for consistency.",
     "source": "content/booking-app.json (data) + system/app.mjs (design) → build/app/img/<device>-<screen>.png",
@@ -61,7 +94,6 @@
     "photos": "Interior photos are Kim-generated into assets/app/<slot>.png (hero, studio, twobed, lifestyle); prompts in build/app/photo-prompts.md. Warm gradient placeholders until then.",
     "composite": "In a scene slide, `screen:{app:'laptop-hero', quad:[TL,TR,BR,BL] in slide px}` maps the UI onto the device's white screen via a perspective transform. Generate the scene with a BLANK WHITE device screen; read the 4 corners off the render to set the quad."
   },
-
   "organicAccents": {
     "note": "The hand-made 'alive' layer used mainly on scene slides. Every accent is a hand-drawn stroke (irregular, wobbly, rough-ended) tinted Verde Pixel — never a clean geometric rectangle.",
     "marker": "==text== → torn-edge highlighter swipe behind the word.",
@@ -72,12 +104,43 @@
     "cutout": "optional subject.png (masked) composited above the scrim with a rough cream halo.",
     "restraint": "One or two accents per slide, maximum. The accent points at the ONE idea — over-marking kills it."
   },
-
   "gridRules": [
-    "Never two identical surfaces adjacent in the profile grid (checkerboard) — applies to HTML posts; scene posts read as full-bleed images and add texture to the grid.",
+    "Organic/flat checkerboard — scene covers at grid positions 1,3,5,7,9,11; systemized covers at 2,4,6,8,10,12.",
+    "No two covers of the same ARCHETYPE adjacent, including diagonally. The two MATRIX and the two SEAM covers sit at opposite corners of the grid.",
+    "At least FOUR light covers per twelve, at slots 2 and 8 plus one of {4,10} and one of {6,12}. Three light covers can never clear the grid (see myDesignLanguage.surfaces.rhythm).",
+    "A topic that has a scene version drops its flat HTML twin — nothing repeats in the same month.",
     "Vary the cover treatment post-to-post so the feed never looks samey while staying one brand.",
     "Verde Pixel is an accent only — one hero element per slide.",
-    "Path A visuals are designed/drawn — no stock or AI photography; product shots are CSS mockups. Path B uses AI-generated SCENE backgrounds only (never fake UI, logos, text, or a real identifiable person baked into the image)."
+    "Path A visuals are designed/drawn — no stock or AI photography; product shots are CSS mockups or real composited screens. Path B uses AI-generated SCENE backgrounds only (never fake UI, logos, text, or a real identifiable person baked into the image)."
   ],
-  "format": { "aspect": "4:5", "px": "1080 x 1350", "platform": "Instagram carousel (primary), reusable for TikTok slides" }
+  "format": {
+    "aspect": "4:5",
+    "px": "1080 x 1350",
+    "platform": "Instagram carousel (primary), reusable for TikTok slides"
+  },
+  "contentCategories": {
+    "note": "Two categories share ONE design system and ONE feed. Not two styles — same canvas, palette, type, motif, footer and one-accent rule.",
+    "fireYourMiddleman": {
+      "job": "Sell the argument for going direct.",
+      "pillars": "THE PROBLEM · THE MATH · THE ALTERNATIVE · THE PROOF · THE DECISION",
+      "coverSurface": "mostly dark",
+      "paths": "A (HTML) and B (scene/organic)",
+      "bank": "content/ideas/fire-your-middleman.json"
+    },
+    "educational": {
+      "job": "Teach the craft — WordPress, the stack, how a booking system is built. Earns authority; feeds the campaign.",
+      "pillars": "THE STACK · THE BUILD · THE STANDARD · THE FIX · THE TRADEOFF",
+      "coverSurface": "ALWAYS light — this is the tile that fills the feed's light slot.",
+      "paths": "A by default; drawn, not photographed.",
+      "howItDiffers": [
+        "Diagram-forward interiors: where a campaign slide puts a colossal number, an educational slide puts a STRUCTURE — a flow, a stack, a labelled anatomy, a before/after.",
+        "The pixel motif becomes the diagram primitive: cells as nodes, layers, steps.",
+        "Space Grotesk carries more weight (labels, field names, values, paths); display type shrinks because the diagram is the hero.",
+        "The lime accent points at the ANSWER — the one cell or step that is the lesson — not at the headline."
+      ],
+      "staysTheSame": "1080x1350, Media Noche/Pantalla/Verde Pixel, Satoshi + Space Grotesk, pixel motif, progress ticks, one accent per slide, no logo/handle/swipe.",
+      "bank": "content/ideas/educational-technical.json"
+    }
+  },
+  "contentRepository": "content/ideas/ — README.md (system + ideation workflow), stack.json, fire-your-middleman.json, educational-technical.json. Pull topics from here at ideation; never brainstorm from zero."
 }

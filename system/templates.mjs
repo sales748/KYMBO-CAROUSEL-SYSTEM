@@ -168,17 +168,30 @@ function coverBody(s) {
 }
 
 // SEAM cover is bespoke full-bleed (own furniture)
+/* A seam panel is (1080-8)/2 minus 72px padding either side => 392px of type
+   room. Fit the display size to the LONGEST WORD across both panels so the two
+   halves always render at the same size — an asymmetric seam reads as a bug. */
+function seamSize(...values) {
+  const longest = Math.max(...values.map((v) => Math.max(...String(v).split(/\s+/).map((w) => w.length))));
+  if (longest <= 4) return 150;   // $312 / $516
+  if (longest <= 5) return 122;   // BUILD
+  if (longest <= 6) return 102;   // WIDGET
+  if (longest <= 8) return 80;
+  return 64;
+}
+
 function seamSlide(s, ctx) {
+  const px = seamSize(s.left, s.right);
   return `<div class="slide cover-seam" data-idx="${ctx.index}">
     <div class="seam-l">
       <div class="kicker kicker-abs"><span class="br">[</span> ${esc(s.kicker)} <span class="br">]</span></div>
       <div class="seam-label">${esc(s.leftLabel || 'VIA OTA')}</div>
-      <div class="seam-big">${esc(s.left)}</div>
+      <div class="seam-big" style="font-size:${px}px">${esc(s.left)}</div>
     </div>
     <div class="divider"></div>
     <div class="seam-r">
       <div class="seam-label">${esc(s.rightLabel || 'DIRECT')}</div>
-      <div class="seam-big">${esc(s.right)}</div>
+      <div class="seam-big" style="font-size:${px}px">${esc(s.right)}</div>
     </div>
     ${s.sub ? `<div class="seam-sub">${esc(s.sub)}</div>` : ''}
   </div>`;

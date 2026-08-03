@@ -1,0 +1,60 @@
+{
+  "note": "The tech stack the technical topics rest on. SPLIT INTO TWO PARTS ON PURPOSE: `industry` is the generic architecture every hotel/STR has (safe to publish, sourced below), and `kymbo` is what KYMBO ITSELF builds with — which is NOT yet verified. Do not put a tool name from `kymbo` into a published slide until `verified` is true for that entry.",
+
+  "verificationStatus": {
+    "industry": "researched — public sources listed per topic in the topic banks",
+    "kymbo": "UNVERIFIED — pending a read of the Notion workspace. The Notion connector is installed for the org but was toggled off for this chat, so the workspace could not be read. Enable it and this file gets filled from source.",
+    "howToFill": "Once Notion is readable: pull the tools/stack pages, replace each null below, set verified:true, then flip needsStack:false on the topics that depend on it."
+  },
+
+  "industry": {
+    "note": "The five-layer stack any independent property runs, whoever supplies it. This is the spine of most technical topics.",
+    "layers": [
+      { "layer": "PMS", "role": "Property management system — the hub. Rooms, rates, availability, guest records, folio.", "note": "Hub-and-spoke: everything else integrates to this." },
+      { "layer": "Channel manager", "role": "Pushes availability/rates out to OTAs and pulls their bookings back in.", "note": "Two-way sync is the whole point; one-way sync is how double bookings happen." },
+      { "layer": "Booking engine", "role": "The direct-booking checkout on the hotel's own site.", "note": "This is the layer Kymbo sells. Commission-free by definition." },
+      { "layer": "Payments", "role": "Gateway + processor + merchant account. Authorization, capture, refunds, disputes.", "note": "PCI scope lives here." },
+      { "layer": "CRM / guest data", "role": "Profiles, segmentation, pre-stay and post-stay email, loyalty.", "note": "The asset an OTA booking denies you." }
+    ],
+    "distributionSurfaces": [
+      { "name": "OTA", "model": "commission 15–30%+", "note": "Booking.com, Expedia, Airbnb (~15.5%)." },
+      { "name": "Metasearch (paid)", "model": "CPC / commission-per-stay", "note": "Google Hotel Ads, Trivago, Kayak." },
+      { "name": "Google free booking links", "model": "zero cost per click", "note": "Requires a connectivity partner (PMS, channel manager or booking engine) sending live rates + availability to Google. Shows as 'Official site'." },
+      { "name": "Direct", "model": "0%", "note": "The website. The whole campaign thesis." }
+    ],
+    "webLayer": {
+      "cms": ["WordPress (dominant in this market)", "headless CMS + JS framework (Next.js) for larger builds"],
+      "seoCritical": ["JSON-LD schema: Hotel, LocalBusiness, AggregateRating, Offer, FAQPage", "Core Web Vitals: LCP < 2.5s, INP < 200ms, CLS", "canonical + sitemap ownership"],
+      "infra": ["domain / DNS", "hosting", "CDN + edge caching", "TLS certificate", "staging + backups"]
+    }
+  },
+
+  "kymbo": {
+    "note": "What Kymbo actually builds with. EVERY FIELD BELOW IS A PLACEHOLDER pending Notion.",
+    "verified": false,
+    "siteStack": { "cms": null, "theme_or_framework": null, "hosting": null, "cdn": null },
+    "bookingEngine": { "product": null, "integrations": null, "commissionModel": null },
+    "integrations": { "pms": null, "channelManager": null, "payments": null, "crm_email": null, "analytics": null },
+    "delivery": { "widgetOffering": "Path 01 — booking widget dropped into an existing site (referenced on carousel c12)", "fullBuildOffering": "Path 02 — full build (referenced on carousel c12)", "timeline": "45 days, in writing (referenced on carousel 06 / scene-03)" },
+    "openQuestions": [
+      "Which PMS/channel managers are actually supported today?",
+      "Is the booking engine proprietary or a white-labelled partner product?",
+      "Is WordPress the delivery platform, and if so which builder/theme?",
+      "What does the 45-day guarantee cover exactly — launch, or launch + first bookings?",
+      "Which payment processors are wired in, and who holds PCI scope?"
+    ]
+  },
+
+  "sources": [
+    "https://www.cloudbeds.com/articles/hotel-booking-engine-guide/",
+    "https://chargeautomation.com/hospitality-tech-stack-independent-hotels/",
+    "https://hoteltechinsight.com/answers/how-is-a-hotel-tech-stack-interconnected/",
+    "https://www.cloudbeds.com/articles/googles-free-hotel-booking-links/",
+    "https://www.cloudbeds.com/online-travel-agencies/commissions/",
+    "https://www.siteminder.com/r/hotel-rate-parity/",
+    "https://hotelrank.ai/learn/schema-markup-hotels",
+    "https://seoparity.com/blog/headless-wordpress-seo",
+    "https://scalemyhotel.com/blog/hotel-website/hotel-website-core-web-vitals/",
+    "https://motopress.com/blog/best-free-wordpress-booking-plugins-for-hotels/"
+  ]
+}

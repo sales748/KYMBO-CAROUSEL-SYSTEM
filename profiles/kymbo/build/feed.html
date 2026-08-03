@@ -67,6 +67,15 @@
 .tick{ width:14px; height:14px; background:var(--line); }
 .tick.on{ background:var(--verde); }
 
+/* ---------- Instagram carousel-indicator safe zone ----------
+   IG stamps a carousel glyph into the top-right corner of every grid tile and
+   of the post itself. Covers whose headline starts at the top must keep that
+   corner clear. A float shim inside the headline indents ONLY the line boxes
+   that would otherwise run under the glyph — later lines keep the full
+   measure, so the type scale and wrap rhythm are untouched. */
+.cover-matrix h1::before,
+.scene .anchor-top h1::before{ content:""; float:right; width:150px; height:112px; }
+
 /* ---------- COVER: STAT ---------- */
 .cover-stat .bd{ justify-content:center; }
 .figure{ font-weight:800; letter-spacing:-.04em; color:var(--verde); line-height:.82; }
@@ -103,12 +112,17 @@
 
 /* ---------- COVER: SEAM (bespoke full-bleed) ---------- */
 .cover-seam{ padding:0; flex-direction:row; background:var(--noche); }
-.seam-l,.seam-r{ flex:1; padding:86px 72px; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; position:relative; }
+/* min-width:0 is load-bearing: without it the panels keep their intrinsic
+   content width, so a long value (WIDGET / FULL BUILD) grows past the 50%
+   basis, crushes the divider and pushes its own type off the canvas. */
+.seam-l,.seam-r{ flex:1 1 0; min-width:0; padding:86px 72px; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; position:relative; }
 .seam-l{ background:var(--noche); color:var(--pantalla); }
 .seam-r{ background:var(--pantalla); color:var(--noche); align-items:flex-end; text-align:right; }
-.cover-seam .divider{ width:8px; background:var(--verde); }
+.cover-seam .divider{ flex:0 0 8px; background:var(--verde); }
 .seam-label{ font-family:var(--font-mono); font-size:26px; letter-spacing:.24em; text-transform:uppercase; opacity:.62; }
-.seam-big{ font-size:150px; font-weight:800; letter-spacing:-.04em; line-height:.9; margin-top:18px; }
+/* size comes from the template — one size for BOTH panels, fitted to the
+   longest word across the pair so the two halves stay symmetric */
+.seam-big{ font-size:150px; font-weight:800; letter-spacing:-.04em; line-height:.9; margin-top:18px; max-width:100%; overflow-wrap:break-word; }
 .seam-l .kicker-abs{ position:absolute; top:86px; left:72px; }
 .seam-sub{
   position:absolute; left:50%; bottom:74px; transform:translateX(-50%);
@@ -312,31 +326,31 @@
        <img src="img/scene-01-s1.png" alt="scene-01">
        <span class="car">▤</span>
      </a><a class="tile" href="index.html">
-       <img src="img/c04-s1.png" alt="c04">
+       <img src="img/c08-s1.png" alt="c08">
        <span class="car">▤</span>
      </a><a class="tile organic" href="index.html">
        <img src="img/scene-05-s1.png" alt="scene-05">
        <span class="car">▤</span>
      </a><a class="tile" href="index.html">
-       <img src="img/c05-s1.png" alt="c05">
+       <img src="img/c11-s1.png" alt="c11">
        <span class="car">▤</span>
      </a><a class="tile organic" href="index.html">
        <img src="img/scene-03-s1.png" alt="scene-03">
        <span class="car">▤</span>
      </a><a class="tile" href="index.html">
-       <img src="img/c08-s1.png" alt="c08">
+       <img src="img/c05-s1.png" alt="c05">
        <span class="car">▤</span>
      </a><a class="tile organic" href="index.html">
        <img src="img/scene-02-s1.png" alt="scene-02">
        <span class="car">▤</span>
      </a><a class="tile" href="index.html">
-       <img src="img/c03-s1.png" alt="c03">
+       <img src="img/c04-s1.png" alt="c04">
        <span class="car">▤</span>
      </a><a class="tile organic" href="index.html">
        <img src="img/scene-06-s1.png" alt="scene-06">
        <span class="car">▤</span>
      </a><a class="tile" href="index.html">
-       <img src="img/c11-s1.png" alt="c11">
+       <img src="img/c03-s1.png" alt="c03">
        <span class="car">▤</span>
      </a><a class="tile organic" href="index.html">
        <img src="img/scene-04-s1.png" alt="scene-04">

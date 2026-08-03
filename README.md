@@ -34,6 +34,7 @@ profiles/
   kymbo/                    ← PROFILE: Kymbo (code-driven pipeline)
     brand.json                 brand foundation (KYMBO FEED OS)
     content/                   carousels.json, scene-*.json, booking-app.json
+    content/ideas/             CONTENT REPOSITORY — the topic banks ideation pulls from
     assets/                    real scene/app images dropped in by the client
     build/                     rendered output → index.html, feed.html, img/, app/
   randyortegar/             ← PROFILE: Randy Ortega (THE SIGNAL SYSTEM)
@@ -89,6 +90,34 @@ to post to TikTok/IG. See
 
 > Adding a third profile = add `profiles/<name>/` with its own `brand.json`.
 > The shared `system/` engine stays untouched.
+
+---
+
+## Content repository (ideation input)
+
+Ideation does not start from a blank page. `profiles/kymbo/content/ideas/` holds
+the topic banks; you filter and pull from them, then write the chosen topics into
+`content/<id>.json`.
+
+```
+content/ideas/README.md                   how the repository works + the ideation workflow
+content/ideas/stack.json                  the tech stack the technical topics rest on
+content/ideas/fire-your-middleman.json    campaign bank — the OTA/direct argument
+content/ideas/educational-technical.json  educational bank — WordPress, the stack, how to build
+```
+
+**Two content categories, one design system, one feed.** *Fire Your Middleman*
+sells the argument for going direct. *Educational / Technical* teaches the craft
+(WordPress, the five-layer stack, schema, Core Web Vitals, payments). The
+educational category is **not** a second style — same canvas, palette, type,
+motif and furniture. It differs by always shipping a **light cover** and by
+building diagram-forward interiors where a campaign carousel would put a
+colossal number. Full direction in `brand.json → contentCategories.educational`.
+
+The light cover is also load-bearing for the grid: a 12-tile month needs **four**
+light covers to avoid an all-dark column and a 3-dark row — three is provably
+insufficient. See `system/render.mjs` (the `FEED` block) for the arithmetic and
+the enforced order.
 
 ---
 

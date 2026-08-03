@@ -91,14 +91,29 @@ writeFileSync(join(build, 'index.html'), galleryDoc());
 
 /* ---------- Instagram profile grid (feed.html) ---------- */
 // Curated one-month feed: organic SCENE covers interwoven with systemized HTML
-// covers. The 4 topics that have a scene version (Problem, Proof, POV, Decision)
-// use the scene cover — the flat HTML twin is dropped so nothing repeats.
-// Organic tiles sit one-per-row in a C1·C3·C1·C3 zigzag so the grid breathes.
+// covers. A topic that has a scene version drops its flat HTML twin so nothing
+// repeats. Organic tiles sit on every (row+col)-even tile — a 6:6 checkerboard.
+//
+// THE RULES THIS ORDER ENFORCES (keep them when planning the next batch):
+//   1. Organic/flat checkerboard — organic at positions 1,3,5,7,9,11 below.
+//   2. No two covers of the same ARCHETYPE adjacent, including diagonally.
+//      The two MATRIX covers (c05, c03) and the two SEAM covers (c08, c12) are
+//      each placed at opposite corners of the grid.
+//   3. Surface rhythm — see the note below. Currently capped by the inputs.
+//
+// TONAL CEILING (measured, not opinion): rows 1 and 3 each carry two organic
+// tiles, so their single flat slot must be light or the row goes 3-dark. That
+// spends two of the three light flats in column 2, leaving ONE light to cover
+// both column 1 and column 3 — impossible. With 6 dark organic covers and 3
+// light flats the grid ALWAYS has one all-dark column plus one 3-dark row.
+// This order already sits at that floor; no reordering improves it. The fix is
+// a light cover entering the pool — which is exactly what the EDUCATIONAL
+// category (white covers) supplies. See content/ideas/README.md.
 const FEED = [
-  'scene-01', 'c04', 'scene-05',
-  'c05', 'scene-03', 'c08',
-  'scene-02', 'c03', 'scene-06',
-  'c11', 'scene-04', 'c12',
+  'scene-01', 'c08', 'scene-05',
+  'c11', 'scene-03', 'c05',
+  'scene-02', 'c04', 'scene-06',
+  'c03', 'scene-04', 'c12',
 ];
 const SCENE_SET = new Set(['scene-01', 'scene-02', 'scene-03', 'scene-04', 'scene-05', 'scene-06']);
 function feedDoc() {
