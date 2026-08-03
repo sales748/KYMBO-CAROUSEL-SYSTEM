@@ -27,7 +27,7 @@ every month you delay.  —  For a mid-size property. The system that stops it t
 Save as `s2.png` in `assets/scene-04/`.
 
 ```text
-A quiet modern reception desk at dusk, empty and still, one warm lamp glowing, a leafy plant, deep shadows, a sense of money quietly slipping away. LEAVE THE BOTTOM THIRD calm and darker for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props, no cash. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
+A quiet modern reception desk at dusk, empty and still, one warm lamp glowing, a leafy plant, deep shadows, a sense of money quietly slipping away. LEAVE THE BOTTOM THIRD calm and darker for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props, no cash. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 3 — SCENE-04 / 3  (PHOTO)
@@ -37,7 +37,7 @@ A quiet modern reception desk at dusk, empty and still, one warm lamp glowing, a
 Save as `s3.png` in `assets/scene-04/`.
 
 ```text
-A sunlit modern room with long dramatic shadows moving across a wall — a visual of time passing — a single chair, a plant, warm cream plaster. Contemplative. LEAVE THE TOP THIRD a calm wall for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props, no cash. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
+A sunlit modern room with long dramatic shadows moving across a wall — a visual of time passing — a single chair, a plant, warm cream plaster. Contemplative. LEAVE THE TOP THIRD a calm wall for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props, no cash. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 4 — SCENE-04 / 4  (PHOTO)
@@ -48,7 +48,7 @@ The __second-best__ is now.  —  Every booking from today can be one you actual
 Save as `s4.png` in `assets/scene-04/`.
 
 ```text
-A fresh bright morning in a modern boutique lobby, glass doors opening to golden daylight, plants, walnut and cream, a hopeful new-day feeling. LEAVE THE BOTTOM THIRD calm and darker for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props, no cash. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
+A fresh bright morning in a modern boutique lobby, glass doors opening to golden daylight, plants, walnut and cream, a hopeful new-day feeling. LEAVE THE BOTTOM THIRD calm and darker for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props, no cash. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 5 — SCENE-04 / 5  (PHOTO + COMPOSITE — laptop, blank white screen)

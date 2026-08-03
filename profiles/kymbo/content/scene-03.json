@@ -5,8 +5,8 @@
   "batch": "01",
   "pathBofBatch": "3 of 4",
   "title": "45 days, in writing.",
-  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade \u2014 deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel + modern workspace world: walnut wood, cream plaster, greenery, contemporary fixtures and screens. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
-  "note": "Path B \u2014 scene/organic. Pure-photo slides + one DEVICE-COMPOSITE (blank white laptop screen \u2192 composite laptop-hero). Drop photos into assets/scene-03/ as s1..s6 .png.",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel + modern workspace world: walnut wood, cream plaster, greenery, contemporary fixtures and screens. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
+  "note": "Path B — scene/organic. Pure-photo slides + one DEVICE-COMPOSITE (blank white laptop screen → composite laptop-hero). Drop photos into assets/scene-03/ as s1..s6 .png.",
   "assetDir": "assets/scene-03",
   "slides": [
     {
@@ -29,9 +29,9 @@
       "imageId": "SCENE-03 / 2  (PHOTO)",
       "index": "01",
       "title": "==Weeks==, not months.",
-      "body": "A senior team ships your booking system in a single sprint \u2014 and we put the date in the contract.",
+      "body": "A senior team ships your booking system in a single sprint — and we put the date in the contract.",
       "bg": "assets/scene-03/s2.png",
-      "imagePrompt": "A focused modern developer workspace: dual monitors glowing softly (screens ambient, not readable), a mechanical keyboard, plants, warm desk lamp, evening light. Craft and momentum. LEAVE THE BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]"
+      "imagePrompt": "A focused modern developer workspace: dual monitors glowing softly (screens ambient, not readable), a mechanical keyboard, plants, warm desk lamp, evening light. Craft and momentum. LEAVE THE BOTTOM THIRD calm and darker for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
     },
     {
       "scene": true,
@@ -44,25 +44,25 @@
         "Live & taking real payments in 45 days",
         "Channel sync configured and tested",
         "A booking flow that passes our conversion checklist",
-        "Or we keep working \u2014 free \u2014 until it does"
+        "Or we keep working — free — until it does"
       ],
       "bg": "assets/scene-03/s3.png",
-      "imagePrompt": "A tidy, minimalist modern desk from above: a closed laptop, a cup of coffee, a small plant, a notebook, soft even daylight on a warm wood surface. Calm and ordered. Keep it uncluttered and slightly darker overall so a checklist reads on top. [Apply the STYLE LINE.]"
+      "imagePrompt": "A tidy, minimalist modern desk from above: a closed laptop, a cup of coffee, a small plant, a notebook, soft even daylight on a warm wood surface. Calm and ordered. Keep it uncluttered and slightly darker overall so a checklist reads on top. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
     },
     {
       "scene": true,
       "layout": "point",
       "anchor": "bottom",
       "scrim": "bottom",
-      "imageId": "SCENE-03 / 4  (PHOTO + COMPOSITE \u2014 laptop, blank white screen)",
+      "imageId": "SCENE-03 / 4  (PHOTO + COMPOSITE — laptop, blank white screen)",
       "index": "02",
       "title": "On day 45, this is ==live==.",
-      "body": "Real bookings, real payments \u2014 on your own site.",
+      "body": "Real bookings, real payments — on your own site.",
       "bg": "assets/scene-03/s4.png",
       "screen": {
         "app": "laptop-hero"
       },
-      "imagePrompt": "A modern open laptop (MacBook-style) on a walnut desk in a warm boutique-hotel back office, plants, morning light, a coffee beside it. IMPORTANT FOR COMPOSITING: laptop FRONT-ON to the camera, screen a solid PURE-WHITE rectangle (#FFFFFF) \u2014 blank, no UI, no glare, unobstructed. LEAVE THE BOTTOM THIRD calm for text. CRITICAL COMPOSITION: the device occupies only the UPPER ~55% of the frame; keep the LOWER ~40% a clean, empty, softly-shadowed darker surface (nothing on it) for text. All four screen corners visible. [Apply the STYLE LINE.]"
+      "imagePrompt": "A modern open laptop (MacBook-style) on a walnut desk in a warm boutique-hotel back office, plants, morning light, a coffee beside it. IMPORTANT FOR COMPOSITING: laptop FRONT-ON to the camera, screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no glare, unobstructed. LEAVE THE BOTTOM THIRD calm for text. CRITICAL COMPOSITION: the device occupies only the UPPER ~55% of the frame; keep the LOWER ~40% a clean, empty, softly-shadowed darker surface (nothing on it) for text. All four screen corners visible. [Apply the STYLE LINE.]"
     },
     {
       "scene": true,
@@ -74,7 +74,7 @@
       "title": "The risk moves to ((us)).",
       "body": "You've carried the cost of doing nothing for years. Now it sits with the people building it.",
       "bg": "assets/scene-03/s5.png",
-      "imagePrompt": "Two people collaborating warmly in a bright modern office \u2014 one gesturing at a screen (ambient, not readable), the other nodding, plants, walnut and cream, daylight (faces soft / not identifiable). Trust and partnership. LEAVE THE TOP THIRD a calm wall for text. [Apply the STYLE LINE.]"
+      "imagePrompt": "Two people collaborating warmly in a bright modern office — one gesturing at a screen (ambient, not readable), the other nodding, plants, walnut and cream, daylight (faces soft / not identifiable). Trust and partnership. LEAVE THE TOP THIRD a calm wall for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
     },
     {
       "scene": true,
@@ -87,7 +87,7 @@
       "sub": "Read the guarantee before you commit a cent.",
       "action": "Comment 45 for the terms",
       "bg": "assets/scene-03/s6.png",
-      "imagePrompt": "A boutique-hotel owner at ease in their beautiful property at warm evening hour \u2014 leaning on a walnut counter, calm and reassured, plants, soft lamp glow (face soft / not identifiable). LEAVE THE BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]"
+      "imagePrompt": "A boutique-hotel owner at ease in their beautiful property at warm evening hour — leaning on a walnut counter, calm and reassured, plants, soft lamp glow (face soft / not identifiable). LEAVE THE BOTTOM THIRD calm and darker for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
     }
   ]
 }

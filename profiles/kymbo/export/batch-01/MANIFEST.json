@@ -1,0 +1,71 @@
+{
+  "batch": "01",
+  "generated": "see git log",
+  "carousels": [
+    {
+      "id": "c01",
+      "n": 6,
+      "title": "The 15–30% tax nobody put on your P&L"
+    },
+    {
+      "id": "c02",
+      "n": 7,
+      "title": "5 myths that keep hotels addicted to OTAs"
+    },
+    {
+      "id": "c03",
+      "n": 6,
+      "title": "What a direct-booking system actually includes"
+    },
+    {
+      "id": "c04",
+      "n": 6,
+      "title": "$50 gone on every $200 booking"
+    },
+    {
+      "id": "c05",
+      "n": 6,
+      "title": "Watch the grid drain: 30 rooms, $151k a year"
+    },
+    {
+      "id": "c06",
+      "n": 6,
+      "title": "We back every build in writing — the 45-day guarantee"
+    },
+    {
+      "id": "c07",
+      "n": 6,
+      "title": "You don't need to quit Airbnb"
+    },
+    {
+      "id": "c08",
+      "n": 6,
+      "title": "$516 vs $312 per booking: the real cost of a middleman"
+    },
+    {
+      "id": "c09",
+      "n": 6,
+      "title": "3 things every booking page needs to convert"
+    },
+    {
+      "id": "c10",
+      "n": 5,
+      "title": "Every month you wait, the middleman keeps his cut"
+    },
+    {
+      "id": "c11",
+      "n": 6,
+      "title": "Widget vs full integration: which one do you need?"
+    },
+    {
+      "id": "c12",
+      "n": 5,
+      "title": "Two ways to start booking direct"
+    },
+    {
+      "id": "scene-01",
+      "n": 6,
+      "title": "You're not fully booked. You're fully rented."
+    }
+  ]
+}

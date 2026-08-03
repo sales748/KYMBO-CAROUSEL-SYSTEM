@@ -9,7 +9,10 @@
   "assetDir": "assets/scene-05",
   "slides": [
     {
-      "scene": true, "layout": "cover", "anchor": "top", "scrim": "top",
+      "scene": true,
+      "layout": "cover",
+      "anchor": "top",
+      "scrim": "top",
       "imageId": "SCENE-05 / 1  (PHOTO — cover)",
       "kicker": "MYTH-BUSTING",
       "headline": "5 ==myths== keeping you\naddicted to OTAs.",
@@ -18,50 +21,65 @@
       "imagePrompt": "A boutique-hotel owner (three-quarter, face not clearly identifiable) pausing thoughtfully — mid-doubt — at a beautiful modern reception or lounge, warm lamp light, plants, walnut and cream, a small green neon glow. Quietly skeptical, reflective mood. LEAVE THE TOP THIRD a calm darker wall for the headline; subject lower-right. [Apply the STYLE LINE.]"
     },
     {
-      "scene": true, "layout": "point", "anchor": "bottom", "scrim": "bottom",
+      "scene": true,
+      "layout": "point",
+      "anchor": "bottom",
+      "scrim": "bottom",
       "imageId": "SCENE-05 / 2  (PHOTO)",
       "index": "01",
       "title": "“They bring guests I'd never reach.”",
       "body": "70% of OTA guests search your name right after. You paid a finder's fee for a guest who already found you.",
       "bg": "assets/scene-05/s2.png",
-      "imagePrompt": "A traveller on a sofa searching a hotel name on a phone (screen not readable, ambient glow), warm evening light, plant nearby, cosy modern interior. LEAVE THE BOTTOM THIRD calm and darker for text; subject upper-mid. [Apply the STYLE LINE.]"
+      "imagePrompt": "A traveller on a sofa searching a hotel name on a phone (screen not readable, ambient glow), warm evening light, plant nearby, cosy modern interior. LEAVE THE BOTTOM THIRD calm and darker for text; subject upper-mid. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
     },
     {
-      "scene": true, "layout": "point", "anchor": "top", "scrim": "top",
+      "scene": true,
+      "layout": "point",
+      "anchor": "top",
+      "scrim": "top",
       "imageId": "SCENE-05 / 3  (PHOTO)",
       "index": "02",
       "title": "“A direct site is too ((expensive)).”",
       "body": "One month of commission often covers the entire build. It pays for itself — then keeps paying.",
       "bg": "assets/scene-05/s3.png",
-      "imagePrompt": "A calm modern hotel back-office desk with a laptop (screen ambient, not readable), a plant and coffee, soft daylight — a sense of quiet numbers. LEAVE THE TOP THIRD calm for text; desk lower. [Apply the STYLE LINE.]"
+      "imagePrompt": "A calm modern hotel back-office desk with a laptop (screen ambient, not readable), a plant and coffee, soft daylight — a sense of quiet numbers. LEAVE THE TOP THIRD calm for text; desk lower. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
     },
     {
-      "scene": true, "layout": "point", "anchor": "bottom", "scrim": "bottom",
+      "scene": true,
+      "layout": "point",
+      "anchor": "bottom",
+      "scrim": "bottom",
       "imageId": "SCENE-05 / 4  (PHOTO)",
       "index": "03",
       "title": "“Guests trust Booking.com more.”",
       "body": "Guests trust a fast, clear checkout — wherever it lives. Trust is a ==design problem==, not a platform.",
       "bg": "assets/scene-05/s4.png",
-      "imagePrompt": "A guest relaxed and confident completing something on a phone at a warm café table (screen not readable), latte and plant nearby, reassured mood. LEAVE THE BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]"
+      "imagePrompt": "A guest relaxed and confident completing something on a phone at a warm café table (screen not readable), latte and plant nearby, reassured mood. LEAVE THE BOTTOM THIRD calm and darker for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
     },
     {
-      "scene": true, "layout": "point", "anchor": "top", "scrim": "top",
+      "scene": true,
+      "layout": "point",
+      "anchor": "top",
+      "scrim": "top",
       "imageId": "SCENE-05 / 5  (PHOTO)",
       "index": "04",
       "title": "“Rate parity means I can't compete.”",
       "body": "You don't compete on price. You win on perks the OTA legally can't show — upgrades, late checkout, the real you.",
       "bg": "assets/scene-05/s5.png",
-      "imagePrompt": "A warm welcome moment — a host offering a small upgrade gesture (a glass of wine, a room key card) to a guest at a beautiful modern reception, golden light, plants (faces not identifiable). LEAVE THE TOP THIRD calm for text. [Apply the STYLE LINE.]"
+      "imagePrompt": "A warm welcome moment — a host offering a small upgrade gesture (a glass of wine, a room key card) to a guest at a beautiful modern reception, golden light, plants (faces not identifiable). LEAVE THE TOP THIRD calm for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
     },
     {
-      "scene": true, "layout": "cta", "anchor": "bottom", "scrim": "bottom",
+      "scene": true,
+      "layout": "cta",
+      "anchor": "bottom",
+      "scrim": "bottom",
       "imageId": "SCENE-05 / 6  (PHOTO — cta)",
       "kicker": "THE FIX",
       "headline": "Myths are expensive.\n==Math is cheap.==",
       "sub": "We'll show you yours.",
       "action": "Comment DIRECT to start",
       "bg": "assets/scene-05/s6.png",
-      "imagePrompt": "A calm, confident boutique-hotel owner at ease in their beautiful property at warm evening hour, reassured (face soft / not identifiable), plants, soft lamp glow. LEAVE THE BOTTOM THIRD calm and darker for text. [Apply the STYLE LINE.]"
+      "imagePrompt": "A calm, confident boutique-hotel owner at ease in their beautiful property at warm evening hour, reassured (face soft / not identifiable), plants, soft lamp glow. LEAVE THE BOTTOM THIRD calm and darker for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
     }
   ]
 }
