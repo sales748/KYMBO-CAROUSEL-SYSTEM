@@ -1,0 +1,75 @@
+{
+  "id": "scene-09",
+  "mode": "scene",
+  "pillar": "The Alternative",
+  "batch": "02",
+  "pathBofBatch": "3 of 6",
+  "title": "You don't have to win the search. Just the handoff.",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
+  "note": "Path B. Slide 5 is a DEVICE-COMPOSITE (laptop, blank white screen). All other slides are pure photos.",
+  "assetDir": "assets/scene-09",
+  "slides": [
+    {
+      "scene": true,
+      "layout": "cover",
+      "bg": "assets/scene-09/s1.png",
+      "imageId": "guest-phone-lobby-search",
+      "imagePrompt": "A guest sitting in a warm boutique-hotel lounge chair looking down at a phone, seen from the side and slightly behind, face not identifiable. Walnut, cream plaster, greenery, warm lamp light. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "headline": "You don't have to win the search.\nJust the ==handoff==.",
+      "sub": "65% of direct bookings start on an OTA."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-09/s2.png",
+      "imageId": "laptop-and-phone-table",
+      "imagePrompt": "A phone lying beside a closed laptop on a walnut cafe table in a boutique hotel, warm daylight, plant and cup nearby. Screens dark and blank, no readable content. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "01",
+      "title": "They find you on Booking.com",
+      "body": "That's not the loss. That's the introduction — the part you were never going to pay for any other way."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-09/s3.png",
+      "imageId": "guest-walking-corridor",
+      "imagePrompt": "A guest walking away down a warm boutique-hotel corridor, seen from behind, soft wall lights, walnut doors, a plant. Anonymous. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "02",
+      "title": "Then they __google your name__",
+      "body": "Two out of three direct bookings begin exactly here. The OTA did the discovery. Your site only has to be findable and fast."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-09/s4.png",
+      "imageId": "hotel-exterior-evening",
+      "imagePrompt": "The entrance of a small modern boutique hotel at dusk from across the street: warm glow through glass, planting either side of the door, contemporary signage with NO readable text or logo. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "03",
+      "title": "The handoff is where you lose them",
+      "body": "A slow site, no live availability, a booking form that asks for an email and promises a reply. They go back to the tab that just works."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-09/s5.png",
+      "imageId": "laptop-lobby-blank",
+      "imagePrompt": "DEVICE-COMPOSITE SLIDE: the device screen must be COMPLETELY BLANK PURE WHITE — no UI, no icons, no reflections, no text. We composite our own booking product onto it. A laptop open on a low walnut table in a warm boutique-hotel lounge, screen COMPLETELY BLANK PURE WHITE, viewed slightly from the side. Linen armchair, plant, soft evening lamps behind. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "04",
+      "title": "Win it with ==live availability==",
+      "body": "Real dates, real rooms, real prices, booked in under a minute. That's the whole job.",
+      "screen": {
+        "app": "laptop-hero"
+      }
+    },
+    {
+      "scene": true,
+      "layout": "cta",
+      "bg": "assets/scene-09/s6.png",
+      "imageId": "reception-warm-evening",
+      "imagePrompt": "A warm boutique-hotel reception at evening, lamps on, walnut counter, greenery, cream plaster, entirely empty of people. Quiet and expensive. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "headline": "Let them find you.\n==Then win the click.==",
+      "sub": "We build the page that closes it.",
+      "action": "Comment HANDOFF"
+    }
+  ]
+}

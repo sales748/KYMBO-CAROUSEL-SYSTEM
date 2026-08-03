@@ -103,25 +103,39 @@ writeFileSync(join(build, 'index.html'), galleryDoc());
 //
 // TONAL CEILING (measured, not opinion): rows 1 and 3 each carry two organic
 // tiles, so their single flat slot must be light or the row goes 3-dark. That
-// spends two of the three light flats in column 2, leaving ONE light to cover
-// both column 1 and column 3 — impossible. With 6 dark organic covers and 3
-// light flats the grid ALWAYS has one all-dark column plus one 3-dark row.
-// This order already sits at that floor; no reordering improves it. The fix is
-// a light cover entering the pool — which is exactly what the EDUCATIONAL
-// category (white covers) supplies. See content/ideas/README.md.
-const FEED = [
+// spends two light flats in column 2, leaving ONE light to cover both column 1
+// and column 3 — impossible. With 6 dark organic covers and only 3 light flats
+// the grid ALWAYS has one all-dark column plus one 3-dark row. BATCH 01 sits at
+// that floor and no reordering improves it. FOUR light covers clears it.
+//
+// BATCH 02 proves it: the four EDUCATIONAL carousels (c13–c16) ship light covers
+// by rule, plus c17, giving 5 light flats. Result below — no all-dark column and
+// no 3-dark row, for the first time.
+const FEED_01 = [
   'scene-01', 'c08', 'scene-05',
   'c11', 'scene-03', 'c05',
   'scene-02', 'c04', 'scene-06',
   'c03', 'scene-04', 'c12',
 ];
-const SCENE_SET = new Set(['scene-01', 'scene-02', 'scene-03', 'scene-04', 'scene-05', 'scene-06']);
-function feedDoc() {
-  const tiles = FEED.map((base) =>
+// Batch 02 — the upcoming month. Light flats at 2,4,6,8,12; the one dark flat
+// (c18) sits at 10. The two STAT covers (c13, c18) are at opposite corners.
+const FEED_02 = [
+  'scene-07', 'c13', 'scene-08',
+  'c15', 'scene-09', 'c14',
+  'scene-10', 'c16', 'scene-11',
+  'c18', 'scene-12', 'c17',
+];
+const FEED = FEED_02;
+const SCENE_SET = new Set(['scene-01', 'scene-02', 'scene-03', 'scene-04', 'scene-05', 'scene-06',
+  'scene-07', 'scene-08', 'scene-09', 'scene-10', 'scene-11', 'scene-12']);
+function grid(feed) {
+  return feed.map((base) =>
     `<a class="tile${SCENE_SET.has(base) ? ' organic' : ''}" href="index.html">
        <img src="img/${base}-s1.png" alt="${base}">
        <span class="car">▤</span>
      </a>`).join('');
+}
+function feedDoc() {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <title>@kymbo — feed preview</title>${head}
 <style>
@@ -141,6 +155,11 @@ function feedDoc() {
   .tile{position:relative;aspect-ratio:4/5;overflow:hidden;background:#000}
   .tile img{width:100%;height:100%;object-fit:cover;display:block}
   .tile .car{position:absolute;top:8px;right:9px;color:#fff;font-size:20px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+  .mlabel{font-family:var(--font-mono);font-size:15px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--verde);padding:30px 34px 12px;border-top:1px solid rgba(247,248,234,.12);margin-top:26px}
+  .mlabel span{color:rgba(247,248,234,.55);letter-spacing:.04em;text-transform:none;display:block;
+    font-size:15px;margin-top:6px}
+  .mlabel.first{border-top:0;margin-top:6px;padding-top:8px}
 </style></head><body>
   <div class="phone">
     <div class="hero">
@@ -158,7 +177,12 @@ function feedDoc() {
         <div class="lime">▸ fire your middleman</div>
       </div>
     </div>
-    <div class="grid">${tiles}</div>
+    <div class="mlabel first">▸ Batch 02 — next weeks
+      <span>4 educational (light covers) · 2 campaign · 6 organic scene</span></div>
+    <div class="grid">${grid(FEED_02)}</div>
+    <div class="mlabel">▸ Batch 01 — shipped
+      <span>for rhythm reference</span></div>
+    <div class="grid">${grid(FEED_01)}</div>
   </div>
 </body></html>`;
 }

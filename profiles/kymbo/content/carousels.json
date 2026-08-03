@@ -3,149 +3,968 @@
   "brand": "Kymbo",
   "handle": "@kymbo",
   "message": "OTAs take 15–30%. Airbnb 15.5%. Your website takes 0%. Fire your middleman.",
-  "rotationNote": "Surfaces alternate dark/light by order (checkerboard grid). The five cover archetypes rotate so no two adjacent posts share one.",
+  "rotationNote": "Batch 01 = c01–c12. Batch 02 = c13–c18 (systemized) + scene-07–scene-12 (organic). c13–c16 are the EDUCATIONAL category — light covers by rule, which is what keeps the grid out of its all-dark floor.",
   "carousels": [
     {
-      "id": 1, "order": 1, "pillar": "The Problem", "surface": "dark", "cover": "STAT",
+      "id": 1,
+      "order": 1,
+      "pillar": "The Problem",
+      "surface": "dark",
+      "cover": "STAT",
       "title": "The 15–30% tax nobody put on your P&L",
       "slides": [
-        { "type": "cover", "variant": "STAT", "kicker": "THE PROBLEM", "stat": "15–30%", "headline": "The tax nobody put on your P&L", "sub": "Every OTA booking. Every month. Quietly." },
-        { "type": "point", "index": "01", "title": "It doesn't show up as a line item", "body": "Commission is skimmed before the money ever reaches you. You never write the check — so you never feel the wound." },
-        { "type": "stat", "value": "$50", "label": "gone on every $200 booking", "note": "At 25% commission, one in four rooms is booked for the middleman, not for you." },
-        { "type": "list", "title": "What that 25% really pays for", "items": ["A guest who searched for YOUR property by name", "A booking that would have happened anyway", "A relationship the OTA now owns, not you"] },
-        { "type": "point", "index": "02", "title": "Rankings you rent, never own", "body": "Stop paying and you vanish. You are renting visibility to your own guests — forever." },
-        { "type": "cta", "headline": "Your website takes 0%.", "hiWord": "0%", "sub": "See the real math on your property.", "action": "Comment MATH and we'll run your numbers" }
+        {
+          "type": "cover",
+          "variant": "STAT",
+          "kicker": "THE PROBLEM",
+          "stat": "15–30%",
+          "headline": "The tax nobody put on your P&L",
+          "sub": "Every OTA booking. Every month. Quietly."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "It doesn't show up as a line item",
+          "body": "Commission is skimmed before the money ever reaches you. You never write the check — so you never feel the wound."
+        },
+        {
+          "type": "stat",
+          "value": "$50",
+          "label": "gone on every $200 booking",
+          "note": "At 25% commission, one in four rooms is booked for the middleman, not for you."
+        },
+        {
+          "type": "list",
+          "title": "What that 25% really pays for",
+          "items": [
+            "A guest who searched for YOUR property by name",
+            "A booking that would have happened anyway",
+            "A relationship the OTA now owns, not you"
+          ]
+        },
+        {
+          "type": "point",
+          "index": "02",
+          "title": "Rankings you rent, never own",
+          "body": "Stop paying and you vanish. You are renting visibility to your own guests — forever."
+        },
+        {
+          "type": "cta",
+          "headline": "Your website takes 0%.",
+          "hiWord": "0%",
+          "sub": "See the real math on your property.",
+          "action": "Comment MATH and we'll run your numbers"
+        }
       ]
     },
     {
-      "id": 2, "order": 2, "pillar": "The Problem", "surface": "light", "cover": "INDEX",
+      "id": 2,
+      "order": 2,
+      "pillar": "The Problem",
+      "surface": "light",
+      "cover": "INDEX",
       "title": "5 myths that keep hotels addicted to OTAs",
       "slides": [
-        { "type": "cover", "variant": "INDEX", "kicker": "MYTH-BUSTING", "ghost": "5", "headline": "5 myths that keep hotels addicted to OTAs", "sub": "The stories that cost you six figures a year." },
-        { "type": "point", "index": "MYTH 01", "title": "“OTAs bring me guests I'd never reach.”", "body": "70% of OTA guests search your name directly afterward. You paid a finder's fee for a guest who already found you." },
-        { "type": "point", "index": "MYTH 02", "title": "“A direct site is too expensive to build.”", "body": "One month of commission on a mid-size property often covers the entire build. It pays for itself, then keeps paying." },
-        { "type": "point", "index": "MYTH 03", "title": "“Guests trust Booking.com more than me.”", "body": "Guests trust a fast, clear checkout — wherever it lives. Trust is a design problem, not a platform." },
-        { "type": "point", "index": "MYTH 04", "title": "“I can't compete under rate parity.”", "body": "You don't compete on price. You compete on perks the OTA legally can't match: upgrades, late checkout, the real you." },
-        { "type": "point", "index": "MYTH 05", "title": "“Managing direct bookings is a headache.”", "body": "With the right channel manager, direct is less work — one calendar, no disputes, no chargebacks you didn't cause." },
-        { "type": "cta", "headline": "Myths are expensive.", "sub": "Math is cheap. We'll show you yours.", "action": "Comment DIRECT to start" }
+        {
+          "type": "cover",
+          "variant": "INDEX",
+          "kicker": "MYTH-BUSTING",
+          "ghost": "5",
+          "headline": "5 myths that keep hotels addicted to OTAs",
+          "sub": "The stories that cost you six figures a year."
+        },
+        {
+          "type": "point",
+          "index": "MYTH 01",
+          "title": "“OTAs bring me guests I'd never reach.”",
+          "body": "70% of OTA guests search your name directly afterward. You paid a finder's fee for a guest who already found you."
+        },
+        {
+          "type": "point",
+          "index": "MYTH 02",
+          "title": "“A direct site is too expensive to build.”",
+          "body": "One month of commission on a mid-size property often covers the entire build. It pays for itself, then keeps paying."
+        },
+        {
+          "type": "point",
+          "index": "MYTH 03",
+          "title": "“Guests trust Booking.com more than me.”",
+          "body": "Guests trust a fast, clear checkout — wherever it lives. Trust is a design problem, not a platform."
+        },
+        {
+          "type": "point",
+          "index": "MYTH 04",
+          "title": "“I can't compete under rate parity.”",
+          "body": "You don't compete on price. You compete on perks the OTA legally can't match: upgrades, late checkout, the real you."
+        },
+        {
+          "type": "point",
+          "index": "MYTH 05",
+          "title": "“Managing direct bookings is a headache.”",
+          "body": "With the right channel manager, direct is less work — one calendar, no disputes, no chargebacks you didn't cause."
+        },
+        {
+          "type": "cta",
+          "headline": "Myths are expensive.",
+          "sub": "Math is cheap. We'll show you yours.",
+          "action": "Comment DIRECT to start"
+        }
       ]
     },
     {
-      "id": 3, "order": 3, "pillar": "The Alternative", "surface": "dark", "cover": "MATRIX",
+      "id": 3,
+      "order": 3,
+      "pillar": "The Alternative",
+      "surface": "dark",
+      "cover": "MATRIX",
       "title": "What a direct-booking system actually includes",
       "slides": [
-        { "type": "cover", "variant": "MATRIX", "kicker": "THE ALTERNATIVE", "headline": "What a direct-booking system actually includes", "sub": "Not a website. A revenue system.", "grid": { "total": 16, "filled": 16 } },
-        { "type": "mockup", "device": "desktop", "title": "A page that takes payment", "caption": "This is the whole product — availability, rate, and one button.", "ui": { "brandline": "THE COASTAL — Direct", "price": "$180", "unit": "/ night", "cta": "Book direct" } },
-        { "type": "list", "title": "Inside the system", "items": ["A fast booking engine with real-time availability", "Secure payments — cards, Apple & Google Pay", "Automatic channel sync so you never double-book", "Guest emails, confirmations & upsells, hands-free"] },
-        { "type": "point", "index": "01", "title": "Your calendar, one source of truth", "body": "Direct, Airbnb and Booking.com all read the same availability. No overbooking, no 2am panic." },
-        { "type": "mockup", "device": "mobile", "title": "80% of guests book here", "caption": "Four in five bookings happen on this screen. It has to be flawless.", "ui": { "brandline": "Checkout", "price": "$180", "unit": "· 2 nights", "cta": "Pay & confirm" } },
-        { "type": "cta", "headline": "A system that pays for itself.", "sub": "See a live demo on your own property.", "action": "Comment SYSTEM for a walkthrough" }
+        {
+          "type": "cover",
+          "variant": "MATRIX",
+          "kicker": "THE ALTERNATIVE",
+          "headline": "What a direct-booking system actually includes",
+          "sub": "Not a website. A revenue system.",
+          "grid": {
+            "total": 16,
+            "filled": 16
+          }
+        },
+        {
+          "type": "mockup",
+          "device": "desktop",
+          "title": "A page that takes payment",
+          "caption": "This is the whole product — availability, rate, and one button.",
+          "ui": {
+            "brandline": "THE COASTAL — Direct",
+            "price": "$180",
+            "unit": "/ night",
+            "cta": "Book direct"
+          }
+        },
+        {
+          "type": "list",
+          "title": "Inside the system",
+          "items": [
+            "A fast booking engine with real-time availability",
+            "Secure payments — cards, Apple & Google Pay",
+            "Automatic channel sync so you never double-book",
+            "Guest emails, confirmations & upsells, hands-free"
+          ]
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "Your calendar, one source of truth",
+          "body": "Direct, Airbnb and Booking.com all read the same availability. No overbooking, no 2am panic."
+        },
+        {
+          "type": "mockup",
+          "device": "mobile",
+          "title": "80% of guests book here",
+          "caption": "Four in five bookings happen on this screen. It has to be flawless.",
+          "ui": {
+            "brandline": "Checkout",
+            "price": "$180",
+            "unit": "· 2 nights",
+            "cta": "Pay & confirm"
+          }
+        },
+        {
+          "type": "cta",
+          "headline": "A system that pays for itself.",
+          "sub": "See a live demo on your own property.",
+          "action": "Comment SYSTEM for a walkthrough"
+        }
       ]
     },
     {
-      "id": 4, "order": 4, "pillar": "The Math", "surface": "light", "cover": "STATEMENT",
+      "id": 4,
+      "order": 4,
+      "pillar": "The Math",
+      "surface": "light",
+      "cover": "STATEMENT",
       "title": "$50 gone on every $200 booking",
       "slides": [
-        { "type": "cover", "variant": "STATEMENT", "kicker": "THE MATH", "headline": "$50 gone on every $200 booking.", "hi": "$50", "sub": "Run it across a full year. Then keep reading." },
-        { "type": "stat", "value": "$200", "label": "guest pays", "note": "A single midweek room night." },
-        { "type": "stat", "value": "−$50", "label": "OTA commission (25%)", "note": "You never see it. It's gone before payout." },
-        { "type": "stat", "value": "$150", "label": "what actually reaches you", "note": "You did all the work. They took the cut." },
-        { "type": "point", "index": "01", "title": "Now multiply", "body": "40 OTA bookings a month × $50 = $2,000/mo. That's $24,000 a year — for guests who were already yours." },
-        { "type": "cta", "headline": "$0 on direct.", "hiWord": "$0", "sub": "That $24k builds the system in year one and prints profit after.", "action": "Comment MATH for your numbers" }
+        {
+          "type": "cover",
+          "variant": "STATEMENT",
+          "kicker": "THE MATH",
+          "headline": "$50 gone on every $200 booking.",
+          "hi": "$50",
+          "sub": "Run it across a full year. Then keep reading."
+        },
+        {
+          "type": "stat",
+          "value": "$200",
+          "label": "guest pays",
+          "note": "A single midweek room night."
+        },
+        {
+          "type": "stat",
+          "value": "−$50",
+          "label": "OTA commission (25%)",
+          "note": "You never see it. It's gone before payout."
+        },
+        {
+          "type": "stat",
+          "value": "$150",
+          "label": "what actually reaches you",
+          "note": "You did all the work. They took the cut."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "Now multiply",
+          "body": "40 OTA bookings a month × $50 = $2,000/mo. That's $24,000 a year — for guests who were already yours."
+        },
+        {
+          "type": "cta",
+          "headline": "$0 on direct.",
+          "hiWord": "$0",
+          "sub": "That $24k builds the system in year one and prints profit after.",
+          "action": "Comment MATH for your numbers"
+        }
       ]
     },
     {
-      "id": 5, "order": 5, "pillar": "The Math", "surface": "dark", "cover": "MATRIX",
+      "id": 5,
+      "order": 5,
+      "pillar": "The Math",
+      "surface": "dark",
+      "cover": "MATRIX",
       "title": "Watch the grid drain: 30 rooms, $151k a year",
       "slides": [
-        { "type": "cover", "variant": "MATRIX", "kicker": "THE MATH", "headline": "Watch the grid drain.", "sub": "A 30-room hotel, one full year of OTA commission.", "grid": { "total": 100, "filled": 76 } },
-        { "type": "drain", "title": "Each square = $1,510 of commission", "total": 100, "filled": 76, "caption": "24 squares drained. That's the OTA cut on a 30-room property at 70% occupancy." },
-        { "type": "stat", "value": "$151,200", "label": "annual OTA commission", "note": "30 rooms × $180 ADR × 70% occ × 365 × ~11% blended commission." },
-        { "type": "point", "index": "01", "title": "Shift just 20% to direct", "body": "You keep ~$30,000 a year — every year — for bookings you were already getting." },
-        { "type": "drain", "title": "The same grid, rebalanced", "total": 100, "filled": 94, "caption": "Move a fifth of bookings direct and the drain nearly closes. The system stays whole." },
-        { "type": "cta", "headline": "The grid can stay whole.", "sub": "We'll model your exact occupancy and ADR.", "action": "Comment GRID to see yours" }
+        {
+          "type": "cover",
+          "variant": "MATRIX",
+          "kicker": "THE MATH",
+          "headline": "Watch the grid drain.",
+          "sub": "A 30-room hotel, one full year of OTA commission.",
+          "grid": {
+            "total": 100,
+            "filled": 76
+          }
+        },
+        {
+          "type": "drain",
+          "title": "Each square = $1,510 of commission",
+          "total": 100,
+          "filled": 76,
+          "caption": "24 squares drained. That's the OTA cut on a 30-room property at 70% occupancy."
+        },
+        {
+          "type": "stat",
+          "value": "$151,200",
+          "label": "annual OTA commission",
+          "note": "30 rooms × $180 ADR × 70% occ × 365 × ~11% blended commission."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "Shift just 20% to direct",
+          "body": "You keep ~$30,000 a year — every year — for bookings you were already getting."
+        },
+        {
+          "type": "drain",
+          "title": "The same grid, rebalanced",
+          "total": 100,
+          "filled": 94,
+          "caption": "Move a fifth of bookings direct and the drain nearly closes. The system stays whole."
+        },
+        {
+          "type": "cta",
+          "headline": "The grid can stay whole.",
+          "sub": "We'll model your exact occupancy and ADR.",
+          "action": "Comment GRID to see yours"
+        }
       ]
     },
     {
-      "id": 6, "order": 6, "pillar": "The Proof", "surface": "light", "cover": "STAT",
+      "id": 6,
+      "order": 6,
+      "pillar": "The Proof",
+      "surface": "light",
+      "cover": "STAT",
       "title": "We back every build in writing — the 45-day guarantee",
       "slides": [
-        { "type": "cover", "variant": "STAT", "kicker": "THE PROOF", "stat": "45", "headline": "days, in writing", "sub": "If your direct site isn't live and taking bookings, you don't pay." },
-        { "type": "point", "index": "01", "title": "Weeks, not months", "body": "A senior nearshore team ships your booking system in a single sprint cycle — and we put the date in the contract." },
-        { "type": "list", "title": "What the guarantee covers", "items": ["Live, taking real payments within 45 days", "Channel sync configured and tested", "A booking flow that passes our conversion checklist", "Or we keep working — free — until it does"] },
-        { "type": "quote", "text": "We only win when your direct channel wins. So we put the timeline in the contract.", "attribution": "Kymbo — the honest rule" },
-        { "type": "point", "index": "02", "title": "The risk moves to us", "body": "You've been carrying the cost of doing nothing for years. The 45-day guarantee finally hands that risk to the people building it." },
-        { "type": "cta", "headline": "Risk on us, not you.", "sub": "Read the guarantee before you commit a cent.", "action": "Comment 45 for the terms" }
+        {
+          "type": "cover",
+          "variant": "STAT",
+          "kicker": "THE PROOF",
+          "stat": "45",
+          "headline": "days, in writing",
+          "sub": "If your direct site isn't live and taking bookings, you don't pay."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "Weeks, not months",
+          "body": "A senior nearshore team ships your booking system in a single sprint cycle — and we put the date in the contract."
+        },
+        {
+          "type": "list",
+          "title": "What the guarantee covers",
+          "items": [
+            "Live, taking real payments within 45 days",
+            "Channel sync configured and tested",
+            "A booking flow that passes our conversion checklist",
+            "Or we keep working — free — until it does"
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "We only win when your direct channel wins. So we put the timeline in the contract.",
+          "attribution": "Kymbo — the honest rule"
+        },
+        {
+          "type": "point",
+          "index": "02",
+          "title": "The risk moves to us",
+          "body": "You've been carrying the cost of doing nothing for years. The 45-day guarantee finally hands that risk to the people building it."
+        },
+        {
+          "type": "cta",
+          "headline": "Risk on us, not you.",
+          "sub": "Read the guarantee before you commit a cent.",
+          "action": "Comment 45 for the terms"
+        }
       ]
     },
     {
-      "id": 7, "order": 7, "pillar": "The Alternative", "surface": "dark", "cover": "STATEMENT",
+      "id": 7,
+      "order": 7,
+      "pillar": "The Alternative",
+      "surface": "dark",
+      "cover": "STATEMENT",
       "title": "You don't need to quit Airbnb",
       "slides": [
-        { "type": "cover", "variant": "STATEMENT", "kicker": "POV", "headline": "You don't need to quit Airbnb.", "hi": "quit", "sub": "You need to stop letting it own 100% of your guests." },
-        { "type": "point", "index": "01", "title": "OTAs are a channel, not a landlord", "body": "Use them for discovery — the first-time guest who's never heard of you. That's what they're good at." },
-        { "type": "point", "index": "02", "title": "Direct is where you keep them", "body": "The second stay should never pay 25% again. Bring returning guests home to your own site." },
-        { "type": "stat", "value": "80 / 20", "label": "the goal, not 0 / 100", "note": "Keep OTAs for reach. Move loyal, repeat and direct-search guests to your channel." },
-        { "type": "point", "index": "03", "title": "Rebalance, don't rip out", "body": "Every point of occupancy you shift to direct is pure margin. You don't need a revolution — you need a rebalance." },
-        { "type": "cta", "headline": "Keep the reach. Keep the margin.", "sub": "We'll map which guests to move first.", "action": "Comment BALANCE to start" }
+        {
+          "type": "cover",
+          "variant": "STATEMENT",
+          "kicker": "POV",
+          "headline": "You don't need to quit Airbnb.",
+          "hi": "quit",
+          "sub": "You need to stop letting it own 100% of your guests."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "OTAs are a channel, not a landlord",
+          "body": "Use them for discovery — the first-time guest who's never heard of you. That's what they're good at."
+        },
+        {
+          "type": "point",
+          "index": "02",
+          "title": "Direct is where you keep them",
+          "body": "The second stay should never pay 25% again. Bring returning guests home to your own site."
+        },
+        {
+          "type": "stat",
+          "value": "80 / 20",
+          "label": "the goal, not 0 / 100",
+          "note": "Keep OTAs for reach. Move loyal, repeat and direct-search guests to your channel."
+        },
+        {
+          "type": "point",
+          "index": "03",
+          "title": "Rebalance, don't rip out",
+          "body": "Every point of occupancy you shift to direct is pure margin. You don't need a revolution — you need a rebalance."
+        },
+        {
+          "type": "cta",
+          "headline": "Keep the reach. Keep the margin.",
+          "sub": "We'll map which guests to move first.",
+          "action": "Comment BALANCE to start"
+        }
       ]
     },
     {
-      "id": 8, "order": 8, "pillar": "The Math", "surface": "light", "cover": "SEAM",
+      "id": 8,
+      "order": 8,
+      "pillar": "The Math",
+      "surface": "light",
+      "cover": "SEAM",
       "title": "$516 vs $312 per booking: the real cost of a middleman",
       "slides": [
-        { "type": "cover", "variant": "SEAM", "kicker": "THE MATH", "headline": "$516 vs $312", "left": "$312", "right": "$516", "sub": "Same guest. Same room. Two very different outcomes." },
-        { "type": "stat", "value": "$312", "label": "you keep via OTA", "note": "$516 stay, minus commission, minus card fees, minus the guest you never get to keep." },
-        { "type": "stat", "value": "$516", "label": "you keep direct", "note": "Full value, minus a small processing fee. And the guest is now yours." },
-        { "type": "list", "title": "The hidden costs of “free” OTA bookings", "items": ["Commission: 15–30%", "Rate-parity clauses that cap your pricing", "Guest data you never receive", "Reviews the platform owns, not you"] },
-        { "type": "point", "index": "01", "title": "$204 difference. Every booking.", "body": "That's not a rounding error — it's a renovation, a new hire, a marketing budget. Compounded across a year, it's a different business." },
-        { "type": "cta", "headline": "Keep the whole $516.", "hiWord": "$516", "sub": "We'll calculate your per-booking gap.", "action": "Comment 516 to run it" }
+        {
+          "type": "cover",
+          "variant": "SEAM",
+          "kicker": "THE MATH",
+          "headline": "$516 vs $312",
+          "left": "$312",
+          "right": "$516",
+          "sub": "Same guest. Same room. Two very different outcomes."
+        },
+        {
+          "type": "stat",
+          "value": "$312",
+          "label": "you keep via OTA",
+          "note": "$516 stay, minus commission, minus card fees, minus the guest you never get to keep."
+        },
+        {
+          "type": "stat",
+          "value": "$516",
+          "label": "you keep direct",
+          "note": "Full value, minus a small processing fee. And the guest is now yours."
+        },
+        {
+          "type": "list",
+          "title": "The hidden costs of “free” OTA bookings",
+          "items": [
+            "Commission: 15–30%",
+            "Rate-parity clauses that cap your pricing",
+            "Guest data you never receive",
+            "Reviews the platform owns, not you"
+          ]
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "$204 difference. Every booking.",
+          "body": "That's not a rounding error — it's a renovation, a new hire, a marketing budget. Compounded across a year, it's a different business."
+        },
+        {
+          "type": "cta",
+          "headline": "Keep the whole $516.",
+          "hiWord": "$516",
+          "sub": "We'll calculate your per-booking gap.",
+          "action": "Comment 516 to run it"
+        }
       ]
     },
     {
-      "id": 9, "order": 9, "pillar": "The Alternative", "surface": "dark", "cover": "INDEX",
+      "id": 9,
+      "order": 9,
+      "pillar": "The Alternative",
+      "surface": "dark",
+      "cover": "INDEX",
       "title": "3 things every booking page needs to convert",
       "slides": [
-        { "type": "cover", "variant": "INDEX", "kicker": "THE ALTERNATIVE", "ghost": "3", "headline": "3 things every booking page needs to convert", "sub": "A pretty site doesn't pay. A converting one does." },
-        { "type": "point", "index": "01", "title": "Speed under 2 seconds", "body": "Every extra second of load time drops conversions ~7%. On mobile, speed is the whole game." },
-        { "type": "mockup", "device": "mobile", "title": "Fast, obvious, one thumb away", "caption": "Dates, price and the book button — visible the instant it opens.", "ui": { "brandline": "The Coastal", "price": "$180", "unit": "/ night", "cta": "Check availability" } },
-        { "type": "point", "index": "02", "title": "Prices and dates above the fold", "body": "No hunting. Availability, rate and the book button visible the moment the page opens." },
-        { "type": "point", "index": "03", "title": "One reason to book here, not there", "body": "Best-rate promise, free upgrade, late checkout — a perk the OTA legally can't show. Make it loud." },
-        { "type": "cta", "headline": "Design that books rooms.", "sub": "We audit your current page free.", "action": "Comment CONVERT for an audit" }
+        {
+          "type": "cover",
+          "variant": "INDEX",
+          "kicker": "THE ALTERNATIVE",
+          "ghost": "3",
+          "headline": "3 things every booking page needs to convert",
+          "sub": "A pretty site doesn't pay. A converting one does."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "Speed under 2 seconds",
+          "body": "Every extra second of load time drops conversions ~7%. On mobile, speed is the whole game."
+        },
+        {
+          "type": "mockup",
+          "device": "mobile",
+          "title": "Fast, obvious, one thumb away",
+          "caption": "Dates, price and the book button — visible the instant it opens.",
+          "ui": {
+            "brandline": "The Coastal",
+            "price": "$180",
+            "unit": "/ night",
+            "cta": "Check availability"
+          }
+        },
+        {
+          "type": "point",
+          "index": "02",
+          "title": "Prices and dates above the fold",
+          "body": "No hunting. Availability, rate and the book button visible the moment the page opens."
+        },
+        {
+          "type": "point",
+          "index": "03",
+          "title": "One reason to book here, not there",
+          "body": "Best-rate promise, free upgrade, late checkout — a perk the OTA legally can't show. Make it loud."
+        },
+        {
+          "type": "cta",
+          "headline": "Design that books rooms.",
+          "sub": "We audit your current page free.",
+          "action": "Comment CONVERT for an audit"
+        }
       ]
     },
     {
-      "id": 10, "order": 10, "pillar": "The Decision", "surface": "light", "cover": "STATEMENT",
+      "id": 10,
+      "order": 10,
+      "pillar": "The Decision",
+      "surface": "light",
+      "cover": "STATEMENT",
       "title": "Every month you wait, the middleman keeps his cut",
       "slides": [
-        { "type": "cover", "variant": "STATEMENT", "kicker": "THE DECISION", "headline": "Every month you wait, the middleman keeps his cut.", "hi": "keeps his cut", "sub": "This isn't a someday project. It's a meter running." },
-        { "type": "stat", "value": "$2,000+", "label": "leaves your account every month you delay", "note": "For a mid-size property. The system that stops it takes weeks to build." },
-        { "type": "point", "index": "01", "title": "The cost of waiting is not zero", "body": "“We'll do it next quarter” is a decision to pay commission for another quarter. Inaction has a price tag." },
-        { "type": "point", "index": "02", "title": "The best time was last year", "body": "The second-best time is now. Every booking from today can be one you actually own." },
-        { "type": "cta", "headline": "Stop the meter.", "sub": "Two ways to start booking direct — pick one this week.", "action": "Comment START to begin" }
+        {
+          "type": "cover",
+          "variant": "STATEMENT",
+          "kicker": "THE DECISION",
+          "headline": "Every month you wait, the middleman keeps his cut.",
+          "hi": "keeps his cut",
+          "sub": "This isn't a someday project. It's a meter running."
+        },
+        {
+          "type": "stat",
+          "value": "$2,000+",
+          "label": "leaves your account every month you delay",
+          "note": "For a mid-size property. The system that stops it takes weeks to build."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "The cost of waiting is not zero",
+          "body": "“We'll do it next quarter” is a decision to pay commission for another quarter. Inaction has a price tag."
+        },
+        {
+          "type": "point",
+          "index": "02",
+          "title": "The best time was last year",
+          "body": "The second-best time is now. Every booking from today can be one you actually own."
+        },
+        {
+          "type": "cta",
+          "headline": "Stop the meter.",
+          "sub": "Two ways to start booking direct — pick one this week.",
+          "action": "Comment START to begin"
+        }
       ]
     },
     {
-      "id": 11, "order": 11, "pillar": "The Alternative", "surface": "dark", "cover": "STAT",
+      "id": 11,
+      "order": 11,
+      "pillar": "The Alternative",
+      "surface": "dark",
+      "cover": "STAT",
       "title": "Widget vs full integration: which one do you need?",
       "slides": [
-        { "type": "cover", "variant": "STAT", "kicker": "EDUCATION", "stat": "2", "headline": "ways to go direct", "sub": "A booking widget or a full integration. Here's how to choose." },
-        { "type": "point", "index": "OPTION 01", "title": "The Widget", "body": "A booking engine embedded into your existing site. Fastest to launch, lowest lift. Start capturing direct bookings this month." },
-        { "type": "list", "title": "Choose the widget if…", "items": ["You already have a site you like", "You want live in days, not weeks", "You're testing direct before going all-in"] },
-        { "type": "point", "index": "OPTION 02", "title": "The Full Integration", "body": "A custom site built around the booking flow. Faster, higher-converting, fully yours. The long-term margin machine." },
-        { "type": "list", "title": "Choose full integration if…", "items": ["Your current site is slow or dated", "Direct is becoming your main channel", "You want maximum conversion and control"] },
-        { "type": "cta", "headline": "Not sure which fits?", "sub": "Tell us your setup — we'll recommend one, honestly.", "action": "Comment WIDGET or FULL" }
+        {
+          "type": "cover",
+          "variant": "STAT",
+          "kicker": "EDUCATION",
+          "stat": "2",
+          "headline": "ways to go direct",
+          "sub": "A booking widget or a full integration. Here's how to choose."
+        },
+        {
+          "type": "point",
+          "index": "OPTION 01",
+          "title": "The Widget",
+          "body": "A booking engine embedded into your existing site. Fastest to launch, lowest lift. Start capturing direct bookings this month."
+        },
+        {
+          "type": "list",
+          "title": "Choose the widget if…",
+          "items": [
+            "You already have a site you like",
+            "You want live in days, not weeks",
+            "You're testing direct before going all-in"
+          ]
+        },
+        {
+          "type": "point",
+          "index": "OPTION 02",
+          "title": "The Full Integration",
+          "body": "A custom site built around the booking flow. Faster, higher-converting, fully yours. The long-term margin machine."
+        },
+        {
+          "type": "list",
+          "title": "Choose full integration if…",
+          "items": [
+            "Your current site is slow or dated",
+            "Direct is becoming your main channel",
+            "You want maximum conversion and control"
+          ]
+        },
+        {
+          "type": "cta",
+          "headline": "Not sure which fits?",
+          "sub": "Tell us your setup — we'll recommend one, honestly.",
+          "action": "Comment WIDGET or FULL"
+        }
       ]
     },
     {
-      "id": 12, "order": 12, "pillar": "The Decision", "surface": "light", "cover": "SEAM",
+      "id": 12,
+      "order": 12,
+      "pillar": "The Decision",
+      "surface": "light",
+      "cover": "SEAM",
       "title": "Two ways to start booking direct",
       "slides": [
-        { "type": "cover", "variant": "SEAM", "kicker": "THE OFFER", "headline": "Two ways to start", "left": "WIDGET", "right": "FULL BUILD", "leftLabel": "PATH 01", "rightLabel": "PATH 02", "sub": "Both end the same way: your guests, your margin, your platform." },
-        { "type": "point", "index": "PATH 01", "title": "Start with the widget", "body": "Live in days. Capture direct bookings on your current site while we plan the bigger build. Lowest risk, immediate return." },
-        { "type": "point", "index": "PATH 02", "title": "Go full system", "body": "A custom direct-booking site, channel sync, payments and automations — backed by the 45-day guarantee. The complete rebalance." },
-        { "type": "list", "title": "Either way you get", "items": ["A booking flow built to convert", "Channel sync so you never double-book", "Payments, confirmations & upsells on autopilot", "A team that ships in weeks, in writing"] },
-        { "type": "cta", "headline": "Fire your middleman.", "hiWord": "middleman", "sub": "Book a 15-minute direct-booking teardown.", "action": "Comment START — we'll take it from there" }
+        {
+          "type": "cover",
+          "variant": "SEAM",
+          "kicker": "THE OFFER",
+          "headline": "Two ways to start",
+          "left": "WIDGET",
+          "right": "FULL BUILD",
+          "leftLabel": "PATH 01",
+          "rightLabel": "PATH 02",
+          "sub": "Both end the same way: your guests, your margin, your platform."
+        },
+        {
+          "type": "point",
+          "index": "PATH 01",
+          "title": "Start with the widget",
+          "body": "Live in days. Capture direct bookings on your current site while we plan the bigger build. Lowest risk, immediate return."
+        },
+        {
+          "type": "point",
+          "index": "PATH 02",
+          "title": "Go full system",
+          "body": "A custom direct-booking site, channel sync, payments and automations — backed by the 45-day guarantee. The complete rebalance."
+        },
+        {
+          "type": "list",
+          "title": "Either way you get",
+          "items": [
+            "A booking flow built to convert",
+            "Channel sync so you never double-book",
+            "Payments, confirmations & upsells on autopilot",
+            "A team that ships in weeks, in writing"
+          ]
+        },
+        {
+          "type": "cta",
+          "headline": "Fire your middleman.",
+          "hiWord": "middleman",
+          "sub": "Book a 15-minute direct-booking teardown.",
+          "action": "Comment START — we'll take it from there"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "order": 13,
+      "pillar": "The Standard",
+      "surface": "light",
+      "cover": "STAT",
+      "category": "educational",
+      "title": "The performance budget we hold every build to",
+      "topic": "edu-08",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "STAT",
+          "kicker": "THE STANDARD",
+          "stat": "6.3s",
+          "headline": "average hotel page load",
+          "sub": "Google's bar is 2.5. Here's the budget we hold every build to — and fail builds against."
+        },
+        {
+          "type": "stat",
+          "value": "2.5s",
+          "label": "LARGEST CONTENTFUL PAINT",
+          "note": "How long until the biggest thing on screen actually appears. Google notices before your guest does."
+        },
+        {
+          "type": "stat",
+          "value": "200ms",
+          "label": "INTERACTION TO NEXT PAINT",
+          "note": "Date picker. Room filter. Guest count. A booking engine lives or dies on this one."
+        },
+        {
+          "type": "list",
+          "title": "The whole budget",
+          "items": [
+            "LCP under 2.5 seconds",
+            "CLS under 0.1",
+            "INP under 200ms",
+            "Total blocking time under 200ms",
+            "First load under 2MB",
+            "HTML under 100KB compressed"
+          ]
+        },
+        {
+          "type": "point",
+          "index": "WHY IT MATTERS",
+          "title": "A budget is a number you can fail",
+          "body": "Anyone can promise “fast.” A budget is different — it's a gate. Miss one line and the build doesn't ship. That's the only version of this promise that means anything."
+        },
+        {
+          "type": "cta",
+          "headline": "Want your numbers?",
+          "hiWord": "numbers",
+          "sub": "Send your URL. We'll run it against this exact budget and send back the failures.",
+          "action": "Comment SPEED"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "order": 14,
+      "pillar": "The Stack",
+      "surface": "light",
+      "cover": "MATRIX",
+      "category": "educational",
+      "title": "Which property management system fits your property",
+      "topic": "edu-02",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "MATRIX",
+          "kicker": "THE STACK",
+          "headline": "Six systems run hotels. Only one fits yours.",
+          "sub": "The table we actually use to choose.",
+          "grid": {
+            "total": 36,
+            "filled": 22
+          }
+        },
+        {
+          "type": "point",
+          "index": "START HERE",
+          "title": "The PMS is the hub",
+          "body": "Every integration you will ever buy plugs into it. Which is why “does it work with my PMS” is the only question that matters when you buy anything else."
+        },
+        {
+          "type": "list",
+          "title": "Independent & boutique hotels",
+          "items": [
+            "Cloudbeds — all-in-one: PMS, channel manager, booking engine",
+            "Mews — modern boutique through small chain",
+            "Both carry you well past 20 rooms"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Smaller, or short-term",
+          "items": [
+            "Little Hotelier — under 20 rooms",
+            "Hostaway — vacation-rental managers",
+            "Guesty — multi-unit short-term rentals"
+          ]
+        },
+        {
+          "type": "point",
+          "index": "THE TRAP",
+          "title": "Pick wrong and you rebuild in 18 months",
+          "body": "Switching a PMS means migrating every rate, every guest record and every channel connection. It is the most expensive mistake on this list, and it is entirely avoidable."
+        },
+        {
+          "type": "cta",
+          "headline": "Tell us your property.",
+          "hiWord": "property",
+          "sub": "Rooms, channels, and what's breaking. We'll name the system we'd pick and why.",
+          "action": "Comment STACK"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "order": 15,
+      "pillar": "The Fix",
+      "surface": "light",
+      "cover": "STATEMENT",
+      "category": "educational",
+      "title": "Plugin sprawl is why your site is slow",
+      "topic": "edu-10",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "STATEMENT",
+          "kicker": "THE FIX",
+          "headline": "Max 15 plugins. 25 on Elementor.",
+          "hi": "15",
+          "sub": "That's the rule. Here's why it's the rule."
+        },
+        {
+          "type": "point",
+          "index": "THE CAUSE",
+          "title": "Not your host. Your plugins.",
+          "body": "Plugin sprawl is the single biggest cause of slow WordPress sites. Every one loads code on every page — including the three you installed once and forgot about."
+        },
+        {
+          "type": "list",
+          "title": "Audit each one against this",
+          "items": [
+            "Does it run on every page, or one?",
+            "Does it add to time-to-first-byte?",
+            "Does it ship its own CSS and JavaScript?",
+            "Would removing it break anything a guest sees?"
+          ]
+        },
+        {
+          "type": "stat",
+          "value": "50–200ms",
+          "label": "THE COST OF ONE EXTRA SCRIPT",
+          "note": "Every chat widget, heatmap and pixel adds this to blocking time. Each one has to earn it."
+        },
+        {
+          "type": "point",
+          "index": "THE HABIT",
+          "title": "Audit quarterly, not never",
+          "body": "Plugin count only moves one direction unless somebody owns it. Put it on a calendar and it stops being a problem."
+        },
+        {
+          "type": "cta",
+          "headline": "How many are you running?",
+          "hiWord": "many",
+          "sub": "Over 25 and we can almost tell you where your seconds went.",
+          "action": "Comment AUDIT"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "order": 16,
+      "pillar": "The Fix",
+      "surface": "light",
+      "cover": "INDEX",
+      "category": "educational",
+      "title": "Five settings that quietly delete you from Google",
+      "topic": "edu-13",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "INDEX",
+          "kicker": "THE FIX",
+          "ghost": "5",
+          "headline": "5 settings that quietly delete you from Google",
+          "sub": "We check every one before a build goes live. They cost minutes now and months later."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "“Discourage search engines” left on",
+          "body": "One checkbox under Settings → Reading. It survives launch more often than anyone admits, and the site simply never appears."
+        },
+        {
+          "type": "point",
+          "index": "02",
+          "title": "robots.txt still says Disallow: /",
+          "body": "Copied over from staging with everything else. Every crawler obeys it, politely and completely."
+        },
+        {
+          "type": "point",
+          "index": "03",
+          "title": "A noindex tag left by a staging plugin",
+          "body": "Invisible on the page. Fatal in the source. This is the one that takes weeks to notice."
+        },
+        {
+          "type": "list",
+          "title": "And the two that cost rankings you already earned",
+          "items": [
+            "04 — Old URLs launched with no 301 redirect",
+            "05 — Staging URLs leaked into the live site"
+          ]
+        },
+        {
+          "type": "cta",
+          "headline": "Launching soon?",
+          "hiWord": "Launching",
+          "sub": "We'll run this gate against your site before you go live.",
+          "action": "Comment LAUNCH"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "order": 17,
+      "pillar": "The Math",
+      "surface": "light",
+      "cover": "SEAM",
+      "category": "campaign",
+      "title": "OTA bookings cancel at twice the rate",
+      "topic": "fym-26",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "SEAM",
+          "kicker": "THE MATH",
+          "leftLabel": "VIA OTA",
+          "left": "21.8%",
+          "rightLabel": "DIRECT",
+          "right": "10.6%",
+          "sub": "Cancellation rate. Same rooms, different door."
+        },
+        {
+          "type": "point",
+          "index": "THE HIDDEN COST",
+          "title": "A cancelled booking is worse than no booking",
+          "body": "It blocked the room. It moved your pricing. And it hands you the same night to re-sell on short notice, at whatever rate you can still get."
+        },
+        {
+          "type": "stat",
+          "value": "2x",
+          "label": "OTA CANCELLATIONS VS DIRECT",
+          "note": "Across 30,000+ properties in 2025. Source: Cloudbeds."
+        },
+        {
+          "type": "point",
+          "index": "WHY",
+          "title": "Commitment follows effort",
+          "body": "An OTA guest holds five tabs open and cancels four. A guest who found you, chose you, and booked on your own site has already decided."
+        },
+        {
+          "type": "list",
+          "title": "So direct isn't only cheaper",
+          "items": [
+            "Cheaper — no commission",
+            "Steadier — half the cancellations",
+            "Yours — the guest data stays with you"
+          ]
+        },
+        {
+          "type": "cta",
+          "headline": "What's your cancellation rate?",
+          "hiWord": "cancellation",
+          "sub": "If it's over 20%, your channel mix is telling you something.",
+          "action": "Comment RATE"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "order": 18,
+      "pillar": "The Decision",
+      "surface": "dark",
+      "cover": "STAT",
+      "category": "campaign",
+      "title": "The target is 45% direct, not 100%",
+      "topic": "fym-14",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "STAT",
+          "kicker": "THE DECISION",
+          "stat": "45%",
+          "headline": "is the target. Not 100%.",
+          "sub": "You're not firing every channel. You're ending one expensive habit."
+        },
+        {
+          "type": "point",
+          "index": "THE MYTH",
+          "title": "Going direct doesn't mean leaving the OTAs",
+          "body": "It means changing the ratio. Most independent properties settle between 40 and 50% direct — and that's the healthy number, not a compromise."
+        },
+        {
+          "type": "drain",
+          "title": "Where most properties start",
+          "total": 20,
+          "filled": 4,
+          "caption": "20% direct. Eight in ten bookings paying a middleman."
+        },
+        {
+          "type": "drain",
+          "title": "Where you're going",
+          "total": 20,
+          "filled": 9,
+          "caption": "45% direct. Same rooms, same rates, different margin."
+        },
+        {
+          "type": "point",
+          "index": "WHY NOT 100%",
+          "title": "The OTAs are still your billboard",
+          "body": "They put you in front of people who have never heard of your property. Let them. Just stop letting them own the booking that comes after."
+        },
+        {
+          "type": "cta",
+          "headline": "What's your split today?",
+          "hiWord": "split",
+          "sub": "Direct vs OTA. If you don't know the number, that's the first thing to fix.",
+          "action": "Comment SPLIT"
+        }
       ]
     }
   ]

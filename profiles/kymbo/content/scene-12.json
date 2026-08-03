@@ -1,0 +1,75 @@
+{
+  "id": "scene-12",
+  "mode": "scene",
+  "pillar": "The Decision",
+  "batch": "02",
+  "pathBofBatch": "6 of 6",
+  "title": "Break-even is smaller than you think.",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
+  "note": "Path B. Slide 5 is a DEVICE-COMPOSITE (laptop, blank white screen). All other slides are pure photos.",
+  "assetDir": "assets/scene-12",
+  "slides": [
+    {
+      "scene": true,
+      "layout": "cover",
+      "bg": "assets/scene-12/s1.png",
+      "imageId": "night-desk-owner-laptop",
+      "imagePrompt": "A hotel owner working late at a warm walnut desk, seen from behind, one lamp and a laptop glow, boutique back office, plant and cream plaster. Face not visible, screen not readable. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "headline": "Break-even is ==smaller==\nthan you think.",
+      "sub": "Let's do the arithmetic instead of the pitch."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-12/s2.png",
+      "imageId": "empty-room-ready",
+      "imagePrompt": "A boutique hotel room fully made up and ready, warm daylight through sheer curtains, crisp linen, walnut, a plant. Empty and inviting. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "01",
+      "title": "Start with one commission",
+      "body": "A $200 night through an OTA hands over roughly $50. That's your unit of measurement, not the invoice."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-12/s3.png",
+      "imageId": "stairwell-light",
+      "imagePrompt": "A calm modern boutique-hotel stairwell with warm wall lights, walnut handrail, cream plaster, a plant on the landing. Architectural and quiet. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "02",
+      "title": "Now count the nights, ==not the months==",
+      "body": "The build pays for itself in a countable number of direct bookings. Then it keeps going, at zero."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-12/s4.png",
+      "imageId": "bar-detail-evening",
+      "imagePrompt": "A small hotel bar corner in the evening: walnut counter, two glasses, a plant, warm low lighting, cream plaster behind. No branding, no people. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "03",
+      "title": "Everything after that is __margin__",
+      "body": "The commission you stop paying doesn't come back once a year. It comes back on every booking, forever."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-12/s5.png",
+      "imageId": "laptop-counter-blank",
+      "imagePrompt": "DEVICE-COMPOSITE SLIDE: the device screen must be COMPLETELY BLANK PURE WHITE — no UI, no icons, no reflections, no text. We composite our own booking product onto it. A laptop open on a warm walnut reception counter in a boutique hotel, screen COMPLETELY BLANK PURE WHITE, viewed slightly from the side. A plant and a lamp beside it, evening light. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "04",
+      "title": "And you can watch it happen",
+      "body": "Direct share, commission saved, month over month, in your own dashboard.",
+      "screen": {
+        "app": "laptop-dashboard"
+      }
+    },
+    {
+      "scene": true,
+      "layout": "cta",
+      "bg": "assets/scene-12/s6.png",
+      "imageId": "entrance-night-warm",
+      "imagePrompt": "The entrance of a small boutique hotel at night from the street, warm light glowing through glass, planting either side, contemporary architecture, no readable signage or logo. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "headline": "Run it on your numbers.",
+      "sub": "Rooms, rate, OTA share. We'll send back the break-even.",
+      "action": "Comment NUMBERS"
+    }
+  ]
+}

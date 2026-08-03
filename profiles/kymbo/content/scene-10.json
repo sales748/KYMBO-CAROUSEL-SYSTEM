@@ -1,0 +1,75 @@
+{
+  "id": "scene-10",
+  "mode": "scene",
+  "pillar": "The Proof",
+  "batch": "02",
+  "pathBofBatch": "4 of 6",
+  "title": "The cheapest booking you'll ever get is the second one.",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
+  "note": "Path B. Slide 4 is a DEVICE-COMPOSITE (phone, blank white screen). All other slides are pure photos.",
+  "assetDir": "assets/scene-10",
+  "slides": [
+    {
+      "scene": true,
+      "layout": "cover",
+      "bg": "assets/scene-10/s1.png",
+      "imageId": "guest-coffee-morning-window",
+      "imagePrompt": "A guest sitting by a bright window in a boutique hotel room with a coffee, seen from the side, face soft and not the focus. Warm cream light, linen, a plant, walnut side table. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "headline": "The cheapest booking you'll ever get\nis the ==second one==.",
+      "sub": "If you're allowed to ask for it."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-10/s2.png",
+      "imageId": "checkout-counter-quiet",
+      "imagePrompt": "A boutique-hotel reception counter at checkout time: walnut surface, a small plant, a card terminal turned away from camera, warm daylight. No people, no readable text. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "01",
+      "title": "They leave, and that's usually the end",
+      "body": "No address you own, no permission to write, no reason for them to think of you in eleven months."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-10/s3.png",
+      "imageId": "linen-detail-close",
+      "imagePrompt": "A close, tactile shot of folded white linen and a small sprig of greenery on a walnut surface in warm side light. Quiet, expensive, editorial. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "02",
+      "title": "A direct guest gave you ==an inbox==",
+      "body": "Which means a thank-you, a photo of the room they liked, and an offer for the same week next year."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-10/s4.png",
+      "imageId": "phone-on-bed-blank",
+      "imagePrompt": "DEVICE-COMPOSITE SLIDE: the device screen must be COMPLETELY BLANK PURE WHITE — no UI, no icons, no reflections, no text. We composite our own booking product onto it. A modern smartphone lying on crisp white bed linen in a bright boutique hotel room, screen COMPLETELY BLANK PURE WHITE, soft morning light from a window. A book and a plant nearby. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "03",
+      "title": "One email. No commission.",
+      "body": "The second stay costs you a sentence and a send button.",
+      "screen": {
+        "app": "phone-confirm"
+      }
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-10/s5.png",
+      "imageId": "two-cups-table",
+      "imagePrompt": "Two coffee cups on a walnut table by a window in a warm boutique hotel, morning light, plant nearby, nobody present. Suggests a returning couple. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "index": "04",
+      "title": "Loyalty isn't a programme",
+      "body": "It's remembering them, and being able to reach them. The second is the part the middleman takes."
+    },
+    {
+      "scene": true,
+      "layout": "cta",
+      "bg": "assets/scene-10/s6.png",
+      "imageId": "room-door-ajar",
+      "imagePrompt": "A boutique-hotel room door slightly ajar with warm light spilling into a calm corridor, walnut and cream, a plant on a console. No text or numbers on the door. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "headline": "Get the first stay direct.\n==Own every one after.==",
+      "sub": "That's the whole compounding argument.",
+      "action": "Comment SECOND"
+    }
+  ]
+}

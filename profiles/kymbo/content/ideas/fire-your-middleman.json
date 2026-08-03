@@ -206,7 +206,7 @@
       "proof": [
         "40–50% direct share is the independent-hotel sweet spot"
       ],
-      "usedIn": null
+      "usedIn": "c18"
     },
     {
       "id": "fym-15",
@@ -236,7 +236,7 @@
       "proof": [
         "direct booking connects the profile to CRM, loyalty, post-stay"
       ],
-      "usedIn": null
+      "usedIn": "scene-07"
     },
     {
       "id": "fym-17",
@@ -262,7 +262,7 @@
       "surface": "light",
       "path": "A",
       "proof": [],
-      "usedIn": null
+      "usedIn": "scene-12"
     },
     {
       "id": "fym-19",
@@ -303,7 +303,7 @@
       "surface": "dark",
       "path": "B",
       "proof": [],
-      "usedIn": null
+      "usedIn": "scene-10"
     },
     {
       "id": "fym-22",
@@ -357,7 +357,7 @@
       "proof": [
         "free cancellation up to 48h is a legitimate parity-safe direct perk"
       ],
-      "usedIn": null
+      "usedIn": "scene-11"
     },
     {
       "id": "fym-26",
@@ -373,7 +373,7 @@
         "OTA 21.8% vs direct 10.6% — Cloudbeds, 30,000+ hotels, 2025"
       ],
       "source": "Notion → campaign brief § Message priorities",
-      "usedIn": null
+      "usedIn": "c17"
     },
     {
       "id": "fym-27",
@@ -389,7 +389,7 @@
         "65% of direct bookings start with discovery on an OTA — ZUZU Hospitality"
       ],
       "source": "Notion → campaign brief § Message priorities",
-      "usedIn": null
+      "usedIn": "scene-09"
     },
     {
       "id": "fym-28",
@@ -407,7 +407,7 @@
         "~$4,650/yr on $30K — PriceLabs, TabiVista"
       ],
       "source": "Notion → campaign brief § Message priorities",
-      "usedIn": null
+      "usedIn": "scene-08"
     },
     {
       "id": "fym-29",
@@ -444,5 +444,6 @@
     }
   ],
   "weekArc": "The campaign runs a 5-week content arc that maps 1:1 onto these pillars: W1 Problem · W2 Math · W3 Alternative · W4 Proof · W5 Decision.",
-  "warning": "carousel c06 / scene-03 ships the claim '45 days, in writing' + 'if your direct site isn't live and taking bookings, you don't pay.' NO 45-day guarantee exists anywhere in the campaign brief, the offer tiers, or the SOW templates. Verify with leadership or pull the claim before this runs again."
+  "warning": "carousel c06 / scene-03 ships the claim '45 days, in writing' + 'if your direct site isn't live and taking bookings, you don't pay.' NO 45-day guarantee exists anywhere in the campaign brief, the offer tiers, or the SOW templates. Verify with leadership or pull the claim before this runs again.",
+  "batch02": "Batch 02 pulled: fym-26->c17, fym-14->c18, fym-16->scene-07, fym-28->scene-08, fym-27->scene-09, fym-21->scene-10, fym-25->scene-11, fym-18->scene-12"
 }
