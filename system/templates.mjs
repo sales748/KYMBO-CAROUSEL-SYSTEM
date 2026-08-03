@@ -230,8 +230,8 @@ function sceneBody(s) {
    Corners are read off the generated photo once Kim sends it. */
 const SCREEN_DIMS = {
   'laptop-hero': [1440, 900], 'laptop-categories': [1440, 900], 'laptop-rates': [1440, 1080],
-  'laptop-modal': [1440, 900], 'laptop-dashboard': [1440, 900],
-  'phone-hero': [460, 996], 'phone-rates': [460, 996], 'phone-confirm': [460, 996],
+  'laptop-modal': [1440, 900], 'laptop-dashboard': [1440, 900], 'laptop-board': [1440, 900], 'laptop-book': [1440, 900],
+  'phone-hero': [460, 996], 'phone-rates': [460, 996], 'phone-confirm': [460, 996], 'phone-book': [460, 996],
 };
 const _adj = (m) => [
   m[4] * m[8] - m[5] * m[7], m[2] * m[7] - m[1] * m[8], m[1] * m[5] - m[2] * m[4],

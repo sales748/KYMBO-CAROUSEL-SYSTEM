@@ -5,8 +5,8 @@
   "batch": "01",
   "pathBofBatch": "1 of 4",
   "title": "You're not fully booked. You're fully rented.",
-  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade \u2014 deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
-  "note": "Path B \u2014 scene/organic. Slides 1,3,4,5 are pure AI photos. Slides 2 & 6 are DEVICE-COMPOSITE: generate a photo where an iPhone 17 (s2) or a laptop (s6) has a BLANK PURE-WHITE screen, then Claude composites the saved booking-app UI onto that screen (screen.app tells which). When Kim sends each device photo, Claude reads the 4 screen-corner coordinates and sets `screen.quad` to composite it in perspective. Drop photos into assets/scene-01/ as s1,s2,s3,s4,s5,s6 .png.",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
+  "note": "Path B — scene/organic. Slides 1,3,4,5 are pure AI photos. Slides 2 & 6 are DEVICE-COMPOSITE: generate a photo where an iPhone 17 (s2) or a laptop (s6) has a BLANK PURE-WHITE screen, then Claude composites the saved booking-app UI onto that screen (screen.app tells which). When Kim sends each device photo, Claude reads the 4 screen-corner coordinates and sets `screen.quad` to composite it in perspective. Drop photos into assets/scene-01/ as s1,s2,s3,s4,s5,s6 .png.",
   "assetDir": "assets/scene-01",
   "slides": [
     {
@@ -26,7 +26,7 @@
       "layout": "point",
       "anchor": "bottom",
       "scrim": "bottom",
-      "imageId": "SCENE-01 / 2  (PHOTO + COMPOSITE \u2014 iPhone 17, blank white screen)",
+      "imageId": "SCENE-01 / 2  (PHOTO + COMPOSITE — iPhone 17, blank white screen)",
       "index": "01",
       "title": "Every booking feels like a ((win)).",
       "body": "Until you count how little of it you actually keep.",
@@ -53,14 +53,14 @@
         ],
         "overscan": 0
       },
-      "imagePrompt": "Camera pulled BACK (not a tight close-up). Two hands holding an iPhone 17 (Dynamic Island, thin bezels) UP in the TOP portion of the frame at a warm walnut cafe table, morning light, a flat-white and a small plant softly out of focus to the sides. CRITICAL COMPOSITION: the phone occupies only the UPPER ~60% of the image; the LOWER 40% is a clean, empty, softly-shadowed dark walnut table surface (nothing on it) reserved for text. The phone is FRONT-ON and its screen is a solid PURE-WHITE rectangle (#FFFFFF) \u2014 completely blank, no UI, no reflections, fully unobstructed by fingers, all four screen corners visible. [Apply the STYLE LINE.]"
+      "imagePrompt": "Camera pulled BACK (not a tight close-up). Two hands holding an iPhone 17 (Dynamic Island, thin bezels) UP in the TOP portion of the frame at a warm walnut cafe table, morning light, a flat-white and a small plant softly out of focus to the sides. DEVICE-COMPOSITE SLIDE — read carefully. The phone must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no icons, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]"
     },
     {
       "scene": true,
       "layout": "point",
       "anchor": "top",
       "scrim": "top",
-      "imageId": "SCENE-01 / 3  (PHOTO \u2014 modern)",
+      "imageId": "SCENE-01 / 3  (PHOTO — modern)",
       "index": "02",
       "title": "==25%== of that win was never yours.",
       "body": "The middleman took his cut before the money ever reached you.",
@@ -84,26 +84,26 @@
       "layout": "point",
       "anchor": "top",
       "scrim": "top",
-      "imageId": "SCENE-01 / 5  (PHOTO \u2014 modern)",
+      "imageId": "SCENE-01 / 5  (PHOTO — modern)",
       "index": "04",
       "title": "Your best month can be your\n==most expensive==.",
       "body": "More OTA bookings just means a bigger cut skimmed off the top.",
       "bg": "assets/scene-01/s5.png",
-      "imagePrompt": "A serene, immaculately styled modern boutique-hotel bedroom at golden hour \u2014 crisp cream linens, a walnut headboard, a trailing plant, soft evening light and long shadows through a large window, one bedside lamp glowing warm. Calm 'sold-out luxury' storytelling. LEAVE THE TOP THIRD calm negative space (plain warm wall / ceiling) for text; bed and window lower. NO keys, no numbers, no signage. [Apply the STYLE LINE.]"
+      "imagePrompt": "A serene, immaculately styled modern boutique-hotel bedroom at golden hour — crisp cream linens, a walnut headboard, a trailing plant, soft evening light and long shadows through a large window, one bedside lamp glowing warm. Calm 'sold-out luxury' storytelling. LEAVE THE TOP THIRD calm negative space (plain warm wall / ceiling) for text; bed and window lower. NO keys, no numbers, no signage. [Apply the STYLE LINE.]"
     },
     {
       "scene": true,
       "layout": "cta",
       "anchor": "bottom",
       "scrim": "bottom",
-      "imageId": "SCENE-01 / 6  (PHOTO + COMPOSITE \u2014 laptop, blank white screen)",
-      "kicker": "THE FIX",
+      "imageId": "SCENE-01 / 6  (PHOTO + COMPOSITE — laptop, blank white screen)",
       "headline": "Own the booking.\n==Keep the guest.==",
-      "sub": "OTAs take 15\u201330%. Your own site takes 0%.",
+      "sub": "OTAs take 15–30%. Your own site takes 0%.",
       "action": "Comment DIRECT and we'll map your first move",
       "bg": "assets/scene-01/s6.png",
       "screen": {
-        "app": "laptop-hero",
+        "app": "laptop-book",
+        "overscan": 0,
         "quad": [
           [
             158,
@@ -123,7 +123,7 @@
           ]
         ]
       },
-      "imagePrompt": "A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled boutique-hotel back office, morning light, a coffee and a small notebook beside it. IMPORTANT FOR COMPOSITING: the laptop is FRONT-ON to the camera (screen facing us as square as possible), and the screen is a solid PURE-WHITE rectangle (#FFFFFF) \u2014 completely blank, no UI, no glare, fully unobstructed. LEAVE THE BOTTOM THIRD / right side calm for text. [Apply the STYLE LINE.]"
+      "imagePrompt": "A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled boutique-hotel back office, morning light, a coffee and a small notebook beside it. DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]"
     }
   ]
 }

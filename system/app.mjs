@@ -178,6 +178,60 @@ export const APP_CSS = `
 .ring .in{ width:74%; height:74%; border-radius:50%; background:var(--paper); display:grid; place-items:center; }
 
 .gallery{ padding:60px 40px; display:flex; flex-wrap:wrap; gap:40px; align-items:flex-start; }
+/* ---------- COMPOSITE SCREENS (transparent) ----------
+   These are designed to be laid onto the BLANK WHITE screen of a real device in
+   a scene photo. They paint NO page background — the photo's own screen is the
+   page, so its real rounded corners, Dynamic Island and screen light survive.
+   Never give these a background; that is what makes a composite look pasted. */
+.bk{ padding:34px 34px 0; }
+.bk-wm{ display:flex; align-items:center; gap:11px; }
+.bk-wm .m{ font-family:var(--serif); font-weight:600; font-size:30px; }
+.bk-wm .n{ font-weight:500; font-size:19px; letter-spacing:.01em; }
+.bk-h{ font-family:var(--serif); font-weight:500; font-size:44px; line-height:1.05; margin-top:34px; }
+.bk-sub{ font-size:17px; color:var(--muted); margin-top:12px; }
+.bk-card{ border:1px solid var(--line); border-radius:20px; margin-top:30px; overflow:hidden; }
+.bk-row{ display:flex; align-items:center; justify-content:space-between; padding:20px 22px; border-bottom:1px solid var(--line); }
+.bk-row:last-child{ border-bottom:0; }
+.bk-row .k{ font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
+.bk-row .v{ font-size:19px; font-weight:500; margin-top:5px; }
+.bk-go{ background:var(--btn); color:#fff; border-radius:16px; padding:22px; text-align:center;
+  font-weight:600; font-size:18px; letter-spacing:.02em; margin-top:26px; }
+.bk-note{ display:flex; align-items:center; gap:9px; margin-top:22px; font-size:16px; }
+.bk-note i{ width:9px; height:9px; border-radius:50%; background:var(--butter); flex:0 0 auto; }
+
+.bd2{ padding:56px 64px 0; }
+.bd2-top{ display:flex; align-items:baseline; justify-content:space-between; }
+.bd2-wm{ font-family:var(--serif); font-weight:600; font-size:34px; }
+.bd2-kick{ font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); margin-top:7px; }
+.bd2-pill{ background:var(--butter); border-radius:999px; padding:11px 22px; font-size:15px; font-weight:600; }
+.bd2-grid{ display:flex; gap:64px; margin-top:52px; }
+.bd2-fig{ font-family:var(--serif); font-weight:500; font-size:74px; line-height:.95; }
+.bd2-lab{ font-size:14px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
+.bd2-bars{ margin-top:54px; max-width:760px; }
+.bd2-bar{ margin-bottom:22px; }
+.bd2-bar .t{ display:flex; justify-content:space-between; font-size:17px; margin-bottom:9px; }
+.bd2-bar .track{ height:12px; border-radius:999px; background:var(--line); overflow:hidden; }
+.bd2-bar .fill{ height:100%; border-radius:999px; background:var(--butter); }
+.bd2-bar.hot .fill{ background:var(--btn); }
+
+.lb{ padding:60px 72px 0; display:flex; gap:70px; }
+.lb-l{ flex:1; }
+.lb-wm{ font-family:var(--serif); font-weight:600; font-size:32px; }
+.lb-kick{ font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); margin-top:7px; }
+.lb-room{ font-family:var(--serif); font-weight:500; font-size:52px; line-height:1.02; margin-top:44px; }
+.lb-meta{ font-size:17px; color:var(--muted); margin-top:16px; }
+.lb-price{ display:flex; align-items:baseline; gap:16px; margin-top:34px; }
+.lb-price b{ font-family:var(--serif); font-weight:500; font-size:66px; }
+.lb-price s{ font-size:28px; color:var(--muted); }
+.lb-save{ display:inline-block; background:var(--butter); border-radius:999px; padding:10px 20px; font-size:15px; font-weight:600; margin-top:20px; }
+.lb-r{ width:520px; }
+.lb-rate{ border:1px solid var(--line); border-radius:18px; padding:26px 28px; margin-bottom:18px; }
+.lb-rate .n{ font-size:21px; font-weight:500; }
+.lb-rate .d{ font-size:15px; color:var(--muted); margin-top:9px; line-height:1.45; }
+.lb-rate .p{ display:flex; align-items:baseline; justify-content:space-between; margin-top:18px; }
+.lb-rate .p b{ font-family:var(--serif); font-weight:500; font-size:30px; }
+.lb-cta{ background:var(--btn); color:#fff; border-radius:14px; padding:19px; text-align:center; font-weight:600; font-size:17px; }
+
 `;
 
 /* ---------- svg icons ---------- */
@@ -351,10 +405,77 @@ function pRates(d, photos) {
           <div class="btn-yellow" style="width:100%;margin-top:16px">Book now</div></div></div></div></div>`;
 }
 
+
+/* phone-book — transparent booking screen for compositing onto a blank white phone */
+function pBook(d) {
+  return `<div class="cap app" style="width:460px;height:996px;background:transparent">${sbar()}
+    <div class="bk">
+      <div class="bk-wm"><span class="m">${esc(d.hotel.monogram)}</span><span class="n">${esc(d.hotel.name)}</span></div>
+      <div class="bk-h">${esc(d.hotel.kind)}<br>in ${esc(d.hotel.place)}</div>
+      <div class="bk-sub">${esc(d.hotel.rating)} ★ · ${esc(d.hotel.reviews)} reviews</div>
+      <div class="bk-card">
+        <div class="bk-row"><div><div class="k">Check in</div><div class="v">${esc(d.stay.checkin)}</div></div></div>
+        <div class="bk-row"><div><div class="k">Check out</div><div class="v">${esc(d.stay.checkout)}</div></div></div>
+        <div class="bk-row"><div><div class="k">Guests</div><div class="v">${esc(d.stay.guests)}</div></div></div>
+      </div>
+      <div class="bk-go">Search direct rates</div>
+      <div class="bk-note"><i></i>No booking fee. Ever.</div>
+    </div></div>`;
+}
+
+/* laptop-board — transparent owner dashboard for compositing onto a blank white laptop */
+function lBoard(d) {
+  const b = d.dashboard;
+  return `<div class="cap app" style="width:1440px;height:900px;background:transparent">
+    <div class="bd2">
+      <div class="bd2-top">
+        <div><div class="bd2-wm">${esc(d.hotel.name)}</div>
+          <div class="bd2-kick">Owner · ${esc(b.month)}</div></div>
+        <div class="bd2-pill">Direct is winning</div>
+      </div>
+      <div class="bd2-grid">
+        <div><div class="bd2-lab">Direct revenue</div><div class="bd2-fig">${esc(b.directRevenue)}</div></div>
+        <div><div class="bd2-lab">Commission saved</div><div class="bd2-fig">${esc(b.commissionSaved)}</div></div>
+        <div><div class="bd2-lab">Occupancy</div><div class="bd2-fig">${b.occupancy}%</div></div>
+      </div>
+      <div class="bd2-bars">
+        ${b.channels.map((c) => `<div class="bd2-bar${c.hot ? ' hot' : ''}">
+          <div class="t"><span>${esc(c.label)}</span><span>${c.pct}%</span></div>
+          <div class="track"><div class="fill" style="width:${c.pct}%"></div></div></div>`).join('')}
+      </div>
+    </div></div>`;
+}
+
+
+/* laptop-book — transparent booking page for compositing onto a blank white laptop */
+function lBook(d) {
+  const sel = d.rooms.find((r) => r.id === d.selected) || d.rooms[0];
+  const off = Math.round((1 - sel.direct / sel.ota) * 100);
+  return `<div class="cap app" style="width:1440px;height:900px;background:transparent">
+    <div class="lb">
+      <div class="lb-l">
+        <div class="lb-wm">${esc(d.hotel.name)}</div>
+        <div class="lb-kick">Direct booking</div>
+        <div class="lb-room">${esc(sel.name)}</div>
+        <div class="lb-meta">${esc(sel.bed)} · ${esc(sel.sqft)} · up to ${sel.max} guests</div>
+        <div class="lb-price"><b>$${sel.direct}</b><s>$${sel.ota}</s></div>
+        <div class="lb-save">${off}% cheaper than the OTA</div>
+      </div>
+      <div class="lb-r">
+        ${d.rates.map((r) => `<div class="lb-rate">
+          <div class="n">${esc(r.name)}</div>
+          <div class="d">${esc(r.desc)}</div>
+          <div class="p"><b>${esc(r.price)}</b><span style="font-size:15px;color:var(--muted)">${esc(r.per)}</span></div>
+        </div>`).join('')}
+        <div class="lb-cta">Book direct</div>
+      </div>
+    </div></div>`;
+}
+
 /* ---------- registry + page ---------- */
 export const SCREENS = {
-  laptop: { hero: lHero, categories: lCategories, rates: lRates, modal: lModal, dashboard: lDashboard },
-  phone: { hero: pHero, rates: pRates, confirm: pConfirm },
+  laptop: { hero: lHero, categories: lCategories, rates: lRates, modal: lModal, dashboard: lDashboard, board: lBoard, book: lBook },
+  phone: { hero: pHero, rates: pRates, confirm: pConfirm, book: pBook },
 };
 
 export function appPage(data, fontsCss, photos) {

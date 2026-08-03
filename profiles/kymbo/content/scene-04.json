@@ -63,15 +63,15 @@
       "anchor": "bottom",
       "scrim": "bottom",
       "imageId": "SCENE-04 / 5  (PHOTO + COMPOSITE — laptop, blank white screen)",
-      "kicker": "THE FIX",
       "headline": "==Stop the meter.==",
       "sub": "Two ways to start booking direct — pick one this week.",
       "action": "Comment START to begin",
       "bg": "assets/scene-04/s5.png",
       "screen": {
-        "app": "laptop-dashboard"
+        "app": "laptop-board",
+        "overscan": 0
       },
-      "imagePrompt": "A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled boutique-hotel office, morning light, a coffee beside it. IMPORTANT FOR COMPOSITING: laptop FRONT-ON to the camera, screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no glare, unobstructed. LEAVE THE BOTTOM THIRD calm for text. CRITICAL COMPOSITION: the device occupies only the UPPER ~55% of the frame; keep the LOWER ~40% a clean, empty, softly-shadowed darker surface (nothing on it) for text. All four screen corners visible. [Apply the STYLE LINE.]"
+      "imagePrompt": "A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled boutique-hotel office, morning light, a coffee beside it. DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]"
     }
   ]
 }

@@ -53,12 +53,12 @@ A small hotel bar corner in the evening: walnut counter, two glasses, a plant, w
 
 **On-slide copy:** And you can watch it happen  —  Direct share, commission saved, month over month, in your own dashboard.
 
-> **Composite slide.** Generate this photo with a BLANK WHITE device screen; we then composite the `laptop-dashboard` booking-app UI onto it.
+> **Composite slide.** Generate this photo with a BLANK WHITE device screen; we then composite the `laptop-board` booking-app UI onto it.
 
 Save as `s5.png` in `assets/scene-12/`.
 
 ```text
-DEVICE-COMPOSITE SLIDE: the device screen must be COMPLETELY BLANK PURE WHITE — no UI, no icons, no reflections, no text. We composite our own booking product onto it. A laptop open on a warm walnut reception counter in a boutique hotel, screen COMPLETELY BLANK PURE WHITE, viewed slightly from the side. A plant and a lamp beside it, evening light. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
+DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow).  ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 6 — entrance-night-warm

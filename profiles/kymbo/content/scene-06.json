@@ -43,9 +43,10 @@
       "body": "Availability, rate and the book button — visible the second the page opens. No hunting.",
       "bg": "assets/scene-06/s3.png",
       "screen": {
-        "app": "laptop-hero"
+        "app": "laptop-book",
+        "overscan": 0
       },
-      "imagePrompt": "A modern open laptop (MacBook-style) on a clean walnut desk, plant and coffee, morning light. IMPORTANT FOR COMPOSITING: laptop FRONT-ON, screen a solid PURE-WHITE rectangle (#FFFFFF) — blank, no UI, no glare, unobstructed. CRITICAL COMPOSITION: the device occupies only the UPPER ~55% of the frame; keep the LOWER ~40% a clean, empty, darker surface for text. All four screen corners visible. [Apply the STYLE LINE.]"
+      "imagePrompt": "A modern open laptop (MacBook-style) on a clean walnut desk, plant and coffee, morning light. DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]"
     },
     {
       "scene": true,
@@ -65,7 +66,6 @@
       "anchor": "bottom",
       "scrim": "bottom",
       "imageId": "SCENE-06 / 5  (PHOTO — cta)",
-      "kicker": "THE FIX",
       "headline": "Design that ==books rooms==.",
       "sub": "We audit your current page — free.",
       "action": "Comment CONVERT for an audit",

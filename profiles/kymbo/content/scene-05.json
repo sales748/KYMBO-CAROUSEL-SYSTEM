@@ -14,11 +14,11 @@
       "anchor": "top",
       "scrim": "top",
       "imageId": "SCENE-05 / 1  (PHOTO — cover)",
-      "kicker": "MYTH-BUSTING",
       "headline": "5 ==myths== keeping you\naddicted to OTAs.",
       "sub": "The stories that cost you six figures a year.",
       "bg": "assets/scene-05/s1.png",
-      "imagePrompt": "A boutique-hotel owner (three-quarter, face not clearly identifiable) pausing thoughtfully — mid-doubt — at a beautiful modern reception or lounge, warm lamp light, plants, walnut and cream, a small green neon glow. Quietly skeptical, reflective mood. LEAVE THE TOP THIRD a calm darker wall for the headline; subject lower-right. [Apply the STYLE LINE.]"
+      "imagePrompt": "A boutique-hotel owner (three-quarter, face not clearly identifiable) pausing thoughtfully — mid-doubt — at a beautiful modern reception or lounge, warm lamp light, plants, walnut and cream, a small green neon glow. Quietly skeptical, reflective mood. LEAVE THE TOP THIRD a calm darker wall for the headline; subject lower-right. [Apply the STYLE LINE.]",
+      "kicker": "MYTH-BUSTING"
     },
     {
       "scene": true,
@@ -74,7 +74,6 @@
       "anchor": "bottom",
       "scrim": "bottom",
       "imageId": "SCENE-05 / 6  (PHOTO — cta)",
-      "kicker": "THE FIX",
       "headline": "Myths are expensive.\n==Math is cheap.==",
       "sub": "We'll show you yours.",
       "action": "Comment DIRECT to start",

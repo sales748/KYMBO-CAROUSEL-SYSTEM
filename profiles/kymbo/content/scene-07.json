@@ -53,12 +53,13 @@
       "layout": "point",
       "bg": "assets/scene-07/s5.png",
       "imageId": "laptop-desk-blank",
-      "imagePrompt": "DEVICE-COMPOSITE SLIDE: the device screen must be COMPLETELY BLANK PURE WHITE — no UI, no icons, no reflections, no text. We composite our own booking product onto it. A modern laptop open on a walnut desk in a warm boutique-hotel back office, angled slightly toward camera, screen COMPLETELY BLANK PURE WHITE. A coffee cup and a small plant beside it, soft window light from the left. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": " DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). ",
       "index": "04",
       "title": "This is what ==owning it== looks like",
       "body": "Direct revenue, channel mix, commission saved. Your numbers, in your account.",
       "screen": {
-        "app": "laptop-dashboard"
+        "app": "laptop-board",
+        "overscan": 0
       }
     },
     {
