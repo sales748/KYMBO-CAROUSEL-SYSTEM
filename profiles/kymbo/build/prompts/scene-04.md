@@ -31,7 +31,7 @@ A dark walnut dining table under a single low pendant light in a quiet boutique-
 
 ## Slide 3 — terrace-dusk-empty
 
-**On-slide copy:** The cost of waiting is ((not zero)).  —  “We'll do it next quarter” is a decision to pay commission for another quarter.
+**On-slide copy:** The cost of waiting isn't ((zero)).  —  “We'll do it next quarter” is a decision to pay commission for another quarter.
 
 Save as `s3.png` in `assets/scene-04/`.
 

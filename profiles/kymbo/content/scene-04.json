@@ -40,7 +40,7 @@
       "scrim": "top",
       "imageId": "terrace-dusk-empty",
       "index": "02",
-      "title": "The cost of waiting is ((not zero)).",
+      "title": "The cost of waiting isn't ((zero)).",
       "body": "“We'll do it next quarter” is a decision to pay commission for another quarter.",
       "bg": "assets/scene-04/s3.png",
       "imagePrompt": "An empty terrace of a boutique hotel at dusk: two outdoor chairs and a small table, planting around the edge, warm light spilling from inside, a city skyline soft in the distance. Nobody present, quiet. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint. [Apply the STYLE LINE.]"
@@ -69,7 +69,25 @@
       "bg": "assets/scene-04/s5.png",
       "screen": {
         "app": "laptop-board",
-        "overscan": 0
+        "overscan": 0,
+        "quad": [
+          [
+            303,
+            407
+          ],
+          [
+            793,
+            398
+          ],
+          [
+            782,
+            724
+          ],
+          [
+            300,
+            725
+          ]
+        ]
       },
       "imagePrompt": "DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. A modern laptop open on a pale oak dining table in a bright boutique apartment kitchen and dining area, morning light from a large window, a coffee cup and a small plant to one side, cream plaster and warm wood behind. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint. [Apply the STYLE LINE.]"
     }
