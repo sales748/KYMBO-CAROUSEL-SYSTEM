@@ -14,7 +14,7 @@
       "layout": "cover",
       "bg": "assets/scene-12/s1.png",
       "imageId": "night-desk-owner-laptop",
-      "imagePrompt": "A hotel owner working late at a warm walnut desk, seen from behind, one lamp and a laptop glow, boutique back office, plant and cream plaster. Face not visible, screen not readable. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": "A hotel owner working late at a warm walnut desk, seen from behind, one lamp and a laptop glow, boutique back office, plant and cream plaster. Face not visible, screen not readable. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "headline": "Break-even is ==smaller==\nthan you think.",
       "sub": "Let's do the arithmetic instead of the pitch."
     },
@@ -23,7 +23,7 @@
       "layout": "point",
       "bg": "assets/scene-12/s2.png",
       "imageId": "empty-room-ready",
-      "imagePrompt": "A boutique hotel room fully made up and ready, warm daylight through sheer curtains, crisp linen, walnut, a plant. Empty and inviting. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": "A boutique hotel room fully made up and ready, warm daylight through sheer curtains, crisp linen, walnut, a plant. Empty and inviting. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "index": "01",
       "title": "Start with one commission",
       "body": "A $200 night through an OTA hands over roughly $50. That's your unit of measurement, not the invoice."
@@ -33,7 +33,7 @@
       "layout": "point",
       "bg": "assets/scene-12/s3.png",
       "imageId": "stairwell-light",
-      "imagePrompt": "A calm modern boutique-hotel stairwell with warm wall lights, walnut handrail, cream plaster, a plant on the landing. Architectural and quiet. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": "A calm modern boutique-hotel stairwell with warm wall lights, walnut handrail, cream plaster, a plant on the landing. Architectural and quiet. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "index": "02",
       "title": "Now count the nights, ==not the months==",
       "body": "The build pays for itself in a countable number of direct bookings. Then it keeps going, at zero."
@@ -43,7 +43,7 @@
       "layout": "point",
       "bg": "assets/scene-12/s4.png",
       "imageId": "bar-detail-evening",
-      "imagePrompt": "A small hotel bar corner in the evening: walnut counter, two glasses, a plant, warm low lighting, cream plaster behind. No branding, no people. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": "A small hotel bar corner in the evening: walnut counter, two glasses, a plant, warm low lighting, cream plaster behind. No branding, no people. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "index": "03",
       "title": "Everything after that is __margin__",
       "body": "The commission you stop paying doesn't come back once a year. It comes back on every booking, forever."
@@ -53,7 +53,7 @@
       "layout": "point",
       "bg": "assets/scene-12/s5.png",
       "imageId": "laptop-counter-blank",
-      "imagePrompt": " DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). ",
+      "imagePrompt": " DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow).  CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. ",
       "index": "04",
       "title": "And you can watch it happen",
       "body": "Direct share, commission saved, month over month, in your own dashboard.",
@@ -67,7 +67,7 @@
       "layout": "cta",
       "bg": "assets/scene-12/s6.png",
       "imageId": "entrance-night-warm",
-      "imagePrompt": "The entrance of a small boutique hotel at night from the street, warm light glowing through glass, planting either side, contemporary architecture, no readable signage or logo. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": "The entrance of a small boutique hotel at night from the street, warm light glowing through glass, planting either side, contemporary architecture, no readable signage or logo. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "headline": "Run it on your numbers.",
       "sub": "Rooms, rate, OTA share. We'll send back the break-even.",
       "action": "Comment NUMBERS"

@@ -14,7 +14,7 @@
       "layout": "cover",
       "bg": "assets/scene-07/s1.png",
       "imageId": "empty-reception-morning",
-      "imagePrompt": "A quiet boutique-hotel reception at early morning, nobody behind the desk yet: warm walnut counter, a single low lamp still on, a leafy plant, soft cream plaster wall, daylight just reaching the floor. Calm and slightly empty — the feeling of a business running without its owner in the room. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": "A quiet boutique-hotel reception at early morning, nobody behind the desk yet: warm walnut counter, a single low lamp still on, a leafy plant, soft cream plaster wall, daylight just reaching the floor. Calm and slightly empty — the feeling of a business running without its owner in the room. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "headline": "They didn't take 18%.\nThey took ==the guest==.",
       "sub": "The commission is only the part you can see."
     },
@@ -23,7 +23,7 @@
       "layout": "point",
       "bg": "assets/scene-07/s2.png",
       "imageId": "printer-booking-slip",
-      "imagePrompt": "Close, shallow-depth shot of a plain printed reservation slip lying on a walnut desk beside a laptop edge and a coffee cup — paper deliberately blank/illegible, no readable text. Warm side light, deep navy shadows. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": "Close, shallow-depth shot of a plain printed reservation slip lying on a walnut desk beside a laptop edge and a coffee cup — paper deliberately blank/illegible, no readable text. Warm side light, deep navy shadows. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "index": "01",
       "title": "The booking arrives ==without a person==",
       "body": "A reference number, a name, a masked email. No phone. No history. Nothing you can use twice."
@@ -33,7 +33,7 @@
       "layout": "point",
       "bg": "assets/scene-07/s3.png",
       "imageId": "owner-phone-evening",
-      "imagePrompt": "A hotel owner in their 40s seen from behind and slightly to the side, holding a phone, standing near a window in a warm boutique lobby at dusk. Face not visible or heavily soft. Navy shadows, warm lamp pools. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": "A hotel owner in their 40s seen from behind and slightly to the side, holding a phone, standing near a window in a warm boutique lobby at dusk. Face not visible or heavily soft. Navy shadows, warm lamp pools. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "index": "02",
       "title": "You can't email a __masked address__",
       "body": "No pre-stay upsell. No thank-you after checkout. No offer next spring."
@@ -43,7 +43,7 @@
       "layout": "point",
       "bg": "assets/scene-07/s4.png",
       "imageId": "two-guests-checkin",
-      "imagePrompt": "Two guests with small suitcases standing in a warm boutique-hotel entry, seen from behind, waiting to check in. Anonymous, no identifiable faces. Walnut, cream plaster, greenery, late-afternoon light. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": "Two guests with small suitcases standing in a warm boutique-hotel entry, seen from behind, waiting to check in. Anonymous, no identifiable faces. Walnut, cream plaster, greenery, late-afternoon light. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "index": "03",
       "title": "So you pay to meet them ~~once~~",
       "body": "The same guest, next year, arrives through the same middleman. You pay the fee again."
@@ -53,7 +53,7 @@
       "layout": "point",
       "bg": "assets/scene-07/s5.png",
       "imageId": "laptop-desk-blank",
-      "imagePrompt": " DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). ",
+      "imagePrompt": " DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow).  CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. ",
       "index": "04",
       "title": "This is what ==owning it== looks like",
       "body": "Direct revenue, channel mix, commission saved. Your numbers, in your account.",
@@ -67,7 +67,7 @@
       "layout": "cta",
       "bg": "assets/scene-07/s6.png",
       "imageId": "hand-on-desk-close",
-      "imagePrompt": "A calm close shot of a warm boutique-hotel reception counter from the guest side: walnut surface, a small plant, a soft lamp, cream plaster behind. Empty, inviting, no people. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]",
+      "imagePrompt": "A calm close shot of a warm boutique-hotel reception counter from the guest side: walnut surface, a small plant, a soft lamp, cream plaster behind. Empty, inviting, no people. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "headline": "Own the booking.\n==Keep the guest.==",
       "sub": "Your site. Your data. Your next stay.",
       "action": "Comment DIRECT"
