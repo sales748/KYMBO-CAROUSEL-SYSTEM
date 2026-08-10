@@ -329,7 +329,9 @@
           "sub": "Read the guarantee before you commit a cent.",
           "action": "Comment 45 for the terms"
         }
-      ]
+      ],
+      "retired": true,
+      "retiredReason": "Built entirely on the 45-day guarantee, which is unverified and which the client has directed us not to run. Excluded from render and export."
     },
     {
       "id": 7,

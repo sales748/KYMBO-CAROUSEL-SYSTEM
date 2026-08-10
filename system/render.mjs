@@ -23,6 +23,10 @@ mkdirSync(join(build, 'img'), { recursive: true });
 mkdirSync(join(build, 'prompts'), { recursive: true });
 
 const data = JSON.parse(readFileSync(join(profile, 'content/carousels.json'), 'utf8'));
+// RETIRED carousels stay in content as a record but never render or export.
+const retired = data.carousels.filter((c) => c.retired);
+data.carousels = data.carousels.filter((c) => !c.retired);
+if (retired.length) console.log(`Skipping ${retired.length} retired: ${retired.map((c) => 'c' + String(c.id).padStart(2,'0')).join(', ')}`);
 const styles = readFileSync(join(root, 'system/styles.css'), 'utf8');
 const head = `<style>${fontFaceCss()}\n${styles}</style>`;
 

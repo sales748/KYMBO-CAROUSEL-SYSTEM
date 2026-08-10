@@ -1,93 +1,78 @@
 {
   "id": "scene-03",
   "mode": "scene",
-  "pillar": "The Proof",
+  "pillar": "The Fix",
   "batch": "01",
-  "pathBofBatch": "3 of 4",
-  "title": "45 days, in writing.",
-  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel + modern workspace world: walnut wood, cream plaster, greenery, contemporary fixtures and screens. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
-  "note": "Path B — scene/organic. Pure-photo slides + one DEVICE-COMPOSITE (blank white laptop screen → composite laptop-hero). Drop photos into assets/scene-03/ as s1..s6 .png.",
+  "pathBofBatch": "2 of 6",
+  "category": "educational",
+  "title": "Two calendars, one room — how a double booking actually happens",
+  "topic": "edu-04",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
+  "note": "Path B · EDUCATIONAL. Teaches the mechanism behind overbooking: sync direction. Slide 4 is a DEVICE-COMPOSITE (laptop, blank white screen) carrying the channel view. No claims, no guarantees — the lesson is engineering fact plus one question the reader can go and ask.",
   "assetDir": "assets/scene-03",
   "slides": [
     {
       "scene": true,
       "layout": "cover",
-      "anchor": "top",
-      "scrim": "top",
-      "imageId": "SCENE-03 / 1  (PHOTO)",
-      "kicker": "THE PROOF",
-      "headline": "==45 days==,\nin writing.",
-      "sub": "If your direct site isn't live and taking bookings, you don't pay.",
       "bg": "assets/scene-03/s1.png",
-      "imagePrompt": "A calm, confident person (three-quarter, face not clearly identifiable) in a bright modern studio office, arms relaxed, warm daylight, plants, walnut desk with a closed laptop. Quiet certainty. LEAVE THE TOP THIRD a calm brighter wall for the headline; subject lower. [Apply the STYLE LINE.]"
+      "imageId": "made-room-morning",
+      "imagePrompt": "A boutique hotel room perfectly made up and ready for a guest: crisp white linen, walnut headboard, cream plaster, a small plant, soft morning light through sheer curtains. Completely empty and still. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]",
+      "headline": "Two calendars.\n==One room.==",
+      "sub": "How a double booking actually happens — and the one setting behind it."
     },
     {
       "scene": true,
       "layout": "point",
-      "anchor": "bottom",
-      "scrim": "bottom",
-      "imageId": "SCENE-03 / 2  (PHOTO)",
-      "index": "01",
-      "title": "==Weeks==, not months.",
-      "body": "A senior team ships your booking system in a single sprint — and we put the date in the contract.",
       "bg": "assets/scene-03/s2.png",
-      "imagePrompt": "A focused modern developer workspace: dual monitors glowing softly (screens ambient, not readable), a mechanical keyboard, plants, warm desk lamp, evening light. Craft and momentum. LEAVE THE BOTTOM THIRD calm and darker for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
+      "imageId": "back-office-desk",
+      "imagePrompt": "A quiet boutique-hotel back office: a closed laptop on a walnut desk, a notebook, a warm desk lamp, cream plaster wall, a plant in soft focus. Nobody present, nothing readable. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]",
+      "index": "01",
+      "title": "Your system knows. ==The OTA doesn't.==",
+      "body": "A guest books on your site. Your PMS marks the night sold. If the sync only runs one way, Booking.com is still selling it."
     },
     {
       "scene": true,
-      "layout": "list",
-      "anchor": "bottom",
-      "scrim": "bottom",
-      "imageId": "SCENE-03 / 3  (PHOTO)",
-      "title": "What the guarantee covers",
-      "items": [
-        "Live & taking real payments in 45 days",
-        "Channel sync configured and tested",
-        "A booking flow that passes our conversion checklist",
-        "Or we keep working — free — until it does"
-      ],
+      "layout": "point",
       "bg": "assets/scene-03/s3.png",
-      "imagePrompt": "A tidy, minimalist modern desk from above: a closed laptop, a cup of coffee, a small plant, a notebook, soft even daylight on a warm wood surface. Calm and ordered. Keep it uncluttered and slightly darker overall so a checklist reads on top. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
-    },
-    {
-      "scene": true,
-      "layout": "point",
-      "anchor": "bottom",
-      "scrim": "bottom",
-      "imageId": "SCENE-03 / 4  (PHOTO + COMPOSITE — laptop, blank white screen)",
+      "imageId": "corridor-warm-lights",
+      "imagePrompt": "A calm modern boutique-hotel corridor at dusk: warm wall lights in a row, walnut doors, cream plaster, a plant on a console at the far end. Architectural, quiet, nobody present. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]",
       "index": "02",
-      "title": "On day 45, this is ==live==.",
-      "body": "Real bookings, real payments — on your own site.",
-      "bg": "assets/scene-03/s4.png",
-      "screen": {
-        "app": "laptop-book",
-        "overscan": 0
-      },
-      "imagePrompt": "A modern open laptop (MacBook-style) on a walnut desk in a warm boutique-hotel back office, plants, morning light, a coffee beside it. DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]"
+      "title": "The gap is measured in __minutes__.",
+      "body": "Channel managers push on a cycle, not instantly. The overlap window is small. It only has to catch you once."
     },
     {
       "scene": true,
       "layout": "point",
-      "anchor": "top",
-      "scrim": "top",
-      "imageId": "SCENE-03 / 5  (PHOTO)",
+      "bg": "assets/scene-03/s4.png",
+      "imageId": "laptop-counter-blank",
+      "imagePrompt": "DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. A modern laptop open on a warm walnut reception counter in a boutique hotel, a small plant and a soft lamp beside it, cream plaster behind, evening light. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]",
       "index": "03",
-      "title": "The risk moves to ((us)).",
-      "body": "You've carried the cost of doing nothing for years. Now it sits with the people building it.",
+      "title": "Two-way means it ==writes back==.",
+      "body": "Your direct booking closes that night on every channel, and their booking lands in your system. One source of truth.",
+      "screen": {
+        "app": "laptop-board",
+        "overscan": 0
+      }
+    },
+    {
+      "scene": true,
+      "layout": "point",
       "bg": "assets/scene-03/s5.png",
-      "imagePrompt": "Two people collaborating warmly in a bright modern office — one gesturing at a screen (ambient, not readable), the other nodding, plants, walnut and cream, daylight (faces soft / not identifiable). Trust and partnership. LEAVE THE TOP THIRD a calm wall for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
+      "imageId": "suitcase-lobby",
+      "imagePrompt": "A single suitcase standing alone on the floor of a warm boutique-hotel lobby, walnut and cream, greenery, low evening light, nobody present. Quiet and slightly unsettling. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]",
+      "index": "04",
+      "title": "A free iCal link is usually ~~two-way~~.",
+      "body": "It's the most common calendar sync, and it points one direction only. That's the setting that walks a guest."
     },
     {
       "scene": true,
       "layout": "cta",
-      "anchor": "bottom",
-      "scrim": "bottom",
-      "imageId": "SCENE-03 / 6  (PHOTO)",
-      "headline": "Risk on us,\n==not you==.",
-      "sub": "Read the guarantee before you commit a cent.",
-      "action": "Comment 45 for the terms",
       "bg": "assets/scene-03/s6.png",
-      "imagePrompt": "A boutique-hotel owner at ease in their beautiful property at warm evening hour — leaning on a walnut counter, calm and reassured, plants, soft lamp glow (face soft / not identifiable). LEAVE THE BOTTOM THIRD calm and darker for text. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. [Apply the STYLE LINE.]"
+      "imageId": "reception-evening-empty",
+      "imagePrompt": "A warm boutique-hotel reception counter in the evening, lamps lit, walnut surface, greenery, cream plaster behind, entirely empty of people. Calm and expensive. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]",
+      "headline": "Ask your channel manager\n==one question.==",
+      "sub": "“Is my calendar sync two-way?” If the answer is no, you've found it.",
+      "action": "Comment SYNC"
     }
   ]
 }

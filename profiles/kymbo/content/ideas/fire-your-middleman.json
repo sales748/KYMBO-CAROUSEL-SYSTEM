@@ -91,8 +91,9 @@
       "proof": [
         "45-day guarantee"
       ],
-      "usedIn": "c06 / scene-03",
-      "flag": "UNVERIFIED — the 45-day guarantee is not in the campaign brief or any SOW. See top-level `warning`."
+      "usedIn": null,
+      "flag": "RETIRED — do not use. The 45-day guarantee is not in the campaign brief, the offer tiers or any SOW. Client direction: do not engage with guarantee/claim topics of this kind.",
+      "retired": true
     },
     {
       "id": "fym-07",
@@ -444,6 +445,6 @@
     }
   ],
   "weekArc": "The campaign runs a 5-week content arc that maps 1:1 onto these pillars: W1 Problem · W2 Math · W3 Alternative · W4 Proof · W5 Decision.",
-  "warning": "carousel c06 / scene-03 ships the claim '45 days, in writing' + 'if your direct site isn't live and taking bookings, you don't pay.' NO 45-day guarantee exists anywhere in the campaign brief, the offer tiers, or the SOW templates. Verify with leadership or pull the claim before this runs again.",
-  "batch02": "Batch 02 pulled: fym-26->c17, fym-14->c18, fym-16->scene-07, fym-28->scene-08, fym-27->scene-09, fym-21->scene-10, fym-25->scene-11, fym-18->scene-12"
+  "batch02": "Batch 02 pulled: fym-26->c17, fym-14->c18, fym-16->scene-07, fym-28->scene-08, fym-27->scene-09, fym-21->scene-10, fym-25->scene-11, fym-18->scene-12",
+  "retiredTopics": "fym-06 (45-day guarantee) — retired by client direction; unverifiable commitment."
 }
