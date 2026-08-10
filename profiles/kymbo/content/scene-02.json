@@ -45,7 +45,25 @@
       "bg": "assets/scene-02/s3.png",
       "screen": {
         "app": "phone-book",
-        "overscan": 0
+        "overscan": 0,
+        "quad": [
+          [
+            451,
+            323
+          ],
+          [
+            638,
+            322
+          ],
+          [
+            631,
+            750
+          ],
+          [
+            447,
+            749
+          ]
+        ]
       },
       "imagePrompt": "Close-up: a returning guest, comfortable on a linen sofa at home, holding an iPhone 17 (Dynamic Island, thin bezels) about to book again, warm evening lamp light, a mug and a plant nearby. DEVICE-COMPOSITE SLIDE — read carefully. The phone must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no icons, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]"
     },
@@ -85,7 +103,25 @@
       "bg": "assets/scene-02/s6.png",
       "screen": {
         "app": "laptop-board",
-        "overscan": 0
+        "overscan": 0,
+        "quad": [
+          [
+            324,
+            386
+          ],
+          [
+            753,
+            392
+          ],
+          [
+            754,
+            671
+          ],
+          [
+            328,
+            671
+          ]
+        ]
       },
       "imagePrompt": "A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled home office, morning light, coffee beside it. DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]"
     }
