@@ -44,7 +44,25 @@
       "bg": "assets/scene-06/s3.png",
       "screen": {
         "app": "laptop-book",
-        "overscan": 0
+        "overscan": 0,
+        "quad": [
+          [
+            306,
+            394
+          ],
+          [
+            761,
+            404
+          ],
+          [
+            767,
+            698
+          ],
+          [
+            314,
+            698
+          ]
+        ]
       },
       "imagePrompt": "DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. A modern laptop open on a pale stone kitchen island in a bright boutique apartment, a large window behind throwing soft daylight, a ceramic cup and a small plant to one side, warm wood cabinetry in soft focus. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint. [Apply the STYLE LINE.]"
     },
