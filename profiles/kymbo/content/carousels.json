@@ -161,8 +161,8 @@
         {
           "type": "mockup",
           "device": "mobile",
-          "title": "80% of guests book here",
-          "caption": "Four in five bookings happen on this screen. It has to be flawless.",
+          "title": "The screen it comes down to",
+          "caption": "Mobile checkout is where a booking is won or lost. It has to be flawless.",
           "ui": {
             "brandline": "Checkout",
             "price": "$180",
@@ -172,7 +172,7 @@
         },
         {
           "type": "cta",
-          "headline": "A system that pays for itself.",
+          "headline": "A system you actually own.",
           "sub": "See a live demo on your own property.",
           "action": "Comment SYSTEM for a walkthrough"
         }
@@ -216,13 +216,13 @@
           "type": "point",
           "index": "01",
           "title": "Now multiply",
-          "body": "40 OTA bookings a month × $50 = $2,000/mo. That's $24,000 a year — for guests who were already yours."
+          "body": "40 OTA bookings a month × $50 = $2,000/mo. That's $24,000 a year — on bookings your own site could have taken."
         },
         {
           "type": "cta",
           "headline": "$0 on direct.",
           "hiWord": "$0",
-          "sub": "That $24k builds the system in year one and prints profit after.",
+          "sub": "That's the figure to weigh against a one-time build. Run it on your own numbers.",
           "action": "Comment MATH for your numbers"
         }
       ]
@@ -608,13 +608,13 @@
           "type": "point",
           "index": "PATH 01",
           "title": "Start with the widget",
-          "body": "Live in days. Capture direct bookings on your current site while we plan the bigger build. Lowest risk, immediate return."
+          "body": "Live on your current site as soon as it's configured. Capture direct bookings while the bigger build is planned. The smallest possible first step."
         },
         {
           "type": "point",
           "index": "PATH 02",
           "title": "Go full system",
-          "body": "A custom direct-booking site, channel sync, payments and automations — backed by the 45-day guarantee. The complete rebalance."
+          "body": "A custom direct-booking site, channel sync, payments and automations. The complete rebalance."
         },
         {
           "type": "list",
@@ -623,7 +623,7 @@
             "A booking flow built to convert",
             "Channel sync so you never double-book",
             "Payments, confirmations & upsells on autopilot",
-            "A team that ships in weeks, in writing"
+            "A staging build you sign off before go-live"
           ]
         },
         {
