@@ -53,7 +53,7 @@ DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT
 
 ## Slide 5 — suitcase-lobby
 
-**On-slide copy:** A free iCal link is usually ~~two-way~~.  —  It's the most common calendar sync, and it points one direction only. That's the setting that walks a guest.
+**On-slide copy:** A free iCal link goes ==one way==.  —  It's the most common calendar sync, and it points one direction only. That's the setting that walks a guest.
 
 Save as `s5.png` in `assets/scene-03/`.
 
