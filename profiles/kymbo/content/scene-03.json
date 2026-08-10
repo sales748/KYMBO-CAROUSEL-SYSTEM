@@ -51,7 +51,25 @@
       "body": "Your direct booking closes that night on every channel, and their booking lands in your system. One source of truth.",
       "screen": {
         "app": "laptop-board",
-        "overscan": 0
+        "overscan": 0,
+        "quad": [
+          [
+            354,
+            399
+          ],
+          [
+            730,
+            400
+          ],
+          [
+            733,
+            650
+          ],
+          [
+            350,
+            650
+          ]
+        ]
       }
     },
     {
