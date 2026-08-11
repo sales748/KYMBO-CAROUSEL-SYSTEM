@@ -1,8 +1,8 @@
 # Kymbo — Content Repository
 
-The idea bank the ideation step pulls from. When we start the next four
-carousels, we do **not** brainstorm from zero — we open these files, filter, and
-pick. Everything here is a *topic*, not a finished carousel: a topic becomes a
+The idea bank the ideation step pulls from. When we start the next carousels,
+we do **not** brainstorm from zero — we open these files, filter, and pick.
+Everything here is a *topic*, not a finished carousel: a topic becomes a
 carousel when it gets copy, a layout and (for Path B) image prompts.
 
 ```
@@ -10,24 +10,37 @@ ideas/
   README.md                   ← this file: how the repository works
   stack.json                  the tech stack the technical topics rest on
   fire-your-middleman.json    campaign topic bank (the OTA/direct argument)
-  educational-technical.json  technical/educational topic bank (the new category)
+  educational-technical.json  hotel-tech / how-it-works topic bank
+  craft-and-team.json         team, process, range, culture — the wider Kymbo
 ```
+
+> **Read `../../../docs/` first.** `docs/CONTINUE-HERE.md` is the entry point
+> for any new session picking this up. It links to the Aug 11 feedback log,
+> the mental-triggers filter every carousel now runs through, the retired
+> claim families, and the Batch 01v2 plan.
 
 ---
 
-## The two categories
+## The three categories
 
-| | **Fire Your Middleman** | **Educational / Technical** |
-|---|---|---|
-| Job | Sell the argument for going direct | Teach the craft; earn authority |
-| Reader leaves with | A reason to act | A thing they understand |
-| Pillars | Problem · Math · Alternative · Proof · Decision | Stack · Build · Standard · Fix · Tradeoff |
-| Default cover surface | dark (mostly) | **light — always** |
-| Default path | A (HTML) or B (scene) | A (HTML), diagram-forward |
+| | **Fire Your Middleman** | **Educational / Technical** | **Craft & Team** |
+|---|---|---|---|
+| Job | Sell the argument for going direct | Teach the craft; earn authority | Show what Kymbo is beyond the campaign |
+| Reader leaves with | A reason to act | A thing they understand | A sense of who they'd be working with |
+| Pillars | Problem · Math · Alternative · Proof · Decision | Stack · Build · Standard · Fix · Tradeoff | Team · Process · Craft · Range · Culture |
+| Default cover surface | dark (mostly) | **light — always** | mixed (decided per topic) |
+| Default path | A (HTML) or B (scene) | A (HTML), diagram-forward | mixed (people-oriented topics lean B) |
 
-The educational category is **not a new design system**. Same canvas, palette,
-type, footer ticks, one-lime-accent rule. What changes is stated under *Design
-direction* below.
+None of these is a new design system. Same canvas, palette, type, footer
+ticks, one-lime-accent rule. What changes is stated under *Design direction*
+below.
+
+**Batch mix — Isa's direction 2026-08-11.** Do not ship a batch that draws
+only from Fire Your Middleman. Mix the three categories from the start, not
+"revive the account first, then run the campaign." Recommended Batch 01v2
+split: 4 FYM + 4 Educational + 4 Craft/Team, interwoven across the 12 feed
+slots. See `docs/batch-01v2-plan.md` for the specific 12 and the slot
+assignments.
 
 ---
 
@@ -35,19 +48,27 @@ direction* below.
 
 1. **Filter by what the feed needs**, not by what's interesting. The feed rules
    below tell you how many light covers and which archetypes are free.
-2. **Pull 4 topics.** Check `usedIn` on each — anything with a value is already
+2. **Pull to the batch mix.** For Batch 01v2 that means 4 from each of the
+   three banks. Check `usedIn` on each — anything with a value is already
    shipped; don't repeat a topic that has a scene twin (see the no-twins rule).
-3. **Check `needsStack`.** A topic flagged `true` asserts something about
+3. **Check the retired-topics flag on each bank.** Retired topics carry
+   `retired: true` or a `flag`. Do not repull them.
+4. **Check `needsStack`.** A topic flagged `true` asserts something about
    Kymbo's own tooling. Verify against `stack.json` before writing copy — do not
    guess a tool name into a published slide.
-4. **Write the carousel** into `content/<id>.json`, then set `usedIn` on the
+5. **Assign the primary trigger** at pull time, not after copy is drafted.
+   The trigger is a structural decision. See `docs/mental-triggers.md` for the
+   filter and the checklist.
+6. **Write the carousel** into `content/<id>.json`, then set `usedIn` on the
    topic so it leaves the pool.
-5. **Top the pool back up** when a bank drops below ~10 unused topics.
+7. **Top the pool back up** when a bank drops below ~10 unused topics.
 
 Each topic carries: `id`, `title`, `pillar`, `hook` (the cover line),
 `angle` (what makes it non-obvious), `slides` (suggested count), `cover`
 (archetype), `surface`, `path`, `proof` (the concrete numbers to use), and
-`needsStack`.
+`needsStack`. Topics in `craft-and-team.json` additionally carry
+`primaryTrigger` because the trigger is the structural anchor for those
+carousels.
 
 ---
 

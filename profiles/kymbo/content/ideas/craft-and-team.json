@@ -1,0 +1,320 @@
+{
+  "category": "Craft & Team",
+  "note": "The third topic bank. Covers the material outside FYM and hotel-tech: team/process (PM + lead + dev + designer, onboarding, custom vs template), e-commerce, mobile apps, integrations, general (non-hotel) WordPress work, and Kymbo's operating principles. This is the 'wider positioning' material Isa asked for on 2026-08-11 — carousels that speak about the whole shop, not just the campaign. Verified against Notion 2026-08-03 (see stack.json).",
+  "pillars": {
+    "The Team": "Who does what, when, and why the shape works.",
+    "The Process": "How a project actually runs, step by step, transparently.",
+    "The Craft": "Positions Kymbo takes on how work should be done — with the reason.",
+    "The Range": "What Kymbo builds beyond hotels — e-commerce, mobile, integrations, custom.",
+    "The Culture": "The nearshore team, timezone reality, how collaboration actually feels."
+  },
+  "coverRule": "Surface is not fixed — decided per topic. Light covers help the feed's tonal math; dark covers work when the topic has a strong visual anchor (a person, a workspace, a piece of infrastructure).",
+  "editorialNote": "These carousels are the ones that read as 'brand and craft', not 'sales'. They are the reason a follower who never converts still stays subscribed. Copy discipline is the same as everywhere: no unverified claims, arithmetic > promise, one idea per slide, the 5-year-old test on every sentence.",
+  "topics": [
+    {
+      "id": "craft-01",
+      "title": "The five people on every Kymbo project",
+      "pillar": "The Team",
+      "hook": "The shape of the team behind your build.",
+      "angle": "PM, tech lead, developer(s), designer (custom only), client. What each does, when they show up, why the shape works. Anti-'lone freelancer' — Kymbo is a team, not a founder.",
+      "slides": 6,
+      "cover": "STATEMENT",
+      "surface": "dark",
+      "path": "B",
+      "primaryTrigger": "affinity",
+      "proof": [
+        "PM: client-facing single point of contact",
+        "Tech lead: architecture + code review",
+        "Developer(s): implementation",
+        "Designer: custom builds only",
+        "Template projects run without a designer"
+      ],
+      "source": "Notion → team model + docs/positioning.md",
+      "usedIn": null
+    },
+    {
+      "id": "craft-02",
+      "title": "The onboarding week, day by day",
+      "pillar": "The Process",
+      "hook": "From 'yes' to first design in five working days.",
+      "angle": "Publish the actual onboarding cadence — discovery call, SOW, staging environment, first design pass, first review. Transparency IS the value proposition; nobody else in this market publishes the workflow.",
+      "slides": 7,
+      "cover": "INDEX",
+      "surface": "light",
+      "path": "A",
+      "primaryTrigger": "reciprocity",
+      "proof": [
+        "Day 1: discovery call",
+        "Day 2: SOW draft returned",
+        "Day 3: staging environment spun up",
+        "Day 4-5: first design or content pass",
+        "End of week: review + revision list"
+      ],
+      "source": "Notion → onboarding SOW + docs/positioning.md",
+      "usedIn": null
+    },
+    {
+      "id": "craft-03",
+      "title": "Custom or template — how Kymbo picks",
+      "pillar": "The Craft",
+      "hook": "You don't need custom. Until you do.",
+      "angle": "The real decision Kymbo runs, replacing the retired widget/full-integration framing. Template when: content-first site, marketing site, standard flow; custom when: design is a value driver, integrations are non-trivial, performance is load-bearing. Named tradeoffs, not marketing.",
+      "slides": 6,
+      "cover": "STATEMENT",
+      "surface": "dark",
+      "path": "B",
+      "primaryTrigger": "commitment",
+      "proof": [
+        "template: capped at 25 active plugins (Elementor)",
+        "custom: capped at 15 active plugins (custom theme)",
+        "custom: vanilla ES2020+, no jQuery",
+        "custom: 33/33/33 payment terms",
+        "template: 50/50 payment terms"
+      ],
+      "source": "Notion → CMS category + docs/positioning.md",
+      "usedIn": null
+    },
+    {
+      "id": "craft-04",
+      "title": "The whole guest lifecycle, not just the booking",
+      "pillar": "The Range",
+      "hook": "Direct isn't a checkout. It's the whole stay.",
+      "angle": "The C7/C10/C11 fix combined. A direct-booking build handles pre-arrival messaging, door codes, self check-in instructions, staff notifications on check-in/out, in-stay FAQs, post-stay follow-up. This is what closes Airbnb's operational advantage — not just the booking, the automation.",
+      "slides": 7,
+      "cover": "STATEMENT",
+      "surface": "dark",
+      "path": "B",
+      "primaryTrigger": "commitment",
+      "proof": [
+        "pre-arrival: confirmation email + property information",
+        "arrival: door code + self check-in instructions",
+        "in-stay: FAQ automation, staff notifications",
+        "post-stay: review request + return-guest email",
+        "the layer OTAs never gave you: the CRM"
+      ],
+      "source": "Notion → Hospitality management + FYM brief; C7/C10/C11 feedback",
+      "usedIn": null
+    },
+    {
+      "id": "craft-05",
+      "title": "Discovery, SOW, kickoff — the three docs every project starts with",
+      "pillar": "The Process",
+      "hook": "A quote isn't a scope. Here's what actually comes first.",
+      "angle": "What each document is for, what belongs in it, what does not. Discovery = questions and risks. SOW = named deliverables + timeline + price. Kickoff = who owns what, sign-offs, communication cadence. Publishing this makes Kymbo look like the adult in the room.",
+      "slides": 6,
+      "cover": "INDEX",
+      "surface": "light",
+      "path": "A",
+      "primaryTrigger": "authority",
+      "proof": [
+        "discovery: 20-30 questions, risks named",
+        "SOW: deliverables + timeline + fixed price",
+        "kickoff: comms cadence, sign-off owners, staging URL"
+      ],
+      "source": "Notion → Wordpress SOW / Handoff",
+      "usedIn": null
+    },
+    {
+      "id": "craft-06",
+      "title": "Staging environment, always",
+      "pillar": "The Craft",
+      "hook": "The first real booking is the worst place to find the bug.",
+      "angle": "Every Kymbo build lives on staging before it lives on production. Client-tested, payment-flow-tested, PMS-sync-tested. The client signs off on staging before the domain gets pointed. This is what prevents launch-day disaster stories — publish it, don't hide it.",
+      "slides": 6,
+      "cover": "STATEMENT",
+      "surface": "light",
+      "path": "A",
+      "primaryTrigger": "authority",
+      "proof": [
+        "staging = real dev-staging-prod pipeline (Railway or Cloudflare)",
+        "payment flow tested before go-live",
+        "PMS sync tested before go-live (prevents double-booking)",
+        "client sign-off gates the domain pointing"
+      ],
+      "source": "Notion → campaign brief § Offer (Growth tier); edu-30",
+      "usedIn": null
+    },
+    {
+      "id": "craft-07",
+      "title": "Why Kymbo doesn't lock clients in",
+      "pillar": "The Culture",
+      "hook": "You can take your site elsewhere on day one.",
+      "angle": "Kymbo hands over: full admin, hosting credentials, backup restore drill, documentation. Competes on ongoing value, not on lock-in. A slightly spicy position because most agencies do the opposite — that's exactly why it converts.",
+      "slides": 5,
+      "cover": "STATEMENT",
+      "surface": "dark",
+      "path": "A",
+      "primaryTrigger": "affinity",
+      "proof": [
+        "handoff includes admin, hosting, backups, docs",
+        "no proprietary CMS, no locked-down theme framework",
+        "care plan is opt-in, not required"
+      ],
+      "source": "Notion → Wordpress Handoff Meeting Checklist",
+      "usedIn": null
+    },
+    {
+      "id": "craft-08",
+      "title": "Nearshore, in one timezone",
+      "pillar": "The Culture",
+      "hook": "Colombian team. US LLC. Same coffee break.",
+      "angle": "The genuine argument for nearshore vs offshore: same business hours as US/Canada clients, same-day iteration, no 12-hour handoff cycles. Not a claim about culture — a claim about the clock.",
+      "slides": 5,
+      "cover": "STAT",
+      "surface": "light",
+      "path": "A",
+      "primaryTrigger": "affinity",
+      "proof": [
+        "team in Colombia (UTC-5)",
+        "US LLC",
+        "same working hours as US East / Central",
+        "same-day iteration cycles"
+      ],
+      "source": "Notion → about Kymbo",
+      "usedIn": null
+    },
+    {
+      "id": "craft-09",
+      "title": "E-commerce isn't just a Shopify install",
+      "pillar": "The Range",
+      "hook": "You didn't buy a store. You bought a pipeline.",
+      "angle": "The parts of an e-commerce build that aren't 'add the theme': payment gateway + processor + merchant account (three companies, three fees), tax and shipping logic, inventory sync, abandoned cart, post-purchase email, GA4 events. Kymbo does the pipeline; the theme is 5% of the work.",
+      "slides": 6,
+      "cover": "MATRIX",
+      "surface": "light",
+      "path": "A",
+      "primaryTrigger": "reciprocity",
+      "proof": [
+        "payments: gateway + processor + merchant account",
+        "tax: destination-based, jurisdiction-aware",
+        "shipping: real-time rates or flat, per SKU",
+        "GA4: view_item → add_to_cart → begin_checkout → purchase",
+        "post-purchase: order confirmation + shipping + review request"
+      ],
+      "source": "Notion → e-commerce build notes",
+      "usedIn": null
+    },
+    {
+      "id": "craft-10",
+      "title": "When mobile is the right answer (and when it isn't)",
+      "pillar": "The Range",
+      "hook": "A mobile app is a commitment, not a feature.",
+      "angle": "The honest decision Kymbo runs before quoting a mobile build. Yes when: repeat-use, offline capability, native device features (camera, push, geofence), long-term relationship with the same user. No when: content browsing, one-time transaction, would work as a fast responsive site. The 'don't build the app' answer is often the right one.",
+      "slides": 6,
+      "cover": "SEAM",
+      "surface": "light",
+      "path": "A",
+      "primaryTrigger": "commitment",
+      "proof": [
+        "yes: repeat use, offline, push, native features",
+        "no: content browsing, one-time transaction, first-time users",
+        "cost signal: mobile ships in 2 stores, updates cost 2x web"
+      ],
+      "source": "Notion → mobile decisioning notes",
+      "usedIn": null
+    },
+    {
+      "id": "craft-11",
+      "title": "Every integration is two things: an API and an agreement",
+      "pillar": "The Craft",
+      "hook": "APIs never break the way people expect them to.",
+      "angle": "What makes integrations expensive isn't the code — it's the auth flow, the rate limits, the retry policy, the failure surface (which side rolls back?), and the change contract (who tells whom when the API updates). Kymbo has scars from all five.",
+      "slides": 6,
+      "cover": "INDEX",
+      "surface": "light",
+      "path": "A",
+      "primaryTrigger": "authority",
+      "proof": [
+        "auth: OAuth vs API key vs signed JWT — different failure surfaces",
+        "rate limits: retry with backoff, not a tight loop",
+        "webhooks: idempotent handlers, always",
+        "failure: exactly-once is a myth; design for at-least-once",
+        "change: version pinning, contract tests, changelogs monitored"
+      ],
+      "source": "Notion → integrations wiki",
+      "usedIn": null
+    },
+    {
+      "id": "craft-12",
+      "title": "The check-in flow, automated end-to-end",
+      "pillar": "The Range",
+      "hook": "Guest lands. Door opens. No front desk required.",
+      "angle": "Concrete companion to craft-04. A single scene walkthrough of what a fully-automated arrival looks like on a Kymbo direct-booking build: SMS/email confirmation with door code, in-app or SMS 'you're here' welcome, self check-in instructions, staff notified only if something fails. Ties the whole 'direct booking > Airbnb operations' argument to a physical moment.",
+      "slides": 6,
+      "cover": "STATEMENT",
+      "surface": "dark",
+      "path": "B",
+      "primaryTrigger": "curiosity",
+      "proof": [
+        "24h before: confirmation + door code SMS",
+        "arrival: 'you're here' welcome + wifi + house rules",
+        "check-in: no front desk required for standard stays",
+        "exception path: staff notified only if guest reports an issue",
+        "check-out: automated reminder + review request"
+      ],
+      "source": "docs/feedback-log.md § C10; Notion → automation wiki",
+      "usedIn": null
+    },
+    {
+      "id": "craft-13",
+      "title": "Why performance is a gate, not a feature",
+      "pillar": "The Craft",
+      "hook": "LCP 2.5s. That's the wall.",
+      "angle": "Publish the internal performance gate again, this time not as an educational post but as a *position*: some things are non-negotiable. LCP < 2.5s or the build doesn't go live. Explains what changes when performance is treated as a gate versus an aspiration.",
+      "slides": 6,
+      "cover": "STAT",
+      "surface": "light",
+      "path": "A",
+      "primaryTrigger": "authority",
+      "proof": [
+        "LCP < 2.5s, CLS < 0.1, INP < 200ms, TBT < 200ms",
+        "Lighthouse >= 80",
+        "first load < 2 MB",
+        "industry average hotel page: 6.3s"
+      ],
+      "source": "Notion → WordPress Performance and Core Web Vitals",
+      "usedIn": null
+    },
+    {
+      "id": "craft-14",
+      "title": "The three things that end up on the review call",
+      "pillar": "The Process",
+      "hook": "Design. Copy. Performance. That's the review.",
+      "angle": "Transparency about how a Kymbo review actually goes: not 'what do you think of the design' — 'here's the design, here's the copy, here's the performance, sign off on each independently'. Isolates the feedback so it doesn't blur.",
+      "slides": 5,
+      "cover": "INDEX",
+      "surface": "light",
+      "path": "A",
+      "primaryTrigger": "reciprocity",
+      "proof": [
+        "design: sign off before content pass",
+        "copy: sign off before performance pass",
+        "performance: sign off before go-live"
+      ],
+      "source": "Notion → project review process",
+      "usedIn": null
+    },
+    {
+      "id": "craft-15",
+      "title": "Handoff, not lock-in",
+      "pillar": "The Culture",
+      "hook": "On go-live day, you get everything.",
+      "angle": "Companion to craft-07. The handoff checklist Kymbo runs on every project: admin credentials, hosting access, backups verified, documentation, restore drill run. The client leaves the launch call with everything they need to take the site to another agency if they want to. That is Kymbo's competitive posture, not a courtesy.",
+      "slides": 6,
+      "cover": "INDEX",
+      "surface": "light",
+      "path": "A",
+      "primaryTrigger": "reciprocity",
+      "proof": [
+        "admin creds",
+        "hosting access + billing pointer",
+        "backup restore drill (actually run, not just documented)",
+        "site documentation + editor guide",
+        "SEO baseline report"
+      ],
+      "source": "Notion → Wordpress Handoff Meeting Checklist",
+      "usedIn": null
+    }
+  ],
+  "usageNote": "As of Batch 01v2 planning: craft-01, craft-02, craft-03, craft-04 are proposed for the batch. See docs/batch-01v2-plan.md for the full mix. Everything else here is the pool the next batch pulls from."
+}
