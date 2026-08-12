@@ -192,7 +192,7 @@
       "proof": [
         "~50% of OTA-discovered guests search the property directly before booking"
       ],
-      "usedIn": null
+      "usedIn": "scene-18"
     },
     {
       "id": "fym-14",
@@ -237,7 +237,7 @@
       "proof": [
         "direct booking connects the profile to CRM, loyalty, post-stay"
       ],
-      "usedIn": "scene-07"
+      "usedIn": "scene-07; scene-15"
     },
     {
       "id": "fym-17",
@@ -291,7 +291,7 @@
       "surface": "light",
       "path": "A",
       "proof": [],
-      "usedIn": null
+      "usedIn": "scene-16"
     },
     {
       "id": "fym-21",
@@ -390,7 +390,7 @@
         "65% of direct bookings start with discovery on an OTA — ZUZU Hospitality"
       ],
       "source": "Notion → campaign brief § Message priorities",
-      "usedIn": "scene-09"
+      "usedIn": "scene-09; scene-13"
     },
     {
       "id": "fym-28",
@@ -446,5 +446,6 @@
   ],
   "weekArc": "The campaign runs a 5-week content arc that maps 1:1 onto these pillars: W1 Problem · W2 Math · W3 Alternative · W4 Proof · W5 Decision.",
   "batch02": "Batch 02 pulled: fym-26->c17, fym-14->c18, fym-16->scene-07, fym-28->scene-08, fym-27->scene-09, fym-21->scene-10, fym-25->scene-11, fym-18->scene-12",
-  "retiredTopics": "fym-06 (45-day guarantee) — retired by client direction; unverifiable commitment."
+  "retiredTopics": "fym-06 (45-day guarantee) — retired by client direction; unverifiable commitment.",
+  "batch01v2": "Batch 01v2 pulled: fym-27 -> scene-13, fym-16 -> scene-15, fym-20 -> scene-16, fym-13 -> scene-18. Four FYM scenes in a batch that mixes with educational and craft-and-team."
 }

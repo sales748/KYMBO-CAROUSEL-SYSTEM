@@ -152,7 +152,7 @@
       ],
       "source": "Notion → WordPress Performance and Core Web Vitals",
       "needsStack": false,
-      "usedIn": "c13"
+      "usedIn": "c13; c19"
     },
     {
       "id": "edu-09",
@@ -190,7 +190,7 @@
       ],
       "source": "Notion → WordPress Performance and Core Web Vitals",
       "needsStack": false,
-      "usedIn": "c15"
+      "usedIn": "c15; c20"
     },
     {
       "id": "edu-11",
@@ -280,7 +280,7 @@
       ],
       "source": "Notion → WordPress Performance and Core Web Vitals § Hosting",
       "needsStack": false,
-      "usedIn": null
+      "usedIn": "c22"
     },
     {
       "id": "edu-16",
@@ -299,7 +299,7 @@
       ],
       "source": "Notion → WordPress Performance and Core Web Vitals § Caching",
       "needsStack": false,
-      "usedIn": null
+      "usedIn": "c24"
     },
     {
       "id": "edu-17",
@@ -571,5 +571,6 @@
       "usedIn": null
     }
   ],
-  "batch02": "Batch 02 pulled: edu-08->c13, edu-02->c14, edu-10->c15, edu-13->c16"
+  "batch02": "Batch 02 pulled: edu-08->c13, edu-02->c14, edu-10->c15, edu-13->c16",
+  "batch01v2": "Batch 01v2 pulled: edu-08 -> c19, edu-10 -> c20, edu-15 -> c22, edu-16 -> c24. Category-scope rule (docs/batch-01v2-plan.md): educational stays clear of hotel/booking specificity — those examples belong in the FYM lane. edu-24 and edu-03 (both booking-flow topics) were swapped out at planning time for edu-15 and edu-16."
 }

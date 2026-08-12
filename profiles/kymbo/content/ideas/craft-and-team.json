@@ -30,7 +30,7 @@
         "Template projects run without a designer"
       ],
       "source": "Notion → team model + docs/positioning.md",
-      "usedIn": null
+      "usedIn": "scene-14"
     },
     {
       "id": "craft-02",
@@ -51,7 +51,7 @@
         "End of week: review + revision list"
       ],
       "source": "Notion → onboarding SOW + docs/positioning.md",
-      "usedIn": null
+      "usedIn": "c21"
     },
     {
       "id": "craft-03",
@@ -72,7 +72,7 @@
         "template: 50/50 payment terms"
       ],
       "source": "Notion → CMS category + docs/positioning.md",
-      "usedIn": null
+      "usedIn": "c23"
     },
     {
       "id": "craft-04",
@@ -93,7 +93,7 @@
         "the layer OTAs never gave you: the CRM"
       ],
       "source": "Notion → Hospitality management + FYM brief; C7/C10/C11 feedback",
-      "usedIn": null
+      "usedIn": "scene-17"
     },
     {
       "id": "craft-05",
@@ -316,5 +316,6 @@
       "usedIn": null
     }
   ],
-  "usageNote": "As of Batch 01v2 planning: craft-01, craft-02, craft-03, craft-04 are proposed for the batch. See docs/batch-01v2-plan.md for the full mix. Everything else here is the pool the next batch pulls from."
+  "usageNote": "As of Batch 01v2 planning: craft-01, craft-02, craft-03, craft-04 are proposed for the batch. See docs/batch-01v2-plan.md for the full mix. Everything else here is the pool the next batch pulls from.",
+  "batch01v2": "Batch 01v2 pulled: craft-01 -> scene-14, craft-02 -> c21, craft-03 -> c23, craft-04 -> scene-17. Two flat (c21, c23) and two scene (scene-14, scene-17). craft-04 sits inside the FYM visual world because it is the C7/C10/C11 fix (whole guest lifecycle)."
 }
