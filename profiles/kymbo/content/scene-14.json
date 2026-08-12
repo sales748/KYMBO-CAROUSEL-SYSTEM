@@ -1,0 +1,75 @@
+{
+  "id": "scene-14",
+  "mode": "scene",
+  "pillar": "The Team",
+  "batch": "01v2",
+  "pathBofBatch": "2 of 6",
+  "topic": "craft-01",
+  "primaryTrigger": "affinity",
+  "category": "craft",
+  "title": "The five people on every Kymbo project.",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). A modern small software-studio workspace: walnut desks, natural window light, plants, notebooks and coffee cups, laptops that are either closed or with COMPLETELY BLANK white screens. Contemporary and quiet, not corporate — a small serious team, not a coworking-space cliché. NO branded gear, NO visible UI on screens, NO stock 'business meeting' props. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces (backs of heads, hands, over-the-shoulder crops are fine).",
+  "note": "Path B. All six slides are pure photos. No device composite in this one.",
+  "assetDir": "assets/scene-14",
+  "slides": [
+    {
+      "scene": true,
+      "layout": "cover",
+      "bg": "assets/scene-14/s1.png",
+      "imageId": "studio-wide-morning",
+      "imagePrompt": "A wide shot of a small software-studio workspace in warm morning light: two or three walnut desks, closed laptops, notebooks, one large plant, a window with sheer curtains. No people visible in the frame. Editorial and quiet. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
+      "headline": "Five people.\n==Every Kymbo project.==",
+      "sub": "The shape of the team behind your build. Not a lone freelancer, not a nameless agency."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-14/s2.png",
+      "imageId": "hands-notebook-calendar",
+      "imagePrompt": "Over-the-shoulder view of hands writing in a paper notebook on a walnut desk, a phone face-down beside it, a coffee cup, warm side light. No readable text on the notebook. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
+      "index": "01",
+      "title": "==Project Manager==",
+      "body": "The person answering your emails on Monday morning. Scope, timeline, budget, milestones. Never writes the code — that's not their job."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-14/s3.png",
+      "imageId": "whiteboard-sketch-lines",
+      "imagePrompt": "Close view of a whiteboard or a large paper pad on a wall, with abstract non-readable pencil sketches of boxes and arrows — a system diagram feel. Warm indirect light. No readable text. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
+      "index": "02",
+      "title": "==Tech Lead==",
+      "body": "The one who decides whether your requirement is a template extension or a full custom build. Architecture, code review, integration design."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-14/s4.png",
+      "imageId": "closed-laptop-plants",
+      "imagePrompt": "A single closed laptop on a warm walnut desk, plants behind it in soft focus, a small stack of books, a coffee cup. Natural light. Nothing on-screen because the laptop is closed. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
+      "index": "03",
+      "title": "==Developer==",
+      "body": "The person actually writing the code. Frontend, backend, or full-stack depending on what your project needs. One on small builds, two or three on bigger ones."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "bg": "assets/scene-14/s5.png",
+      "imageId": "moodboard-swatches-warm",
+      "imagePrompt": "A design moodboard corner on a warm cream plaster wall: paper swatches, a few photographic prints, a plant, a pencil on a walnut shelf. Editorial and calm. No readable text. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
+      "index": "04",
+      "title": "==Designer==",
+      "body": "On full-custom builds only. Template projects skip this seat and use a pre-designed theme. If we're quoting you a template, we say so."
+    },
+    {
+      "scene": true,
+      "layout": "cta",
+      "bg": "assets/scene-14/s6.png",
+      "imageId": "empty-seat-at-table",
+      "imagePrompt": "A single empty chair pulled up to a walnut table, warm morning light, coffee cup and a notebook set at the place, a plant behind. Editorial and inviting. No people. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
+      "headline": "==05: You.==",
+      "sub": "The fifth seat is yours. Client sign-off gates every stage — nothing ships without you.",
+      "action": "Comment TEAM"
+    }
+  ]
+}

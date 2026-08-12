@@ -3,7 +3,7 @@
   "brand": "Kymbo",
   "handle": "@kymbo",
   "message": "OTAs take 15–30%. Airbnb 15.5%. Your website takes 0%. Fire your middleman.",
-  "rotationNote": "Batch 01 = c01–c12. Batch 02 = c13–c18 (systemized) + scene-07–scene-12 (organic). c13–c16 are the EDUCATIONAL category — light covers by rule, which is what keeps the grid out of its all-dark floor.",
+  "rotationNote": "Batch 01 = c01-c12. Batch 02 = c13-c18 (systemized) + scene-07-scene-12 (organic). Batch 01v2 = c19-c24 (systemized) + scene-13-scene-18 (organic). Educational carousels are always LIGHT covers and stay clear of hotel/booking examples — hospitality specificity belongs in the FYM (campaign) lane. Each Batch 01v2 carousel declares primaryTrigger.",
   "carousels": [
     {
       "id": 1,
@@ -966,6 +966,124 @@
           "hiWord": "split",
           "sub": "Direct vs OTA. If you don't know the number, that's the first thing to fix.",
           "action": "Comment SPLIT"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "order": 19,
+      "pillar": "The Standard",
+      "surface": "light",
+      "cover": "SEAM",
+      "category": "educational",
+      "title": "The performance budget we hold every build to",
+      "topic": "edu-08",
+      "primaryTrigger": "authority",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "SEAM",
+          "kicker": "WHAT WE SHIP AGAINST",
+          "leftLabel": "OUR GATE",
+          "left": "2.5s",
+          "rightLabel": "MISS ONE",
+          "right": "0",
+          "sub": "Largest Contentful Paint. The rule that decides whether a build ships."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "What LCP actually measures",
+          "body": "The moment the biggest thing on the screen finishes loading. If it takes longer than 2.5 seconds, most visitors have already reached for the back button."
+        },
+        {
+          "type": "list",
+          "title": "The full budget on every Kymbo build",
+          "items": [
+            "LCP under 2.5s — biggest visible thing loads fast",
+            "CLS under 0.1 — nothing shifts under your finger",
+            "INP under 200ms — every tap answers quickly",
+            "TBT under 200ms — no long blocking scripts",
+            "Lighthouse score 80 or higher",
+            "First-load payload under 2 MB, HTML under 100 KB compressed"
+          ]
+        },
+        {
+          "type": "point",
+          "index": "02",
+          "title": "It's a gate, not an aspiration",
+          "body": "The build gets tested on staging. Numbers under the budget: it ships. Numbers over: we fix it before you see it. This is not negotiable."
+        },
+        {
+          "type": "stat",
+          "value": "80+",
+          "label": "LIGHTHOUSE, EVERY PROJECT",
+          "note": "The public number. If a page scores below 80, it does not go live."
+        },
+        {
+          "type": "point",
+          "index": "03",
+          "title": "How this gets to those numbers",
+          "body": "Plugin discipline (never more than 15 on custom, 25 on Elementor). Images compressed before upload, WebP, lazy-loaded below the fold. Third-party scripts audited one by one — each one has a cost, we count it."
+        },
+        {
+          "type": "cta",
+          "headline": "Run your site through PageSpeed Insights.",
+          "hiWord": "PageSpeed",
+          "sub": "Comment the LCP number. We'll tell you which layer is slowing it down.",
+          "action": "Comment SPEED"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "order": 20,
+      "pillar": "The Standard",
+      "surface": "light",
+      "cover": "INDEX",
+      "category": "educational",
+      "title": "Max 15 plugins. 25 on Elementor. That's the rule.",
+      "topic": "edu-10",
+      "primaryTrigger": "reasons",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "INDEX",
+          "kicker": "EVERY PLUGIN HAS A COST",
+          "index": "15",
+          "headline": "is the plugin ceiling on\nevery custom Kymbo build.",
+          "sub": "25 if you're on Elementor. Because each one has a price, and we count them."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "Every plugin runs code on every page load",
+          "body": "50 to 200 milliseconds each, sometimes more. A site with 30 active plugins can spend a full second just booting them before the page starts to render."
+        },
+        {
+          "type": "point",
+          "index": "02",
+          "title": "And they each add a database query, an update to run, a way in for attackers",
+          "body": "A plugin is a whole codebase you did not write, running as an equal to your own code. Every one is a small ongoing bet on someone else's discipline."
+        },
+        {
+          "type": "stat",
+          "value": "50–200ms",
+          "label": "PER PLUGIN, ON EVERY PAGE LOAD",
+          "note": "Which is why plugin sprawl is the single most common reason a WordPress site is slow."
+        },
+        {
+          "type": "point",
+          "index": "03",
+          "title": "So we cap and we audit",
+          "body": "15 on custom themes. 25 on Elementor (which needs its own plugins to work). Every quarter we run Query Monitor and Plugin Performance Profiler to find the slow ones and cut them."
+        },
+        {
+          "type": "cta",
+          "headline": "How many plugins is your site running right now?",
+          "hiWord": "plugins",
+          "sub": "Comment the number. If it's over 30, we'll tell you the three most likely to be the ones costing you.",
+          "action": "Comment PLUGINS"
         }
       ]
     }
