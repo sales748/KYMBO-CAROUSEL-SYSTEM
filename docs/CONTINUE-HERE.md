@@ -96,8 +96,9 @@ The order matters. Do not skip a stage.
 3. **Feed lock.** Once 12 covers are drafted, render the feed grid
    (`profiles/kymbo/build/feed.html`) and iterate until the tonal math is
    clean — 4 light covers minimum, no adjacent archetype repeats.
-   For scene covers, Kim generates the images in ChatGPT from prompts we write
-   and drops them into `assets/scene-XX/`.
+   For scene covers, the operator generates the images in ChatGPT's image tool
+   from the prompts written to `build/prompts/<id>.md` and drops each result
+   into `profiles/kymbo/assets/scene-XX/sN.png`.
 4. **Produce.** `npm run build` renders every slide. Review each in
    `profiles/kymbo/build/index.html`. Export to
    `profiles/kymbo/export/batch-<n>/`.

@@ -209,8 +209,10 @@ proceeding.
 4. **Feed lock.** Render the covers only. Iterate until the tonal math is
    clean and no archetype adjacencies. For the 6 scene carousels, image
    prompts are generated to `build/prompts/<id>.md`.
-5. **Kim generates images.** She drops them into
-   `assets/<id>/s1.png ... sN.png`.
+5. **Operator generates images in ChatGPT.** Each per-scene prompt sheet
+   (`build/prompts/scene-<id>.md`) is copy-paste-ready; the operator runs
+   each slide's prompt through ChatGPT's image tool and saves the result to
+   `profiles/kymbo/assets/scene-<id>/s1.png ... sN.png`.
 6. **Full render.** `npm run build`. Review each in
    `build/index.html`. Fix in copy or in code (not by hand-editing PNGs).
 7. **Export.** `profiles/kymbo/export/batch-01v2/` (or whatever the batch
