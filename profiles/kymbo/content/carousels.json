@@ -1200,6 +1200,114 @@
           "action": "Comment HOST"
         }
       ]
+    },
+    {
+      "id": 23,
+      "order": 23,
+      "pillar": "The Craft",
+      "surface": "dark",
+      "cover": "MATRIX",
+      "category": "craft",
+      "title": "Custom or template — how Kymbo picks",
+      "topic": "craft-03",
+      "primaryTrigger": "commitment",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "MATRIX",
+          "kicker": "THE HONEST ANSWER",
+          "headline": "Custom, or template?",
+          "hiWord": "template",
+          "sub": "We pick per project. And the answer is 'template' more often than any agency will tell you."
+        },
+        {
+          "type": "point",
+          "index": "TEMPLATE",
+          "title": "For content-first work",
+          "body": "Marketing sites. Brochures. Small commerce with a clean flow. A booking-plus-content site for a hotel or a services business. If the design isn't the value driver, template is the honest quote."
+        },
+        {
+          "type": "point",
+          "index": "CUSTOM",
+          "title": "When the design does real work",
+          "body": "The homepage IS the pitch. The product page is where the deal is won. Performance is load-bearing (LCP under 2.5s, e-commerce speed). The integration surface is non-trivial (PMS, POS, custom checkout, custom auth). Then custom earns its price."
+        },
+        {
+          "type": "point",
+          "index": "SIGNAL",
+          "title": "Payment terms tell you which one you're buying",
+          "body": "50/50 up-front and on-launch = template. Faster to ship, capped at 25 active plugins on Elementor. 33/33/33 kickoff-midpoint-launch = custom. Slower to ship, capped at 15 plugins in a hand-written theme."
+        },
+        {
+          "type": "list",
+          "title": "What DOESN'T decide it",
+          "items": [
+            "How much revenue the site is doing",
+            "Whether the client is 'important enough' for custom",
+            "The agency's default preference",
+            "'Everyone else is on custom'"
+          ]
+        },
+        {
+          "type": "cta",
+          "headline": "Which one is right for your project?",
+          "hiWord": "right",
+          "sub": "Post the requirement — one paragraph is enough — and we'll tell you which one an honest quote from us would open with.",
+          "action": "Comment BUILD"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "order": 24,
+      "pillar": "The Build",
+      "surface": "light",
+      "cover": "MATRIX",
+      "category": "educational",
+      "title": "Four caches. Most sites configure one.",
+      "topic": "edu-16",
+      "primaryTrigger": "reciprocity",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "MATRIX",
+          "kicker": "THERE ARE FOUR",
+          "headline": "Caches. Most sites\nconfigure one.",
+          "hiWord": "one",
+          "sub": "Which is why 'I installed WP Rocket' doesn't fix a slow site on its own."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "Page cache",
+          "body": "The whole rendered HTML for a URL, saved and served without touching PHP or the database. WP Rocket handles this by default. It's the one most sites do have."
+        },
+        {
+          "type": "point",
+          "index": "02",
+          "title": "Browser cache",
+          "body": "Headers that tell the visitor's browser 'keep this image, this CSS, this font for a week.' Costs nothing to configure. Most sites leave it at default and pay for it on every return visit."
+        },
+        {
+          "type": "point",
+          "index": "03",
+          "title": "Object cache",
+          "body": "Database query results held in memory (Redis or Memcached). This is the one that separates a fast dashboard from a slow one, and the one most WordPress sites completely skip."
+        },
+        {
+          "type": "point",
+          "index": "04",
+          "title": "CDN cache",
+          "body": "Static assets served from a server near your visitor instead of near your host. Cloudflare, KeyCDN, others. Turns a Vancouver site into an instant site in Vancouver, London and Sydney."
+        },
+        {
+          "type": "cta",
+          "headline": "How many of the four does your site have?",
+          "hiWord": "four",
+          "sub": "Comment the count. If it's under three, we'll tell you which layer is the fastest win from where you are now.",
+          "action": "Comment CACHE"
+        }
+      ]
     }
   ]
 }
