@@ -1086,6 +1086,120 @@
           "action": "Comment PLUGINS"
         }
       ]
+    },
+    {
+      "id": 21,
+      "order": 21,
+      "pillar": "The Process",
+      "surface": "light",
+      "cover": "INDEX",
+      "category": "craft",
+      "title": "The onboarding week, day by day",
+      "topic": "craft-02",
+      "primaryTrigger": "reciprocity",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "INDEX",
+          "kicker": "FROM YES TO KICKOFF",
+          "index": "5",
+          "headline": "days from 'yes' to\nyour first design pass.",
+          "sub": "The onboarding week, in full. No mystery, no NDA required to read this."
+        },
+        {
+          "type": "point",
+          "index": "MONDAY",
+          "title": "Discovery call",
+          "body": "Not sales — questions and risks. Twenty to thirty questions about your scope, budget, timeline, integrations, and what you'd rather never say aloud on a launch day."
+        },
+        {
+          "type": "point",
+          "index": "TUESDAY",
+          "title": "SOW draft in your inbox",
+          "body": "Named deliverables. Fixed price. An honest timeline. Not 'we'll see what it costs' — a real document you can forward to a partner or a board."
+        },
+        {
+          "type": "point",
+          "index": "WEDNESDAY",
+          "title": "Staging environment live",
+          "body": "A real dev-staging-prod pipeline spun up in your name. You have a URL by end of day. Nothing to install, nothing to configure on your end."
+        },
+        {
+          "type": "point",
+          "index": "THU–FRI",
+          "title": "First design or content pass",
+          "body": "Not 'wait three weeks and see.' By Friday morning there is something to look at — a page, a component, a copy pass, an integration spike. You see progress inside the week."
+        },
+        {
+          "type": "point",
+          "index": "FRIDAY PM",
+          "title": "Review call",
+          "body": "Design, copy and performance reviewed separately — one sign-off each, so feedback doesn't blur. You leave the call with a decision list, not a vibe."
+        },
+        {
+          "type": "cta",
+          "headline": "How long did your last agency take to show you something real?",
+          "hiWord": "something real",
+          "sub": "Comment the number of days. If it was over 30, we'd like to hear the story.",
+          "action": "Comment DAYS"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "order": 22,
+      "pillar": "The Tradeoff",
+      "surface": "light",
+      "cover": "STATEMENT",
+      "category": "educational",
+      "title": "We reject GoDaddy and Bluehost",
+      "topic": "edu-15",
+      "primaryTrigger": "authority",
+      "slides": [
+        {
+          "type": "cover",
+          "variant": "STATEMENT",
+          "kicker": "TWO HOSTS WE WON'T BUILD ON",
+          "headline": "We reject GoDaddy\nand Bluehost.",
+          "hiWord": "reject",
+          "sub": "Not a preference — a position. Here's the math behind it."
+        },
+        {
+          "type": "point",
+          "index": "01",
+          "title": "Shared hosting is a shared machine",
+          "body": "Thirty sites live on one server. The one having a traffic spike is your neighbor. Their crash is your slow page — and there is nothing you or your developer can do from inside your site."
+        },
+        {
+          "type": "point",
+          "index": "02",
+          "title": "The host is the ceiling",
+          "body": "You can rewrite every line, compress every image, cache every query — and still hit the wall of a server you don't control. Performance work on shared hosting is work you throw away."
+        },
+        {
+          "type": "list",
+          "title": "So we build on three real tiers instead",
+          "items": [
+            "SiteGround — informational sites, small marketing",
+            "Cloudways — control over the stack, managed Linode / Vultr / DO",
+            "Kinsta or WP Engine — traffic, e-commerce, anything load-bearing",
+            "Hostinger — the go-to managed WordPress for simple sites the client wants to run themselves"
+          ]
+        },
+        {
+          "type": "point",
+          "index": "03",
+          "title": "And we're a WP Engine partner",
+          "body": "Because they hold themselves to the same performance numbers we do. Our hosting-only plan is $20 a month — about five dollars less than their direct entry tier. That's the alignment we want."
+        },
+        {
+          "type": "cta",
+          "headline": "Where does your site live right now?",
+          "hiWord": "live",
+          "sub": "Comment your host. If it's shared, we'll tell you what ceiling you're bumping into — and what one tier up would cost.",
+          "action": "Comment HOST"
+        }
+      ]
     }
   ]
 }
