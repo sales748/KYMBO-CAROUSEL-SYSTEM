@@ -1,0 +1,70 @@
+# The five people on every Kymbo project.
+
+**Carousel:** scene-14 · **Pillar:** The Team · **Path B (scene / organic)**
+
+> Path B. All six slides are pure photos. No device composite in this one.
+
+You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE and copy-paste-ready — the full style line is already baked in, so consistency holds across every image. Slides marked "no image" build from our booking-app design automatically.
+
+---
+
+## Slide 1 — studio-wide-morning
+
+**On-slide copy:** Five people.
+==Every Kymbo project.==
+
+Save as `s1.png` in `assets/scene-14/`.
+
+```text
+A wide shot of a small software-studio workspace in warm morning light: two or three walnut desks, closed laptops, notebooks, one large plant, a window with sheer curtains. No people visible in the frame. Editorial and quiet. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). A modern small software-studio workspace: walnut desks, natural window light, plants, notebooks and coffee cups, laptops that are either closed or with COMPLETELY BLANK white screens. Contemporary and quiet, not corporate — a small serious team, not a coworking-space cliché. NO branded gear, NO visible UI on screens, NO stock 'business meeting' props. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces (backs of heads, hands, over-the-shoulder crops are fine).
+```
+
+## Slide 2 — hands-notebook-calendar
+
+**On-slide copy:** ==Project Manager==  —  The person answering your emails on Monday morning. Scope, timeline, budget, milestones. Never writes the code — that's not their job.
+
+Save as `s2.png` in `assets/scene-14/`.
+
+```text
+Over-the-shoulder view of hands writing in a paper notebook on a walnut desk, a phone face-down beside it, a coffee cup, warm side light. No readable text on the notebook. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). A modern small software-studio workspace: walnut desks, natural window light, plants, notebooks and coffee cups, laptops that are either closed or with COMPLETELY BLANK white screens. Contemporary and quiet, not corporate — a small serious team, not a coworking-space cliché. NO branded gear, NO visible UI on screens, NO stock 'business meeting' props. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces (backs of heads, hands, over-the-shoulder crops are fine).
+```
+
+## Slide 3 — whiteboard-sketch-lines
+
+**On-slide copy:** ==Tech Lead==  —  The one who decides whether your requirement is a template extension or a full custom build. Architecture, code review, integration design.
+
+Save as `s3.png` in `assets/scene-14/`.
+
+```text
+Close view of a whiteboard or a large paper pad on a wall, with abstract non-readable pencil sketches of boxes and arrows — a system diagram feel. Warm indirect light. No readable text. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). A modern small software-studio workspace: walnut desks, natural window light, plants, notebooks and coffee cups, laptops that are either closed or with COMPLETELY BLANK white screens. Contemporary and quiet, not corporate — a small serious team, not a coworking-space cliché. NO branded gear, NO visible UI on screens, NO stock 'business meeting' props. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces (backs of heads, hands, over-the-shoulder crops are fine).
+```
+
+## Slide 4 — closed-laptop-plants
+
+**On-slide copy:** ==Developer==  —  The person actually writing the code. Frontend, backend, or full-stack depending on what your project needs. One on small builds, two or three on bigger ones.
+
+Save as `s4.png` in `assets/scene-14/`.
+
+```text
+A single closed laptop on a warm walnut desk, plants behind it in soft focus, a small stack of books, a coffee cup. Natural light. Nothing on-screen because the laptop is closed. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). A modern small software-studio workspace: walnut desks, natural window light, plants, notebooks and coffee cups, laptops that are either closed or with COMPLETELY BLANK white screens. Contemporary and quiet, not corporate — a small serious team, not a coworking-space cliché. NO branded gear, NO visible UI on screens, NO stock 'business meeting' props. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces (backs of heads, hands, over-the-shoulder crops are fine).
+```
+
+## Slide 5 — moodboard-swatches-warm
+
+**On-slide copy:** ==Designer==  —  On full-custom builds only. Template projects skip this seat and use a pre-designed theme. If we're quoting you a template, we say so.
+
+Save as `s5.png` in `assets/scene-14/`.
+
+```text
+A design moodboard corner on a warm cream plaster wall: paper swatches, a few photographic prints, a plant, a pencil on a walnut shelf. Editorial and calm. No readable text. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). A modern small software-studio workspace: walnut desks, natural window light, plants, notebooks and coffee cups, laptops that are either closed or with COMPLETELY BLANK white screens. Contemporary and quiet, not corporate — a small serious team, not a coworking-space cliché. NO branded gear, NO visible UI on screens, NO stock 'business meeting' props. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces (backs of heads, hands, over-the-shoulder crops are fine).
+```
+
+## Slide 6 — empty-seat-at-table
+
+**On-slide copy:** ==05: You.==  —  CTA: Comment TEAM
+
+Save as `s6.png` in `assets/scene-14/`.
+
+```text
+A single empty chair pulled up to a walnut table, warm morning light, coffee cup and a notebook set at the place, a plant behind. Editorial and inviting. No people. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). A modern small software-studio workspace: walnut desks, natural window light, plants, notebooks and coffee cups, laptops that are either closed or with COMPLETELY BLANK white screens. Contemporary and quiet, not corporate — a small serious team, not a coworking-space cliché. NO branded gear, NO visible UI on screens, NO stock 'business meeting' props. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces (backs of heads, hands, over-the-shoulder crops are fine).
+```
