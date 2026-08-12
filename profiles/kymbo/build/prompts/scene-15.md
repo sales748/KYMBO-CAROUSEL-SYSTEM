@@ -31,7 +31,7 @@ A single closed folder or plain paper on a walnut desk beside a warm lamp, a fou
 
 ## Slide 3 — guestroom-personal-details
 
-**On-slide copy:** You didn't see ==the profile==  —  Their email. Their preferences. Their birthday. The room they liked. The reason they came. Booking.com kept all of it. You got a booking reference.
+**On-slide copy:** You didn't see ==the profile==  —  Their email. Their preferences. Their birthday. The room they liked. The reason they came. Booking kept all of it. You got a booking reference.
 
 Save as `s3.png` in `assets/scene-15/`.
 
@@ -41,7 +41,7 @@ A boutique-hotel guestroom detail: linen sheet, a small welcome card on the pill
 
 ## Slide 4 — empty-corridor-warm
 
-**On-slide copy:** So next year, you ==buy them back==  —  Same guest, same room, another 18%. That's not a commission — that's a subscription to a customer who was already yours.
+**On-slide copy:** So next year, you ==buy them back==  —  Same guest, same room, another eighteen percent. That's not a commission, it's a subscription to a customer who was already yours.
 
 Save as `s4.png` in `assets/scene-15/`.
 

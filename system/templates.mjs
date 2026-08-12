@@ -47,16 +47,33 @@ const ticks = (total, idx) => {
 // footer: progress squares only — no handle, no swipe text, no logo
 const footer = (ctx) => `<footer class="ft">${ticks(ctx.total, ctx.index)}</footer>`;
 
-function matrix(total, filled) {
-  const cols = total <= 16 ? 4 : total <= 36 ? 6 : 10;
-  const width = cols <= 4 ? 560 : cols <= 6 ? 720 : 880;
+function matrix(g) {
+  // Accept the legacy shape (total, filled) OR the bespoke shape
+  // (total, on:[...], hot:[...], labels:[...], cols?)
+  const total = g.total ?? 16;
+  const filled = g.filled;
+  const onSet = new Set(g.on || []);
+  const hotSet = new Set(g.hot || []);
+  const labels = g.labels || [];
+  const cols = g.cols ?? (total <= 2 ? 2 : total <= 4 ? 4 : total <= 16 ? 4 : total <= 36 ? 6 : 10);
+  // Wider tiles when a low-count grid carries labels — reads as content, not
+  // decoration. Widths sized so no tile is clipped inside the safe canvas
+  // (slide is 1080px wide, with 92px padding each side = 896px usable).
+  const isLabeled = labels.length > 0;
+  const width = isLabeled
+    ? (total === 2 ? 780 : total === 4 ? 880 : 720)
+    : (cols <= 4 ? 560 : cols <= 6 ? 720 : 880);
   let cells = '';
   for (let i = 0; i < total; i++) {
     let c = 'cell';
-    if (i < filled) c += (i % 7 === 3 ? ' hot' : ' on');
-    cells += `<div class="${c}"></div>`;
+    if (hotSet.has(i)) c += ' hot';
+    else if (onSet.has(i)) c += ' on';
+    else if (filled !== undefined && i < filled) c += (i % 7 === 3 ? ' hot' : ' on');
+    const label = labels[i] ? `<span class="cell-label">${esc(labels[i])}</span>` : '';
+    cells += `<div class="${c}">${label}</div>`;
   }
-  return `<div class="matrix" style="grid-template-columns:repeat(${cols},1fr);width:${width}px">${cells}</div>`;
+  const cls = 'matrix' + (isLabeled ? ' labeled' : '') + ` count-${total}`;
+  return `<div class="${cls}" style="grid-template-columns:repeat(${cols},1fr);width:${width}px">${cells}</div>`;
 }
 
 function drainGrid(total, filled) {
@@ -80,7 +97,7 @@ function coverStat(s) {
 
 function coverStatement(s) {
   return `
-    <h1>${hi(s.headline, s.hi)}</h1>
+    <h1>${hi(s.headline, s.hi || s.hiWord)}</h1>
     ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}`;
 }
 
@@ -95,16 +112,16 @@ function coverMatrix(s) {
   const g = s.grid || { total: 16, filled: 16 };
   return `
     <div>
-      <h1>${esc(s.headline)}</h1>
+      <h1>${hi(s.headline, s.hi || s.hiWord)}</h1>
       ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}
     </div>
-    ${matrix(g.total, g.filled)}`;
+    ${matrix(g)}`;
 }
 
 /* ---------------- INTERIOR ---------------- */
 
 const point = (s) => `
-  <div class="p-index"><span class="px"></span>${esc(s.index || '')}</div>
+  ${s.index ? `<div class="p-index"><span class="px"></span>${esc(s.index)}</div>` : ''}
   <div class="p-title">${esc(s.title)}</div>
   <div class="p-body">${esc(s.body)}</div>`;
 
@@ -182,9 +199,12 @@ function seamSize(...values) {
 
 function seamSlide(s, ctx) {
   const px = seamSize(s.left, s.right);
+  const kickerHTML = s.kicker
+    ? `<div class="kicker kicker-abs"><span class="br">[</span> ${esc(s.kicker)} <span class="br">]</span></div>`
+    : '';
   return `<div class="slide cover-seam" data-idx="${ctx.index}">
     <div class="seam-l">
-      <div class="kicker kicker-abs"><span class="br">[</span> ${esc(s.kicker)} <span class="br">]</span></div>
+      ${kickerHTML}
       <div class="seam-label">${esc(s.leftLabel || 'VIA OTA')}</div>
       <div class="seam-big" style="font-size:${px}px">${esc(s.left)}</div>
     </div>
@@ -207,7 +227,7 @@ function sceneBody(s) {
         <h1>${rich(s.headline)}</h1>
         ${s.sub ? `<div class="sub" style="margin-top:28px">${rich(s.sub)}</div>` : ''}`;
     case 'point':
-      return `<div class="p-index"><span class="px"></span>${esc(s.index || '')}</div>
+      return `${s.index ? `<div class="p-index"><span class="px"></span>${esc(s.index)}</div>` : ''}
         <div class="p-title">${rich(s.title)}</div>
         ${s.body ? `<div class="p-body" style="opacity:1">${rich(s.body)}</div>` : ''}`;
     case 'list':

@@ -41,7 +41,7 @@ A single printed photograph or open magazine on a walnut coffee table, showing a
 
 ## Slide 4 — hand-typing-search-blank
 
-**On-slide copy:** Then they open a ==new tab==  —  They Google your name. Not 'boutique hotel Vancouver' — your name. This is the moment Booking.com paid to introduce you. It's also the moment their job is done.
+**On-slide copy:** Then they open a ==new tab==  —  They Google your name. Not 'boutique hotel Vancouver,' your name. This is the moment Booking paid to introduce you. It's also the moment their job is done.
 
 Save as `s4.png` in `assets/scene-18/`.
 
@@ -51,7 +51,7 @@ Hands on a laptop keyboard on a warm walnut desk, laptop screen completely blank
 
 ## Slide 5 — hotel-facade-golden-hour
 
-**On-slide copy:** Your site has ==one job== now  —  Close the guest that Booking already warmed up. Same rate. Better perks (free cancellation, room upgrade, breakfast). One clear button. That's the whole game.
+**On-slide copy:** Your site has ==one job== now  —  Close the guest that Booking already warmed up. Same rate, better perks (free cancellation, room upgrade, breakfast). One clear button. That's the whole game.
 
 Save as `s5.png` in `assets/scene-18/`.
 

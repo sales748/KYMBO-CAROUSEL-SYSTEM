@@ -27,7 +27,6 @@
       "bg": "assets/scene-15/s2.png",
       "imageId": "invoice-desk-detail",
       "imagePrompt": "A single closed folder or plain paper on a walnut desk beside a warm lamp, a fountain-pen-free desk (a modern rollerball only if any pen at all), a small plant. Editorial, no readable text on the paper. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "01",
       "title": "You saw ==the invoice==",
       "body": "The line item labeled 'commission.' Fifty dollars on every two-hundred-dollar booking. Painful, countable, easy to explain to yourself."
     },
@@ -37,9 +36,8 @@
       "bg": "assets/scene-15/s3.png",
       "imageId": "guestroom-personal-details",
       "imagePrompt": "A boutique-hotel guestroom detail: linen sheet, a small welcome card on the pillow (blank, no readable text), a plant, warm side light. Nothing on the card can be read. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "02",
       "title": "You didn't see ==the profile==",
-      "body": "Their email. Their preferences. Their birthday. The room they liked. The reason they came. Booking.com kept all of it. You got a booking reference."
+      "body": "Their email. Their preferences. Their birthday. The room they liked. The reason they came. Booking kept all of it. You got a booking reference."
     },
     {
       "scene": true,
@@ -47,9 +45,8 @@
       "bg": "assets/scene-15/s4.png",
       "imageId": "empty-corridor-warm",
       "imagePrompt": "A calm corridor in a boutique hotel, walnut floor, cream plaster, a plant on a console, warm indirect light. No people, no signs. Quiet architectural photograph. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "03",
       "title": "So next year, you ==buy them back==",
-      "body": "Same guest, same room, another 18%. That's not a commission — that's a subscription to a customer who was already yours."
+      "body": "Same guest, same room, another eighteen percent. That's not a commission, it's a subscription to a customer who was already yours."
     },
     {
       "scene": true,
@@ -57,7 +54,6 @@
       "bg": "assets/scene-15/s5.png",
       "imageId": "handwritten-list-warm",
       "imagePrompt": "A small notebook opened on a walnut desk, blank pages, a pen resting on top, warm morning light through a window, a plant in soft focus. The notebook pages are completely blank — no writing. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "04",
       "title": "A direct booking is a ==profile==",
       "body": "Email in your CRM. Preference in your record. Birthday in your calendar. A person you can write to before the next season."
     },

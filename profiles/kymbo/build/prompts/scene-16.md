@@ -1,4 +1,4 @@
-# Parking. Pets. Early check-in. The OTA sells none.
+# The OTA sold the room. You sell the stay.
 
 **Carousel:** scene-16 · **Pillar:** The Alternative · **Path B (scene / organic)**
 
@@ -21,7 +21,7 @@ A beautiful breakfast tray on a boutique-hotel bed or terrace: pastry, coffee, s
 
 ## Slide 2 — parking-space-clean
 
-**On-slide copy:** ==Parking==  —  Twenty dollars a night in most cities. Booking.com can't add it to the checkout. You can — with one line the guest sees before they pay.
+**On-slide copy:** ==Parking==  —  Twenty dollars a night in most cities. Booking can't add it to the checkout. You can, with one line the guest sees before they pay.
 
 Save as `s2.png` in `assets/scene-16/`.
 
@@ -31,7 +31,7 @@ A clean modern boutique-hotel private parking bay in warm evening light: paved s
 
 ## Slide 3 — pet-bowl-detail
 
-**On-slide copy:** ==Pets==  —  A fee. A cleaning charge. A pet-friendly room upgrade. Three revenue lines the OTA has no way to sell. Add them to your site once, collect on them forever.
+**On-slide copy:** ==Pets==  —  A fee. A cleaning charge. A pet-friendly room upgrade. Three revenue lines the OTA has no way to sell. Add them once, collect on them forever.
 
 Save as `s3.png` in `assets/scene-16/`.
 

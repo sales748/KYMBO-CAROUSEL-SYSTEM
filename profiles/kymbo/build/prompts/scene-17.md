@@ -1,4 +1,4 @@
-# The whole guest lifecycle, not just the booking
+# 0 phone calls. Full stay.
 
 **Carousel:** scene-17 · **Pillar:** The Range · **Path B (scene / organic)**
 
@@ -21,7 +21,7 @@ A calm boutique-hotel entrance at dusk, warm interior light spilling through the
 
 ## Slide 2 — phone-blank-24h-before
 
-**On-slide copy:** Pre-arrival, ==automated==  —  One clean email. Directions, WiFi, house rules, the door code they'll need tomorrow. Everything the front desk used to say — sent when the guest is still in the airport.
+**On-slide copy:** Pre-arrival, ==automated==  —  One clean email. Directions, WiFi, house rules, the door code they'll need tomorrow. Everything the front desk used to say, sent while the guest is still in the airport.
 
 Save as `s2.png` in `assets/scene-17/`.
 
@@ -31,7 +31,7 @@ A hand-held phone on a warm surface, screen completely blank (pure white), a cof
 
 ## Slide 3 — door-lock-modern-warm
 
-**On-slide copy:** The door opens ==itself==  —  Door code by SMS at check-in time. Self-check-in instructions on the same message. No queue at reception, no waiting for a key. Standard on any Kymbo build.
+**On-slide copy:** The door opens ==itself==  —  Door code by SMS at check-in time. Self check-in instructions on the same message. No queue at reception, no waiting for a key.
 
 Save as `s3.png` in `assets/scene-17/`.
 
@@ -41,7 +41,7 @@ A modern smart lock on a walnut hotel-room door in a warm boutique corridor, nat
 
 ## Slide 4 — guestroom-bed-detail
 
-**On-slide copy:** Questions answered ==without== a phone call  —  A single text-in link. FAQs, restaurant hours, extra towel requests. Staff get notified only if something actually breaks. The guest gets an answer in seconds, not on Monday.
+**On-slide copy:** Questions answered ==without== a call  —  A single text-in link. FAQs, restaurant hours, extra towel requests. Staff get notified only if something actually breaks. The guest gets an answer in seconds.
 
 Save as `s4.png` in `assets/scene-17/`.
 
@@ -51,7 +51,7 @@ A boutique-hotel bed detail with a folded throw and a small welcome card (blank)
 
 ## Slide 5 — checkout-tray-detail
 
-**On-slide copy:** ==Silent== departure  —  Automated reminder the night before. Door locks itself when they leave. Review request lands the next morning, when the trip is fresh. No paperwork. No hand-off.
+**On-slide copy:** ==Silent== departure  —  Automated reminder the night before. Door locks itself when they leave. Review request lands the next morning, when the trip is fresh. No paperwork.
 
 Save as `s5.png` in `assets/scene-17/`.
 
@@ -61,7 +61,7 @@ A room-service tray or breakfast setting being cleared, empty walnut side table 
 
 ## Slide 6 — notebook-list-warm
 
-**On-slide copy:** The same guest, ==again==  —  Return-guest email lands three months later. The birthday note goes out in November. The next stay costs you nothing to sell — you already own the relationship.
+**On-slide copy:** The same guest, ==again==  —  Return-guest email lands three months later. The birthday note goes out in November. The next stay costs you nothing to sell. You already own the relationship.
 
 Save as `s6.png` in `assets/scene-17/`.
 

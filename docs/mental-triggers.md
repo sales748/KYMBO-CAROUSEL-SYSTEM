@@ -1,171 +1,124 @@
-# Mental Triggers — the copy filter
+# Mental Triggers — 5 canonical
 
-Every Kymbo carousel identifies its **primary trigger** before copy is written.
-This makes the trigger a design decision, not a discovery-after-the-fact.
+Every Kymbo carousel declares one primary trigger before copy is written.
+Impeccable's `clarify` pass then enforces: **say each idea once.** More than
+one persuasion move per slide dilutes both.
 
-Sources: Robert Cialdini's canonical seven; the two articles Isa shared —
-Zendesk MX ["¿Qué son los gatillos mentales?"](https://www.zendesk.com.mx/blog/sales/gatillos-mentales-que-es/)
-and Hotmart ["Disparadores mentales"](https://hotmart.com/es/blog/disparadores-mentales).
-Distilled to the set that actually applies to Kymbo's carousels (B2B service,
-Instagram feed, hotel/STR + generalist audiences).
-
-> **The whole point of this file is one paragraph:** you don't sprinkle a
-> trigger on top of finished copy. You pick the trigger, then write the copy
-> so it lands the trigger. Different trigger → different hook, different slide
-> order, different closing line.
+Reduced from 11 triggers to 5 on 2026-08-11 (Impeccable distill pass).
+Sources unchanged — Cialdini's *Influence*, the Hotmart guide, the Zendesk
+guide — but the working set is now tight enough to run without a table.
 
 ---
 
-## The 11 triggers we use
+## The 5
 
-Grouped by *why they work*. Each has: the trigger, the way it works, what it
-looks like on a Kymbo carousel, and the failure mode.
+Each trigger has: what it does, how it lands on a Kymbo carousel, and the
+failure mode that means we're not actually using it.
 
-### 1 · Autoridad (Authority)
-- **How it works.** People defer to demonstrated competence.
-- **On Kymbo.** Publish a number Kymbo actually holds itself to — the
-  performance budget (LCP < 2.5s, ≤ 15 plugins), the SEO QA gate, the five
-  schema types every hotel site needs. "Here is the standard we ship against"
-  is authority; "we're experts" is not.
-- **Failure mode.** Vague expertise-language. If it doesn't cite a number, a
-  standard, or a decision rule, it isn't authority — it's just a claim.
+### 1 · Authority
+The reader defers to demonstrated competence.
 
-### 2 · Prueba social (Social proof)
-- **How it works.** People do what other people (especially similar people) do.
-- **On Kymbo.** Portfolio work made concrete: Kalido Hotels' homepage runs the
-  campaign thesis in production ("Book direct and save up to 35%"). Named,
-  verifiable, live. Case-study numbers when we have them.
-- **Failure mode.** "Trusted by many" without a name. Also, do **not** imply
-  Kalido was built on the productized FYM offer — Kalido runs Mews, not the
-  Guesty tier.
+- **On Kymbo:** publish a number Kymbo actually holds itself to. The
+  performance budget (LCP < 2.5s). The plugin cap (15 on custom). The
+  five-item SEO QA gate. "Here is the standard we ship against."
+- **Failure mode:** vague expertise language. Authority requires a
+  citable number, a stated position, or a decision rule.
 
-### 3 · Escasez / Exclusividad (Scarcity / Exclusivity)
-- **How it works.** Limited access raises perceived value.
-- **On Kymbo.** Genuine capacity limits ("we take on N builds per quarter"),
-  or genuine exclusivity ("WP Engine partner rate"). Use sparingly.
-- **Failure mode.** Fake countdowns. Kymbo does not run fake countdowns.
+### 2 · Reciprocity
+Give value first; attention follows.
 
-### 4 · Urgencia (Urgency)
-- **How it works.** A clock closes the "I'll think about it" loop.
-- **On Kymbo.** Cost-of-delay math ("every month you wait, commission you
-  can't get back"). c09 already does this well and Isa flagged it as the
-  example. **Cap: no more than one urgency-driven carousel per four.**
-- **Failure mode.** Manufactured urgency — a "limited time" without a real
-  limit. Also using it on every campaign carousel drains its power.
+- **On Kymbo:** publish the internal standard for free. The perf budget.
+  The onboarding week, day by day. The five launch killers. The four
+  caches. Every Craft carousel is a reciprocity move.
+- **Failure mode:** teaching thin material to bait a lead. The gift has to
+  be genuinely useful on its own — the reader can act on it without
+  hiring us.
 
-### 5 · Aversión a la pérdida (Loss aversion)
-- **How it works.** People react ~2x more strongly to a loss than an equivalent
-  gain. Frame the same math as a leak, not an opportunity.
-- **On Kymbo.** "$50 gone on every $200 booking" (c04) is loss-aversion, not
-  math. So is "the tax nobody put on your P&L" (c01). Also fits the direct/OTA
-  cancellation gap (21.8% vs 10.6% — booked revenue you thought you had).
-- **Failure mode.** Loss language that isn't grounded in a real cost the
-  reader can verify. Also, tipping into fear-mongering.
+### 3 · Loss aversion
+People react ~2x more strongly to a loss than an equivalent gain. Frame
+the same math as a leak, not an opportunity.
 
-### 6 · Reciprocidad (Reciprocity)
-- **How it works.** Give value first, the reader owes attention.
-- **On Kymbo.** Publish the internal standard for free — the performance
-  budget, the SEO QA gate, the 5-step booking flow, the anatomy of a booking
-  page. Every educational carousel is a reciprocity move.
-- **Failure mode.** Giving away thin material to bait a lead. The gift has to
-  be genuinely useful on its own.
+- **On Kymbo:** "$50 gone on every $200 booking." "The tax nobody put on
+  your P&L." "They didn't take 18%. They took the guest." "OTA bookings
+  cancel at twice the rate — revenue you thought you had."
+- **Failure mode:** fear-mongering. The loss has to be a real cost the
+  reader can verify against their own P&L.
 
-### 7 · Compromiso y consistencia (Commitment & consistency)
-- **How it works.** People act consistent with prior small commitments they've
-  made publicly or to themselves.
-- **On Kymbo.** Framing questions that get an internal "yes" before the ask —
-  "Would you rather own the guest or rent them?" Ask before pitch. Also, "run
-  the arithmetic on your numbers" as a CTA — the reader commits to their own
-  math and then decides.
-- **Failure mode.** Overusing rhetorical questions until they read as
-  pandering. One per carousel, max.
+### 4 · Curiosity
+A partial reveal creates a completion drive.
 
-### 8 · Simpatía / Afinidad (Liking / Affinity)
-- **How it works.** People buy from voices they recognize as *theirs*.
-- **On Kymbo.** Speak the operator's language — commission, ADR, occupancy,
-  RevPAR, walk-ins, ops on a Friday night — not agency-speak. Show the same
-  problem from inside the property, not from the outside looking in.
-- **Failure mode.** Trying to sound like an operator without actually being
-  one. Concrete detail is what earns this trigger, not vibe.
-
-### 9 · Especificidad / Razón (Reasons / specificity)
-- **How it works.** A stated reason — even a mundane one — dramatically
-  increases compliance (Langer's copier experiment).
-- **On Kymbo.** Never assert without the *because*. "Skip shared hosting
-  **because** three sites share your CPU and one crashes yours." "Cap plugins
-  at 15 **because** each one adds 50–200ms."
-- **Failure mode.** Vague reasons ("for better performance"). Numbers where
-  possible.
-
-### 10 · Novedad (Novelty)
-- **How it works.** New = worth attention.
-- **On Kymbo.** Real recent shifts — Airbnb's Oct 27 2025 host-only fee change,
-  Skift's 2030 projection for direct overtaking OTAs. Use dated facts.
-- **Failure mode.** Recycling old news as if it's new. If it was true two years
-  ago, don't lead with novelty.
-
-### 11 · Curiosidad (Curiosity)
-- **How it works.** A partial reveal creates a completion drive.
-- **On Kymbo.** Cover hooks that state a claim you have to swipe to
-  understand: "Break-even is smaller than you think." "There's a free slot on
-  Google labelled 'Official site'." "You can't undercut them. You can
-  out-offer them."
-- **Failure mode.** Clickbait — the curiosity gap that doesn't close on
+- **On Kymbo:** cover hooks that state a claim you have to swipe to
+  understand. "There are four caches. Most sites configure one." "You
+  don't have to win the search. Just the handoff." "Break-even is smaller
+  than you think."
+- **Failure mode:** clickbait. The curiosity gap that doesn't close on
   swipe. Always deliver the payoff.
 
----
+### 5 · Commitment (and consistency)
+People act consistent with prior small commitments — including internal
+ones ("I already agreed the direct rate matters, so I should…").
 
-## Trigger-to-pillar map
-
-Roughly, the pillars in each bank fit certain triggers better than others.
-
-| Pillar | Primary trigger candidates |
-|---|---|
-| The Problem (FYM) | Loss aversion, Novelty, Curiosity |
-| The Math (FYM) | Loss aversion, Reasons, Authority |
-| The Alternative (FYM) | Commitment/consistency, Curiosity, Affinity |
-| The Proof (FYM) | Social proof, Authority |
-| The Decision (FYM) | Urgency, Commitment/consistency |
-| The Stack (educational) | Authority, Reasons |
-| The Build (educational) | Reciprocity, Curiosity |
-| The Standard (educational) | Authority, Reasons |
-| The Fix (educational) | Reasons, Loss aversion |
-| The Tradeoff (educational) | Commitment/consistency, Reasons |
-| Craft & Team pillars (`craft-and-team.json`) | Reciprocity, Affinity, Authority |
-
-Use this as a starting point, not a rule. A "Math" carousel can be Authority-
-led if the number is a Kymbo-published internal standard, for instance.
+- **On Kymbo:** framing questions that earn an internal "yes" before the
+  ask. "Would you rather own the guest or rent them?" A CTA that asks the
+  reader to run their own numbers.
+- **Failure mode:** overusing rhetorical questions until they read as
+  pandering. One question per carousel, max.
 
 ---
 
-## The checklist — every carousel passes this
+## What was retired and why
+
+The 11-trigger list that shipped in the first design filter version was
+Impeccable-flagged as overtaxonomy. Six triggers folded into the 5 above,
+or into voice choices governed by `copy-discipline.md`.
+
+- **Reasons / especificidad** — folded into Authority. A stated reason
+  ("15 plugins because each adds 50-200ms") is Authority when the number
+  is Kymbo's, and Reciprocity when the reader can act on it. The
+  "reasons" cognitive shortcut always attaches to another primary.
+- **Novelty** — folded into voice. A dated fact ("Airbnb's Oct 27 2025
+  fee change") is fine and lands as Loss aversion. "Novelty" as a
+  standalone trigger produced covers that felt breathless.
+- **Affinity / simpatía** — folded into voice. Speaking the operator's
+  language is `copy-discipline.md § voice`, not a persuasion trigger.
+- **Urgencia** — retired. Isa's original note on c09 flagged urgency as a
+  good use but a capped one. A 5-trigger set with no urgency is safer
+  than a 6-trigger set with an urgency cap that's easy to miscount. If a
+  carousel truly needs a clock, it's a Loss aversion frame (cost of
+  delay) with a specific dated fact.
+- **Escasez / exclusividad** — retired. Kymbo has genuine capacity
+  limits, but "we take N builds a quarter" reads on social as marketing
+  scarcity. Skip it here; it belongs in DMs and sales calls.
+- **Social proof** — retired as a *cover-driving* trigger. Named
+  portfolio (Kalido Hospitality's live homepage) is a proof element
+  inside a Loss aversion or Authority carousel, not a carousel's engine.
+
+---
+
+## Per-carousel checklist
 
 Before the first slide of copy is written:
 
-- [ ] **Primary trigger identified.** One trigger, not three. Written at the
-      top of the carousel JSON as `primaryTrigger: "loss-aversion"` (or
-      whichever).
-- [ ] **Different from the two adjacent posts** in the feed order. Two
-      loss-aversion posts in a row train the reader to look away.
-- [ ] **Urgency count checked.** No more than 1 in 4 for a 12-carousel batch.
-- [ ] **The trigger is *earned*, not stated.** Loss aversion doesn't come from
-      the word "lose"; it comes from a number the reader can verify against
-      their own P&L. Authority doesn't come from "we're experts"; it comes
-      from a published standard. Social proof doesn't come from "trusted by
-      many"; it comes from a named example.
-- [ ] **Payoff delivered.** A curiosity hook has to close on a specific slide.
-      A commitment question has to be answered honestly.
+- [ ] **One primary trigger declared** in the carousel JSON as
+      `primaryTrigger: "authority"` (or one of the four others).
+- [ ] **Different from adjacent tiles** in the feed order. Two Authority
+      posts in a row train the reader to look away.
+- [ ] **The trigger is earned, not stated.** Authority doesn't come from
+      "we're experts"; it comes from a published number. Loss aversion
+      doesn't come from the word "lose"; it comes from a real cost the
+      reader can verify.
+- [ ] **The payoff closes** on the CTA slide — a specific number to
+      comment, a specific action to take.
 
 ---
 
-## Rules of use — from Hotmart, adopted verbatim
+## Sources
 
-> "Persuasion is not the same as manipulation."
-
-- Never lie about or misrepresent a product feature.
-- Use triggers with moderation. Excess of any single trigger makes it appear
-  manipulative and drops its effect.
-- Avoid unrelated controversy (politics, race, religion) unless directly tied
-  to the product story.
-- Multiple triggers can appear in one carousel, but **one is primary** and
-  drives the structure. The rest are seasoning.
+- Robert Cialdini, *Influence: The Psychology of Persuasion* (2007
+  revised) — the canonical seven, of which four survived Kymbo's
+  distill (Reciprocity, Authority, Social proof/folded, Commitment).
+- Zendesk MX — [¿Qué son los gatillos mentales?](https://www.zendesk.com.mx/blog/sales/gatillos-mentales-que-es/)
+- Hotmart — [Disparadores mentales](https://hotmart.com/es/blog/disparadores-mentales)
+- Hotmart's rule of use, adopted here: *"Persuasion is not the same as
+  manipulation."* Never overstate a claim; never over-use a single
+  trigger; avoid unrelated controversy.

@@ -1,12 +1,17 @@
-# Batch 01v2 — Plan
+# Batch 01v2 — Plan (post-Impeccable revisions)
 
-This is the proposed 12-carousel mix for Batch 01v2, drawing from all three
-topic banks. It is a **plan, not a shipped batch** — every entry needs copy,
-design decisions and feed lock before it renders.
+The 12-carousel batch, revised on 2026-08-11 after Impeccable's craft-floor +
+critique + distill + clarify passes. Copy is written, covers render clean,
+detector reports zero warnings. Ready for scene image generation.
 
-> Isa's direction (2026-08-11): **mix everything from the start**. Not
-> revive-then-campaign. FYM and educational and craft/team all in the same
-> batch, interwoven by feed rhythm.
+> Isa's direction (2026-08-11): **mix everything from the start**. Money,
+> Craft, and Team pillars interwoven by feed rhythm — no phase-in.
+>
+> **Impeccable pass (2026-08-11):** kickers deleted from covers, ghost
+> numerals moved top-right, MATRIX cells labeled semantically, ordinal
+> p-indexes deleted from decorative interiors, Space Grotesk swapped for
+> JetBrains Mono, 3 topic banks collapsed to 1, 11 triggers collapsed to 5,
+> Kymbo self-references removed from headlines, em-dashes reduced under cap.
 
 ---
 
@@ -22,33 +27,34 @@ Feed rules from `content/ideas/README.md`:
    plus one of {4, 10} and one of {6, 12}.
 
 For Batch 01v2 specifically:
-- **Category mix**: 4 FYM + 4 Educational + 4 Craft/Team.
-- Educational carousels are **always** light covers, so they cover the 4-light
-  minimum by definition.
-- Craft/Team carousels can be light or dark — decided per topic.
-- FYM carousels lean dark by default, one light allowed.
+- **Pillar mix**: 4 Money + 4 Craft + 4 Team, symmetrical.
+- Craft carousels are **always** light covers (topic bank rule) — they
+  cover the 4-light minimum by definition.
+- Team carousels are mixed surface, decided per topic.
+- Money carousels lean dark; one light allowed.
 
 ---
 
 ## The 12
 
-Feed order is slot-by-slot. Batch 01v2 IDs continue existing numbering:
-systemized flat carousels are `c19-c24`, scenes are `scene-13-scene-18`.
+Feed order is slot-by-slot. IDs continue existing numbering: systemized flat
+carousels are `c19-c24`, scenes are `scene-13-scene-18`. Topic IDs use the
+new `topics.json` scheme (money-XX / craft-XX / team-XX).
 
-| # | ID | Cat | Topic | Surf. | Cover | Working title | Trigger |
-|---|---|-----|-------|-------|-------|---------------|---------|
-| 1 | `scene-13` | FYM (scene) | `fym-27` | dark | STAT | 65% of direct bookings start on an OTA | Curiosity |
-| 2 | `c19` | Educational | `edu-08` | **light** | SEAM | LCP 2.5s. CLS 0.1. INP 200ms. The gate we ship against. | Authority |
-| 3 | `scene-14` | Craft/Team (scene) | `craft-01` | dark | STATEMENT | The five people on every Kymbo project | Affinity |
-| 4 | `c20` | Educational | `edu-10` | **light** | INDEX | Max 15 plugins. 25 on Elementor. That's the rule. | Reasons |
-| 5 | `scene-15` | FYM (scene) | `fym-16` | dark | MATRIX | They didn't take 18%. They took the guest. | Loss aversion |
-| 6 | `c21` | Craft/Team | `craft-02` | **light** | INDEX | The onboarding week — day by day | Reciprocity |
-| 7 | `scene-16` | FYM (scene) | `fym-20` | dark | STAT | Parking. Pets. Early check-in. The OTA sells none. | Novelty |
-| 8 | `c22` | Educational | `edu-15` | **light** | STATEMENT | We reject GoDaddy and Bluehost. Here's the math. | Authority |
-| 9 | `scene-17` | Craft/Team (scene) | `craft-04` | dark | STAT | The whole guest lifecycle, not just the booking | Commitment |
-| 10 | `c23` | Craft/Team | `craft-03` | dark | MATRIX | Custom or template — how Kymbo picks | Commitment |
-| 11 | `scene-18` | FYM (scene) | `fym-13` | dark | SEAM | Half the guests who find you on an OTA google you next | Curiosity |
-| 12 | `c24` | Educational | `edu-16` | **light** | MATRIX | Four caches. Most sites configure one. | Reciprocity |
+| # | ID | Pillar | Topic | Surf. | Cover | Working title | Trigger |
+|---|---|--------|-------|-------|-------|---------------|---------|
+| 1 | `scene-13` | Money (scene) | `money-08` | dark | STAT | 65% of direct bookings start on an OTA. | Curiosity |
+| 2 | `c19` | Craft | `craft-01` | **light** | SEAM | The performance budget every build ships against. | Authority |
+| 3 | `scene-14` | Team (scene) | `team-01` | dark | STATEMENT | Five people. Every project. | Authority |
+| 4 | `c20` | Craft | `craft-03` | **light** | INDEX | The plugin ceiling on every custom build. | Reciprocity |
+| 5 | `scene-15` | Money (scene) | `money-06` | dark | MATRIX | They didn't take 18%. They took the guest. | Loss aversion |
+| 6 | `c21` | Team | `team-02` | **light** | INDEX | The onboarding week, day by day. | Reciprocity |
+| 7 | `scene-16` | Money (scene) | fym-20 (upsells) | dark | STAT | The OTA sold the room. You sell the stay. | Curiosity |
+| 8 | `c22` | Craft | `craft-07` | **light** | STATEMENT | We reject GoDaddy and Bluehost. | Authority |
+| 9 | `scene-17` | Team (scene) | craft-04 (lifecycle) | dark | STAT | 0 phone calls. Full stay. | Commitment |
+| 10 | `c23` | Team | `team-03` | dark | MATRIX | Custom, or template? | Commitment |
+| 11 | `scene-18` | Money (scene) | money-08 mechanic | dark | SEAM | The search after the search. | Curiosity |
+| 12 | `c24` | Craft | `craft-08` | **light** | MATRIX | Four caches. Most sites configure one. | Reciprocity |
 
 > **Category-scope rule.** Educational carousels teach Kymbo services (WordPress
 > performance, hosting positions, caching, SEO gates, launch discipline) to

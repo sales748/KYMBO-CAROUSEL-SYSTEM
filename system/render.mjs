@@ -129,9 +129,21 @@ const FEED_02 = [
   'scene-10', 'c16', 'scene-11',
   'c18', 'scene-12', 'c17',
 ];
-const FEED = FEED_02;
+// Batch 01v2 — the new batch we are now producing. Order matches the slot
+// numbering in docs/batch-01v2-plan.md — 4 FYM scenes + 4 educational + 4
+// craft/team, interwoven per feed rules. This is the ONLY feed the CEO
+// reviews right now; the earlier Batch 01 / Batch 02 grids stay for internal
+// rhythm reference.
+const FEED_01V2 = [
+  'scene-13', 'c19', 'scene-14',
+  'c20', 'scene-15', 'c21',
+  'scene-16', 'c22', 'scene-17',
+  'c23', 'scene-18', 'c24',
+];
+const FEED = FEED_01V2;
 const SCENE_SET = new Set(['scene-01', 'scene-02', 'scene-03', 'scene-04', 'scene-05', 'scene-06',
-  'scene-07', 'scene-08', 'scene-09', 'scene-10', 'scene-11', 'scene-12']);
+  'scene-07', 'scene-08', 'scene-09', 'scene-10', 'scene-11', 'scene-12',
+  'scene-13', 'scene-14', 'scene-15', 'scene-16', 'scene-17', 'scene-18']);
 function grid(feed) {
   return feed.map((base) =>
     `<a class="tile${SCENE_SET.has(base) ? ' organic' : ''}" href="index.html">
@@ -181,16 +193,42 @@ function feedDoc() {
         <div class="lime">▸ fire your middleman</div>
       </div>
     </div>
-    <div class="mlabel first">▸ Batch 02 — next weeks
-      <span>4 educational (light covers) · 2 campaign · 6 organic scene</span></div>
-    <div class="grid">${grid(FEED_02)}</div>
-    <div class="mlabel">▸ Batch 01 — shipped
-      <span>for rhythm reference</span></div>
-    <div class="grid">${grid(FEED_01)}</div>
+    <div class="mlabel first">▸ Batch 01v2 — the new batch
+      <span>4 fym · 4 educational (light covers, service-general) · 4 craft &amp; team</span></div>
+    <div class="grid">${grid(FEED_01V2)}</div>
   </div>
 </body></html>`;
 }
 writeFileSync(join(build, 'feed.html'), feedDoc());
+
+// Legacy internal reference — the earlier batches, kept in a separate file so
+// the CEO-facing feed.html stays clean and Batch-01v2-only. Not linked from
+// index.html; open manually if reviewing prior rhythms.
+function feedLegacyDoc() {
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>@kymbo — feed (prior batches, internal)</title>${head}
+<style>
+  body{margin:0;background:#0e1016;color:var(--pantalla);font-family:var(--font-display);display:flex;justify-content:center}
+  .phone{width:520px;max-width:100%;background:var(--noche);min-height:100vh}
+  .hero{padding:44px 34px 26px}
+  .row{display:flex;align-items:center;gap:30px}
+  .avatar{width:118px;height:118px;border-radius:50%;background:var(--pantalla);color:var(--noche);display:grid;place-items:center;font-weight:800;font-size:64px;border:3px solid var(--verde)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:20px}
+  .tile{position:relative;aspect-ratio:4/5;overflow:hidden;background:#000}
+  .tile img{width:100%;height:100%;object-fit:cover;display:block}
+  .mlabel{font-family:var(--font-mono);font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--verde);padding:30px 34px 12px;border-top:1px solid rgba(247,248,234,.12);margin-top:26px}
+  .mlabel.first{border-top:0;margin-top:6px;padding-top:8px}
+</style></head><body>
+  <div class="phone">
+    <div class="hero"><div class="avatar">K</div></div>
+    <div class="mlabel first">Batch 02 — reference only</div>
+    <div class="grid">${grid(FEED_02)}</div>
+    <div class="mlabel">Batch 01 — reference only</div>
+    <div class="grid">${grid(FEED_01)}</div>
+  </div>
+</body></html>`;
+}
+writeFileSync(join(build, 'feed-legacy.html'), feedLegacyDoc());
 
 /* ---------- SCENE carousels (Path B) ---------- */
 // Resolve each scene bg: use the real ChatGPT render if it's been dropped

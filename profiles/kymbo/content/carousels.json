@@ -976,61 +976,56 @@
       "surface": "light",
       "cover": "SEAM",
       "category": "educational",
-      "title": "The performance budget we hold every build to",
+      "title": "The performance budget every build ships against",
       "topic": "edu-08",
       "primaryTrigger": "authority",
       "slides": [
         {
           "type": "cover",
           "variant": "SEAM",
-          "kicker": "WHAT WE SHIP AGAINST",
-          "leftLabel": "OUR GATE",
+          "leftLabel": "KYMBO",
           "left": "2.5s",
-          "rightLabel": "MISS ONE",
-          "right": "0",
-          "sub": "Largest Contentful Paint. The rule that decides whether a build ships."
+          "rightLabel": "TYPICAL",
+          "right": "6.3s",
+          "sub": "Largest Contentful Paint. The wall we ship against."
         },
         {
           "type": "point",
-          "index": "01",
-          "title": "What LCP actually measures",
-          "body": "The moment the biggest thing on the screen finishes loading. If it takes longer than 2.5 seconds, most visitors have already reached for the back button."
+          "title": "Miss 2.5s, most visitors are gone",
+          "body": "The biggest visible thing on the screen has to load in two and a half seconds. Longer than that and the visitor has already tapped back."
         },
         {
           "type": "list",
-          "title": "The full budget on every Kymbo build",
+          "title": "The full gate",
           "items": [
-            "LCP under 2.5s — biggest visible thing loads fast",
-            "CLS under 0.1 — nothing shifts under your finger",
-            "INP under 200ms — every tap answers quickly",
-            "TBT under 200ms — no long blocking scripts",
-            "Lighthouse score 80 or higher",
-            "First-load payload under 2 MB, HTML under 100 KB compressed"
+            "LCP under 2.5s",
+            "CLS under 0.1",
+            "INP under 200ms",
+            "Lighthouse 80 or higher",
+            "First-load payload under 2 MB"
           ]
         },
         {
           "type": "point",
-          "index": "02",
-          "title": "It's a gate, not an aspiration",
-          "body": "The build gets tested on staging. Numbers under the budget: it ships. Numbers over: we fix it before you see it. This is not negotiable."
+          "title": "Numbers under = ship. Numbers over = we fix.",
+          "body": "The build gets staged and measured before the domain moves. No hand-wave, no 'we'll optimise later.' The gate is what decides."
         },
         {
           "type": "stat",
           "value": "80+",
           "label": "LIGHTHOUSE, EVERY PROJECT",
-          "note": "The public number. If a page scores below 80, it does not go live."
+          "note": "Below 80, the page does not go live. Public number."
         },
         {
           "type": "point",
-          "index": "03",
-          "title": "How this gets to those numbers",
-          "body": "Plugin discipline (never more than 15 on custom, 25 on Elementor). Images compressed before upload, WebP, lazy-loaded below the fold. Third-party scripts audited one by one — each one has a cost, we count it."
+          "title": "How the number gets there",
+          "body": "Plugin discipline. Images compressed before upload, WebP, lazy-loaded below the fold. Third-party scripts audited one by one."
         },
         {
           "type": "cta",
           "headline": "Run your site through PageSpeed Insights.",
           "hiWord": "PageSpeed",
-          "sub": "Comment the LCP number. We'll tell you which layer is slowing it down.",
+          "sub": "Comment the LCP number. We tell you which layer is slowing it down.",
           "action": "Comment SPEED"
         }
       ]
@@ -1042,47 +1037,44 @@
       "surface": "light",
       "cover": "INDEX",
       "category": "educational",
-      "title": "Max 15 plugins. 25 on Elementor. That's the rule.",
+      "title": "The plugin ceiling on every custom build",
       "topic": "edu-10",
-      "primaryTrigger": "reasons",
+      "primaryTrigger": "reciprocity",
       "slides": [
         {
           "type": "cover",
           "variant": "INDEX",
-          "kicker": "EVERY PLUGIN HAS A COST",
-          "index": "15",
-          "headline": "is the plugin ceiling on\nevery custom Kymbo build.",
-          "sub": "25 if you're on Elementor. Because each one has a price, and we count them."
+          "ghost": "15",
+          "headline": "The plugin ceiling on\nevery custom build.",
+          "hiWord": "ceiling",
+          "sub": "25 on Elementor. The rule that stops WordPress sites from getting slow."
         },
         {
           "type": "point",
-          "index": "01",
-          "title": "Every plugin runs code on every page load",
-          "body": "50 to 200 milliseconds each, sometimes more. A site with 30 active plugins can spend a full second just booting them before the page starts to render."
+          "title": "Each plugin runs on every page load",
+          "body": "Fifty to two hundred milliseconds each. A site with thirty active plugins can spend a full second just booting them before rendering."
         },
         {
           "type": "point",
-          "index": "02",
-          "title": "And they each add a database query, an update to run, a way in for attackers",
-          "body": "A plugin is a whole codebase you did not write, running as an equal to your own code. Every one is a small ongoing bet on someone else's discipline."
+          "title": "One database query, one attack surface, one update chain",
+          "body": "A plugin is a codebase you didn't write, running as an equal to your own. Every one is a small ongoing bet on someone else's discipline."
         },
         {
           "type": "stat",
           "value": "50–200ms",
-          "label": "PER PLUGIN, ON EVERY PAGE LOAD",
-          "note": "Which is why plugin sprawl is the single most common reason a WordPress site is slow."
+          "label": "PER PLUGIN, PER PAGE LOAD",
+          "note": "The single biggest reason a WordPress site is slow."
         },
         {
           "type": "point",
-          "index": "03",
-          "title": "So we cap and we audit",
-          "body": "15 on custom themes. 25 on Elementor (which needs its own plugins to work). Every quarter we run Query Monitor and Plugin Performance Profiler to find the slow ones and cut them."
+          "title": "So we cap. And we audit.",
+          "body": "Fifteen on custom themes. Twenty-five on Elementor. Every quarter, Query Monitor and Plugin Performance Profiler find the slow ones. The slow ones go."
         },
         {
           "type": "cta",
           "headline": "How many plugins is your site running right now?",
           "hiWord": "plugins",
-          "sub": "Comment the number. If it's over 30, we'll tell you the three most likely to be the ones costing you.",
+          "sub": "Comment the number. Over thirty, we tell you the three most likely to be the ones costing you.",
           "action": "Comment PLUGINS"
         }
       ]
@@ -1101,46 +1093,46 @@
         {
           "type": "cover",
           "variant": "INDEX",
-          "kicker": "FROM YES TO KICKOFF",
-          "index": "5",
-          "headline": "days from 'yes' to\nyour first design pass.",
-          "sub": "The onboarding week, in full. No mystery, no NDA required to read this."
+          "ghost": "5",
+          "headline": "The onboarding week,\nday by day.",
+          "hiWord": "day by day",
+          "sub": "From 'yes' to your first design pass. No mystery, no NDA to read this."
         },
         {
           "type": "point",
           "index": "MONDAY",
           "title": "Discovery call",
-          "body": "Not sales — questions and risks. Twenty to thirty questions about your scope, budget, timeline, integrations, and what you'd rather never say aloud on a launch day."
+          "body": "Not sales. Twenty to thirty questions about scope, budget, timeline, integrations, and what you'd rather never say aloud on a launch day."
         },
         {
           "type": "point",
           "index": "TUESDAY",
           "title": "SOW draft in your inbox",
-          "body": "Named deliverables. Fixed price. An honest timeline. Not 'we'll see what it costs' — a real document you can forward to a partner or a board."
+          "body": "Named deliverables. Fixed price. An honest timeline. Not 'we'll see what it costs,' a real document you can forward to a partner or a board."
         },
         {
           "type": "point",
           "index": "WEDNESDAY",
           "title": "Staging environment live",
-          "body": "A real dev-staging-prod pipeline spun up in your name. You have a URL by end of day. Nothing to install, nothing to configure on your end."
+          "body": "A real dev-staging-prod pipeline spun up in your name. You have a URL by end of day. Nothing to install on your end."
         },
         {
           "type": "point",
           "index": "THU–FRI",
           "title": "First design or content pass",
-          "body": "Not 'wait three weeks and see.' By Friday morning there is something to look at — a page, a component, a copy pass, an integration spike. You see progress inside the week."
+          "body": "By Friday morning there is something to look at. A page, a component, a copy pass, an integration spike. Progress is visible inside the week."
         },
         {
           "type": "point",
           "index": "FRIDAY PM",
           "title": "Review call",
-          "body": "Design, copy and performance reviewed separately — one sign-off each, so feedback doesn't blur. You leave the call with a decision list, not a vibe."
+          "body": "Design, copy and performance reviewed separately. One sign-off each. You leave with a decision list, not a vibe."
         },
         {
           "type": "cta",
           "headline": "How long did your last agency take to show you something real?",
           "hiWord": "something real",
-          "sub": "Comment the number of days. If it was over 30, we'd like to hear the story.",
+          "sub": "Comment the number of days. Over thirty, we'd like to hear the story.",
           "action": "Comment DAYS"
         }
       ]
@@ -1159,44 +1151,40 @@
         {
           "type": "cover",
           "variant": "STATEMENT",
-          "kicker": "TWO HOSTS WE WON'T BUILD ON",
           "headline": "We reject GoDaddy\nand Bluehost.",
           "hiWord": "reject",
-          "sub": "Not a preference — a position. Here's the math behind it."
+          "sub": "Not a preference. A position. Here's the math."
         },
         {
           "type": "point",
-          "index": "01",
           "title": "Shared hosting is a shared machine",
-          "body": "Thirty sites live on one server. The one having a traffic spike is your neighbor. Their crash is your slow page — and there is nothing you or your developer can do from inside your site."
+          "body": "Thirty sites live on one server. The neighbor having a traffic spike is your slow page, and there is nothing you or your developer can do from inside your site."
         },
         {
           "type": "point",
-          "index": "02",
           "title": "The host is the ceiling",
-          "body": "You can rewrite every line, compress every image, cache every query — and still hit the wall of a server you don't control. Performance work on shared hosting is work you throw away."
+          "body": "Rewrite every line, compress every image, cache every query, and you still hit the wall of a server you don't control. Performance work on shared hosting is work thrown away."
         },
         {
           "type": "list",
-          "title": "So we build on three real tiers instead",
+          "title": "The three tiers we do build on",
           "items": [
-            "SiteGround — informational sites, small marketing",
-            "Cloudways — control over the stack, managed Linode / Vultr / DO",
-            "Kinsta or WP Engine — traffic, e-commerce, anything load-bearing",
-            "Hostinger — the go-to managed WordPress for simple sites the client wants to run themselves"
+            "SiteGround for informational, small marketing",
+            "Cloudways for control over the stack",
+            "Kinsta or WP Engine for traffic, e-commerce, load-bearing",
+            "Hostinger for self-managed clients"
           ]
         },
         {
           "type": "point",
-          "index": "03",
-          "title": "And we're a WP Engine partner",
-          "body": "Because they hold themselves to the same performance numbers we do. Our hosting-only plan is $20 a month — about five dollars less than their direct entry tier. That's the alignment we want."
+          "title": "WP Engine partner, because their numbers match ours",
+          "body": "Our hosting-only plan is $20 a month. About five dollars less than their direct entry tier. That's the alignment."
         },
         {
           "type": "cta",
           "headline": "Where does your site live right now?",
           "hiWord": "live",
-          "sub": "Comment your host. If it's shared, we'll tell you what ceiling you're bumping into — and what one tier up would cost.",
+          "sub": "Comment your host. If it's shared, we tell you what ceiling you're bumping into.",
           "action": "Comment HOST"
         }
       ]
@@ -1208,39 +1196,49 @@
       "surface": "dark",
       "cover": "MATRIX",
       "category": "craft",
-      "title": "Custom or template — how Kymbo picks",
+      "title": "Custom, or template?",
       "topic": "craft-03",
       "primaryTrigger": "commitment",
       "slides": [
         {
           "type": "cover",
           "variant": "MATRIX",
-          "kicker": "THE HONEST ANSWER",
           "headline": "Custom, or template?",
           "hiWord": "template",
-          "sub": "We pick per project. And the answer is 'template' more often than any agency will tell you."
+          "sub": "We pick per project. And the answer is 'template' more often than any agency will tell you.",
+          "grid": {
+            "total": 2,
+            "on": [
+              0,
+              1
+            ],
+            "labels": [
+              "TEMPLATE",
+              "CUSTOM"
+            ]
+          }
         },
         {
           "type": "point",
           "index": "TEMPLATE",
           "title": "For content-first work",
-          "body": "Marketing sites. Brochures. Small commerce with a clean flow. A booking-plus-content site for a hotel or a services business. If the design isn't the value driver, template is the honest quote."
+          "body": "Marketing sites. Brochures. Small commerce with a clean flow. If the design isn't the value driver, template is the honest quote."
         },
         {
           "type": "point",
           "index": "CUSTOM",
           "title": "When the design does real work",
-          "body": "The homepage IS the pitch. The product page is where the deal is won. Performance is load-bearing (LCP under 2.5s, e-commerce speed). The integration surface is non-trivial (PMS, POS, custom checkout, custom auth). Then custom earns its price."
+          "body": "The homepage IS the pitch. The product page is where the deal is won. Performance is load-bearing. The integration surface is non-trivial. Then custom earns its price."
         },
         {
           "type": "point",
           "index": "SIGNAL",
           "title": "Payment terms tell you which one you're buying",
-          "body": "50/50 up-front and on-launch = template. Faster to ship, capped at 25 active plugins on Elementor. 33/33/33 kickoff-midpoint-launch = custom. Slower to ship, capped at 15 plugins in a hand-written theme."
+          "body": "50/50 up-front and on-launch means template. 33/33/33 kickoff-midpoint-launch means custom. Faster ships one way, deeper ships the other."
         },
         {
           "type": "list",
-          "title": "What DOESN'T decide it",
+          "title": "What doesn't decide it",
           "items": [
             "How much revenue the site is doing",
             "Whether the client is 'important enough' for custom",
@@ -1252,7 +1250,7 @@
           "type": "cta",
           "headline": "Which one is right for your project?",
           "hiWord": "right",
-          "sub": "Post the requirement — one paragraph is enough — and we'll tell you which one an honest quote from us would open with.",
+          "sub": "Post the requirement, one paragraph. We tell you which one an honest quote would open with.",
           "action": "Comment BUILD"
         }
       ]
@@ -1271,40 +1269,52 @@
         {
           "type": "cover",
           "variant": "MATRIX",
-          "kicker": "THERE ARE FOUR",
           "headline": "Caches. Most sites\nconfigure one.",
           "hiWord": "one",
-          "sub": "Which is why 'I installed WP Rocket' doesn't fix a slow site on its own."
+          "sub": "Which is why installing WP Rocket alone doesn't fix a slow site.",
+          "grid": {
+            "total": 4,
+            "on": [
+              1,
+              2,
+              3
+            ],
+            "hot": [
+              0
+            ],
+            "labels": [
+              "PAGE",
+              "BROWSER",
+              "OBJECT",
+              "CDN"
+            ]
+          }
         },
         {
           "type": "point",
-          "index": "01",
           "title": "Page cache",
           "body": "The whole rendered HTML for a URL, saved and served without touching PHP or the database. WP Rocket handles this by default. It's the one most sites do have."
         },
         {
           "type": "point",
-          "index": "02",
           "title": "Browser cache",
           "body": "Headers that tell the visitor's browser 'keep this image, this CSS, this font for a week.' Costs nothing to configure. Most sites leave it at default and pay for it on every return visit."
         },
         {
           "type": "point",
-          "index": "03",
           "title": "Object cache",
-          "body": "Database query results held in memory (Redis or Memcached). This is the one that separates a fast dashboard from a slow one, and the one most WordPress sites completely skip."
+          "body": "Database query results held in memory (Redis or Memcached). This is the one that separates a fast dashboard from a slow one. The one most WordPress sites completely skip."
         },
         {
           "type": "point",
-          "index": "04",
           "title": "CDN cache",
-          "body": "Static assets served from a server near your visitor instead of near your host. Cloudflare, KeyCDN, others. Turns a Vancouver site into an instant site in Vancouver, London and Sydney."
+          "body": "Static assets served from a server near your visitor instead of near your host. Turns a Vancouver site into an instant site in Vancouver, London and Sydney."
         },
         {
           "type": "cta",
           "headline": "How many of the four does your site have?",
           "hiWord": "four",
-          "sub": "Comment the count. If it's under three, we'll tell you which layer is the fastest win from where you are now.",
+          "sub": "Comment the count. Under three, we tell you which layer is the fastest win from where you are now.",
           "action": "Comment CACHE"
         }
       ]

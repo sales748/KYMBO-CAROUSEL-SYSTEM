@@ -19,7 +19,7 @@
       "imageId": "guest-scrolling-cafe-phone",
       "imagePrompt": "A relaxed traveler at a warm cafe table by a window, holding a phone with the screen completely blank (pure white), a cup of coffee and a small plant beside them. Warm daylight. Face soft, not the focus. Boutique cafe aesthetic. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "headline": "==65%== of direct bookings\nstart on an ==OTA==.",
-      "sub": "You were never supposed to win the search. Just the handoff."
+      "sub": "You never had to win the search. Just the handoff."
     },
     {
       "scene": true,
@@ -27,9 +27,8 @@
       "bg": "assets/scene-13/s2.png",
       "imageId": "laptop-browser-tabs-blank",
       "imagePrompt": "An open laptop on a warm walnut desk seen at an angle, screen completely blank (pure white), the desk holds a notebook and a coffee. Natural window light, plant nearby. No visible browser UI or text. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "01",
       "title": "The number is ==bigger== than you thought",
-      "body": "Two out of every three guests who book direct saw you on Booking.com first. The OTA didn't take them — it introduced them."
+      "body": "Two out of every three guests who book direct saw you on Booking first. The OTA didn't take them. It introduced them."
     },
     {
       "scene": true,
@@ -37,9 +36,8 @@
       "bg": "assets/scene-13/s3.png",
       "imageId": "hotel-window-view-warm",
       "imagePrompt": "A quiet view through a boutique-hotel window at late afternoon, warm light spilling onto a walnut sill, sheer curtain, a plant. Architectural and calm, no people. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "02",
-      "title": "That's the OTA ==doing your marketing==",
-      "body": "You will never outspend Booking.com. You were never supposed to. They put you in front of the world. Then the guest comes looking for you."
+      "title": "That's the OTA ==paying== for your marketing",
+      "body": "You will never outspend Booking. You were never supposed to. They put you in front of the world, and the guest comes looking for you."
     },
     {
       "scene": true,
@@ -47,7 +45,6 @@
       "bg": "assets/scene-13/s4.png",
       "imageId": "reception-detail-empty",
       "imagePrompt": "A quiet modern boutique-hotel entrance detail: walnut counter, plant, warm directional light, a hand-thrown ceramic bowl. No people. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "03",
       "title": "Your site's job is the ((handoff))",
       "body": "Not the search. The moment the guest types your name into Google. That last click is the whole game. It's yours to win or lose."
     },
@@ -57,9 +54,8 @@
       "bg": "assets/scene-13/s5.png",
       "imageId": "phone-in-hand-blank-close",
       "imagePrompt": "A close, tighter framing of a hand holding a phone with a pure white blank screen, walnut surface beneath, warm side light. No visible UI, no text on screen. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "04",
       "title": "And it's a ==solvable== problem",
-      "body": "One page. Clear rate. Working booking engine. A direct offer the OTA can't match. That's what closes the guest the second time they see you."
+      "body": "One page. Clear rate. Working booking engine. A direct offer the OTA can't match. That closes the guest the second time they see you."
     },
     {
       "scene": true,
@@ -68,7 +64,7 @@
       "imageId": "hotel-facade-evening-warm",
       "imagePrompt": "A wide calm shot of a small boutique-hotel facade at early evening, warm lamp light through the ground-floor windows, planting, contemporary architecture. No readable signage. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "headline": "How many of yours ==came back?==",
-      "sub": "The guests who found you on an OTA, then booked direct. That's the number.",
+      "sub": "Guests who found you on an OTA, then booked direct. That's the number worth tracking.",
       "action": "Comment HANDOFF"
     }
   ]

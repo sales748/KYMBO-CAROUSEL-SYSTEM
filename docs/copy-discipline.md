@@ -1,10 +1,75 @@
 # Copy Discipline
 
-The rules copy has to pass before it ships. This file is the union of
-every "no" that emerged from Batch 01 and the review Isa gave on 2026-08-11.
+The rules copy has to pass before it ships. Union of every "no" from Batch
+01 review + Impeccable's `clarify` pass added on 2026-08-11.
 
 > If a sentence would fail this file, do not ship it. Rewrite it. If the
 > rewrite is difficult, the *concept* is probably wrong, not the sentence.
+
+> **Primary authority for copy review: Impeccable `clarify`** —
+> `.claude/skills/impeccable/reference/clarify.md`. Load and run it against
+> every headline, sub, body, and CTA line before render. The rules below
+> are the Kymbo-specific overlays; where they conflict with Impeccable
+> clarify, Impeccable wins.
+
+---
+
+## Rules from Impeccable clarify (adopted verbatim as Kymbo policy)
+
+**One trigger per slide.** Impeccable clarify: "Say each idea once. If the
+heading already explains the state, the introduction should add new
+information or disappear." Applied to Kymbo: a slide carries one primary
+persuasion move (see `docs/mental-triggers.md`), and every subsequent
+sentence extends that trigger's argument rather than layering a second
+persuasion move on top.
+
+**Set the message hierarchy explicitly.** For each slide, decide before
+writing:
+1. the one fact the reader needs now;
+2. the action available next (swipe, comment, click);
+3. supporting context that changes the decision;
+4. tone appropriate to this moment.
+
+**Use a specific verb + object.** Actions/CTAs describe what happens, not
+the gesture that triggers them. Same noun + verb for the same concept
+across a carousel.
+
+**Say the label with the number.** Every stat carries its source in the
+same slide. Every claim carries its "because." Kymbo internal standards
+attribute to `KYMBO INTERNAL`; industry data attributes to the vendor
+(`SITEMINDER`, `CLOUDBEDS`).
+
+**No hedges.** Delete "consider exploring," "you might want to," "it's
+possible that." Kymbo publishes numbers it holds itself to; hedges
+contradict that stance.
+
+---
+
+## Kymbo-specific overlays
+
+---
+
+## Brand-behavior rules (added 2026-08-11 per Impeccable distill)
+
+### No "Kymbo" in headlines
+The brand shows up in the design system + the account handle on the tile.
+Repeating the brand name in a headline reads as advertising. Applied:
+- ✗ "The plugin ceiling on every custom Kymbo build"
+- ✓ "The plugin ceiling on every custom build"
+
+Exceptions: identifier labels on comparison covers (e.g. `KYMBO` on the
+left panel of a SEAM value-comparison) are structural, not self-reference.
+
+### Em-dash cap: under 8 per carousel body
+Impeccable detector fires an advisory at ≥ 8 em-dashes in body text (AI
+cadence tell). Kymbo cap: never more than 7 across all interior bodies of
+a single carousel. Prefer commas, colons, periods, parentheses. Em-dashes
+on cover headlines are fine.
+
+### Interior slides extend, don't restate
+Impeccable clarify: "Say each idea once." Applied to carousel structure:
+no interior body paragraph rephrases the cover headline. If a point
+carousel's slide 2 body says the same thing the cover said, cut it.
 
 ---
 

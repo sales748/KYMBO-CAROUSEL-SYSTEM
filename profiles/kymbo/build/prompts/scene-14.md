@@ -1,4 +1,4 @@
-# The five people on every Kymbo project.
+# Five people. Every project.
 
 **Carousel:** scene-14 · **Pillar:** The Team · **Path B (scene / organic)**
 
@@ -11,7 +11,7 @@ You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE an
 ## Slide 1 — studio-wide-morning
 
 **On-slide copy:** Five people.
-==Every Kymbo project.==
+==Every project.==
 
 Save as `s1.png` in `assets/scene-14/`.
 
@@ -21,7 +21,7 @@ A wide shot of a small software-studio workspace in warm morning light: two or t
 
 ## Slide 2 — hands-notebook-calendar
 
-**On-slide copy:** ==Project Manager==  —  The person answering your emails on Monday morning. Scope, timeline, budget, milestones. Never writes the code — that's not their job.
+**On-slide copy:** ==Project Manager==  —  The person answering your emails on Monday morning. Scope, timeline, budget, milestones. Never writes the code, that's not the job.
 
 Save as `s2.png` in `assets/scene-14/`.
 
@@ -41,7 +41,7 @@ Close view of a whiteboard or a large paper pad on a wall, with abstract non-rea
 
 ## Slide 4 — closed-laptop-plants
 
-**On-slide copy:** ==Developer==  —  The person actually writing the code. Frontend, backend, or full-stack depending on what your project needs. One on small builds, two or three on bigger ones.
+**On-slide copy:** ==Developer==  —  The person actually writing the code. Frontend, backend, or full-stack depending on what your project needs.
 
 Save as `s4.png` in `assets/scene-14/`.
 

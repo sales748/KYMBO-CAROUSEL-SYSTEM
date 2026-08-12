@@ -19,7 +19,7 @@
       "imageId": "person-scrolling-lounge",
       "imagePrompt": "A traveler seated in a warm cafe or hotel lounge, holding a phone with a completely blank pure-white screen, a plant nearby, natural window light. Face soft, not the focus. No visible UI on the phone. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "headline": "The search\n==after the search==.",
-      "sub": "How Booking.com becomes your ad budget — without you paying for a click."
+      "sub": "How Booking becomes your ad budget. Without you paying for a click."
     },
     {
       "scene": true,
@@ -27,7 +27,6 @@
       "bg": "assets/scene-18/s2.png",
       "imageId": "phone-blank-scroll-close",
       "imagePrompt": "A close view of a hand holding a phone at an angle, screen fully blank (pure white), walnut surface beneath, soft afternoon light. No UI, no visible text. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "01",
       "title": "The ==first search== isn't yours",
       "body": "The guest types 'boutique hotel Vancouver' into Booking. They see twenty properties. Yours is one of them. So far, so ordinary."
     },
@@ -37,7 +36,6 @@
       "bg": "assets/scene-18/s3.png",
       "imageId": "hotel-photo-print",
       "imagePrompt": "A single printed photograph or open magazine on a walnut coffee table, showing a warm hotel interior detail — walnut, plant, sheer curtain. No readable text, no branding. Warm indirect light. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "02",
       "title": "They ==stop== on you",
       "body": "One of the photos catches their eye. Or the location. Or the room description. They tap in, read reviews, look at rates. Twenty seconds of real attention."
     },
@@ -47,9 +45,8 @@
       "bg": "assets/scene-18/s4.png",
       "imageId": "hand-typing-search-blank",
       "imagePrompt": "Hands on a laptop keyboard on a warm walnut desk, laptop screen completely blank (pure white), plant beside it, warm side light. No visible UI. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "03",
       "title": "Then they open a ==new tab==",
-      "body": "They Google your name. Not 'boutique hotel Vancouver' — your name. This is the moment Booking.com paid to introduce you. It's also the moment their job is done."
+      "body": "They Google your name. Not 'boutique hotel Vancouver,' your name. This is the moment Booking paid to introduce you. It's also the moment their job is done."
     },
     {
       "scene": true,
@@ -57,9 +54,8 @@
       "bg": "assets/scene-18/s5.png",
       "imageId": "hotel-facade-golden-hour",
       "imagePrompt": "A calm street view of a small boutique-hotel facade in golden-hour light, warm windows glowing, planting, contemporary architecture. No readable signage. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "index": "04",
       "title": "Your site has ==one job== now",
-      "body": "Close the guest that Booking already warmed up. Same rate. Better perks (free cancellation, room upgrade, breakfast). One clear button. That's the whole game."
+      "body": "Close the guest that Booking already warmed up. Same rate, better perks (free cancellation, room upgrade, breakfast). One clear button. That's the whole game."
     },
     {
       "scene": true,
@@ -68,7 +64,7 @@
       "imageId": "empty-desk-with-laptop-warm",
       "imagePrompt": "A warm walnut desk with a closed laptop, a coffee, a small plant, sheer window curtain behind, calm evening light. No people. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
       "headline": "What page do they land on\n==when they Google you?==",
-      "sub": "If it's not built to close, Booking.com just did the work for their commission. Not yours.",
+      "sub": "If it's not built to close, Booking just did the work for their commission. Not yours.",
       "action": "Comment SEARCH"
     }
   ]

@@ -21,7 +21,7 @@ A relaxed traveler at a warm cafe table by a window, holding a phone with the sc
 
 ## Slide 2 — laptop-browser-tabs-blank
 
-**On-slide copy:** The number is ==bigger== than you thought  —  Two out of every three guests who book direct saw you on Booking.com first. The OTA didn't take them — it introduced them.
+**On-slide copy:** The number is ==bigger== than you thought  —  Two out of every three guests who book direct saw you on Booking first. The OTA didn't take them. It introduced them.
 
 Save as `s2.png` in `assets/scene-13/`.
 
@@ -31,7 +31,7 @@ An open laptop on a warm walnut desk seen at an angle, screen completely blank (
 
 ## Slide 3 — hotel-window-view-warm
 
-**On-slide copy:** That's the OTA ==doing your marketing==  —  You will never outspend Booking.com. You were never supposed to. They put you in front of the world. Then the guest comes looking for you.
+**On-slide copy:** That's the OTA ==paying== for your marketing  —  You will never outspend Booking. You were never supposed to. They put you in front of the world, and the guest comes looking for you.
 
 Save as `s3.png` in `assets/scene-13/`.
 
@@ -51,7 +51,7 @@ A quiet modern boutique-hotel entrance detail: walnut counter, plant, warm direc
 
 ## Slide 5 — phone-in-hand-blank-close
 
-**On-slide copy:** And it's a ==solvable== problem  —  One page. Clear rate. Working booking engine. A direct offer the OTA can't match. That's what closes the guest the second time they see you.
+**On-slide copy:** And it's a ==solvable== problem  —  One page. Clear rate. Working booking engine. A direct offer the OTA can't match. That closes the guest the second time they see you.
 
 Save as `s5.png` in `assets/scene-13/`.
 
