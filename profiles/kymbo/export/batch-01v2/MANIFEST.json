@@ -1,0 +1,54 @@
+{
+  "batch": "01v2",
+  "generated": "2026-08-11",
+  "carousels": [
+    {
+      "id": "c19",
+      "n": 7,
+      "title": "The performance budget every build ships against",
+      "pillar": "The Standard",
+      "primaryTrigger": "authority",
+      "category": "educational"
+    },
+    {
+      "id": "c20",
+      "n": 6,
+      "title": "The plugin ceiling on every custom build",
+      "pillar": "The Standard",
+      "primaryTrigger": "reciprocity",
+      "category": "educational"
+    },
+    {
+      "id": "c21",
+      "n": 7,
+      "title": "The onboarding week, day by day",
+      "pillar": "The Process",
+      "primaryTrigger": "reciprocity",
+      "category": "craft"
+    },
+    {
+      "id": "c22",
+      "n": 6,
+      "title": "We reject GoDaddy and Bluehost",
+      "pillar": "The Tradeoff",
+      "primaryTrigger": "authority",
+      "category": "educational"
+    },
+    {
+      "id": "c23",
+      "n": 6,
+      "title": "Custom, or template?",
+      "pillar": "The Craft",
+      "primaryTrigger": "commitment",
+      "category": "craft"
+    },
+    {
+      "id": "c24",
+      "n": 6,
+      "title": "Four caches. Most sites configure one.",
+      "pillar": "The Build",
+      "primaryTrigger": "reciprocity",
+      "category": "educational"
+    }
+  ]
+}
