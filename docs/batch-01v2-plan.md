@@ -38,17 +38,53 @@ systemized flat carousels are `c19-c24`, scenes are `scene-13-scene-18`.
 | # | ID | Cat | Topic | Surf. | Cover | Working title | Trigger |
 |---|---|-----|-------|-------|-------|---------------|---------|
 | 1 | `scene-13` | FYM (scene) | `fym-27` | dark | STAT | 65% of direct bookings start on an OTA | Curiosity |
-| 2 | `c19` | Educational | `edu-08` | **light** | SEAM | LCP 2.5s. CLS 0.1. INP 200ms. The gate. | Authority |
+| 2 | `c19` | Educational | `edu-08` | **light** | SEAM | LCP 2.5s. CLS 0.1. INP 200ms. The gate we ship against. | Authority |
 | 3 | `scene-14` | Craft/Team (scene) | `craft-01` | dark | STATEMENT | The five people on every Kymbo project | Affinity |
 | 4 | `c20` | Educational | `edu-10` | **light** | INDEX | Max 15 plugins. 25 on Elementor. That's the rule. | Reasons |
 | 5 | `scene-15` | FYM (scene) | `fym-16` | dark | MATRIX | They didn't take 18%. They took the guest. | Loss aversion |
 | 6 | `c21` | Craft/Team | `craft-02` | **light** | INDEX | The onboarding week — day by day | Reciprocity |
 | 7 | `scene-16` | FYM (scene) | `fym-20` | dark | STAT | Parking. Pets. Early check-in. The OTA sells none. | Novelty |
-| 8 | `c22` | Educational | `edu-24` | **light** | STATEMENT | The 5-step booking flow that converts | Authority |
+| 8 | `c22` | Educational | `edu-15` | **light** | STATEMENT | We reject GoDaddy and Bluehost. Here's the math. | Authority |
 | 9 | `scene-17` | Craft/Team (scene) | `craft-04` | dark | STAT | The whole guest lifecycle, not just the booking | Commitment |
 | 10 | `c23` | Craft/Team | `craft-03` | dark | MATRIX | Custom or template — how Kymbo picks | Commitment |
 | 11 | `scene-18` | FYM (scene) | `fym-13` | dark | SEAM | Half the guests who find you on an OTA google you next | Curiosity |
-| 12 | `c24` | Educational | `edu-03` | **light** | MATRIX | Nine things happen in 3 seconds after "Book" | Reciprocity |
+| 12 | `c24` | Educational | `edu-16` | **light** | MATRIX | Four caches. Most sites configure one. | Reciprocity |
+
+> **Category-scope rule.** Educational carousels teach Kymbo services (WordPress
+> performance, hosting positions, caching, SEO gates, launch discipline) to
+> the wider client audience — commerce, marketing sites, service businesses.
+> They do **not** carry hotel- or booking-specific examples. Anything
+> booking-flavored belongs in the FYM (campaign) lane. This is why slot 8 and
+> slot 12 moved from `edu-24` / `edu-03` (both booking-flow topics) to
+> `edu-15` / `edu-16` (both service-general positions), and why the perf
+> budget carousel at slot 2 is written without the hotel-page comparison the
+> topic bank uses as its example.
+
+> **Kicker rule.** The kicker on the cover slide (the small label at the top
+> of the first frame) is a **short mini-hook that executes the primary
+> trigger**, not a category label. Batch 01 shipped covers with kickers like
+> `[ THE MATH ]` / `[ THE FIX ]` / `[ EDUCATION ]` — those are pillar tags,
+> not persuasion. Replace with 1–3 words that begin the trigger's work
+> before the headline even lands. Batch 01v2 mapping below. Point-slide
+> kickers (the `index` field inside a slide) follow the same rule — either
+> a mini-hook or a number, never a pillar tag.
+
+### Batch 01v2 cover kickers
+
+| slot | ID | trigger | kicker |
+|---|---|---|---|
+| 1 | scene-13 | Curiosity | THE HANDOFF, NOT THE SEARCH |
+| 2 | c19 | Authority | WHAT WE SHIP AGAINST |
+| 3 | scene-14 | Affinity | NOT A FREELANCER |
+| 4 | c20 | Reasons | EVERY PLUGIN HAS A COST |
+| 5 | scene-15 | Loss aversion | IT WASN'T THE MONEY |
+| 6 | c21 | Reciprocity | FROM YES TO KICKOFF |
+| 7 | scene-16 | Novelty | THE UPSELLS ONLY YOU SELL |
+| 8 | c22 | Authority | TWO HOSTS WE WON'T BUILD ON |
+| 9 | scene-17 | Commitment | THE BOOKING ISN'T THE PRODUCT |
+| 10 | c23 | Commitment | THE HONEST ANSWER |
+| 11 | scene-18 | Curiosity | THE SEARCH AFTER THE SEARCH |
+| 12 | c24 | Reciprocity | THERE ARE FOUR |
 
 ### Feed grid — how it lands in the profile view
 
