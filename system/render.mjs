@@ -94,56 +94,20 @@ function galleryDoc() {
 writeFileSync(join(build, 'index.html'), galleryDoc());
 
 /* ---------- Instagram profile grid (feed.html) ---------- */
-// Curated one-month feed: organic SCENE covers interwoven with systemized HTML
-// covers. A topic that has a scene version drops its flat HTML twin so nothing
-// repeats. Organic tiles sit on every (row+col)-even tile — a 6:6 checkerboard.
-//
-// THE RULES THIS ORDER ENFORCES (keep them when planning the next batch):
-//   1. Organic/flat checkerboard — organic at positions 1,3,5,7,9,11 below.
-//   2. No two covers of the same ARCHETYPE adjacent, including diagonally.
-//      The two MATRIX covers (c05, c03) and the two SEAM covers (c08, c12) are
-//      each placed at opposite corners of the grid.
-//   3. Surface rhythm — see the note below. Currently capped by the inputs.
-//
-// TONAL CEILING (measured, not opinion): rows 1 and 3 each carry two organic
-// tiles, so their single flat slot must be light or the row goes 3-dark. That
-// spends two light flats in column 2, leaving ONE light to cover both column 1
-// and column 3 — impossible. With 6 dark organic covers and only 3 light flats
-// the grid ALWAYS has one all-dark column plus one 3-dark row. BATCH 01 sits at
-// that floor and no reordering improves it. FOUR light covers clears it.
-//
-// BATCH 02 proves it: the four EDUCATIONAL carousels (c13–c16) ship light covers
-// by rule, plus c17, giving 5 light flats. Result below — no all-dark column and
-// no 3-dark row, for the first time.
-const FEED_01 = [
-  'scene-01', 'c08', 'scene-05',
-  'c11', 'scene-03', 'c05',
-  'scene-02', 'c04', 'scene-06',
-  'c03', 'scene-04', 'c12',
+// 12-carousel feed — all scene/organic covers.
+// Distribution: 4 FYM (30%) · 6 educational (50%) · 2 craft (20%)
+// Grid order: category-alternating for visual variety across 3-column rows.
+//   Row 1: craft · educational · FYM
+//   Row 2: educational · FYM · educational
+//   Row 3: FYM · educational · craft
+//   Row 4: educational · FYM · educational
+const FEED = [
+  'scene-14', 'scene-03', 'scene-04',
+  'scene-05', 'scene-01', 'scene-07',
+  'scene-11', 'scene-13', 'scene-20',
+  'scene-15', 'scene-12', 'scene-17',
 ];
-// Batch 02 — the upcoming month. Light flats at 2,4,6,8,12; the one dark flat
-// (c18) sits at 10. The two STAT covers (c13, c18) are at opposite corners.
-const FEED_02 = [
-  'scene-07', 'c13', 'scene-08',
-  'c15', 'scene-09', 'c14',
-  'scene-10', 'c16', 'scene-11',
-  'c18', 'scene-12', 'c17',
-];
-// Batch 01v2 — the new batch we are now producing. Order matches the slot
-// numbering in docs/batch-01v2-plan.md — 4 FYM scenes + 4 educational + 4
-// craft/team, interwoven per feed rules. This is the ONLY feed the CEO
-// reviews right now; the earlier Batch 01 / Batch 02 grids stay for internal
-// rhythm reference.
-const FEED_01V2 = [
-  'scene-13', 'c19', 'scene-14',
-  'c20', 'scene-15', 'c21',
-  'scene-16', 'c22', 'scene-17',
-  'c23', 'scene-18', 'c24',
-];
-const FEED = FEED_01V2;
-const SCENE_SET = new Set(['scene-01', 'scene-02', 'scene-03', 'scene-04', 'scene-05', 'scene-06',
-  'scene-07', 'scene-08', 'scene-09', 'scene-10', 'scene-11', 'scene-12',
-  'scene-13', 'scene-14', 'scene-15', 'scene-16', 'scene-17', 'scene-18']);
+const SCENE_SET = new Set(FEED);
 function grid(feed) {
   return feed.map((base) =>
     `<a class="tile${SCENE_SET.has(base) ? ' organic' : ''}" href="index.html">
@@ -193,42 +157,14 @@ function feedDoc() {
         <div class="lime">▸ fire your middleman</div>
       </div>
     </div>
-    <div class="mlabel first">▸ Batch 01v2 — the new batch
-      <span>4 fym · 4 educational (light covers, service-general) · 4 craft &amp; team</span></div>
-    <div class="grid">${grid(FEED_01V2)}</div>
+    <div class="mlabel first">▸ Feed — 12 carousels
+      <span>4 fym (30%) · 6 educational (50%) · 2 craft (20%)</span></div>
+    <div class="grid">${grid(FEED)}</div>
   </div>
 </body></html>`;
 }
 writeFileSync(join(build, 'feed.html'), feedDoc());
 
-// Legacy internal reference — the earlier batches, kept in a separate file so
-// the CEO-facing feed.html stays clean and Batch-01v2-only. Not linked from
-// index.html; open manually if reviewing prior rhythms.
-function feedLegacyDoc() {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8">
-<title>@kymbo — feed (prior batches, internal)</title>${head}
-<style>
-  body{margin:0;background:#0e1016;color:var(--pantalla);font-family:var(--font-display);display:flex;justify-content:center}
-  .phone{width:520px;max-width:100%;background:var(--noche);min-height:100vh}
-  .hero{padding:44px 34px 26px}
-  .row{display:flex;align-items:center;gap:30px}
-  .avatar{width:118px;height:118px;border-radius:50%;background:var(--pantalla);color:var(--noche);display:grid;place-items:center;font-weight:800;font-size:64px;border:3px solid var(--verde)}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:20px}
-  .tile{position:relative;aspect-ratio:4/5;overflow:hidden;background:#000}
-  .tile img{width:100%;height:100%;object-fit:cover;display:block}
-  .mlabel{font-family:var(--font-mono);font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--verde);padding:30px 34px 12px;border-top:1px solid rgba(247,248,234,.12);margin-top:26px}
-  .mlabel.first{border-top:0;margin-top:6px;padding-top:8px}
-</style></head><body>
-  <div class="phone">
-    <div class="hero"><div class="avatar">K</div></div>
-    <div class="mlabel first">Batch 02 — reference only</div>
-    <div class="grid">${grid(FEED_02)}</div>
-    <div class="mlabel">Batch 01 — reference only</div>
-    <div class="grid">${grid(FEED_01)}</div>
-  </div>
-</body></html>`;
-}
-writeFileSync(join(build, 'feed-legacy.html'), feedLegacyDoc());
 
 /* ---------- SCENE carousels (Path B) ---------- */
 // Resolve each scene bg: use the real ChatGPT render if it's been dropped

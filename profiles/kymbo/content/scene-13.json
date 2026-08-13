@@ -6,7 +6,7 @@
   "pathBofBatch": "1 of 6",
   "topic": "fym-27",
   "primaryTrigger": "curiosity",
-  "category": "campaign",
+  "category": "educational",
   "title": "65% of direct bookings start on an OTA.",
   "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 aspect (1080x1350), designed for Instagram feed carousels (full frame visible) and TikTok photo carousels. SAFE ZONES: (a) Instagram profile grid crops to CENTER 1:1 — the top ~135px and bottom ~135px are cropped in the grid view, so keep the hero subject center-frame. (b) TikTok photo mode overlays a caption/UI region across the bottom ~340px on the visible feed — keep any critical visual detail above that band. (c) The lower ~40% of the frame (roughly y=810 to y=1350 on a 1080x1350 canvas) is reserved for on-slide type — compose the subject in the upper ~55-60% but fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area. A CSS gradient handles text legibility. No text, no logos, no clearly identifiable faces.",
   "note": "Path C. Slides 1 and 5 are frameless composites — clean editorial scenes with UI screenshots overlaid freely (no devices, no frames, no white panels). Remaining slides are pure editorial photos.",
