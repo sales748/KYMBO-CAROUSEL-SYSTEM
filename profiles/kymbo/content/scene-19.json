@@ -1,82 +1,77 @@
 {
   "id": "scene-19",
   "mode": "scene",
-  "pillar": "The Craft",
+  "pillar": "The Team",
   "batch": "01v2",
   "pathBofBatch": "3 of 6",
-  "topic": "edu-05",
-  "primaryTrigger": "curiosity",
-  "category": "educational",
-  "title": "The guest journey has 7 screens.",
-  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 aspect (1080x1350), designed for Instagram feed carousels (full frame visible) and TikTok photo carousels. SAFE ZONES: (a) Instagram profile grid crops to CENTER 1:1 — the top ~135px and bottom ~135px are cropped in the grid view, so keep the hero subject center-frame. (b) TikTok photo mode overlays a caption/UI region across the bottom ~340px on the visible feed — keep any critical visual detail above that band. (c) The lower ~40% of the frame (roughly y=810 to y=1350 on a 1080x1350 canvas) is reserved for on-slide type — compose the subject in the upper ~55-60% but fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area. A CSS gradient handles text legibility. No text, no logos, no clearly identifiable faces.",
-  "note": "Educational — walks through the 7 screens a guest sees from landing to confirmation. Slides 2 and 5 are frameless composites showing the phone booking flow. Companion to scene-14.",
+  "topic": "craft-05",
+  "primaryTrigger": "authority",
+  "category": "craft",
+  "title": "We don't do proposals. We do prototypes.",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). A modern small software-studio workspace: walnut desks, natural window light, plants, notebooks and coffee cups, closed laptops (lids down, no visible screens). Contemporary and quiet, not corporate — a small serious team, not a coworking-space cliché. NO branded gear, NO visible UI on screens, NO stock 'business meeting' props. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces (backs of heads, hands, over-the-shoulder crops are fine).",
+  "note": "Craft story about CTFY's development process — speed, no bloated proposals, show-don't-tell culture. All six slides are pure editorial photos. No composites. Companion to scene-14 and scene-20.",
   "assetDir": "assets/scene-19",
   "slides": [
     {
       "scene": true,
       "layout": "cover",
-      "anchor": "bottom",
       "scrim": "fade",
       "bg": "assets/scene-19/s1.png",
-      "imageId": "lobby-hallway-morning",
-      "imagePrompt": "A warm boutique-hotel corridor in morning light: cream plaster walls, walnut wainscoting, a single potted plant, a soft runner rug, sheer curtains at the far end glowing with natural light. A sense of moving through a journey. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
-      "headline": "The guest journey\nhas ==7 screens==.",
-      "sub": "From the first tap to the confirmation email. Here's what they see — and where most hotels lose them."
+      "imageId": "studio-whiteboard-morning",
+      "imagePrompt": "A small software-studio workspace at morning golden hour: a whiteboard with abstract non-readable sketches (boxes and lines — no text), warm walnut desk, a coffee cup, one large monstera plant. The feeling of early momentum. No people visible. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "headline": "We don't do proposals.\n==We do prototypes.==",
+      "sub": "A 40-page deck tells you what we think. A working prototype shows you what you're getting."
     },
     {
       "scene": true,
       "layout": "point",
       "scrim": "fade",
       "bg": "assets/scene-19/s2.png",
-      "imageId": "sofa-corner-phone-journey",
-      "kicker": "",
-      "imagePrompt": "A cozy corner of a boutique-hotel lounge: a linen armchair, a walnut side table with a coffee cup and a trailing plant, warm afternoon light through sheer curtains. Generous open space on the wall for UI overlay. NO DEVICE, NO PHONE, NO LAPTOP, NO SCREEN — just the pure scene. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content. [Apply the STYLE LINE.]",
-      "screen": { "app": "phone-hero", "quad": [[380,80],[660,80],[660,690],[380,690]], "radius": 28, "overscan": 0 },
-      "title": "==Screen 1==: the landing page",
-      "body": "Hero image, headline, one button. They decide in 3 seconds whether this feels right. No sliders. No popups. Just clarity."
+      "imageId": "hands-sketching-wireframe",
+      "imagePrompt": "Close overhead view of hands sketching quick wireframe boxes with a pencil on blank paper, walnut desk, a ruler, a coffee cup nearby. Fast and loose — not polished design, raw thinking on paper. No readable text on the sketches. Editorial close-up. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content. [Apply the STYLE LINE.]",
+      "title": "Day ==1==: we listen",
+      "body": "One call. You tell us the problem. We take notes on paper, not in a CRM. By the end of that call we know if we're the right fit."
     },
     {
       "scene": true,
       "layout": "point",
       "scrim": "fade",
       "bg": "assets/scene-19/s3.png",
-      "imageId": "hotel-room-detail-towels",
-      "imagePrompt": "A hotel room detail: neatly folded linen towels on a walnut bench, a small plant and a glass carafe, warm natural light from a window. Clean, inviting, editorial. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
-      "title": "Screens ==2–4==: rooms, rates, gallery",
-      "body": "They browse. They compare. They zoom into photos. Every extra click here is fine — they're selling themselves. Your job: don't interrupt the momentum."
+      "imageId": "studio-desk-two-screens-closed",
+      "imagePrompt": "A software-studio desk in warm side light: two closed laptops side by side on a walnut table, notebooks between them, two coffee cups, a small plant. The idea of two people working together — but no people in frame. Editorial and quiet. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content. [Apply the STYLE LINE.]",
+      "title": "Day ==2–3==: we build",
+      "body": "Not a mockup. Not a Figma file. A working prototype on a real URL you can tap through on your phone. Ugly, fast, functional."
     },
     {
       "scene": true,
       "layout": "point",
       "scrim": "fade",
       "bg": "assets/scene-19/s4.png",
-      "imageId": "reception-detail-keycard",
-      "imagePrompt": "A modern boutique-hotel reception detail: a matte-black keycard on a walnut tray, a small succulent, warm directional light, cream wall behind. Premium and minimal. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
-      "title": "Screen ==5==: the booking form",
-      "body": "Name. Dates. Card. That's it. Every extra field costs you 10% of completions. We've measured it."
+      "imageId": "phone-on-table-ambient",
+      "imagePrompt": "A phone lying face-down on a walnut table, a coffee cup, a notebook with a pen resting on it, warm afternoon light. The feeling of waiting for a response — the prototype has been sent. No readable screen. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content. [Apply the STYLE LINE.]",
+      "title": "Day ==4==: you react",
+      "body": "You tap through the prototype. You say 'yes, but can it also…' or 'no, that's not what I meant.' Both answers are progress. A proposal can't give you that moment."
     },
     {
       "scene": true,
       "layout": "point",
       "scrim": "fade",
       "bg": "assets/scene-19/s5.png",
-      "imageId": "reading-nook-confirm",
-      "kicker": "",
-      "imagePrompt": "A warm reading nook in a boutique hotel: a linen cushion on a walnut window seat, a book, a coffee cup, sheer curtains, golden-hour light. Generous open wall space for UI overlay. NO DEVICE, NO PHONE, NO LAPTOP — just the pure scene. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content. [Apply the STYLE LINE.]",
-      "screen": { "app": "phone-confirm", "quad": [[380,80],[660,80],[660,690],[380,690]], "radius": 28, "overscan": 0 },
-      "title": "Screens ==6–7==: confirm + email",
-      "body": "Instant confirmation on-screen, then a beautiful email with check-in details. The guest feels handled. That feeling is worth more than any discount."
+      "imageId": "notebook-timeline-abstract",
+      "imagePrompt": "A close-up of an open notebook on a walnut desk with abstract non-readable marks — a timeline drawn as a simple horizontal line with dots along it. A pencil beside it, warm lamp light. The feeling of a plan crystallizing. No readable text. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content. [Apply the STYLE LINE.]",
+      "title": "Day ==5==: we scope",
+      "body": "Now we know what to build. The scope comes from what you actually reacted to — not from what sounded good in a meeting room three weeks ago."
     },
     {
       "scene": true,
       "layout": "cta",
       "scrim": "fade",
       "bg": "assets/scene-19/s6.png",
-      "imageId": "walnut-desk-morning-calm",
-      "imagePrompt": "A walnut desk by a window with warm morning light, a single coffee cup, a small potted fern, sheer curtains. Calm and inviting — the desk of someone ready to start. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
-      "headline": "How many screens\n==does yours have?==",
-      "sub": "If you can't count them on one hand, you're losing guests between taps.",
-      "action": "Comment JOURNEY"
+      "imageId": "single-coffee-fresh-start",
+      "imagePrompt": "A fresh black coffee in a ceramic cup on a clean walnut desk, morning light, a plant in soft focus behind. Nothing else on the desk — the feeling of 'let's start.' Minimal, editorial. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content. [Apply the STYLE LINE.]",
+      "headline": "Skip the deck.\n==See the thing.==",
+      "sub": "One call. One week. One working prototype. That's how every project starts.",
+      "action": "Comment PROTOTYPE"
     }
   ]
 }
