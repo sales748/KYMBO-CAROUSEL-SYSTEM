@@ -94,20 +94,21 @@ function galleryDoc() {
 writeFileSync(join(build, 'index.html'), galleryDoc());
 
 /* ---------- Instagram profile grid (feed.html) ---------- */
-// 12-carousel feed — all scene/organic covers.
+// 12-carousel feed — 6 scene (photo) + 6 flat (pure design), checkerboarded.
 // Distribution: 4 FYM (30%) · 6 educational (50%) · 2 craft (20%)
-// Grid order: category-alternating for visual variety across 3-column rows.
-//   Row 1: craft · educational · FYM
-//   Row 2: educational · FYM · educational
-//   Row 3: FYM · educational · craft
-//   Row 4: educational · FYM · educational
+// FYM = hotel/OTA/bookings content. Educational + craft = dev services, NOT hotel.
+//   Odd positions = scene (organic photo), even = flat (pure design).
+//   Row 1: scene-craft · flat-edu · scene-FYM
+//   Row 2: flat-edu · scene-FYM · flat-edu
+//   Row 3: scene-FYM · flat-craft · scene-edu
+//   Row 4: flat-edu · scene-FYM · flat-edu
 const FEED = [
-  'scene-14', 'scene-03', 'scene-04',
-  'scene-05', 'scene-01', 'scene-07',
-  'scene-11', 'scene-13', 'scene-20',
-  'scene-15', 'scene-12', 'scene-17',
+  'scene-14', 'c16', 'scene-04',
+  'c22', 'scene-01', 'c15',
+  'scene-13', 'c21', 'scene-20',
+  'c23', 'scene-15', 'c24',
 ];
-const SCENE_SET = new Set(FEED);
+const SCENE_SET = new Set(['scene-01', 'scene-04', 'scene-13', 'scene-14', 'scene-15', 'scene-20']);
 function grid(feed) {
   return feed.map((base) =>
     `<a class="tile${SCENE_SET.has(base) ? ' organic' : ''}" href="index.html">
@@ -157,7 +158,7 @@ function feedDoc() {
         <div class="lime">▸ fire your middleman</div>
       </div>
     </div>
-    <div class="mlabel first">▸ Feed — 12 carousels
+    <div class="mlabel first">▸ Feed — 12 carousels (6 scene + 6 flat)
       <span>4 fym (30%) · 6 educational (50%) · 2 craft (20%)</span></div>
     <div class="grid">${grid(FEED)}</div>
   </div>
