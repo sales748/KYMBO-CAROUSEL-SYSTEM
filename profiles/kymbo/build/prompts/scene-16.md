@@ -21,7 +21,7 @@ A beautiful breakfast tray on a boutique-hotel bed or terrace: pastry, coffee, s
 
 ## Slide 2 — parking-space-clean
 
-**On-slide copy:** ==Parking==  —  Twenty dollars a night in most cities. Booking can't add it to the checkout. You can, with one line the guest sees before they pay.
+**On-slide copy:** $20/night. ==Zero== commission.  —  Parking. Booking can't add it to the checkout. You can, with one line the guest sees before they pay. That's revenue the OTA never touches.
 
 Save as `s2.png` in `assets/scene-16/`.
 

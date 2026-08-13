@@ -1101,8 +1101,9 @@
         {
           "type": "point",
           "index": "MONDAY",
-          "title": "Discovery call",
-          "body": "Not sales. Twenty to thirty questions about scope, budget, timeline, integrations, and what you'd rather never say aloud on a launch day."
+          "title": "Thirty questions before a single line of code",
+          "hiWord": "before",
+          "body": "Scope, budget, timeline, integrations, and the thing you'd rather never say aloud on a launch day. Not a sales call. A stress test."
         },
         {
           "type": "point",
@@ -1292,8 +1293,9 @@
         },
         {
           "type": "point",
-          "title": "Page cache",
-          "body": "The whole rendered HTML for a URL, saved and served without touching PHP or the database. WP Rocket handles this by default. It's the one most sites do have."
+          "title": "The one you probably have",
+          "hiWord": "one",
+          "body": "Page cache. The whole rendered HTML for a URL, saved and served without touching PHP or the database. WP Rocket handles this by default. It's the first layer, not the last."
         },
         {
           "type": "point",

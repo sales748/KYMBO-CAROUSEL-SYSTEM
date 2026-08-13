@@ -109,7 +109,18 @@ The 4 : 5 canvas (1080 × 1350) has to survive two crops:
 
 Slide padding-top is 148 px so the top edge clears IG's grid crop.
 
-### 3.2 Feed grid math
+### 3.2 Slide 2 as recapture point
+
+Instagram's algorithm re-shows a post starting from **slide 2** on second
+impression. Slide 2 must work as an independent attention hook, not just as
+a continuation of slide 1.
+
+- The title must read as a standalone statement, not a label or category.
+- If slide 2 is educational (explaining a concept), lead with the payoff
+  or the surprise, not the definition.
+- Body text may assume the cover was seen, but the title may not.
+
+### 3.3 Feed grid math
 
 A batch is 12 tiles arranged 3 × 4. Feed rules:
 
@@ -121,7 +132,7 @@ A batch is 12 tiles arranged 3 × 4. Feed rules:
 - **Scene/flat checkerboard** — scene carousels at 1, 3, 5, 7, 9, 11;
   systemized flats at 2, 4, 6, 8, 10, 12.
 
-### 3.3 Trigger discipline
+### 3.4 Trigger discipline
 
 See `mental-triggers.md`. One primary trigger per carousel — declared before
 copy is written, in the JSON's top-level `primaryTrigger` field. **No two
@@ -132,13 +143,13 @@ Impeccable's `clarify` overrides this when they conflict: if declaring a
 trigger produces copy with more than one persuasion move per slide, cut
 until one remains.
 
-### 3.4 Copy discipline
+### 3.5 Copy discipline
 
 See `copy-discipline.md`. The retired-claim families and the 5-year-old test
 apply per that file. Impeccable's `clarify` command is the review pass on
 every headline / sub / body / CTA line.
 
-### 3.5 Brand as behavior, not label
+### 3.6 Brand as behavior, not label
 
 - Kymbo does not name itself in headlines. The brand is carried by the
   design system + the handle on the tile. Repeat self-reference reads as

@@ -122,7 +122,7 @@ function coverMatrix(s) {
 
 const point = (s) => `
   ${s.index ? `<div class="p-index"><span class="px"></span>${esc(s.index)}</div>` : ''}
-  <div class="p-title">${esc(s.title)}</div>
+  <div class="p-title">${hi(s.title, s.hi || s.hiWord)}</div>
   <div class="p-body">${esc(s.body)}</div>`;
 
 const stat = (s) => `

@@ -21,7 +21,7 @@ A wide shot of a small software-studio workspace in warm morning light: two or t
 
 ## Slide 2 — hands-notebook-calendar
 
-**On-slide copy:** ==Project Manager==  —  The person answering your emails on Monday morning. Scope, timeline, budget, milestones. Never writes the code, that's not the job.
+**On-slide copy:** ==One person== answers your Monday email  —  Project manager. Scope, timeline, budget, milestones. They never write the code — that's not the job. They make sure the people who do are building the right thing.
 
 Save as `s2.png` in `assets/scene-14/`.
 
