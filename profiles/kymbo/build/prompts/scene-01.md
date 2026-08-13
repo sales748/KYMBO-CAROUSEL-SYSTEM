@@ -10,8 +10,8 @@ You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE an
 
 ## Slide 1 — SCENE-01 / 1  (PHOTO)
 
-**On-slide copy:** You're not fully booked.
-You're ==fully rented==.
+**On-slide copy:** You're not ==fully booked==.
+You're fully rented.
 
 Save as `s1.png` in `assets/scene-01/`.
 

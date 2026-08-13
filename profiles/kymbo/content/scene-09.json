@@ -15,8 +15,8 @@
       "bg": "assets/scene-09/s1.png",
       "imageId": "guest-phone-lobby-search",
       "imagePrompt": "A guest sitting in a warm boutique-hotel lounge chair looking down at a phone, seen from the side and slightly behind, face not identifiable. Walnut, cream plaster, greenery, warm lamp light. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "headline": "You don't have to win the search.\nJust the ==handoff==.",
-      "sub": "65% of direct bookings start on an OTA."
+      "headline": "Stop trying to ==outrank== Booking.\nStart outrunning the handoff.",
+      "sub": "The guest already found you there. Make sure the next click is yours."
     },
     {
       "scene": true,

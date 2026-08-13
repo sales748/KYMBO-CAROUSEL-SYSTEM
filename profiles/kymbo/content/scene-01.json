@@ -16,8 +16,8 @@
       "scrim": "top",
       "imageId": "SCENE-01 / 1  (PHOTO)",
       "kicker": "THE PROBLEM",
-      "headline": "You're not fully booked.\nYou're ==fully rented==.",
-      "sub": "A boutique-hotel owner's quiet, expensive truth.",
+      "headline": "You're not ==fully booked==.\nYou're fully rented.",
+      "sub": "100% occupancy. 0% of those guests are yours.",
       "bg": "assets/scene-01/s1.png",
       "imagePrompt": "A boutique-hotel owner (40s, warm, three-quarter so not a clear identifiable portrait) standing behind a beautiful minimalist modern reception desk at blue hour, lit by a warm modern lamp and a small green neon glow. Rich modern Scandinavian-boho lobby: walnut wood, cream plaster walls, a large leafy monstera. LEAVE THE TOP THIRD a calm darker wall / negative space for the headline; subject lower-right. [Apply the STYLE LINE.]"
     },

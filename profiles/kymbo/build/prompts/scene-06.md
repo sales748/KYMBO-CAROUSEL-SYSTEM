@@ -10,8 +10,8 @@ You need to generate the 5 PHOTO slides below. Each fenced prompt is COMPLETE an
 
 ## Slide 1 — SCENE-06 / 1  (PHOTO — cover)
 
-**On-slide copy:** 3 things every booking page
-needs to ==convert==.
+**On-slide copy:** 3 things separating a
+==booking page== from a brochure.
 
 Save as `s1.png` in `assets/scene-06/`.
 

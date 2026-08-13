@@ -15,8 +15,8 @@
       "bg": "assets/scene-12/s1.png",
       "imageId": "night-desk-owner-laptop",
       "imagePrompt": "A hotel owner working late at a warm walnut desk, seen from behind, one lamp and a laptop glow, boutique back office, plant and cream plaster. Face not visible, screen not readable. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
-      "headline": "Break-even is ==smaller==\nthan you think.",
-      "sub": "Let's do the arithmetic instead of the pitch."
+      "headline": "==4 bookings== a month.\nThat's your break-even.",
+      "sub": "The math of going direct is simpler than the pitch. Let's do it."
     },
     {
       "scene": true,

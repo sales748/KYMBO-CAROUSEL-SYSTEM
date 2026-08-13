@@ -10,8 +10,8 @@ You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE an
 
 ## Slide 1 — night-desk-owner-laptop
 
-**On-slide copy:** Break-even is ==smaller==
-than you think.
+**On-slide copy:** ==4 bookings== a month.
+That's your break-even.
 
 Save as `s1.png` in `assets/scene-12/`.
 

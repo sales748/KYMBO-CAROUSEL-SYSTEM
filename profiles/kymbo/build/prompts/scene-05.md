@@ -10,8 +10,8 @@ You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE an
 
 ## Slide 1 — SCENE-05 / 1  (PHOTO — cover)
 
-**On-slide copy:** 5 ==myths== keeping you
-addicted to OTAs.
+**On-slide copy:** 5 ==lies== you believe
+about OTAs.
 
 Save as `s1.png` in `assets/scene-05/`.
 

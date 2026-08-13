@@ -10,8 +10,8 @@ You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE an
 
 ## Slide 1 — guest-coffee-morning-window
 
-**On-slide copy:** The cheapest booking you'll ever get
-is the ==second one==.
+**On-slide copy:** The cheapest booking
+you'll ever get costs ==$0==.
 
 Save as `s1.png` in `assets/scene-10/`.
 

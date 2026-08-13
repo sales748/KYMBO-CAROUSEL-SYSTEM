@@ -10,8 +10,8 @@ You need to generate the 5 PHOTO slides below. Each fenced prompt is COMPLETE an
 
 ## Slide 1 — SCENE-04 / 1  (PHOTO)
 
-**On-slide copy:** Every month you wait,
-the middleman ==keeps his cut==.
+**On-slide copy:** ==$4,650== a year.
+Per room. To the middleman.
 
 Save as `s1.png` in `assets/scene-04/`.
 

@@ -10,8 +10,8 @@ You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE an
 
 ## Slide 1 — guest-phone-lobby-search
 
-**On-slide copy:** You don't have to win the search.
-Just the ==handoff==.
+**On-slide copy:** Stop trying to ==outrank== Booking.
+Start outrunning the handoff.
 
 Save as `s1.png` in `assets/scene-09/`.
 
