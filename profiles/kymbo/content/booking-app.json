@@ -59,6 +59,21 @@
     "lifestyle": "Guest relaxing (for the email-capture modal)."
   },
   "photoStyleLine": "Warm, editorial real-estate/hotel photography — natural daylight, walnut wood + cream + soft greenery, calm and premium, lightly desaturated, no people-faces-in-focus, no text/logos. Consistent grade across all four.",
+  "ota": {
+    "platform": "Booking.com",
+    "color": "#003580",
+    "accent": "#0071c2",
+    "rating": "8.9",
+    "ratingLabel": "Fabulous",
+    "reviews": "847",
+    "locationScore": "9.4",
+    "priceLabel": "US$636",
+    "priceNote": "per night",
+    "taxNote": "Includes taxes and fees",
+    "badges": ["Free cancellation", "No prepayment needed"],
+    "propertyType": "Apartment hotel",
+    "distance": "0.3 km from center"
+  },
   "photoPrompts": {
     "hero": "LANDSCAPE 16:10. A warm boutique apartment-hotel living room by a large window with sheer curtains and a soft city view, a linen sofa, a leafy plant, framed art on a shelf, natural morning light. Calm, editorial, inviting. Leave the upper area relatively simple. [Apply photo STYLE LINE.]",
     "studio": "LANDSCAPE 4:3. A modern studio apartment interior: a neatly made bed with crisp white linens beside a small lounge area, walnut and cream tones, a big window with daylight, a plant, minimalist wall art. Editorial hotel photography. [Apply photo STYLE LINE.]",

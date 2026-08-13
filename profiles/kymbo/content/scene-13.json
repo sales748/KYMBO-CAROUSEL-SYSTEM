@@ -19,6 +19,11 @@
       "imageId": "guest-scrolling-cafe-phone",
       "characterDef": "CHARACTER: a man in his late 30s, warm medium skin tone, short dark hair, wearing a relaxed navy linen shirt with sleeves rolled to mid-forearm. No watch, no rings, no visible tattoos. This character appears in slides 1, 2, and 5 — every detail must match.",
       "imagePrompt": "A relaxed man in his late 30s (warm medium skin, short dark hair, navy linen shirt with sleeves rolled to mid-forearm) seated at a warm cafe table by a window. He holds an iPhone FACING THE CAMERA STRAIGHT-ON — screen perfectly flat, parallel to the lens, completely blank pure white, no tilt or angle. A cup of coffee and a small plant beside him. Warm daylight. His face is soft, not the focus — shoot from chest level, slightly off-axis so the phone is the hero. Boutique cafe aesthetic. The subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
+      "screen": {
+        "app": "phone-ota",
+        "quad": [[565, 255], [695, 255], [695, 570], [565, 570]],
+        "overscan": 0.02
+      },
       "headline": "==65%== of direct bookings\nstart on an ==OTA==.",
       "sub": "You never had to win the search. Just the handoff."
     },
@@ -28,6 +33,11 @@
       "bg": "assets/scene-13/s2.png",
       "imageId": "laptop-browser-tabs-blank",
       "imagePrompt": "An open laptop on a warm walnut desk, screen FACING THE CAMERA STRAIGHT-ON — perfectly flat, parallel to the lens, completely blank pure white. No tilt, no angle, no perspective distortion on the screen. The desk holds a notebook and a coffee. Natural window light, plant nearby. No visible browser UI or text. SAME MAN from slide 1 is implied (his navy linen shirt sleeve visible at the edge of frame, same warm skin tone) but the laptop is the hero. The subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
+      "screen": {
+        "app": "laptop-hero",
+        "quad": [[185, 170], [780, 170], [780, 560], [185, 560]],
+        "overscan": 0.02
+      },
       "title": "The number is ==bigger== than you thought",
       "body": "Two out of every three guests who book direct saw you on Booking first. The OTA didn't take them. It introduced them."
     },
@@ -55,6 +65,11 @@
       "bg": "assets/scene-13/s5.png",
       "imageId": "phone-in-hand-blank-close",
       "imagePrompt": "Close-up of the SAME MAN from slide 1 — same warm medium skin, same navy linen shirt sleeve rolled to mid-forearm — holding an iPhone FACING THE CAMERA STRAIGHT-ON. Screen perfectly flat, parallel to the lens, completely blank pure white. No tilt, no angle. Walnut surface beneath, warm side light. No visible UI, no text on screen. Tighter crop than slide 1 — the phone and his hand are the hero. The subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. [Apply the STYLE LINE.]",
+      "screen": {
+        "app": "phone-book",
+        "quad": [[395, 215], [640, 215], [640, 645], [395, 645]],
+        "overscan": 0.02
+      },
       "title": "And it's a ==solvable== problem",
       "body": "One page. Clear rate. Working booking engine. A direct offer the OTA can't match. That closes the guest the second time they see you."
     },

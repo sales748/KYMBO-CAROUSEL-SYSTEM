@@ -472,10 +472,139 @@ function lBook(d) {
     </div></div>`;
 }
 
+/* ---------- OTA SCREENS (generic Booking-style listing) ---------- */
+
+const OTA_CSS = `
+.ota{ font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; color:#1a1a2e; }
+.ota-bar{ background:#003580; padding:14px 26px; display:flex; align-items:center; justify-content:space-between; }
+.ota-bar .logo{ color:#fff; font-weight:700; font-size:20px; letter-spacing:-.02em; }
+.ota-bar .logo span{ color:#fff; }
+.ota-search{ background:#febb02; margin:0 12px; border-radius:6px; padding:10px 14px; display:flex; gap:8px; }
+.ota-search .f{ flex:1; background:#fff; border:2px solid #febb02; border-radius:4px; padding:10px 12px; font-size:13px; color:#6b6b6b; }
+.ota-search .go{ background:#0071c2; color:#fff; border-radius:4px; padding:10px 16px; font-weight:700; font-size:14px; }
+.ota-card{ margin:12px; background:#fff; border-radius:10px; border:1px solid #e0e0e0; overflow:hidden; }
+.ota-card .ph{ height:220px; position:relative; overflow:hidden; background:linear-gradient(135deg,#d4cfc4,#a89f8e); }
+.ota-badge{ position:absolute; top:12px; left:12px; background:#003580; color:#fff; border-radius:4px; padding:4px 8px; font-size:12px; font-weight:700; }
+.ota-card .info{ padding:16px; }
+.ota-card h3{ font-size:18px; font-weight:700; color:#1a1a2e; margin-bottom:4px; }
+.ota-card .loc{ font-size:13px; color:#0071c2; margin-bottom:10px; }
+.ota-card .type{ font-size:13px; color:#6b6b6b; margin-bottom:12px; }
+.ota-rating{ display:flex; align-items:center; gap:8px; margin-bottom:14px; }
+.ota-rating .score{ background:#003580; color:#fff; border-radius:6px 6px 6px 0; padding:6px 8px; font-weight:700; font-size:15px; }
+.ota-rating .label{ font-weight:700; font-size:14px; }
+.ota-rating .count{ font-size:13px; color:#6b6b6b; }
+.ota-tags{ display:flex; flex-direction:column; gap:6px; margin-bottom:14px; }
+.ota-tags .t{ font-size:13px; color:#008009; font-weight:600; }
+.ota-price{ text-align:right; }
+.ota-price .n{ font-size:12px; color:#6b6b6b; }
+.ota-price .v{ font-size:24px; font-weight:700; color:#1a1a2e; }
+.ota-price .tax{ font-size:12px; color:#6b6b6b; }
+.ota-avail{ background:#0071c2; color:#fff; border-radius:6px; padding:14px; text-align:center; font-weight:700; font-size:15px; margin:16px 12px; }
+.ota-lbar{ background:#003580; height:58px; display:flex; align-items:center; padding:0 60px; gap:22px; }
+.ota-lbar .logo{ color:#fff; font-weight:800; font-size:26px; letter-spacing:-.02em; margin-right:40px; }
+.ota-lbar a{ color:rgba(255,255,255,.85); font-size:15px; text-decoration:none; }
+.ota-lsearch{ background:#febb02; padding:10px 56px; display:flex; align-items:center; gap:10px; }
+.ota-lsearch .f{ flex:1; background:#fff; border:2px solid #febb02; border-radius:4px; padding:12px 16px; font-size:15px; color:#333; }
+.ota-lsearch .f:first-child{ flex:2; }
+.ota-lsearch .go{ background:#0071c2; color:#fff; border-radius:4px; padding:12px 30px; font-weight:700; font-size:16px; }
+.ota-lcard{ margin:20px 56px; background:#fff; border:1px solid #e0e0e0; border-radius:8px; overflow:hidden; display:flex; }
+.ota-lcard .ph{ width:320px; position:relative; overflow:hidden; background:linear-gradient(135deg,#d4cfc4,#a89f8e); }
+.ota-lcard .info{ flex:1; padding:20px 24px; display:flex; flex-direction:column; }
+.ota-lcard h3{ font-size:22px; font-weight:700; color:#1a1a2e; }
+.ota-lcard .loc{ font-size:14px; color:#0071c2; margin-top:4px; }
+.ota-lcard .type{ font-size:14px; color:#6b6b6b; margin-top:6px; }
+.ota-lcard .bottom{ margin-top:auto; display:flex; align-items:flex-end; justify-content:space-between; }
+.ota-lcard .bottom .price{ text-align:right; }
+.ota-lcard .bottom .price .v{ font-size:28px; font-weight:700; }
+.ota-lcard .bottom .price .n{ font-size:13px; color:#6b6b6b; }
+.ota-lcard .bottom .cta{ background:#0071c2; color:#fff; border-radius:4px; padding:12px 24px; font-weight:700; font-size:15px; margin-top:8px; text-align:center; }
+`;
+
+function pOta(d, photos) {
+  const o = d.ota;
+  const h = d.hotel;
+  return `<div class="cap app ota" style="width:460px;height:996px;background:#f5f5f5">${sbar()}
+    <div class="ota-bar"><span class="logo">Booking<span>.com</span></span><span style="color:#fff;font-size:18px">☰</span></div>
+    <div class="ota-search"><div class="f">${esc(h.name)}</div><div class="go">Search</div></div>
+    <div class="ota-card">
+      <div class="ph">${photo(photos, 'hero', 'hero')}
+        <div class="ota-badge">Preferred</div></div>
+      <div class="info">
+        <h3>${esc(h.name)}</h3>
+        <div class="loc">📍 ${esc(o.distance)}</div>
+        <div class="type">${esc(o.propertyType)}</div>
+        <div class="ota-rating">
+          <span class="score">${esc(o.rating)}</span>
+          <span class="label">${esc(o.ratingLabel)}</span>
+          <span class="count">${esc(o.reviews)} reviews</span>
+        </div>
+        <div class="ota-tags">${o.badges.map((b) => `<div class="t">✓ ${esc(b)}</div>`).join('')}</div>
+        <div class="ota-price">
+          <div class="n">3 nights, 2 adults</div>
+          <div class="v">${esc(o.priceLabel)}</div>
+          <div class="tax">${esc(o.taxNote)}</div>
+        </div>
+      </div>
+    </div>
+    <div class="ota-avail">See availability →</div>
+    <div style="padding:12px;font-size:14px;font-weight:700;color:#1a1a2e">Your recent searches</div>
+    <div style="margin:0 12px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+      <div style="width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#d4cfc4,#a89f8e);flex:0 0 auto"></div>
+      <div><div style="font-size:14px;font-weight:600">${esc(h.place)}</div><div style="font-size:12px;color:#6b6b6b">${esc(d.stay.checkin)} – ${esc(d.stay.checkout)}</div></div>
+    </div>
+    <div style="padding:16px 12px 8px;font-size:14px;font-weight:700;color:#1a1a2e">Explore ${esc(h.place)}</div>
+    <div style="display:flex;gap:10px;padding:0 12px;overflow:hidden">
+      <div style="width:120px;height:80px;border-radius:10px;background:linear-gradient(135deg,#c8c3b4,#8f836c);flex:0 0 auto"></div>
+      <div style="width:120px;height:80px;border-radius:10px;background:linear-gradient(135deg,#b8c3b4,#6f936c);flex:0 0 auto"></div>
+      <div style="width:120px;height:80px;border-radius:10px;background:linear-gradient(135deg,#c8b3a4,#9f736c);flex:0 0 auto"></div>
+    </div></div>`;
+}
+
+function lOta(d, photos) {
+  const o = d.ota;
+  const h = d.hotel;
+  return `<div class="cap app ota" style="width:1440px;height:900px;background:#f5f5f5">
+    <div class="ota-lbar">
+      <span class="logo">Booking.com</span>
+      <a>Stays</a><a>Flights</a><a>Car rentals</a><a>Attractions</a>
+    </div>
+    <div class="ota-lsearch">
+      <div class="f" style="flex:2">${esc(h.name)}, ${esc(h.place)}</div>
+      <div class="f">${esc(d.stay.checkin)}</div>
+      <div class="f">${esc(d.stay.checkout)}</div>
+      <div class="f">${esc(d.stay.guests)}</div>
+      <div class="go">Search</div>
+    </div>
+    <div style="padding:14px 56px;font-size:14px;color:#6b6b6b">1 property found</div>
+    <div class="ota-lcard">
+      <div class="ph">${photo(photos, 'hero', 'hero')}</div>
+      <div class="info">
+        <h3>${esc(h.name)}</h3>
+        <div class="loc">📍 ${esc(o.distance)}</div>
+        <div class="type">${esc(o.propertyType)}</div>
+        <div class="ota-rating">
+          <span class="score">${esc(o.rating)}</span>
+          <span class="label">${esc(o.ratingLabel)}</span>
+          <span class="count"> · ${esc(o.reviews)} reviews</span>
+        </div>
+        <div class="ota-tags">${o.badges.map((b) => `<div class="t">✓ ${esc(b)}</div>`).join('')}</div>
+        <div class="bottom">
+          <div></div>
+          <div class="price">
+            <div class="n">3 nights, 2 adults</div>
+            <div class="v">${esc(o.priceLabel)}</div>
+            <div class="n">${esc(o.taxNote)}</div>
+            <div class="cta">See availability →</div>
+          </div>
+        </div>
+      </div>
+    </div></div>`;
+}
+
 /* ---------- registry + page ---------- */
 export const SCREENS = {
-  laptop: { hero: lHero, categories: lCategories, rates: lRates, modal: lModal, dashboard: lDashboard, board: lBoard, book: lBook },
-  phone: { hero: pHero, rates: pRates, confirm: pConfirm, book: pBook },
+  laptop: { hero: lHero, categories: lCategories, rates: lRates, modal: lModal, dashboard: lDashboard, board: lBoard, book: lBook, ota: lOta },
+  phone: { hero: pHero, rates: pRates, confirm: pConfirm, book: pBook, ota: pOta },
 };
 
 export function appPage(data, fontsCss, photos) {
@@ -486,6 +615,6 @@ export function appPage(data, fontsCss, photos) {
     }
   }
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Marlowe House · booking app (Kalido-style)</title>
-<style>${fontsCss}\n${APP_CSS}</style></head>
+<style>${fontsCss}\n${APP_CSS}\n${OTA_CSS}</style></head>
 <body class="app" style="background:transparent"><div class="gallery">${shots.join('')}</div></body></html>`;
 }

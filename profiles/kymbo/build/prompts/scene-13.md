@@ -13,6 +13,8 @@ You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE an
 **On-slide copy:** ==65%== of direct bookings
 start on an ==OTA==.
 
+> **Composite slide.** Generate this photo with a BLANK WHITE device screen; we then composite the `phone-ota` booking-app UI onto it.
+
 Save as `s1.png` in `assets/scene-13/`.
 
 ```text
@@ -22,6 +24,8 @@ A relaxed man in his late 30s (warm medium skin, short dark hair, navy linen shi
 ## Slide 2 — laptop-browser-tabs-blank
 
 **On-slide copy:** The number is ==bigger== than you thought  —  Two out of every three guests who book direct saw you on Booking first. The OTA didn't take them. It introduced them.
+
+> **Composite slide.** Generate this photo with a BLANK WHITE device screen; we then composite the `laptop-hero` booking-app UI onto it.
 
 Save as `s2.png` in `assets/scene-13/`.
 
@@ -52,6 +56,8 @@ A quiet modern boutique-hotel reception detail: walnut counter, plant, warm dire
 ## Slide 5 — phone-in-hand-blank-close
 
 **On-slide copy:** And it's a ==solvable== problem  —  One page. Clear rate. Working booking engine. A direct offer the OTA can't match. That closes the guest the second time they see you.
+
+> **Composite slide.** Generate this photo with a BLANK WHITE device screen; we then composite the `phone-book` booking-app UI onto it.
 
 Save as `s5.png` in `assets/scene-13/`.
 
