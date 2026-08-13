@@ -8,7 +8,7 @@
   "title": "Two calendars, one room — how a double booking actually happens",
   "topic": "edu-04",
   "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
-  "note": "Path B · EDUCATIONAL. Teaches the mechanism behind overbooking: sync direction. Slide 4 is a DEVICE-COMPOSITE (laptop, blank white screen) carrying the channel view. No claims, no guarantees — the lesson is engineering fact plus one question the reader can go and ask.",
+  "note": "Path B · EDUCATIONAL. Teaches the mechanism behind overbooking: sync direction. Slide 4 is a frameless composite — clean editorial scene with UI screenshot overlaid freely. No claims, no guarantees — the lesson is engineering fact plus one question the reader can go and ask.",
   "assetDir": "assets/scene-03",
   "slides": [
     {
@@ -45,7 +45,7 @@
       "layout": "point",
       "bg": "assets/scene-03/s4.png",
       "imageId": "laptop-counter-blank",
-      "imagePrompt": "DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. A modern laptop open on a warm walnut reception counter in a boutique hotel, a small plant and a soft lamp beside it, cream plaster behind, evening light. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). [Apply the STYLE LINE.]",
+      "imagePrompt": "A warm walnut reception counter in a boutique hotel, a small plant and a soft lamp beside a ceramic bowl, cream plaster wall behind, evening light. Generous open space for UI overlay. NO DEVICE, NO LAPTOP, NO PHONE, NO SCREEN — just the pure scene. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
       "index": "03",
       "title": "Two-way means it ==writes back==.",
       "body": "Your direct booking closes that night on every channel, and their booking lands in your system. One source of truth.",

@@ -563,7 +563,7 @@ function pOta(d, photos) {
 function lOta(d, photos) {
   const o = d.ota;
   const h = d.hotel;
-  return `<div class="cap app ota" style="width:1440px;height:900px;background:#f5f5f5">
+  return `<div class="cap app ota" style="width:1440px;height:560px;background:#f5f5f5">
     <div class="ota-lbar">
       <span class="logo">Booking.com</span>
       <a>Stays</a><a>Flights</a><a>Car rentals</a><a>Attractions</a>

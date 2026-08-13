@@ -2,7 +2,7 @@
 
 **Carousel:** scene-10 · **Pillar:** The Proof · **Path B (scene / organic)**
 
-> Path B. Slide 4 is a DEVICE-COMPOSITE (phone, blank white screen). All other slides are pure photos.
+> Path B. Slide 4 is a frameless composite — clean editorial scene with UI screenshot overlaid freely. All other slides are pure photos.
 
 You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE and copy-paste-ready — the full style line is already baked in, so consistency holds across every image. Slides marked "no image" build from our booking-app design automatically.
 
@@ -48,7 +48,7 @@ A close, tactile shot of folded white linen and a small sprig of greenery on a w
 Save as `s4.png` in `assets/scene-10/`.
 
 ```text
-DEVICE-COMPOSITE SLIDE — read carefully. The phone must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no icons, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow).  CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously.  ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
+A warm linen armchair beside a low walnut side table with a ceramic cup and a small potted fern, soft reading light, cream plaster wall behind. Calm, inviting corner — the feeling of a returning guest at home. NO DEVICE, NO PHONE, NO LAPTOP, NO SCREEN — just the pure scene. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 5 — two-cups-table

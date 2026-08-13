@@ -2,7 +2,7 @@
 
 **Carousel:** scene-02 · **Pillar:** The Alternative · **Path B (scene / organic)**
 
-> Path B — scene/organic. Pure-photo slides + DEVICE-COMPOSITE slides (generate with a BLANK PURE-WHITE device screen; Claude composites the saved booking-app UI via screen.quad). iPhone 17 whenever a phone appears. Drop photos into assets/scene-02/ as s1..s6 .png.
+> Path B — scene/organic. Pure-photo slides + frameless composites — clean editorial scenes with UI screenshots overlaid freely (no devices, no frames, no white panels). Drop photos into assets/scene-02/ as s1..s6 .png.
 
 You need to generate the 6 PHOTO slides below. Each fenced prompt is COMPLETE and copy-paste-ready — the full style line is already baked in, so consistency holds across every image. Slides marked "no image" build from our booking-app design automatically.
 
@@ -29,7 +29,7 @@ Save as `s2.png` in `assets/scene-02/`.
 A first-time guest arriving at a modern boutique apartment building with a weekend bag, checking the address, warm daytime street light, greenery, contemporary architecture. Sense of discovery. LEAVE THE BOTTOM THIRD calm and darker for text; subject upper-mid. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel / short-term-rental world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
-## Slide 3 — SCENE-02 / 3  (PHOTO + COMPOSITE — iPhone 17, blank white screen)
+## Slide 3 — SCENE-02 / 3  (FRAMELESS COMPOSITE)
 
 **On-slide copy:** Direct is where you __keep__ them.  —  The second stay should never pay 25% again.
 
@@ -38,7 +38,7 @@ A first-time guest arriving at a modern boutique apartment building with a weeke
 Save as `s3.png` in `assets/scene-02/`.
 
 ```text
-Close-up: a returning guest, comfortable on a linen sofa at home, holding an iPhone 17 (Dynamic Island, thin bezels) about to book again, warm evening lamp light, a mug and a plant nearby. DEVICE-COMPOSITE SLIDE — read carefully. The phone must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no icons, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel / short-term-rental world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
+A cozy linen sofa corner at home, warm evening lamp light, a mug on a side table and a trailing plant nearby. Calm, intimate — the feeling of a returning guest about to book again. Generous open space for UI overlay. NO DEVICE, NO PHONE, NO LAPTOP, NO SCREEN — just the pure scene. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel / short-term-rental world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
 ## Slide 4 — SCENE-02 / 4  (PHOTO)
@@ -62,7 +62,7 @@ Save as `s5.png` in `assets/scene-02/`.
 A host calmly working at a modern desk in a plant-filled home office, a laptop open (screen ambient, not readable), coffee, warm daylight, content and in-control. LEAVE THE BOTTOM THIRD calm and darker for text; subject upper-mid. The main subject or device must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel / short-term-rental world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```
 
-## Slide 6 — SCENE-02 / 6  (PHOTO + COMPOSITE — laptop, blank white screen)
+## Slide 6 — SCENE-02 / 6  (FRAMELESS COMPOSITE)
 
 **On-slide copy:** Keep the reach.
 ==Keep the margin.==  —  CTA: Comment BALANCE to start
@@ -72,5 +72,5 @@ A host calmly working at a modern desk in a plant-filled home office, a laptop o
 Save as `s6.png` in `assets/scene-02/`.
 
 ```text
-A modern open laptop (MacBook-style) on a clean walnut desk in a warm, plant-filled home office, morning light, coffee beside it. DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. The device sits in the UPPER ~55% of the frame; the LOWER ~40% is a clean, empty, softly-shadowed darker surface for text. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint — no horizontal seam anywhere; the empty lower area must be part of the photographed scene (a real table top, floor or wall in shadow). ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel / short-term-rental world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
+A clean walnut desk in a warm, plant-filled home office, morning light, coffee beside a small notebook. Cream wall behind with soft shadows. NO DEVICE, NO LAPTOP, NO PHONE, NO SCREEN — just the pure scene. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel / short-term-rental world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.
 ```

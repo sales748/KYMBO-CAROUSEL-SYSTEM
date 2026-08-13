@@ -6,7 +6,7 @@
   "pathBofBatch": "4 of 4",
   "title": "Every month you wait, the middleman keeps his cut.",
   "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props, no cash. Elegant, quiet, expensive. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces.",
-  "note": "Path B — scene/organic. Cost-of-delay. s5 is a DEVICE-COMPOSITE (laptop, blank white screen). Claims audited: no figure is asserted about the reader's business and no delivery timeline is promised; s2 asks the reader to compute their own number instead.",
+  "note": "Path B — scene/organic. Cost-of-delay. s5 is a frameless composite — clean editorial scene with UI screenshot overlaid freely. Claims audited: no figure is asserted about the reader's business and no delivery timeline is promised; s2 asks the reader to compute their own number instead.",
   "assetDir": "assets/scene-04",
   "slides": [
     {
@@ -89,7 +89,7 @@
           ]
         ]
       },
-      "imagePrompt": "DEVICE-COMPOSITE SLIDE — read carefully. The laptop must be PERFECTLY STRAIGHT AND FRONT-ON: screen plane exactly parallel to the camera, ZERO rotation, ZERO tilt, no perspective, edges square to the frame. Its screen must be a COMPLETELY BLANK PURE-WHITE rectangle (#FFFFFF) — no UI, no text, no reflections, no glare, nothing overlapping it, all four corners fully visible with a little clearance. A modern laptop open on a pale oak dining table in a bright boutique apartment kitchen and dining area, morning light from a large window, a coffee cup and a small plant to one side, cream plaster and warm wood behind. The main subject must sit in the UPPER ~55-60% of the frame, leaving a clean, uncluttered, darker LOWER ~40% for text. CRITICAL: any darker area must be darker ONLY because the scene's own light falls off naturally — NOT because a dark band, gradient, vignette or overlay has been applied. There must be NO horizontal boundary, step, line or abrupt change of tone anywhere in the frame; brightness must fall away gradually and continuously. Deliver ONE SINGLE CONTINUOUS PHOTOGRAPH natively in 4:5 (1080x1350). Do NOT letterbox, pad, extend or outpaint. [Apply the STYLE LINE.]"
+      "imagePrompt": "A pale oak dining table in a bright boutique apartment kitchen and dining area, morning light from a large window, a coffee cup and a small plant to one side, cream plaster and warm wood behind. Generous open space for UI overlay. NO DEVICE, NO LAPTOP, NO PHONE, NO SCREEN — just the pure scene. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]"
     }
   ]
 }
