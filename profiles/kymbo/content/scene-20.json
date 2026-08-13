@@ -1,0 +1,77 @@
+{
+  "id": "scene-20",
+  "mode": "scene",
+  "pillar": "The Team",
+  "batch": "01v2",
+  "pathBofBatch": "4 of 6",
+  "topic": "craft-02",
+  "primaryTrigger": "trust",
+  "category": "craft",
+  "title": "We build it. You own it.",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). A modern small software-studio workspace: walnut desks, natural window light, plants, notebooks and coffee cups, closed laptops (lids down, no visible screens). Contemporary and quiet, not corporate — a small serious team, not a coworking-space cliché. NO branded gear, NO visible UI on screens, NO stock 'business meeting' props. 4:5 (1080x1350). No text, no logos, no clearly identifiable faces (backs of heads, hands, over-the-shoulder crops are fine).",
+  "note": "Craft story about ownership — no vendor lock-in, client owns everything. All six slides are pure editorial photos. No composites.",
+  "assetDir": "assets/scene-20",
+  "slides": [
+    {
+      "scene": true,
+      "layout": "cover",
+      "scrim": "fade",
+      "bg": "assets/scene-20/s1.png",
+      "imageId": "studio-keys-handover",
+      "imagePrompt": "A warm editorial detail: a set of modern brass keys on a walnut tray, a small plant, warm side light on a cream wall. The idea of handing over ownership. Clean and premium. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "headline": "We build it.\n==You own it.==",
+      "sub": "No lock-in. No monthly ransom. No 'you can't leave without rebuilding everything.'"
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "scrim": "fade",
+      "bg": "assets/scene-20/s2.png",
+      "imageId": "notebook-handwriting-close",
+      "imagePrompt": "Close-up of hands holding an open paper notebook with abstract non-readable notes, on a walnut desk, warm lamp light, a plant behind. Over-the-shoulder crop. Editorial and intimate. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "title": "Your ==code==. Your server. Your domain.",
+      "body": "When we hand off a project, we hand off everything. Source code, hosting credentials, DNS records. You could fire us tomorrow and nothing breaks."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "scrim": "fade",
+      "bg": "assets/scene-20/s3.png",
+      "imageId": "studio-shelf-books",
+      "imagePrompt": "A small studio shelf with a few design books, a plant, a ceramic mug, warm natural window light, walnut and cream tones. Editorial and calm. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "title": "No ==proprietary== CMS",
+      "body": "We don't lock your content inside a system only we can edit. Standard tools. Open formats. You or any developer can update it."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "scrim": "fade",
+      "bg": "assets/scene-20/s4.png",
+      "imageId": "single-chair-window",
+      "imagePrompt": "A single leather accent chair by a large window in a small studio, warm morning light, a walnut side table with coffee, a plant on the floor. The feeling of independence and quiet confidence. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "title": "Why ==lock-in== exists",
+      "body": "Because recurring revenue is easier than earning the next project. We'd rather build something so good you come back because you want to — not because you're trapped."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "scrim": "fade",
+      "bg": "assets/scene-20/s5.png",
+      "imageId": "hands-coffee-conversation",
+      "imagePrompt": "Two coffee cups on a walnut table, warm overhead light, a small plant between them. The idea of a conversation between equals — no hierarchy, no power imbalance. Editorial still-life. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "title": "The ==relationship== after launch",
+      "body": "Maintenance is optional. Improvements are project-scoped. We quote, you approve, we build. Same terms every time."
+    },
+    {
+      "scene": true,
+      "layout": "cta",
+      "scrim": "fade",
+      "bg": "assets/scene-20/s6.png",
+      "imageId": "open-door-light",
+      "imagePrompt": "An open door in a warm studio space, light flooding in from outside, walnut floor, a trailing plant by the doorframe. The feeling of freedom and an open exit. Editorial and metaphorical. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "headline": "The door is\n==always open.==",
+      "sub": "We build for keeps. But you're never kept.",
+      "action": "Comment OWN"
+    }
+  ]
+}

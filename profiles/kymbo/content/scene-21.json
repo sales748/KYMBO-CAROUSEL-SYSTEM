@@ -1,0 +1,82 @@
+{
+  "id": "scene-21",
+  "mode": "scene",
+  "pillar": "The Craft",
+  "batch": "01v2",
+  "pathBofBatch": "5 of 6",
+  "topic": "craft-03",
+  "primaryTrigger": "authority",
+  "category": "craft",
+  "title": "Every pixel earns its place.",
+  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, same warm natural grade — deep navy shadows (#262B38) + warm cream light (#F7F8EA), rich but natural (NOT a heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. NO dated props. Elegant, quiet, expensive. 4:5 aspect (1080x1350), designed for Instagram feed carousels (full frame visible) and TikTok photo carousels. SAFE ZONES: (a) Instagram profile grid crops to CENTER 1:1 — the top ~135px and bottom ~135px are cropped in the grid view, so keep the hero subject center-frame. (b) TikTok photo mode overlays a caption/UI region across the bottom ~340px on the visible feed — keep any critical visual detail above that band. (c) The lower ~40% of the frame (roughly y=810 to y=1350 on a 1080x1350 canvas) is reserved for on-slide type — compose the subject in the upper ~55-60% but fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area. A CSS gradient handles text legibility. No text, no logos, no clearly identifiable faces.",
+  "note": "Craft story about design attention to detail. Slides 2 and 5 are frameless composites showing the polished booking UI (laptop-hero and laptop-book). Companion to scene-14 and scene-20.",
+  "assetDir": "assets/scene-21",
+  "slides": [
+    {
+      "scene": true,
+      "layout": "cover",
+      "anchor": "bottom",
+      "scrim": "fade",
+      "bg": "assets/scene-21/s1.png",
+      "imageId": "detail-walnut-grain",
+      "imagePrompt": "An extreme close-up of a walnut wood surface with beautiful natural grain, warm side light catching the texture, a small green leaf resting on it. The feeling of craftsmanship and material obsession. Shallow depth of field. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "headline": "Every pixel\n==earns its place.==",
+      "sub": "We don't decorate hotel websites. We engineer them to convert. Here's what that looks like up close."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "scrim": "fade",
+      "bg": "assets/scene-21/s2.png",
+      "imageId": "cream-wall-hero-display",
+      "kicker": "",
+      "imagePrompt": "A warm boutique-hotel lobby detail: cream plaster wall above a walnut console, a coffee cup, a small potted fern, warm natural side light filtering through sheer curtains. Generous open wall space for UI overlay. NO DEVICE, NO SCREEN, NO FRAME — just the pure editorial scene. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content. [Apply the STYLE LINE.]",
+      "screen": { "app": "laptop-hero", "quad": [[120,100],[960,100],[960,560],[120,560]], "radius": 20, "overscan": 0 },
+      "title": "The ==hero== does one thing",
+      "body": "One image. One headline. One button. No carousel of 30 photos fighting for attention. The guest knows exactly what to do."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "scrim": "fade",
+      "bg": "assets/scene-21/s3.png",
+      "imageId": "designer-hands-swatches",
+      "imagePrompt": "A designer's hands arranging color swatches and paper samples on a walnut desk, warm directional light. No face visible — just hands, materials, and craft. Editorial close-up. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "title": "Typography is ==not decoration==",
+      "body": "Font weights guide the eye. Spacing creates hierarchy. The guest reads 'book now' before they read the price — that's not an accident."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "scrim": "fade",
+      "bg": "assets/scene-21/s4.png",
+      "imageId": "hotel-bathroom-detail",
+      "imagePrompt": "A beautiful hotel bathroom detail: a single matte-black faucet, a walnut vanity, a small plant, warm natural light on cream tiles. Precision and restraint. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "title": "==White space== is a feature",
+      "body": "Every millimeter of breathing room around a button increases tap accuracy on mobile by 12%. We don't add margins because it looks clean — we add them because they convert."
+    },
+    {
+      "scene": true,
+      "layout": "point",
+      "scrim": "fade",
+      "bg": "assets/scene-21/s5.png",
+      "imageId": "lounge-wall-book-display",
+      "kicker": "",
+      "imagePrompt": "A warm lounge corner in a boutique hotel: a linen armchair, walnut bookshelf with a few objects, a trailing plant, warm lamp light on a cream wall. Generous wall space for UI overlay. NO DEVICE, NO SCREEN, NO FRAME — just the pure scene. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content. [Apply the STYLE LINE.]",
+      "screen": { "app": "laptop-book", "quad": [[120,100],[960,100],[960,560],[120,560]], "radius": 20, "overscan": 0 },
+      "title": "The ==booking form== is 4 fields",
+      "body": "Name. Dates. Card. Done. No account creation. No loyalty signup interrupting the flow. Every field we removed increased completions."
+    },
+    {
+      "scene": true,
+      "layout": "cta",
+      "scrim": "fade",
+      "bg": "assets/scene-21/s6.png",
+      "imageId": "pencil-on-paper-close",
+      "imagePrompt": "A single sharp pencil resting on a blank sheet of paper on a walnut desk, warm directional light, a small plant in soft focus. The feeling of precision before the first mark. Editorial and calm. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "headline": "Design is how\n==it works.==",
+      "sub": "Not how it looks. Every choice we make answers one question: does the guest book?",
+      "action": "Comment CRAFT"
+    }
+  ]
+}
