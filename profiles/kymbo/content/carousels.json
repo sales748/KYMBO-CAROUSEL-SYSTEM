@@ -768,7 +768,7 @@
           "kicker": "THE FIX",
           "headline": "Max 15 plugins. 25 on Elementor.",
           "hi": "15",
-          "sub": "That's the rule. Here's why it's the rule."
+          "sub": "Every one past that limit adds load time your visitor won't wait for."
         },
         {
           "type": "point",
@@ -823,7 +823,7 @@
           "kicker": "THE FIX",
           "ghost": "5",
           "headline": "5 settings that quietly delete you from Google",
-          "sub": "We check every one before a build goes live. They cost minutes now and months later."
+          "sub": "They take minutes to fix now. They cost you months of traffic later."
         },
         {
           "type": "point",
@@ -1270,7 +1270,7 @@
         {
           "type": "cover",
           "variant": "MATRIX",
-          "headline": "Caches. Most sites\nconfigure one.",
+          "headline": "4 caches. Most sites\nconfigure one.",
           "hiWord": "one",
           "sub": "Which is why installing WP Rocket alone doesn't fix a slow site.",
           "grid": {
