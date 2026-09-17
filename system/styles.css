@@ -29,12 +29,32 @@
   -webkit-font-smoothing:antialiased;
   text-rendering:geometricPrecision;
 }
+/* Spec-paper background — a whisper-quiet dot grid + two hairline
+   column guides at the safe-zone edges. Kills the "empty white"
+   flatness without competing with headlines; reads as a plotter /
+   CAD canvas, which is Kymbo's positioning. */
+.slide::before{
+  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image: radial-gradient(circle, var(--grid-dot) 1px, transparent 1.4px);
+  background-size: 24px 24px;
+}
+.slide::after{
+  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:
+    linear-gradient(to right, transparent 91px, var(--grid-line) 91px, var(--grid-line) 92px, transparent 92px),
+    linear-gradient(to right, transparent 988px, var(--grid-line) 988px, var(--grid-line) 989px, transparent 989px);
+}
+/* Direct children ride above the grid layers. */
+.slide > *{ position:relative; z-index:1; }
+
 .slide.dark{
   background:var(--noche); color:var(--pantalla);
   --fg:var(--pantalla); --bg:var(--noche);
   --muted:rgba(255,255,255,.60);
   --line:rgba(255,255,255,.16);
   --panel:var(--noche-2);
+  --grid-dot:rgba(255,255,255,.09);
+  --grid-line:rgba(255,255,255,.05);
 }
 .slide.light{
   background:var(--pantalla); color:var(--noche);
@@ -42,7 +62,14 @@
   --muted:rgba(38,43,56,.60);
   --line:rgba(38,43,56,.13);
   --panel:var(--pantalla-2);
+  --grid-dot:rgba(38,43,56,.10);
+  --grid-line:rgba(38,43,56,.06);
 }
+/* Scene slides use the photo as background — the spec grid is
+   redundant and would fight the image. SEAM has its own bespoke
+   two-panel bg + lime divider — the grid competes with the split. */
+.slide.scene::before, .slide.scene::after,
+.slide.cover-seam::before, .slide.cover-seam::after{ display:none; }
 
 /* ---------- shared furniture ---------- */
 .hd{ display:flex; align-items:flex-start; justify-content:space-between; }
