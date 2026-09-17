@@ -86,36 +86,95 @@ function drainGrid(total, filled) {
 
 /* ---------------- COVERS ---------------- */
 
+/* STAT — colossal figure treated as a MEASURED value. Dimension ticks
+   bracket the number (engineer's callout); an optional mono unit tag
+   sits at the corner. Existing `stat` field still works; add
+   `s.unit` ("USD / YEAR", "%", "PER ROOM") to light the tag. */
 function coverStat(s) {
   const raw = (s.stat || '').replace(/[^0-9%$]/g, '');
   const sz = raw.length <= 2 ? 'lg' : raw.length <= 4 ? 'md' : 'sm';
+  const unit = s.unit ? `<div class="fig-unit">${esc(s.unit)}</div>` : '';
   return `
-    <div class="figure ${sz}">${esc(s.stat)}</div>
+    <div class="fig-wrap">
+      <div class="fig-tick t"></div>
+      <div class="figure ${sz}">${esc(s.stat)}</div>
+      <div class="fig-tick b"></div>
+      ${unit}
+    </div>
     <h1>${esc(s.headline)}</h1>
     ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}`;
 }
 
+/* STATEMENT — bold sans headline gets a mono line-number gutter and
+   two corner registration marks. Line-count is derived from a
+   simple heuristic; consumers can override with `s.lineCount`. */
 function coverStatement(s) {
+  const html = hi(s.headline, s.hi || s.hiWord);
+  // Heuristic: ~14 chars per line at 96px in a 900px column.
+  const lineCount = s.lineCount || Math.max(2, Math.min(4, Math.ceil((s.headline || '').length / 22)));
+  const nums = Array.from({ length: lineCount },
+    (_, i) => `<span>${String(i + 1).padStart(2, '0')}</span>`).join('');
   return `
-    <h1>${hi(s.headline, s.hi || s.hiWord)}</h1>
-    ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}`;
+    <div class="reg reg-tr"></div>
+    <div class="reg reg-bl"></div>
+    <div class="stmt-wrap">
+      <div class="stmt-gutter">${nums}</div>
+      <div class="stmt-body">
+        <h1>${html}</h1>
+        ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}
+      </div>
+    </div>`;
 }
 
+/* INDEX — retire the vague ghost-only cover for a functional one.
+   Keeps the ghost numeral (still beautiful), adds a mono count kicker
+   above the headline ("N=5 · SEO") and a numbered progress strip
+   below. Count auto-derived from a leading number in the headline;
+   overridable with `s.count`. Domain tag from `s.domain`. */
 function coverIndex(s) {
+  const m = (s.headline || '').match(/^\s*(\d+)/);
+  const count = s.count || (m ? Number(m[1]) : 0);
+  const domain = s.domain ? ` · ${esc(s.domain)}` : '';
+  const meta = count
+    ? `<div class="idx-meta">N=${count}${domain}</div>`
+    : '';
+  const strip = count
+    ? `<div class="idx-strip">${Array.from({ length: count },
+        (_, i) => `<span${i === 0 ? ' class="on"' : ''}>${String(i + 1).padStart(2, '0')}</span>`).join('<i></i>')}</div>`
+    : '';
   return `
     ${s.ghost ? `<div class="ghost">${esc(s.ghost)}</div>` : ''}
+    ${meta}
     <h1>${esc(s.headline)}</h1>
+    ${strip}
     ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}`;
 }
 
+/* MATRIX — the pixel grid gets axis labels and a mono scale note.
+   Pass `s.grid.axes = { x, y }` to draw the axes; `s.grid.note` for
+   the scale caption. Backward compatible: without those fields it
+   renders the plain grid as before. */
 function coverMatrix(s) {
   const g = s.grid || { total: 16, filled: 16 };
+  const axes = g.axes || null;
+  const cols = g.cols ?? (g.total <= 2 ? 2 : g.total <= 4 ? 4 : g.total <= 16 ? 4 : g.total <= 36 ? 6 : 10);
+  const rows = Math.ceil((g.total ?? 16) / cols);
+  const axesHTML = axes
+    ? `<div class="mx-axes">
+         <div class="mx-y">${esc(axes.y || '')}</div>
+         <div class="mx-inner">${matrix(g)}<div class="mx-x">${esc(axes.x || '')}</div></div>
+       </div>`
+    : matrix(g);
+  const note = g.note
+    ? `<div class="mx-note">${esc(g.note)}</div>`
+    : (axes ? `<div class="mx-note">N=${g.total ?? 16} · ${cols}×${rows}</div>` : '');
   return `
     <div>
       <h1>${hi(s.headline, s.hi || s.hiWord)}</h1>
       ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}
     </div>
-    ${matrix(g)}`;
+    ${axesHTML}
+    ${note}`;
 }
 
 /* SPEC — technical/engineered cover. Mono, weight 500. The header

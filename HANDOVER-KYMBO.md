@@ -120,11 +120,14 @@ All of this is already implemented. Do not re-invent; extend.
 
 ### Cover archetypes (in `system/templates.mjs`)
 
-- **STAT** — a single number, dominant. Verified source required.
-- **INDEX** — numbered list ("5 settings that quietly delete you from Google"). Ghost numeral is decorative; the headline must still name the count.
-- **MATRIX** — comparison grid.
-- **SEAM** — split cover, two panels with a lime divider. Panels use `flex:1 1 0; min-width:0` and `seamSize()` fits the longest word — do NOT bypass this or the divider gets crushed.
-- **SPEC** — technical/engineered voice. Mono headline (JetBrains Mono, weight 500 — never bold at display, per Anthropic DESIGN.md rule); mono sub-copy; a short horizontal rule as the closing mark. The header kicker's lime brackets are the single accent — no additional badge in the body. Use for ERP, CRM, AI-integration, e-commerce, WordPress, and any technical topic that needs the quieter register. Pair with the `spec` interior layout.
+Every archetype carries **two** tech-signal marks — no more (discipline over ornament) — so the covers read as measured, engineered artifacts rather than shouty hero slides.
+
+- **STAT** — colossal lime figure treated as a MEASURED value. Two marks: (1) **dimension ticks** bracket the figure (engineer's callout) and (2) an optional **mono unit tag** sits at the figure's right (`s.unit = "USD / ROOM · YEAR"`). Verified source required for the number.
+- **STATEMENT** — bold sans headline framed by two marks: (1) a **mono line-number gutter** on the left (01/02/… reads as a spec-sheet or editor viewport) and (2) two **corner registration marks** at top-right and bottom-left (the composition reads as one printed spread, not a floating hero). One lime highlighted word max via `hi`/`hiWord`. Override the gutter count with `s.lineCount` if needed.
+- **INDEX** — retired the vague ghost-only cover for a functional one. Two marks: (1) a **mono count kicker** above the headline (`N=5 · WORDPRESS` when `s.domain` is set) and (2) a **numbered progress strip** below (01·02·03·04·05, the first cell lit lime). Count auto-derived from a leading number in the headline; overridable with `s.count`.
+- **MATRIX** — data-grid signals. Two marks: (1) **X/Y axis labels** (`s.grid.axes = { x, y }`) and (2) a **mono scale note** beneath (`s.grid.note` or auto: `N=16 · 4×4`). Backward compatible: without axes/note the grid renders plain.
+- **SEAM** — bespoke full-bleed split cover with a lime divider. Panels use `flex:1 1 0; min-width:0` and `seamSize()` fits the longest word — do NOT bypass this or the divider gets crushed.
+- **SPEC** — the technical/engineered voice. Mono headline (JetBrains Mono, weight 500 — never bold at display, per Anthropic DESIGN.md rule); mono sub-copy; a short horizontal rule as the closing mark. The header kicker's lime brackets are the single accent — no additional badge in the body. Pair with the `spec` interior layout. Use for ERP, CRM, AI-integration, e-commerce, WordPress — any topic that needs the quieter register.
 - **STATEMENT** — one bold sentence.
 
 ### Interior layouts

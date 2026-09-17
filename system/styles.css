@@ -67,43 +67,134 @@
 .cover-matrix h1::before,
 .scene .anchor-top h1::before{ content:""; float:right; width:150px; height:112px; }
 
-/* ---------- COVER: STAT ---------- */
+/* ---------- COVER: STAT ----------
+   Colossal lime figure treated as a MEASURED value: dimension ticks
+   bracket the number (engineer's callout), an optional mono unit tag
+   labels it. The number stops reading as a floating decoration and
+   starts reading as a spec-sheet reading. */
 .cover-stat .bd{ justify-content:center; }
-.figure{ font-weight:800; letter-spacing:-.04em; color:var(--verde); line-height:.82; }
+.fig-wrap{
+  position:relative; display:inline-block; padding:22px 0;
+  align-self:flex-start;
+}
+.fig-tick{
+  position:absolute; left:0; height:14px; width:min(680px, 88%);
+  border-left:2px solid var(--fg); border-right:2px solid var(--fg);
+  opacity:.32; pointer-events:none;
+}
+.fig-tick::before{
+  content:""; position:absolute; left:2px; right:2px; height:2px;
+  background:var(--fg);
+}
+.fig-tick.t{ top:0; }
+.fig-tick.t::before{ bottom:0; }
+.fig-tick.b{ bottom:0; }
+.fig-tick.b::before{ top:0; }
+.figure{ font-weight:800; letter-spacing:-.04em; color:var(--verde); line-height:.82; display:block; }
 .figure.lg{ font-size:400px; }
 .figure.md{ font-size:280px; }
 .figure.sm{ font-size:190px; }
-.cover-stat h1{ font-size:78px; font-weight:800; letter-spacing:-.02em; line-height:1.0; margin-top:24px; }
+.fig-unit{
+  position:absolute; right:-8px; top:44px;
+  font-family:var(--font-mono); font-size:22px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--fg); opacity:.62;
+  white-space:nowrap; transform:translateX(100%); padding-left:18px;
+}
+.cover-stat h1{ font-size:78px; font-weight:800; letter-spacing:-.02em; line-height:1.0; margin-top:34px; }
 .cover-stat .sub{ font-size:36px; color:var(--muted); margin-top:26px; max-width:760px; line-height:1.28; text-wrap:pretty; }
 
-/* ---------- COVER: STATEMENT ---------- */
+/* ---------- COVER: STATEMENT ----------
+   Bold sans headline lives in a two-column frame: a mono line-number
+   gutter on the left (like a spec sheet / editor viewport) and the
+   headline on the right. Two corner registration marks bracket the
+   slide — top-right + bottom-left — reading the composition as one
+   printed spread, not a floating hero. */
 .cover-statement .bd{ justify-content:center; }
+.stmt-wrap{ display:flex; gap:32px; align-items:flex-start; }
+.stmt-gutter{
+  display:flex; flex-direction:column; gap:.18em;
+  padding-top:22px; min-width:56px;
+  font-family:var(--font-mono); font-size:22px; font-weight:500;
+  letter-spacing:.06em; color:var(--verde); line-height:.98;
+}
+.stmt-gutter span{ display:block; }
+.stmt-body{ flex:1; min-width:0; }
 .cover-statement h1{ font-size:96px; font-weight:800; letter-spacing:-.04em; line-height:.99; text-wrap:balance; }
 .cover-statement h1 .hi{ color:var(--verde); }
 .cover-statement .sub{ font-size:38px; color:var(--muted); margin-top:44px; max-width:820px; line-height:1.3; text-wrap:pretty; }
+.reg{
+  position:absolute; width:44px; height:44px;
+  pointer-events:none; opacity:.55;
+}
+.reg::before, .reg::after{
+  content:""; position:absolute; background:var(--fg);
+}
+.reg-tr{ top:60px; right:60px; }
+.reg-tr::before{ top:0; right:0; width:2px;  height:44px; }
+.reg-tr::after { top:0; right:0; height:2px; width:44px; }
+.reg-bl{ bottom:60px; left:60px; }
+.reg-bl::before{ bottom:0; left:0; width:2px;  height:44px; }
+.reg-bl::after { bottom:0; left:0; height:2px; width:44px; }
 
-/* ---------- COVER: INDEX ---------- */
+/* ---------- COVER: INDEX ----------
+   Ghost numeral (editorial atmosphere) + a mono count kicker above
+   the headline ("N=5 · SEO") and a numbered progress strip below
+   ([01]—[02]—[03]—[04]—[05], the first cell lit lime). Turns a
+   decorative numeral into a functional index — the reader sees
+   how long the list is before deciding to swipe. */
 .cover-index .bd{ justify-content:flex-end; position:relative; }
-/* Ghost numeral: moved to top-right so it lives above the headline (which sits
-   at the bottom of .bd). Opacity bumped from .07 to .12 so the numeral reads
-   as intentional editorial atmosphere, not a printing artifact. Slightly
-   smaller so it doesn't overwhelm the headline. */
 .ghost{
   position:absolute; right:-20px; top:-40px;
   font-size:640px; font-weight:800; line-height:.82; letter-spacing:-.05em;
   color:var(--fg); opacity:.12; pointer-events:none;
 }
+.idx-meta{
+  font-family:var(--font-mono); font-size:22px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--verde);
+  margin-bottom:20px; position:relative;
+}
 .cover-index h1{ font-size:96px; font-weight:800; letter-spacing:-.04em; line-height:.98; max-width:900px; position:relative; text-wrap:balance; }
+.idx-strip{
+  display:flex; align-items:center; gap:14px;
+  margin-top:34px; position:relative;
+  font-family:var(--font-mono); font-size:22px; letter-spacing:.08em;
+  color:var(--muted);
+}
+.idx-strip span{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:8px 10px; border:2px solid var(--line); min-width:52px;
+}
+.idx-strip span.on{ color:var(--noche); background:var(--verde); border-color:var(--verde); }
+.idx-strip i{ flex:0 0 14px; height:2px; background:var(--line); }
 .cover-index .sub{ font-size:38px; color:var(--muted); margin-top:36px; max-width:760px; line-height:1.3; position:relative; text-wrap:pretty; }
 
-/* ---------- COVER: MATRIX ---------- */
-/* justify-content:center + margin-top on matrix lifts the grid off the bottom
-   of the slide so it sits in the visual mid — no longer touching the footer
-   ticks or the TikTok bottom safe zone. */
-.cover-matrix .bd{ justify-content:flex-start; gap:100px; }
+/* ---------- COVER: MATRIX ----------
+   Grid gets X/Y axis labels (data-viz signal) and a mono scale note
+   below (N and dimensions). Reads as measured data, not decoration. */
+.cover-matrix .bd{ justify-content:flex-start; gap:60px; }
 .cover-matrix h1{ font-size:92px; font-weight:800; letter-spacing:-.04em; line-height:.99; max-width:900px; text-wrap:balance; }
 .cover-matrix .sub{ font-size:36px; color:var(--muted); margin-top:24px; max-width:720px; line-height:1.3; text-wrap:pretty; }
-.matrix{ display:grid; gap:12px; align-self:center; margin:8px 0 4px; }
+.mx-axes{
+  display:flex; align-items:stretch; gap:20px; align-self:center; margin:8px 0 4px;
+}
+.mx-y{
+  writing-mode:vertical-rl; transform:rotate(180deg);
+  font-family:var(--font-mono); font-size:20px; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--muted);
+  padding:2px 0; align-self:center;
+}
+.mx-inner{ display:flex; flex-direction:column; gap:14px; align-items:center; }
+.mx-x{
+  font-family:var(--font-mono); font-size:20px; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--muted);
+  padding-top:2px; align-self:center;
+}
+.mx-note{
+  font-family:var(--font-mono); font-size:22px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--muted);
+  align-self:center; margin-top:12px;
+}
+.matrix{ display:grid; gap:12px; align-self:center; margin:0; }
 .matrix .cell{ aspect-ratio:1/1; background:var(--line); position:relative; }
 .matrix .cell.on{ background:var(--fg); color:var(--bg); }
 .matrix .cell.hot{ background:var(--verde); color:var(--noche); }
