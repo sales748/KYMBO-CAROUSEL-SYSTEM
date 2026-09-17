@@ -27,7 +27,7 @@ await page.setContent(`<div style="width:1080px;height:1350px;
     radial-gradient(circle at 30% 30%, rgba(255,255,255,.04) 1px, transparent 1px) 0 0/40px 40px,
     linear-gradient(135deg,#2c3242,#1a1d26);
   display:flex;align-items:center;justify-content:center;
-  font-family:ui-monospace,monospace;color:rgba(247,248,234,.28);
+  font-family:ui-monospace,monospace;color:rgba(255,255,255,.28);
   font-size:30px;letter-spacing:.3em">SCENE&nbsp;IMAGE</div>`);
 await page.locator('div').first().screenshot({ path: join(build, 'img', '_scene-ph.png') });
 console.log('_scene-ph.png (placeholder)');

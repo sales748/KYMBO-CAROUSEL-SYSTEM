@@ -12,8 +12,9 @@
         "role": "Primary dark surface / ink on light."
       },
       "pantalla": {
-        "hex": "#F7F8EA",
-        "role": "Primary light surface / text on dark."
+        "hex": "#FFFFFF",
+        "role": "Primary light surface / text on dark. PURE WHITE — never warm beige. Kymbo is a systems-engineering shop (e-com, ERP, CRM, AI integrations); the light surface must read as tech, not wellness. Panels/tint use #F1F3F6 (cool near-white), never a warm off-white.",
+        "note": "Previously #F7F8EA (warm beige). Retired on client direction — the beige read as agency/wellness, not tech."
       },
       "verdePixel": {
         "hex": "#9BEC00",

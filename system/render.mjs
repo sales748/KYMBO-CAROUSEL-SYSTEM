@@ -72,17 +72,17 @@ function galleryDoc() {
 <title>KYMBO FEED OS — 12 Carousels</title>${head}
 <style>
   body{margin:0;background:var(--noche);color:var(--pantalla);font-family:var(--font-display)}
-  .top{padding:80px 64px 40px;border-bottom:1px solid rgba(247,248,234,.14)}
+  .top{padding:80px 64px 40px;border-bottom:1px solid rgba(255,255,255,.14)}
   .top h1{font-size:64px;letter-spacing:-.03em;font-weight:800}
   .top h1 span{color:var(--verde)}
-  .top p{font-family:var(--font-mono);color:rgba(247,248,234,.6);margin-top:16px;font-size:20px;letter-spacing:.04em;max-width:900px;line-height:1.5}
-  .card{padding:56px 64px;border-bottom:1px solid rgba(247,248,234,.12)}
+  .top p{font-family:var(--font-mono);color:rgba(255,255,255,.6);margin-top:16px;font-size:20px;letter-spacing:.04em;max-width:900px;line-height:1.5}
+  .card{padding:56px 64px;border-bottom:1px solid rgba(255,255,255,.12)}
   .meta{display:flex;gap:28px;align-items:flex-start;margin-bottom:28px}
   .num{font-family:var(--font-mono);color:var(--verde);font-size:34px;font-weight:600}
   .meta h2{font-size:36px;letter-spacing:-.02em}
-  .meta p{font-family:var(--font-mono);color:rgba(247,248,234,.55);font-size:18px;margin-top:8px;letter-spacing:.03em}
+  .meta p{font-family:var(--font-mono);color:rgba(255,255,255,.55);font-size:18px;margin-top:8px;letter-spacing:.03em}
   .strip{display:flex;gap:18px;overflow-x:auto;padding-bottom:14px}
-  .strip img{height:520px;width:auto;flex:0 0 auto;background:#000;border:1px solid rgba(247,248,234,.1)}
+  .strip img{height:520px;width:auto;flex:0 0 auto;background:#000;border:1px solid rgba(255,255,255,.1)}
 </style></head><body>
   <div class="top">
     <h1>KYMBO FEED OS <span>— 12 carousels</span></h1>
@@ -127,18 +127,18 @@ function feedDoc() {
   .avatar{width:118px;height:118px;border-radius:50%;background:var(--pantalla);color:var(--noche);display:grid;place-items:center;font-weight:800;font-size:64px;border:3px solid var(--verde)}
   .stats{display:flex;gap:34px;font-family:var(--font-mono)}
   .stats b{display:block;font-size:28px;font-weight:700}
-  .stats span{font-size:16px;color:rgba(247,248,234,.6)}
+  .stats span{font-size:16px;color:rgba(255,255,255,.6)}
   .bio{margin-top:22px}
   .bio h1{font-size:26px}
-  .bio p{color:rgba(247,248,234,.7);font-size:19px;margin-top:6px;line-height:1.4}
+  .bio p{color:rgba(255,255,255,.7);font-size:19px;margin-top:6px;line-height:1.4}
   .bio .lime{color:var(--verde);font-family:var(--font-mono);font-size:16px;letter-spacing:.04em;margin-top:10px}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:20px}
   .tile{position:relative;aspect-ratio:4/5;overflow:hidden;background:#000}
   .tile img{width:100%;height:100%;object-fit:cover;display:block}
   .tile .car{position:absolute;top:8px;right:9px;color:#fff;font-size:20px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
   .mlabel{font-family:var(--font-mono);font-size:15px;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--verde);padding:30px 34px 12px;border-top:1px solid rgba(247,248,234,.12);margin-top:26px}
-  .mlabel span{color:rgba(247,248,234,.55);letter-spacing:.04em;text-transform:none;display:block;
+    color:var(--verde);padding:30px 34px 12px;border-top:1px solid rgba(255,255,255,.12);margin-top:26px}
+  .mlabel span{color:rgba(255,255,255,.55);letter-spacing:.04em;text-transform:none;display:block;
     font-size:15px;margin-top:6px}
   .mlabel.first{border-top:0;margin-top:6px;padding-top:8px}
 </style></head><body>

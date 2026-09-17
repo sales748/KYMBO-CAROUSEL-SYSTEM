@@ -18,10 +18,10 @@
 
 :root{
   --noche:#262B38;
-  --pantalla:#F7F8EA;
+  --pantalla:#FFFFFF;
   --verde:#9BEC00;
   --noche-2:#31374A;
-  --pantalla-2:#ECEEDA;
+  --pantalla-2:#F1F3F6;
   --font-display:'Satoshi','Onest Variable','Onest',system-ui,-apple-system,sans-serif;
   --font-mono:'JetBrains Mono Variable','JetBrains Mono',ui-monospace,monospace;
 }
@@ -44,8 +44,8 @@
 .slide.dark{
   background:var(--noche); color:var(--pantalla);
   --fg:var(--pantalla); --bg:var(--noche);
-  --muted:rgba(247,248,234,.60);
-  --line:rgba(247,248,234,.16);
+  --muted:rgba(255,255,255,.60);
+  --line:rgba(255,255,255,.16);
   --panel:var(--noche-2);
 }
 .slide.light{
@@ -261,7 +261,7 @@
    ============================================================ */
 .slide.scene{
   color:var(--pantalla);
-  --fg:var(--pantalla); --muted:rgba(247,248,234,.82); --line:rgba(247,248,234,.30); --panel:rgba(247,248,234,.12);
+  --fg:var(--pantalla); --muted:rgba(255,255,255,.82); --line:rgba(255,255,255,.30); --panel:rgba(255,255,255,.12);
 }
 .scene .layer-bg{ position:absolute; inset:0; z-index:0; background:var(--noche-2); }
 .scene .layer-bg img{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -335,7 +335,7 @@
 .scene .await{
   position:absolute; inset:0; z-index:1; display:grid; place-items:center;
   font-family:var(--font-mono); font-size:26px; letter-spacing:.16em; text-transform:uppercase;
-  color:rgba(247,248,234,.32); text-align:center; padding:0 120px; line-height:1.6;
+  color:rgba(255,255,255,.32); text-align:center; padding:0 120px; line-height:1.6;
 }
 
 /* decorative pixel scatter (covers) */
@@ -350,18 +350,18 @@
   .avatar{width:118px;height:118px;border-radius:50%;background:var(--pantalla);color:var(--noche);display:grid;place-items:center;font-weight:800;font-size:64px;border:3px solid var(--verde)}
   .stats{display:flex;gap:34px;font-family:var(--font-mono)}
   .stats b{display:block;font-size:28px;font-weight:700}
-  .stats span{font-size:16px;color:rgba(247,248,234,.6)}
+  .stats span{font-size:16px;color:rgba(255,255,255,.6)}
   .bio{margin-top:22px}
   .bio h1{font-size:26px}
-  .bio p{color:rgba(247,248,234,.7);font-size:19px;margin-top:6px;line-height:1.4}
+  .bio p{color:rgba(255,255,255,.7);font-size:19px;margin-top:6px;line-height:1.4}
   .bio .lime{color:var(--verde);font-family:var(--font-mono);font-size:16px;letter-spacing:.04em;margin-top:10px}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:20px}
   .tile{position:relative;aspect-ratio:4/5;overflow:hidden;background:#000}
   .tile img{width:100%;height:100%;object-fit:cover;display:block}
   .tile .car{position:absolute;top:8px;right:9px;color:#fff;font-size:20px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
   .mlabel{font-family:var(--font-mono);font-size:15px;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--verde);padding:30px 34px 12px;border-top:1px solid rgba(247,248,234,.12);margin-top:26px}
-  .mlabel span{color:rgba(247,248,234,.55);letter-spacing:.04em;text-transform:none;display:block;
+    color:var(--verde);padding:30px 34px 12px;border-top:1px solid rgba(255,255,255,.12);margin-top:26px}
+  .mlabel span{color:rgba(255,255,255,.55);letter-spacing:.04em;text-transform:none;display:block;
     font-size:15px;margin-top:6px}
   .mlabel.first{border-top:0;margin-top:6px;padding-top:8px}
 </style></head><body>

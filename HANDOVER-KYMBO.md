@@ -8,16 +8,20 @@ Open a new chat with: **"read HANDOVER-KYMBO.md and let's build Batch 01v2"**.
 
 ## 1. What Kymbo actually is
 
-Kymbo is **not** a "Fire Your Middleman" newsletter. FYM is one campaign inside a full-service dev shop. The Batch 01 that shipped over-indexed on FYM because that was the entry brief; the CEO's feedback (Isa) is that the account has to reflect the whole company from Batch 01v2 forward.
+Kymbo's own site puts it plainly in the page title: **"Kymbo Devs · E-Commerce, ERP, CRM & AI Systems Engineering"**. Seven years, full-stack, custom WordPress and Shopify plus web and mobile apps. FYM (Fire Your Middleman) is **one campaign** inside that shop — not the company. Batch 01 leaned on FYM because it was the entry brief; every batch from here forward must read as a systems-engineering studio, not a hotel-marketing newsletter.
 
-**What the company does — in reality:**
+**What the company does — in reality (four practice areas, plus FYM the campaign):**
 
-- **WordPress builds & rescues** — Care Plan is a real productized SKU ($99/mo). WP Engine is the hosting partner. This is bread-and-butter and should not be treated as filler.
-- **E-commerce** — WooCommerce, Shopify (custom + theme work), migrations, checkout/UX repair.
-- **Mobile & web apps** — custom app work, not just marketing sites. This is a category the Batch 01 feed never touched.
-- **Integrations** — payments, PMS/booking (Guesty for STR/hotels via the FYM angle), CRMs, ERPs, syncing systems that don't want to talk to each other.
-- **Fire Your Middleman (FYM) campaign** — the direct-booking angle for hotels & short-term rentals. This is one campaign, not the company. Kalido is the portfolio proof point (Mews, not Guesty — do not confuse them).
-- **Team-as-topic** — Isa asked explicitly for content that shows the people, the process, the craft. This has to appear in the feed.
+- **E-Commerce Platforms** — WooCommerce, Shopify (custom + theme work), migrations, checkout/UX repair. Highly convertible stores.
+- **ERP & Operational Systems** — the back-of-house that runs the business: inventory, ops, finance stitching. Named on kymbo.co.
+- **CRM & Sales Automation** — the pipeline layer. Named on kymbo.co.
+- **AI & Custom Integrations** — bespoke integrations, model-backed features, systems that don't want to talk to each other. Named on kymbo.co.
+- **WordPress builds & rescues** — Care Plan is a real productized SKU ($99/mo). WP Engine is the hosting partner. Bread-and-butter under the e-com and marketing-site work.
+- **Mobile & web apps** — custom app work, not just marketing sites. Batch 01 never showed this category; must appear from Batch 01v2 forward.
+- **Fire Your Middleman (FYM) — the campaign** — direct-booking for hotels & short-term rentals. Kalido is the portfolio proof point (runs **Mews**, not Guesty — do not conflate).
+- **Team-as-topic** — Isa asked explicitly for content that shows the people, the process, the craft.
+
+**How the feed should split.** Any 12-tile batch should read as a systems-engineering studio doing all of the above. A rough weight to aim at: 30% FYM (the campaign we're already known for), 50% educational (ERP/CRM/AI/e-com/WP — the actual practice areas), 20% craft (team, process, ownership). The current Batch 01v2 hits 4/6/2 ≈ 33/50/17. Keep that shape; don't slide back to FYM-heavy.
 
 **Offer tiers (from `profiles/kymbo/content/ideas/stack.json`):**
 
@@ -103,14 +107,16 @@ All of this is already implemented. Do not re-invent; extend.
 ### Palette
 
 - **Media Noche** `#262B38` — primary dark
-- **Pantalla** `#F7F8EA` — primary light
-- **Verde Pixel** `#9BEC00` — accent, use sparingly (dividers, one word per cover, CTA highlights)
+- **Pantalla** `#FFFFFF` — primary light. **Pure white, never warm beige.** Retired on client direction: the previous `#F7F8EA` read as agency/wellness, not tech. Kymbo is a systems-engineering shop — the light surface must read as clean tech, not a mood board.
+- **Pantalla-2** `#F1F3F6` — cool near-white for panels/tint. Never a warm off-white.
+- **Verde Pixel** `#9BEC00` — accent, use sparingly (dividers, one word per cover, CTA highlights).
+- **Scene photography grade** — natural white-balance (5200-5500K), deep near-black shadows, clean daylight highlights. **No warm cream cast.** Reads as the studio's own photography, not agency stock.
 
 ### Type
 
-- **Satoshi** — body & UI
-- **Space Grotesk** — display headlines
-- Fonts live in `/fonts/` and are wired in `system/styles.css`.
+- **Satoshi** — display, body, UI. Tight, geometric, oversized for headlines.
+- **JetBrains Mono** — mono voice: kickers, indices, unit labels, matrix cell labels, technical asides. (Space Grotesk was retired from the mono role during the R1–R7 pass — do not reintroduce it as mono.)
+- Fonts live in `/fonts/` and are wired in `system/styles.css` via `--font-display` and `--font-mono`.
 
 ### Cover archetypes (in `system/templates.mjs`)
 
@@ -147,56 +153,73 @@ POINT · STAT · LIST · DRAIN · MOCKUP · QUOTE · CTA.
 
 ## 5. Feed rules
 
-12 tiles per feed row-window. Rules learned the hard way in Batch 01:
+12 tiles per feed row-window.
 
 - **Organic / flat checkerboard** — no two adjacent tiles share the same archetype or same tonal weight.
 - **≥ 4 light covers per 12 tiles.** Without this floor, the grid always produces at least one all-dark column or a 3-dark row.
 - **Category mix** — the Educational/Technical category (`profiles/kymbo/content/ideas/educational-technical.json`, 32 topics) ships light covers by rule. This is the mechanism for hitting the light-cover floor.
 - **6 organic + 6 systemized** per 12-tile batch. Organic = photo/scene backed (Path B). Systemized = HTML-only cover (Path A).
-- **Feeds defined in `system/render.mjs`** as `FEED_01`, `FEED_02`. Add `FEED_03` for Batch 01v2 — do not overwrite prior ones.
+- **Practice-area weight per 12 tiles**: 30% FYM · 50% educational (ERP/CRM/AI/e-com/WP dev) · 20% craft (team/process/ownership). Batch 01v2 lands at 4/6/2. Don't slide back to FYM-heavy.
+- **Feed defined in `system/render.mjs`** as `const FEED`. Odd positions are scene tiles, even positions are flat tiles.
+
+## 5b. Anti-slop — what makes a Kymbo post NOT look AI-made
+
+Per the tododeia "Stop AI Slop" thesis: AI without direction produces the same visual clichés — identical purple-to-blue gradients, the same three sans-serif choices, formulaic paragraph structures, hero-then-three-columns-then-CTA. Kymbo's system is engineered to refuse all of it.
+
+- **No gradients as decoration.** The only gradients in the system are the legibility scrims under text on scene photos, and they are black-to-transparent, never colored. No purple-to-blue, no orange-to-pink, no glassmorphism.
+- **One accent, one time.** Verde Pixel `#9BEC00` appears once per slide, at the point of emphasis. Never two lime elements competing.
+- **Type in extremes, never medium.** Headlines colossal (74–150px), body big (36–44px), mono kickers tiny (22–32px). No 24px generic-blog body copy anywhere.
+- **Structure varies by archetype.** Five cover archetypes (STAT/INDEX/MATRIX/SEAM/STATEMENT) and seven interior layouts (POINT/STAT/LIST/DRAIN/MOCKUP/QUOTE/CTA). Do not send the same archetype twice in a row. Do not default to STATEMENT every time.
+- **Handmade accents on scene slides.** The marker swipe, underline, strikethrough, and circle in `system/styles.css` are hand-drawn SVGs (irregular paths, wobble, rough ends), not CSS `text-decoration`. This is the "alive layer" — use it sparingly on scene slides where copy needs to feel annotated by a person.
+- **No stock photos, no icon fonts.** Every scene photo is generated by Kim (image gen) against the STYLE LINE in the scene's content JSON. Every mockup is drawn in HTML/CSS via `system/app.mjs` — no royalty-free imagery.
+- **No AI-mannerism copy.** No "unlock", no "elevate", no "in today's fast-paced world", no em-dash-joined tricolons. Kymbo copy is either arithmetic the reader runs or a plain statement of what breaks.
+- **No purple, no cyan glow, no gradient text.** The palette is dark-blue/white/lime. That's it.
+- **No hero-3col-CTA slide template.** Slides carry one idea. If a slide has a headline plus three feature boxes plus a CTA, split it.
 
 ---
 
-## 6. Batch 01v2 — proposed content strategy
+## 6. Batch 01v2 — current state
 
-This is the plan the previous chat converged on before running out of context. It is a proposal, not a locked spec — confirm with Isa before producing.
+Batch 01v2 shipped in a parallel session while the previous chat was compacting. The plan below is **current state**, not a forward proposal — inspect exports before adjusting.
 
-### Topic mix (12 carousels, 4:5)
+### The 12-tile feed (defined in `system/render.mjs`)
 
-Target the mix below so the feed shows the whole company, not just FYM.
+```
+Row 1: scene-14 · c16 · scene-04
+Row 2: c22 · scene-01 · c15
+Row 3: scene-13 · c21 · scene-20
+Row 4: c23 · scene-15 · c24
+```
 
-| Slot | Category | Angle | Trigger |
+**Six scene carousels:**
+
+| Slot | Scene | Title | Photo status |
 |---|---|---|---|
-| 1 | Reach / generic | A pain every operator recognises (site slow, bookings leaking) | Reciprocity |
-| 2 | FYM | Airbnb logistics angle — check-in/out, payments, insurance (Isa: c7 needs this) | Authority |
-| 3 | WordPress | Care Plan explained as arithmetic, not as a SKU pitch | Reciprocity |
-| 4 | E-commerce | Checkout leaks — one diagnostic the reader runs themselves | Reciprocity |
-| 5 | Team / process | How a build actually moves (copy → design → feed → produce) | Unity |
-| 6 | FYM | Grid drain math — **audit the c05 assumption** (30 rooms × $180 × 70% × 365 × 11%) before shipping | Authority |
-| 7 | Mobile / apps | The category Batch 01 never showed. One shipped example, no promises. | Social proof |
-| 8 | Integrations | Two systems that don't talk → what breaks when they don't | Authority |
-| 9 | Reach / generic | Broad-appeal statement post; light cover to lift the grid | Liking |
-| 10 | FYM | Automation clarified — door codes, check-in instructions, reception notifs, FAQs (Isa: c10 needs this) | Authority |
-| 11 | Stay-experience | Beyond "pretty page/UX" → the whole stay as a system (Isa: c11 expansion) | Consistency |
-| 12 | Team / process | The people behind the work. No fabricated headcount. | Unity |
+| 1 | scene-14 | "Five people. Every project." | ✅ 6 photos in `assets/scene-14/` |
+| 3 | scene-04 | (Batch 01 legacy) | ✅ carries over from Batch 01 |
+| 5 | scene-01 | (Batch 01 legacy) | ✅ carries over from Batch 01 |
+| 7 | scene-13 | "65% of direct bookings start on an OTA" | ✅ 6 photos in `assets/scene-13/` |
+| 9 | scene-20 | "We build it. You own it." | ❌ **needs 6 photos** — prompt sheet at `build/prompts/scene-20.md` |
+| 11 | scene-15 | "They didn't take 18%. They took the guest." | ❌ **needs 6 photos** — prompt sheet at `build/prompts/scene-15.md` |
 
-### Specific fixes required from CEO feedback
+**Six flat carousels:** c15, c16 (Batch 01 legacy, reused in this grid), c21–c24 (new for Batch 01v2). All rendered.
 
-- **c4 / c12 (widget vs full integration)** — reframe. Kymbo does full integration, always. The old framing implied a widget tier we don't sell. Kill the comparison; talk about what "full" actually means.
-- **c5 (scene-03 sync explanation)** — simplify to five-year-old language. "Your calendar in one place. When someone books on your site, Airbnb sees it in seconds. No double-bookings." No jargon.
-- **c05 grid drain math** — verify the 30 × $180 × 70% × 365 × 11% = ~$151k assumption before publishing. If any input is off, redo. If any input is a claim about the reader's business, convert to arithmetic they run themselves.
-- **c7 (scene-02)** — add the Airbnb logistics angle.
-- **C2 (c08 $516 / $312 math)** — audit before publishing.
-- **c10 automation** — enumerate what actually gets automated: door codes, check-in instructions, reception notifications, FAQs.
-- **c11 (scene-04)** — expand beyond page/UX to stay-experience-as-system.
+### Outstanding work before Batch 01v2 posts
 
-### What has to appear that Batch 01 missed
+1. **Generate scene-15 photos** (6 images) against `build/prompts/scene-15.md`. Drop into `profiles/kymbo/assets/scene-15/` as `s1.png` … `s6.png`.
+2. **Generate scene-20 photos** (6 images) against `build/prompts/scene-20.md`. Drop into `profiles/kymbo/assets/scene-20/` as `s1.png` … `s6.png`. (Asset dir not present yet — create it.)
+3. **Re-render all slide PNGs** after the palette swap to pure white (this HANDOVER's own commit). Run `npm run build`.
+4. **Audit against CEO feedback** (below) — many items may already be addressed in the shipped copy; verify slide-by-slide before posting.
 
-- At least one **WordPress** carousel (Care Plan, WP Engine partner, real work).
-- At least one **e-commerce** carousel.
-- At least one **mobile / app** carousel (this was fully absent).
-- At least one **team / process** carousel (Isa asked for this by name).
-- At least one **reach / generic** carousel (broad-appeal, not niche to FYM).
+### CEO feedback still worth verifying on the shipped Batch 01v2
+
+- **Widget vs full integration** — old framing. Kymbo does full integration, always. Confirm no shipped slide implies a widget tier.
+- **Sync explanation in five-year-old language** — "your calendar in one place; someone books on your site, Airbnb sees it in seconds; no double-bookings." Verify wherever sync is explained.
+- **Grid drain math (c05 legacy)** — 30 rooms × $180 × 70% × 365 × 11% ≈ $151k. Verify inputs; if any is a claim about the reader's business, convert to reader-arithmetic.
+- **Airbnb logistics angle** — check-in/out, payments, insurance. Confirm it lands somewhere in the feed.
+- **Automation specifics** — door codes, check-in instructions, reception notifications, FAQs. Enumerate what actually gets automated where automation is claimed.
+- **Stay-experience-as-system** — expansion beyond "pretty page/UX" to the whole stay. Verify.
+- **Math on C2 (c08 $516/$312)** — verify before posting.
 
 ---
 
