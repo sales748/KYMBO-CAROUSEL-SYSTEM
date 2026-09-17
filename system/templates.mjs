@@ -105,32 +105,26 @@ function coverStat(s) {
     ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}`;
 }
 
-/* STATEMENT — bold sans headline gets a mono line-number gutter and
-   two corner registration marks. Line-count is derived from a
-   simple heuristic; consumers can override with `s.lineCount`. */
+/* STATEMENT — bold sans headline framed by two corner registration
+   marks (top-right + bottom-left). The composition reads as one
+   printed spread, not a floating hero. NOTE: the earlier mono
+   line-number gutter (01/02) was removed — it duplicated the
+   footer ticks. Rule: only the footer squares count the slide. */
 function coverStatement(s) {
   const html = hi(s.headline, s.hi || s.hiWord);
-  // Heuristic: ~14 chars per line at 96px in a 900px column.
-  const lineCount = s.lineCount || Math.max(2, Math.min(4, Math.ceil((s.headline || '').length / 22)));
-  const nums = Array.from({ length: lineCount },
-    (_, i) => `<span>${String(i + 1).padStart(2, '0')}</span>`).join('');
   return `
     <div class="reg reg-tr"></div>
     <div class="reg reg-bl"></div>
-    <div class="stmt-wrap">
-      <div class="stmt-gutter">${nums}</div>
-      <div class="stmt-body">
-        <h1>${html}</h1>
-        ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}
-      </div>
-    </div>`;
+    <h1>${html}</h1>
+    ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}`;
 }
 
-/* INDEX — retire the vague ghost-only cover for a functional one.
-   Keeps the ghost numeral (still beautiful), adds a mono count kicker
-   above the headline ("N=5 · SEO") and a numbered progress strip
-   below. Count auto-derived from a leading number in the headline;
-   overridable with `s.count`. Domain tag from `s.domain`. */
+/* INDEX — ghost numeral (editorial atmosphere) + a mono meta kicker
+   above the headline ("N=5 · WORDPRESS"). Count auto-derived from a
+   leading number in the headline; overridable with `s.count`. Domain
+   tag from `s.domain`. NOTE: the earlier numbered progress strip
+   ([01][02][03][04][05]) was removed — it duplicated the footer
+   ticks. Rule: only the footer squares count the slide. */
 function coverIndex(s) {
   const m = (s.headline || '').match(/^\s*(\d+)/);
   const count = s.count || (m ? Number(m[1]) : 0);
@@ -138,15 +132,10 @@ function coverIndex(s) {
   const meta = count
     ? `<div class="idx-meta">N=${count}${domain}</div>`
     : '';
-  const strip = count
-    ? `<div class="idx-strip">${Array.from({ length: count },
-        (_, i) => `<span${i === 0 ? ' class="on"' : ''}>${String(i + 1).padStart(2, '0')}</span>`).join('<i></i>')}</div>`
-    : '';
   return `
     ${s.ghost ? `<div class="ghost">${esc(s.ghost)}</div>` : ''}
     ${meta}
     <h1>${esc(s.headline)}</h1>
-    ${strip}
     ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}`;
 }
 
