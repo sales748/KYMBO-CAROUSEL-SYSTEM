@@ -133,6 +133,77 @@
    JetBrains Mono (monospace, wider than Space Grotesk was). */
 .matrix.labeled.count-4 .cell .cell-label{ font-size:23px; letter-spacing:.06em; padding:0 6px; }
 
+/* ---------- COVER: SPEC (technical / engineered voice) ----------
+   Counter-position against the bold-sans display headlines. Mono
+   type, weight 500 (Anthropic DESIGN.md rule: "Display sizes use
+   weight 400, never bold"). One lime accent maximum — the tag, or
+   nothing. Purpose: give ERP/CRM/AI-integration/e-com/WP topics a
+   quieter register than the FYM shouty archetypes. */
+.cover-spec .bd{ justify-content:flex-end; align-items:flex-start; }
+.spec-tag{
+  font-family:var(--font-mono); font-size:22px; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--verde); margin-bottom:36px;
+  display:inline-flex; align-items:center; gap:12px;
+}
+.spec-tag .px{ width:14px; height:14px; background:var(--verde); }
+.cover-spec h1{
+  font-family:var(--font-mono); font-size:78px; font-weight:500;
+  letter-spacing:-.015em; line-height:1.08;
+  max-width:920px; text-wrap:balance; color:var(--fg);
+}
+.cover-spec .sub{
+  font-family:var(--font-mono); font-size:26px;
+  letter-spacing:.02em; line-height:1.45;
+  color:var(--muted); margin-top:36px; max-width:820px;
+  text-wrap:pretty;
+}
+.cover-spec .spec-rule{
+  height:2px; width:180px; background:var(--fg); opacity:.28;
+  margin-top:60px;
+}
+
+/* ---------- SPEC (interior) — key/value spec-sheet layout ----------
+   .bd is top-anchored (not center) so content flows down cleanly and
+   the .spec-title doesn't push up under the shared header kicker on
+   dense rows. Cap rows at 4 for breathing room; 5 will fit but is tight. */
+.spec .bd{ justify-content:flex-start; padding-top:12px; }
+.spec-title{
+  font-family:var(--font-mono); font-size:24px;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--verde); margin-bottom:36px;
+  display:inline-flex; align-items:center; gap:12px;
+  align-self:flex-start;
+}
+.spec-title .px{ width:14px; height:14px; background:var(--verde); }
+.spec-h{
+  font-family:var(--font-mono); font-size:56px; font-weight:500;
+  letter-spacing:-.015em; line-height:1.1; margin-bottom:44px;
+  max-width:900px; text-wrap:balance; color:var(--fg);
+}
+.spec-rows{
+  display:grid; gap:0;
+  border-top:2px solid var(--line);
+  width:100%;
+}
+.spec-row{
+  display:grid; grid-template-columns:220px 1fr; gap:30px;
+  padding:26px 0; border-bottom:2px solid var(--line);
+  align-items:baseline;
+}
+.spec-row .k{
+  font-family:var(--font-mono); font-size:22px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--muted);
+}
+.spec-row .v{
+  font-family:var(--font-mono); font-size:34px; font-weight:500;
+  letter-spacing:-.01em; line-height:1.28; color:var(--fg);
+}
+.spec-row.hi .v{ color:var(--verde); }
+.spec-cap{
+  font-family:var(--font-mono); font-size:24px; line-height:1.5;
+  color:var(--muted); margin-top:32px; max-width:900px; text-wrap:pretty;
+}
+
 /* ---------- COVER: SEAM (bespoke full-bleed) ---------- */
 .cover-seam{ padding:0; flex-direction:row; background:var(--noche); }
 /* min-width:0 is load-bearing: without it the panels keep their intrinsic

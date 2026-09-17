@@ -118,6 +118,17 @@ function coverMatrix(s) {
     ${matrix(g)}`;
 }
 
+/* SPEC — technical/engineered cover. Mono, weight 500. The header
+   kicker (lime brackets) is the single accent; no additional badge in
+   body. Use for ERP/CRM/AI-integration/e-com/WP topics — quieter than
+   the shouty STATEMENT/STAT archetypes. */
+function coverSpec(s) {
+  return `
+    <h1>${esc(s.headline)}</h1>
+    ${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}
+    <div class="spec-rule"></div>`;
+}
+
 /* ---------------- INTERIOR ---------------- */
 
 const point = (s) => `
@@ -162,6 +173,16 @@ const quote = (s) => `
   <div class="q-text">${esc(s.text)}</div>
   ${s.attribution ? `<div class="q-attr">— ${esc(s.attribution)}</div>` : ''}`;
 
+/* SPEC interior — a key/value spec-sheet. Rows can be tagged `.hi` to
+   paint the value lime (use once per slide). Pair with SPEC covers. */
+const spec = (s) => `
+  ${s.tag ? `<div class="spec-title"><span class="px"></span>${esc(s.tag)}</div>` : ''}
+  ${s.headline ? `<div class="spec-h">${esc(s.headline)}</div>` : ''}
+  <div class="spec-rows">
+    ${(s.rows || []).map((r) => `<div class="spec-row${r.hi ? ' hi' : ''}"><div class="k">${esc(r.k)}</div><div class="v">${esc(r.v)}</div></div>`).join('')}
+  </div>
+  ${s.caption ? `<div class="spec-cap">${esc(s.caption)}</div>` : ''}`;
+
 const cta = (s, message) => `
   <div class="cta-h">${hi(s.headline, s.hiWord)}</div>
   ${s.sub ? `<div class="cta-sub">${esc(s.sub)}</div>` : ''}
@@ -172,6 +193,7 @@ const cta = (s, message) => `
 const COVER_CLASS = {
   STAT: 'cover-stat', STATEMENT: 'cover-statement',
   INDEX: 'cover-index', MATRIX: 'cover-matrix',
+  SPEC: 'cover-spec',
 };
 
 function coverBody(s) {
@@ -180,6 +202,7 @@ function coverBody(s) {
     case 'STATEMENT': return coverStatement(s);
     case 'INDEX': return coverIndex(s);
     case 'MATRIX': return coverMatrix(s);
+    case 'SPEC': return coverSpec(s);
     default: return coverStatement(s);
   }
 }
@@ -217,7 +240,7 @@ function seamSlide(s, ctx) {
   </div>`;
 }
 
-const BODY = { point, stat, list, drain, mockup, quote };
+const BODY = { point, stat, list, drain, mockup, quote, spec };
 
 /* ---------------- SCENE (Path B: on top of AI images) ---------------- */
 function sceneBody(s) {

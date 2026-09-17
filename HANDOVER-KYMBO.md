@@ -124,11 +124,14 @@ All of this is already implemented. Do not re-invent; extend.
 - **INDEX** — numbered list ("5 settings that quietly delete you from Google"). Ghost numeral is decorative; the headline must still name the count.
 - **MATRIX** — comparison grid.
 - **SEAM** — split cover, two panels with a lime divider. Panels use `flex:1 1 0; min-width:0` and `seamSize()` fits the longest word — do NOT bypass this or the divider gets crushed.
+- **SPEC** — technical/engineered voice. Mono headline (JetBrains Mono, weight 500 — never bold at display, per Anthropic DESIGN.md rule); mono sub-copy; a short horizontal rule as the closing mark. The header kicker's lime brackets are the single accent — no additional badge in the body. Use for ERP, CRM, AI-integration, e-commerce, WordPress, and any technical topic that needs the quieter register. Pair with the `spec` interior layout.
 - **STATEMENT** — one bold sentence.
 
 ### Interior layouts
 
-POINT · STAT · LIST · DRAIN · MOCKUP · QUOTE · CTA.
+POINT · STAT · LIST · DRAIN · MOCKUP · QUOTE · CTA · **SPEC**.
+
+- **SPEC** — a key/value spec-sheet in mono type. Row shape: `{ k, v, hi? }`. `hi:true` paints one row's value in lime — use at most once per slide (single-accent rule). Cap ≈ 4 rows for breathing room; 5 will fit but is tight. Optional `tag` (lime section label with pixel), optional `headline` (mono weight 500), optional `caption` (mono, muted).
 
 ### Path A vs Path B
 
@@ -175,6 +178,21 @@ Per the tododeia "Stop AI Slop" thesis: AI without direction produces the same v
 - **No AI-mannerism copy.** No "unlock", no "elevate", no "in today's fast-paced world", no em-dash-joined tricolons. Kymbo copy is either arithmetic the reader runs or a plain statement of what breaks.
 - **No purple, no cyan glow, no gradient text.** The palette is dark-blue/white/lime. That's it.
 - **No hero-3col-CTA slide template.** Slides carry one idea. If a slide has a headline plus three feature boxes plus a CTA, split it.
+
+### 5b.1 Rules adopted from Impeccable, Anthropic DESIGN.md, and UI/UX Pro Max
+
+Enforced going forward on every new archetype and every audit pass:
+
+1. **No weight-800 on technical content.** Anthropic's own DESIGN.md is explicit: *"Display sizes use weight 400 (regular), never bold. Copernicus at 700 reads as bombastic."* Kymbo's version — the shouty FYM archetypes (STATEMENT, STAT, SEAM, INDEX) keep weight 800 because that's the campaign voice; the technical archetype (**SPEC**, and any future engineering-topic archetype) uses **JetBrains Mono weight 500**. This creates the counter-position between "campaign shout" and "systems statement" inside a single feed.
+2. **Adjacency extends to interior layouts, not just covers.** The existing rule forbids two consecutive covers sharing an archetype. Extend it: **no two consecutive interior slides may share the same layout** (no back-to-back POINT slides, no back-to-back SPEC slides). Force variety inside the carousel.
+3. **Contrast contract on every muted-text usage.** `--muted` opacity plus the surface must clear **WCAG AA 4.5:1** at the size it's set at. Our current values (`.60` on both surfaces at 32–43px) pass by size, but any new usage under 24px must be re-checked. Test with any AA contrast tool before shipping.
+
+Optional but recommended (from Impeccable's detector list):
+
+- **No cards nested in cards.** MOCKUP is one card; do not nest another card inside it.
+- **No rounded-square icon tile above every heading.** We already don't ship these — never introduce them.
+- **No colored gradient behind text.** Legibility scrims on scene photos are black-to-transparent only.
+- **No emoji as icons anywhere.** Pixel squares and hand-drawn SVGs only.
 
 ---
 
