@@ -34,9 +34,11 @@ function hi(text, word) {
   return esc(text.slice(0, i)) + `<span class="hi">${esc(word)}</span>` + esc(text.slice(i + word.length));
 }
 
-const kicker = (t) => t
-  ? `<div class="kicker"><span class="br">[</span> ${esc(t)} <span class="br">]</span></div>`
-  : `<div></div>`;
+// Header kicker removed on client direction — no top-left [ THE FIX ]
+// labels. The .hd flex wrapper stays for layout structure so absolute
+// registration marks and ghost numerals keep their reference frame,
+// but it renders empty and takes no visible space.
+const kicker = (_t) => '';
 
 const ticks = (total, idx) => {
   let out = '<div class="ticks">';
@@ -166,10 +168,10 @@ function coverMatrix(s) {
     ${note}`;
 }
 
-/* SPEC — technical/engineered cover. Mono, weight 500. The header
-   kicker (lime brackets) is the single accent; no additional badge in
-   body. Use for ERP/CRM/AI-integration/e-com/WP topics — quieter than
-   the shouty STATEMENT/STAT archetypes. */
+/* SPEC — technical/engineered cover. Mono headline at weight 500,
+   mono sub-copy, closing horizontal rule. Deliberately no lime accent
+   at all — the quiet register earns its distinction by restraint, not
+   ornament. Use for ERP/CRM/AI-integration/e-com/WP topics. */
 function coverSpec(s) {
   return `
     <h1>${esc(s.headline)}</h1>
@@ -270,12 +272,8 @@ function seamSize(...values) {
 
 function seamSlide(s, ctx) {
   const px = seamSize(s.left, s.right);
-  const kickerHTML = s.kicker
-    ? `<div class="kicker kicker-abs"><span class="br">[</span> ${esc(s.kicker)} <span class="br">]</span></div>`
-    : '';
   return `<div class="slide cover-seam" data-idx="${ctx.index}">
     <div class="seam-l">
-      ${kickerHTML}
       <div class="seam-label">${esc(s.leftLabel || 'VIA OTA')}</div>
       <div class="seam-big" style="font-size:${px}px">${esc(s.left)}</div>
     </div>
@@ -294,8 +292,7 @@ const BODY = { point, stat, list, drain, mockup, quote, spec };
 function sceneBody(s) {
   switch (s.layout) {
     case 'cover':
-      return `${s.kicker ? `<div class="kicker" style="margin-bottom:24px"><span class="br">[</span> ${esc(s.kicker)} <span class="br">]</span></div>` : ''}
-        <h1>${rich(s.headline)}</h1>
+      return `<h1>${rich(s.headline)}</h1>
         ${s.sub ? `<div class="sub" style="margin-top:28px">${rich(s.sub)}</div>` : ''}`;
     case 'point':
       return `${s.index ? `<div class="p-index"><span class="px"></span>${esc(s.index)}</div>` : ''}

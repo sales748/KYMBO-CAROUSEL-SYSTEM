@@ -127,7 +127,9 @@ Every archetype carries **two** tech-signal marks — no more (discipline over o
 - **INDEX** — retired the vague ghost-only cover for a functional one. Two marks: (1) the **ghost numeral** (editorial atmosphere) and (2) a **mono count kicker** above the headline (`N=5 · WORDPRESS` when `s.domain` is set). Count auto-derived from a leading number in the headline; overridable with `s.count`.
 - **MATRIX** — data-grid signals. Two marks: (1) **X/Y axis labels** (`s.grid.axes = { x, y }`) and (2) a **mono scale note** beneath (`s.grid.note` or auto: `N=16 · 4×4`). Backward compatible: without axes/note the grid renders plain.
 - **SEAM** — bespoke full-bleed split cover with a lime divider. Panels use `flex:1 1 0; min-width:0` and `seamSize()` fits the longest word — do NOT bypass this or the divider gets crushed.
-- **SPEC** — the technical/engineered voice. Mono headline (JetBrains Mono, weight 500 — never bold at display, per Anthropic DESIGN.md rule); mono sub-copy; a short horizontal rule as the closing mark. The header kicker's lime brackets are the single accent — no additional badge in the body. Pair with the `spec` interior layout. Use for ERP, CRM, AI-integration, e-commerce, WordPress — any topic that needs the quieter register.
+- **SPEC** — the technical/engineered voice. Mono headline (JetBrains Mono, weight 500 — never bold at display, per Anthropic DESIGN.md rule); mono sub-copy; a short horizontal rule as the closing mark. Deliberately no lime accent — the quiet register earns its distinction by restraint. Pair with the `spec` interior layout. Use for ERP, CRM, AI-integration, e-commerce, WordPress — any topic that needs the quieter register.
+
+**No top-left kicker.** Retired on client direction — the `[ THE FIX ]` / `[ THE STANDARD ]` / `[ THE POSITION ]` bracket labels are gone from every archetype and every layout. The `kicker()` helper in `templates.mjs` renders empty; `.hd` stays as an empty flex wrapper so absolutely-positioned decoration (ghost numerals, corner registration marks) keep their reference frame.
 - **STATEMENT** — one bold sentence.
 
 ### Interior layouts
