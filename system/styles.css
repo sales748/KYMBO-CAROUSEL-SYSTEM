@@ -483,7 +483,7 @@
 .scene .scribble-arrow path{ fill:none; stroke:var(--verde); stroke-width:8; stroke-linecap:round; stroke-linejoin:round; }
 /* torn strip of "tape" — soft, slightly rotated */
 .tape{ position:absolute; z-index:3; width:150px; height:44px; background:rgba(155,236,0,.55); transform:rotate(-4deg); }
-/* cut-out subject halo — when Kim drops a masked PNG (subject.png),
+/* cut-out subject halo — when Kymbo drops a masked PNG (subject.png),
    it sits above the scrim with a rough cream outline like the refs */
 .scene .cutout{ position:absolute; z-index:2; bottom:0; height:76%; filter:drop-shadow(0 0 3px var(--pantalla)) drop-shadow(0 0 3px var(--pantalla)) drop-shadow(0 0 22px rgba(0,0,0,.5)); }
 /* placeholder shown until a real render is dropped in */

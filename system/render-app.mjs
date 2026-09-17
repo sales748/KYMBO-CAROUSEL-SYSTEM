@@ -30,7 +30,7 @@ for (const slot of Object.keys(data.photoSlots || {})) {
 
 writeFileSync(join(appDir, 'app.html'), appPage(data, fontFaceCss(), photos));
 
-// image-prompt sheet for the app's interior photos (Kim generates → assets/app/)
+// image-prompt sheet for the app's interior photos (generated → assets/app/)
 if (data.photoPrompts) {
   const lines = [
     '# Booking-app interior photos', '',

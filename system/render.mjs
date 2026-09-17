@@ -178,7 +178,7 @@ function resolveScene(c) {
       s.bg = `../../${s.bg}`;          // real image, relative to build/carousels/
     } else {
       s._pending = true;
-      s.bg = '../img/_scene-ph.png';   // placeholder until Kim provides it
+      s.bg = '../img/_scene-ph.png';   // placeholder until the photo is provided
     }
   }
   return c;

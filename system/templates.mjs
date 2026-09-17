@@ -315,7 +315,7 @@ function sceneBody(s) {
    inside a scene photo, via a projective (perspective) transform. The
    slide declares the screen's four corners in slide px (1080x1350):
      screen: { app:'laptop-hero', quad:[[x,y]TL,[x,y]TR,[x,y]BR,[x,y]BL] }
-   Corners are read off the generated photo once Kim sends it. */
+   Corners are read off the generated photo once the photo is delivered. */
 const SCREEN_DIMS = {
   'laptop-hero': [1440, 900], 'laptop-categories': [1440, 900], 'laptop-rates': [1440, 1080],
   'laptop-modal': [1440, 900], 'laptop-dashboard': [1440, 900], 'laptop-board': [1440, 900], 'laptop-book': [1440, 900],
