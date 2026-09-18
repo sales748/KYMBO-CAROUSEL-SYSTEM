@@ -8,3 +8,6 @@ profiles/*/build/carousels/
 # JPGs and @2x PNGs are the tracked artifacts, the zips are just packaging.
 # (anchored pattern 'export/*.zip' never matched profiles/kymbo/export/)
 **/export/*.zip
+
+# diagram-design skill is cloned from upstream — do not vendor
+.claude/diagram-design-repo/
