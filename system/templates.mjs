@@ -382,6 +382,15 @@ function sceneSlide(s, ctx) {
 }
 
 export function renderSlide(slide, ctx) {
+  // Diagram slide — authored elsewhere (build-diagrams.mjs), lives as a
+  // full 1080x1350 standalone HTML with its own copy, kicker, and footer.
+  // Render step embeds the pre-rendered PNG so shoot.mjs's screenshot
+  // of the carousel HTML yields the same image without re-compositing.
+  if (slide.layout === 'diagram' && slide.diagram) {
+    return `<div class="slide" data-idx="${ctx.index}" style="padding:0">
+      <img src="../diagrams/${esc(slide.diagram)}.png" style="width:1080px;height:1350px;display:block" alt="diagram">
+    </div>`;
+  }
   // Path B — scene slide built on an AI image (with optional screen composite)
   if (slide.scene) return sceneSlide(slide, ctx);
   // bespoke SEAM cover

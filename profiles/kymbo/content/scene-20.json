@@ -8,8 +8,8 @@
   "primaryTrigger": "trust",
   "category": "educational",
   "title": "We build it. You own it.",
-  "styleLine": "Kymbo scene photography for the ownership piece — see profiles/kymbo/build/prompts/VISUAL.md. World: same Kymbo software-studio as scenes 21/22, but the mood is HANDOVER and INDEPENDENCE — a room that already belongs to someone else. Walls off-white plaster (#EDEAE4) or unpainted concrete. Floor dark polished concrete or dark oak. Walnut desks with visible wear. Palette: near-black cool-neutral shadows (#0A0D14), cool near-white highlights (#F1F3F6). Metal is brushed steel or MATTE BLACK, with occasional brass keys (the exception — because keys are the metaphor). Objects read as REAL WORK ALREADY DONE HERE: notebooks with pages of abstract non-readable notes, cracked spine, coffee-stained corners; hardcover books with torn dust jackets; chipped ceramic mugs; coiled cables; matte-black laptops with used cases. Documentary, unposed — Apartamento or The Gentlewoman feel. 35mm color negative, ONE dominant side-window key at morning (7-9am) or late afternoon (4-6pm), clear light side, deep near-black shadow side. Composition: off-center, asymmetric weight, one object cropped by the frame edge. UNIVERSALLY PROHIBITED: succulents, round white ceramic pots, fiddle-leaf figs, monstera, jute or sisal rugs, terrazzo, perfectly stacked photogenic books, fresh flowers in glass, Apple tastemaker signals, motivational wall art, pastel walls (teal/sage/blush cast), symmetric three-object triangles, centered composition, soft even daylight, blown-out backlit windows, ceremonial 'handover' poses, styled 'reading nook' clichés, 'aesthetic curated moodboard' feel. 4:5 native (1080x1350), do NOT letterbox / pad / extend / outpaint. Fill the ENTIRE 4:5 frame — CSS overlay handles text; NO dark band or vignette. No visible text, no logos, no clearly identifiable faces (hands, over-the-shoulder fine).",
-  "note": "Path B. All six pure editorial photos — no composites.",
+  "styleLine": "Kymbo scene photography for the ownership piece \u2014 see profiles/kymbo/build/prompts/VISUAL.md. World: same Kymbo software-studio as scenes 21/22, but the mood is HANDOVER and INDEPENDENCE \u2014 a room that already belongs to someone else. Walls off-white plaster (#EDEAE4) or unpainted concrete. Floor dark polished concrete or dark oak. Walnut desks with visible wear. Palette: near-black cool-neutral shadows (#0A0D14), cool near-white highlights (#F1F3F6). Metal is brushed steel or MATTE BLACK, with occasional brass keys (the exception \u2014 because keys are the metaphor). Objects read as REAL WORK ALREADY DONE HERE: notebooks with pages of abstract non-readable notes, cracked spine, coffee-stained corners; hardcover books with torn dust jackets; chipped ceramic mugs; coiled cables; matte-black laptops with used cases. Documentary, unposed \u2014 Apartamento or The Gentlewoman feel. 35mm color negative, ONE dominant side-window key at morning (7-9am) or late afternoon (4-6pm), clear light side, deep near-black shadow side. Composition: off-center, asymmetric weight, one object cropped by the frame edge. UNIVERSALLY PROHIBITED: succulents, round white ceramic pots, fiddle-leaf figs, monstera, jute or sisal rugs, terrazzo, perfectly stacked photogenic books, fresh flowers in glass, Apple tastemaker signals, motivational wall art, pastel walls (teal/sage/blush cast), symmetric three-object triangles, centered composition, soft even daylight, blown-out backlit windows, ceremonial 'handover' poses, styled 'reading nook' clich\u00e9s, 'aesthetic curated moodboard' feel. 4:5 native (1080x1350), do NOT letterbox / pad / extend / outpaint. Fill the ENTIRE 4:5 frame \u2014 CSS overlay handles text; NO dark band or vignette. No visible text, no logos, no clearly identifiable faces (hands, over-the-shoulder fine).",
+  "note": "Path B. All six pure editorial photos \u2014 no composites.",
   "assetDir": "assets/scene-20",
   "slides": [
     {
@@ -23,24 +23,12 @@
       "sub": "Source code. Hosting. Domain. Fire us tomorrow and nothing breaks."
     },
     {
-      "scene": true,
-      "layout": "point",
-      "scrim": "fade",
-      "bg": "assets/scene-20/s2.png",
-      "imageId": "notebook-handwriting-close",
-      "imagePrompt": "An over-the-shoulder view of hands (wrist down only, no face) holding an OPEN paper notebook on a walnut desk, ~7pm late side-window slice. The notebook page shows abstract non-readable notes (short lines, boxes, arrows suggesting a system diagram). Cracked spine. Right hand holds a pen mid-thought (small ink mark on the barrel). Foreground: coffee ring on the desk, a coiled charging cable trailing off the edge. Behind: unpainted concrete wall in soft focus. Hard warm side-window key from behind-left; wrist is rim-lit, page is partially shadowed. PROHIBITED: no succulents, no plants, no round pots, no clean unmarked notebook page, no perfect symmetric hand position, no pastel wall. [STYLE LINE applies.]",
-      "title": "Your ==code==. Your server. Your domain.",
-      "body": "The source code lives in your repo, not ours. The server is your account. The domain sits on your registrar. Handover is a folder we transfer, not a permission we grant."
+      "layout": "diagram",
+      "diagram": "scene-20-s2-layers"
     },
     {
-      "scene": true,
-      "layout": "point",
-      "scrim": "fade",
-      "bg": "assets/scene-20/s3.png",
-      "imageId": "studio-shelf-books",
-      "imagePrompt": "A small studio shelf mounted on an unpainted concrete wall, ~10am morning side-window slice. Three books stacked HORIZONTALLY (NOT spines-out) on the shelf, at the LEFT third of the frame, with slightly askew alignment — the top book's dust jacket is torn at the corner. Right third: a chipped ceramic mug sits on the same shelf, empty. Below the shelf: a coiled cable hangs over the edge. Behind: unpainted concrete wall texture visible. Hard morning side-window key from upper-left, deep near-black shadow on the books' right edges. PROHIBITED: no succulents, no plants, no round white pots, no perfectly stacked spines-out books, no pastel wall, no photo frame or wall art with visible text. [STYLE LINE applies.]",
-      "title": "No ==proprietary== CMS",
-      "body": "WordPress, Shopify, Woo — code that thousands of developers already know. If we vanish, any competent shop can pick up your project by tomorrow."
+      "layout": "diagram",
+      "diagram": "scene-20-s3-quadrant"
     },
     {
       "scene": true,
@@ -48,7 +36,7 @@
       "scrim": "fade",
       "bg": "assets/scene-20/s4.png",
       "imageId": "single-chair-window",
-      "imagePrompt": "A single dark leather accent chair (visibly worn — a crease on the seat, a small scuff on the arm) positioned at the LEFT third of a Kymbo studio room, cool morning side-window light streaming from the RIGHT third. Foreground: dark polished concrete floor. On a small walnut side-table beside the chair: a chipped ceramic mug with coffee at 2/3 level, and a matte-black hardcover book with a torn dust jacket. Behind the chair, out of focus: an unpainted concrete wall. NO plant in the frame at all — this is a room about independence, not decoration. Hard side-window key from right, the chair's seat catches direct light, the back-left recess goes near-black. PROHIBITED: no succulents, no plants, no round white pots, no jute rug, no pastel wall, no throw blanket, no styled 'reading nook' cliché. [STYLE LINE applies.]",
+      "imagePrompt": "A single dark leather accent chair (visibly worn \u2014 a crease on the seat, a small scuff on the arm) positioned at the LEFT third of a Kymbo studio room, cool morning side-window light streaming from the RIGHT third. Foreground: dark polished concrete floor. On a small walnut side-table beside the chair: a chipped ceramic mug with coffee at 2/3 level, and a matte-black hardcover book with a torn dust jacket. Behind the chair, out of focus: an unpainted concrete wall. NO plant in the frame at all \u2014 this is a room about independence, not decoration. Hard side-window key from right, the chair's seat catches direct light, the back-left recess goes near-black. PROHIBITED: no succulents, no plants, no round white pots, no jute rug, no pastel wall, no throw blanket, no styled 'reading nook' clich\u00e9. [STYLE LINE applies.]",
       "title": "Why ==lock-in== exists",
       "body": "Proprietary systems are the vendor's leverage over you. A page builder that only their team can edit is a dependency dressed up as a feature."
     },
@@ -58,7 +46,7 @@
       "scrim": "fade",
       "bg": "assets/scene-20/s5.png",
       "imageId": "hands-coffee-conversation",
-      "imagePrompt": "Overhead 45° angle onto a walnut table between two seats: two chipped ceramic mugs, one on each side of the frame, positioned OFF-CENTER (the LEFT mug slightly closer to the camera than the RIGHT). Both have coffee at DIFFERENT levels — LEFT mug at 1/2, RIGHT mug at 2/3 (the conversation has been going a while, one drinks faster). Between them: a small notebook open, pen resting across it, abstract non-readable marks. Coffee rings on the table. No plants, no props. Hard warm side-window key from upper-left, deep near-black shadow between the two mugs. PROHIBITED: no succulents, no round white pots, no fresh flowers, no styled cheek-to-cheek symmetric placement, no pastel wall. [STYLE LINE applies.]",
+      "imagePrompt": "Overhead 45\u00b0 angle onto a walnut table between two seats: two chipped ceramic mugs, one on each side of the frame, positioned OFF-CENTER (the LEFT mug slightly closer to the camera than the RIGHT). Both have coffee at DIFFERENT levels \u2014 LEFT mug at 1/2, RIGHT mug at 2/3 (the conversation has been going a while, one drinks faster). Between them: a small notebook open, pen resting across it, abstract non-readable marks. Coffee rings on the table. No plants, no props. Hard warm side-window key from upper-left, deep near-black shadow between the two mugs. PROHIBITED: no succulents, no round white pots, no fresh flowers, no styled cheek-to-cheek symmetric placement, no pastel wall. [STYLE LINE applies.]",
       "title": "The ==relationship== after launch",
       "body": "Care Plan is a monthly conversation, not a subscription trap. If you don't need us next month, you cancel and everything you own stays yours."
     },
@@ -68,7 +56,7 @@
       "scrim": "fade",
       "bg": "assets/scene-20/s6.png",
       "imageId": "open-door-light",
-      "imagePrompt": "A specific OPEN door in the wall of a Kymbo studio, morning warm side-light flooding in from beyond the door and casting a long light rectangle on the dark polished concrete floor inside. LEFT third of the frame: the interior of the studio in near-black shadow (a chair silhouette visible). RIGHT third: the door open at ~40° angle to the interior, hard rim-light on the door edge and jamb. Foreground: the concrete floor with visible grain. NO trailing plant, NO stagey door-frame decoration. Composition is asymmetric — most of the frame is dark interior, the door and light spill occupy the right third. Hard directional morning light from beyond the door. PROHIBITED: no succulents, no plants, no round white pots, no jute rug, no pastel wall, no welcome mat, no styled 'exit sign' or motivational metaphor prop. [STYLE LINE applies.]",
+      "imagePrompt": "A specific OPEN door in the wall of a Kymbo studio, morning warm side-light flooding in from beyond the door and casting a long light rectangle on the dark polished concrete floor inside. LEFT third of the frame: the interior of the studio in near-black shadow (a chair silhouette visible). RIGHT third: the door open at ~40\u00b0 angle to the interior, hard rim-light on the door edge and jamb. Foreground: the concrete floor with visible grain. NO trailing plant, NO stagey door-frame decoration. Composition is asymmetric \u2014 most of the frame is dark interior, the door and light spill occupy the right third. Hard directional morning light from beyond the door. PROHIBITED: no succulents, no plants, no round white pots, no jute rug, no pastel wall, no welcome mat, no styled 'exit sign' or motivational metaphor prop. [STYLE LINE applies.]",
       "headline": "The door is\n==always open.==",
       "sub": "Care Plan month-to-month. Cancel any time. Take everything with you.",
       "action": "Comment OWN"

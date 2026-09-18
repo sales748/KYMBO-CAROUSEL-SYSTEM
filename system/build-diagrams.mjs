@@ -524,9 +524,30 @@ const DIAGRAMS = {
   }
 };
 
+// Also render the demo scene-22-s2-bar that lives as its own hand-authored
+// HTML file — keep it in sync with the shared skeleton by listing it here
+// only for PNG-render; its HTML is authoritative on disk.
+const STANDALONE_HTMLS = ['scene-22-s2-bar'];
+
 for (const [id, cfg] of Object.entries(DIAGRAMS)) {
   const html = slide({ id, ...cfg });
   writeFileSync(join(OUT, `${id}.html`), html);
   console.log(`wrote ${id}.html`);
 }
-console.log(`\n${Object.keys(DIAGRAMS).length} diagram HTMLs written to ${OUT}`);
+console.log(`${Object.keys(DIAGRAMS).length} diagram HTMLs written to ${OUT}`);
+
+// Render every diagram HTML to PNG at 2160x2700 (2x native).
+import { chromium } from 'playwright-core';
+const allIds = [...Object.keys(DIAGRAMS), ...STANDALONE_HTMLS];
+const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+const c = await b.newContext({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 2 });
+for (const id of allIds) {
+  const p = await c.newPage();
+  await p.goto('file://' + join(OUT, `${id}.html`));
+  await p.waitForLoadState('networkidle');
+  await p.screenshot({ path: join(OUT, `${id}.png`), clip: { x: 0, y: 0, width: 1080, height: 1350 } });
+  await p.close();
+  console.log(`rendered ${id}.png`);
+}
+await b.close();
+console.log(`${allIds.length} diagram PNGs rendered.`);

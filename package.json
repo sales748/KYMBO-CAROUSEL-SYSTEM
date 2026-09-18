@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "render": "node system/render.mjs && node system/render-app.mjs",
+    "diagrams": "node system/build-diagrams.mjs",
     "shoot": "node system/shoot.mjs",
-    "build": "node system/render.mjs && node system/render-app.mjs && node system/shoot.mjs"
+    "build": "node system/build-diagrams.mjs && node system/render.mjs && node system/render-app.mjs && node system/shoot.mjs"
   },
   "repository": {
     "type": "git",

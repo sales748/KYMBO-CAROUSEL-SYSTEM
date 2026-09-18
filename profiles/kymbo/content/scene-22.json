@@ -8,8 +8,8 @@
   "primaryTrigger": "authority",
   "category": "educational",
   "title": "The AI feature you don't need is why your site is slow.",
-  "styleLine": "Kymbo scene photography — see profiles/kymbo/build/prompts/VISUAL.md. World: same Kymbo software-studio as scene-21 but STILLER and QUIETER — this scene is about restraint. Closed laptops preferred, analog objects preferred, deliberately un-tech-flashy. Walls off-white plaster (#EDEAE4) or unpainted concrete. Floor dark polished concrete or dark oak. Walnut desks with visible wear. Palette: near-black cool shadows (#0A0D14), cool near-white highlights (#F1F3F6). Metal is brushed steel or matte black. Objects read as SOMEONE WHO SAYS NO WORKS HERE — a lamp turned OFF, a closed notebook, an empty mug, a mechanical toggle in the DOWN position. Documentary, unposed — Apartamento / The Gentlewoman feel, not resort brochure. 35mm color negative, ONE dominant side-window key at ~5pm late afternoon (long slanted light), clear light side, deep near-black shadow side. Composition: off-center, asymmetric weight, one object cropped by the frame edge. UNIVERSALLY PROHIBITED: succulents, round white ceramic pots, fiddle-leaf figs, monstera, jute rugs, terrazzo, perfectly stacked photogenic books, fresh flowers in glass, Apple tastemaker signals, motivational wall art, neon signs, pastel walls, symmetric three-object triangles, centered composition, soft even daylight, blown-out windows, 'AI robot' or 'AI icon' props (nothing that looks like AI at all — this is the OPPOSITE piece), digital LEDs, glowing screens, 'productivity workspace' clichés. 4:5 native (1080x1350), do NOT letterbox / pad / extend / outpaint. Fill the ENTIRE 4:5 frame with natural scene content — CSS overlay handles text; NO dark band or vignette. No visible text, no logos, no clearly identifiable faces.",
-  "note": "Path B. All six pure editorial photos — no composites. The restraint is the point.",
+  "styleLine": "Kymbo scene photography \u2014 see profiles/kymbo/build/prompts/VISUAL.md. World: same Kymbo software-studio as scene-21 but STILLER and QUIETER \u2014 this scene is about restraint. Closed laptops preferred, analog objects preferred, deliberately un-tech-flashy. Walls off-white plaster (#EDEAE4) or unpainted concrete. Floor dark polished concrete or dark oak. Walnut desks with visible wear. Palette: near-black cool shadows (#0A0D14), cool near-white highlights (#F1F3F6). Metal is brushed steel or matte black. Objects read as SOMEONE WHO SAYS NO WORKS HERE \u2014 a lamp turned OFF, a closed notebook, an empty mug, a mechanical toggle in the DOWN position. Documentary, unposed \u2014 Apartamento / The Gentlewoman feel, not resort brochure. 35mm color negative, ONE dominant side-window key at ~5pm late afternoon (long slanted light), clear light side, deep near-black shadow side. Composition: off-center, asymmetric weight, one object cropped by the frame edge. UNIVERSALLY PROHIBITED: succulents, round white ceramic pots, fiddle-leaf figs, monstera, jute rugs, terrazzo, perfectly stacked photogenic books, fresh flowers in glass, Apple tastemaker signals, motivational wall art, neon signs, pastel walls, symmetric three-object triangles, centered composition, soft even daylight, blown-out windows, 'AI robot' or 'AI icon' props (nothing that looks like AI at all \u2014 this is the OPPOSITE piece), digital LEDs, glowing screens, 'productivity workspace' clich\u00e9s. 4:5 native (1080x1350), do NOT letterbox / pad / extend / outpaint. Fill the ENTIRE 4:5 frame with natural scene content \u2014 CSS overlay handles text; NO dark band or vignette. No visible text, no logos, no clearly identifiable faces.",
+  "note": "Path B. All six pure editorial photos \u2014 no composites. The restraint is the point.",
   "assetDir": "assets/scene-22",
   "slides": [
     {
@@ -18,29 +18,17 @@
       "scrim": "fade",
       "bg": "assets/scene-22/s1.png",
       "imageId": "quiet-desk-closed-laptop-slow",
-      "imagePrompt": "A walnut desk in the ~5pm late-afternoon side-window slice, deliberately STILL. Center-left of frame: a closed matte-black laptop with a small scratch on the lid, a paper notebook closed on top of it, an old-style brass-and-black desk lamp turned OFF beside them. Right-third breathes: a chipped ceramic mug at the edge, coffee at 1/3 level (running low, unfinished). Foreground: coffee rings and a small ink stain on the desk. Background: off-white plaster wall, unadorned. Hard side-window key from left, deep shadow side on the right face of the lamp. PROHIBITED IN THIS FRAME: no succulents, no plants of any kind, no round white pots, no jute rug, no pastel wall, no motivational quote, no AI-robot prop, no glowing screen — this is the OPPOSITE of AI-flashy. [STYLE LINE applies.]",
+      "imagePrompt": "A walnut desk in the ~5pm late-afternoon side-window slice, deliberately STILL. Center-left of frame: a closed matte-black laptop with a small scratch on the lid, a paper notebook closed on top of it, an old-style brass-and-black desk lamp turned OFF beside them. Right-third breathes: a chipped ceramic mug at the edge, coffee at 1/3 level (running low, unfinished). Foreground: coffee rings and a small ink stain on the desk. Background: off-white plaster wall, unadorned. Hard side-window key from left, deep shadow side on the right face of the lamp. PROHIBITED IN THIS FRAME: no succulents, no plants of any kind, no round white pots, no jute rug, no pastel wall, no motivational quote, no AI-robot prop, no glowing screen \u2014 this is the OPPOSITE of AI-flashy. [STYLE LINE applies.]",
       "headline": "The AI feature you don't need is why your site is ==slow==.",
       "sub": "Every \"AI Assistant\" script is 300KB of JavaScript and one more thing that can break."
     },
     {
-      "scene": true,
-      "layout": "point",
-      "scrim": "fade",
-      "bg": "assets/scene-22/s2.png",
-      "imageId": "stack-books-weight",
-      "imagePrompt": "A close low-angle view along the surface of a walnut desk, looking at a small stack of three hardcover books at the LEFT third of frame. The stack reads as WEIGHT — heavy, dense, no negative space between covers. Covers are slightly askew from being handled (NOT perfectly aligned). A pen with a small ink mark on its barrel rests diagonally on top of the stack. Right of the stack, foreground out of focus: a coffee ring and a chipped mug's base. Behind the books, background out of focus: a coiled cable. Hard side-window key from upper-right, deep near-black shadow on the desk to the left of the stack. PROHIBITED: no succulents, no plants, no round white pots, no pastel wall, no perfectly stacked covers-facing-camera photogenic book pile. [STYLE LINE applies.]",
-      "title": "==Weight==, not intelligence.",
-      "body": "The average AI chat widget ships 200-400KB of JavaScript, calls three domains before it loads, and blocks the main thread while it decides what to render. Every one of those is measurable in your PageSpeed report."
+      "layout": "diagram",
+      "diagram": "scene-22-s2-bar"
     },
     {
-      "scene": true,
-      "layout": "point",
-      "scrim": "fade",
-      "bg": "assets/scene-22/s3.png",
-      "imageId": "paper-decision-tree",
-      "imagePrompt": "Overhead 45° angle onto a walnut desk: a notebook open to a page with abstract non-readable pencil marks arranged as a decision tree (a few branching lines, boxes suggested — no readable words). A hand holds a pencil at the edge of the frame (wrist down only, no face); the pencil is chewed at the top from use. Coffee ring on the notebook's lower corner. Background out of focus: an empty ceramic mug tipped slightly on its side, a coiled cable. Hard side-window key from upper-left, deep near-black shadow on the notebook's right page. PROHIBITED: no succulents, no plants, no jute rug, no pastel wall, no clean unmarked page — the page shows real use. [STYLE LINE applies.]",
-      "title": "What most sites actually ==need==.",
-      "body": "A search bar that works. A FAQ organized like a decision tree. A contact form that reaches a human. Boring, cheap, fast."
+      "layout": "diagram",
+      "diagram": "scene-22-s3-fishbone"
     },
     {
       "scene": true,
@@ -48,19 +36,13 @@
       "scrim": "fade",
       "bg": "assets/scene-22/s4.png",
       "imageId": "hand-toggle-off",
-      "imagePrompt": "A hand near a small mechanical toggle switch on a walnut desk (an analog audio-toggle style switch — brushed steel body, matte black switch head). The switch is in the DOWN/OFF position. Hand from wrist down only, index finger has just left the switch. Background out of focus: a closed matte-black laptop, a chipped ceramic mug. Foreground: coffee ring visible on the desk near the switch. Hard side-window key from left — the switch head catches a small specular highlight on its top curve. PROHIBITED: no succulents, no plants, no round white pots, no pastel wall, no digital screen or LED anywhere in the frame — this is analog, mechanical, OFF. [STYLE LINE applies.]",
+      "imagePrompt": "A hand near a small mechanical toggle switch on a walnut desk (an analog audio-toggle style switch \u2014 brushed steel body, matte black switch head). The switch is in the DOWN/OFF position. Hand from wrist down only, index finger has just left the switch. Background out of focus: a closed matte-black laptop, a chipped ceramic mug. Foreground: coffee ring visible on the desk near the switch. Hard side-window key from left \u2014 the switch head catches a small specular highlight on its top curve. PROHIBITED: no succulents, no plants, no round white pots, no pastel wall, no digital screen or LED anywhere in the frame \u2014 this is analog, mechanical, OFF. [STYLE LINE applies.]",
       "title": "Turn every AI feature ==off== for a week.",
       "body": "Measure your bounce rate before and after. If nothing changes, the feature was scenery. If bounce goes up, we can talk about the right AI to put back."
     },
     {
-      "scene": true,
-      "layout": "point",
-      "scrim": "fade",
-      "bg": "assets/scene-22/s5.png",
-      "imageId": "three-objects-purpose",
-      "imagePrompt": "Overhead 45° angle onto a walnut desk: three distinct objects arranged with UNEQUAL SPACING along a slight diagonal — a small brass magnifying glass at the UPPER-LEFT, a folded newspaper in the MIDDLE (headlines out of focus, non-readable), and a small matte-black shield-shaped padlock at the LOWER-RIGHT. The three do NOT form a triangle or symmetric composition — they read as a diagonal sentence. Coffee ring visible on the desk between the newspaper and the padlock. Hard side-window key from upper-right, deep shadow side to the left of each object. PROHIBITED: no succulents, no plants, no round white pots, no symmetric three-object triangle, no evenly-spaced grid — the spacing is DELIBERATELY UNEVEN, asymmetric along the diagonal. [STYLE LINE applies.]",
-      "title": "Three places AI ==earns== its weight.",
-      "body": "Search on a catalog of 10,000+ SKUs. Content moderation at scale. Translation between languages a person doesn't know. Everywhere else, it's costume."
+      "layout": "diagram",
+      "diagram": "scene-22-s5-radar"
     },
     {
       "scene": true,
@@ -68,7 +50,7 @@
       "scrim": "fade",
       "bg": "assets/scene-22/s6.png",
       "imageId": "empty-chair-desk-reserved",
-      "imagePrompt": "A walnut chair pulled up to a desk, cool late-afternoon side-window light coming from behind the chair (backlight). The chair is empty. On the desk (foreground): a chipped ceramic mug half-full of coffee, a closed notebook, a coffee ring near the mug. LEFT of the chair, in soft focus: a MATURE LEMON TREE or an OLIVE TREE in a terracotta planter (NOT a succulent, NOT a fiddle-leaf, NOT in a round white pot) — the plant is real, established, tall. Hard side-window key from behind — chair silhouette rim-lit, desk in half-shadow. PROHIBITED: no succulents, no small houseplants, no round white pots, no jute rug, no pastel wall, no motivational sign, no perfect symmetric layout. [STYLE LINE applies.]",
+      "imagePrompt": "A walnut chair pulled up to a desk, cool late-afternoon side-window light coming from behind the chair (backlight). The chair is empty. On the desk (foreground): a chipped ceramic mug half-full of coffee, a closed notebook, a coffee ring near the mug. LEFT of the chair, in soft focus: a MATURE LEMON TREE or an OLIVE TREE in a terracotta planter (NOT a succulent, NOT a fiddle-leaf, NOT in a round white pot) \u2014 the plant is real, established, tall. Hard side-window key from behind \u2014 chair silhouette rim-lit, desk in half-shadow. PROHIBITED: no succulents, no small houseplants, no round white pots, no jute rug, no pastel wall, no motivational sign, no perfect symmetric layout. [STYLE LINE applies.]",
       "headline": "We put AI in when it ==earns== its weight.",
       "sub": "Not when the client saw a demo.",
       "action": "Comment AI"
