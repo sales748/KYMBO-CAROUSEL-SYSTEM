@@ -138,6 +138,81 @@ Example: *"Reading this as: scene-21 s6 CTA for e-commerce operators, with a mac
 
 ---
 
+## The Kymbo variation engine
+
+Adapted from `imagegen-frontend-web` §2. For each scene, commit to ONE choice per axis and hold it across all 6 slides. Do not mash choices together — the article calls this "not chaos, one strong combination executed clearly."
+
+### Theme Paradigm (whole scene)
+Choose 1: **Pristine Light Mode** (off-white, sharp dark type — Kymbo's default surface) or **Deep Dark Mode** (Media Noche field, Pantalla type — for AI restraint / gravitas).
+
+### Background Character (whole scene)
+Choose 1: **Subtle technical grid / dotted field** (Kymbo's spec-paper — the default) or **Tactile material surface** (raw concrete, brushed metal, walnut — the surface itself is the background).
+
+### Typography Character (whole system, not per scene)
+Locked: **Satoshi-like clean grotesk** for display + JetBrains Mono for technical. Never drift.
+
+### Narrative / Concept Spine (per scene)
+One thread runs through every slide of a scene. Naming it up front stops the middle slides from wandering off:
+
+- **scene-15 (hotel/FYM)** — **Archive / dossier**: indexed rows, captions, understated authority. Every artifact — key on tag, receipt with a hole, index card blank vs filled, guest register — reads as part of a filed record. The hotel's dossier is thin; the OTA's is fat.
+- **scene-20 (ownership)** — **Tool / precision instrument**: machined detail, calibrated controls, tactile hardware. Brass keys → padlock mechanism → calipers → industrial door. Every object is a working tool.
+- **scene-21 (e-commerce)** — **Tool / precision instrument**: the checkout is measured, not decorated. Caliper alongside the phone, machined aluminum block with one hole, thumbprint as tactile trace. Precision as position.
+- **scene-22 (AI restraint)** — **Artifact / collectible**: proof, specimen, treasured object framing. Kettlebell as weight-specimen, industrial toggle in matte panel, precision balance beam. Every object earns its place by physical presence — the opposite of AI's cheap accumulation.
+
+### Second-Read Moment (per scene)
+Exactly one unobvious motif per scene, placed deliberately, serving scan order — not gimmick. From `imagegen-frontend-web` §2:
+
+- **scene-15**: *a macro crop that carries brand color naturally* — the brass key's specular highlight functions as the warm counterpart to Kymbo's cool verde accent, appearing once across the scene.
+- **scene-20**: *one unexpected material switch* — the two calipers on s5 introduce mirror-polish brushed steel after four slides of matte-black anodized surfaces; the material shift is the beat.
+- **scene-21**: *one oversized numeral serving structure* — the diagrams already carry this (sankey `100 → 34`, bar chart `~400`). Photos support without repeating the numeral.
+- **scene-22**: *a narrow vertical side-rail note* — the industrial-toggle slide's non-readable engraved indicator marking beside the switch reads as an editor's marginal note, once.
+
+---
+
+## Multi-image consistency rule (imagegen-frontend-web §16)
+
+Because every slide is its own generation, consistency is the point. Across all 6 slides of a single scene, hold constant:
+
+- Same **brand world** (walnut + concrete + matte-black for the studio scenes; walnut + cream-plaster + linen for the hotel scene)
+- Same **type scale logic** (Kymbo's kicker → headline → sub-copy ratios apply to every slide)
+- Same **spacing discipline** (148px top pad, 92px sides, 86px bottom, spec-paper grid on light or dark)
+- Same **image treatment** — grade, framing vocabulary, prop language. The same photographer on the same day, six different corners.
+- Same **light angle bias** (a scene commits to morning ~8am, or late-afternoon ~5pm — not both)
+
+If two slides in one scene look like they came from two different photographers, one of them is wrong. Regenerate.
+
+---
+
+## Composition variety check (imagegen-frontend-web §18)
+
+Across the 6 slides in a scene, log the composition anchor per slide (LEFT-third mass, CENTER, off-center RIGHT, overhead, etc.). Reject the set if:
+
+- The same composition anchor repeats more than **2 slides in a row**.
+- Every slide uses inline subject (no macro, no architectural, no overhead) — force at least one wide-lens architectural OR one macro crop somewhere in the six.
+
+For Kymbo, the diagrams already handle two or three of the six slots — so the photo slides carry a smaller variety burden. But the rule still applies: photo covers, macros, and architectural shots must not all sit at the same composition anchor.
+
+---
+
+## The Kymbo Clarity Check (before you accept any generated frame)
+
+Adapted from `imagegen-frontend-web` §17. Fewer items than the source — this is scene photography for a carousel, not a landing-page comp:
+
+1. Does the frame carry the scene's **concept spine** (archive / tool / artifact — see above)?
+2. Is there **one hero subject** (VISUAL_DENSITY 3), not three?
+3. Is the composition **off-center** (DESIGN_VARIANCE 9), not dead middle?
+4. Is the light **hard and directional** with a clear near-black shadow side (LIGHTING_CHARACTER 9)?
+5. Does the subject show **real wear / character marks** (IMPERFECTION_INDEX 8), not staged perfection?
+6. Are there any **AI-slop tells** — succulents, round white pots, jute rug, pastel walls, symmetric three-object triangles, soft even light, purple/blue gradients, glowing edges, glassmorphism?
+7. For composite slides: is the device **PERFECTLY STRAIGHT AND FRONT-ON** with a **BLANK white screen**?
+8. Does this frame feel like it belongs with the other 5 slides of this scene (same photographer, same light, same material vocabulary)?
+9. Is the aspect **exactly 4:5 native**, no outpaint / letterbox / extend?
+10. If you swapped this frame into a different scene of the batch, would it look wrong (i.e., does it have per-scene identity, not generic "editorial workspace")?
+
+If any item is a no, regenerate. Do not accept "close enough."
+
+---
+
 ## The per-scene worlds (delta from the baseline above)
 
 **scenes 20, 21, 22 — Kymbo software-studio world:**
