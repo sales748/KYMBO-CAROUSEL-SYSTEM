@@ -11,3 +11,4 @@ profiles/*/build/carousels/
 
 # diagram-design skill is cloned from upstream — do not vendor
 .claude/diagram-design-repo/
+.claude/taste-skill-repo/

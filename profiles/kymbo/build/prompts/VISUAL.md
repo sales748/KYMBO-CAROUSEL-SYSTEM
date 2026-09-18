@@ -116,15 +116,25 @@ Words that trigger the slop pattern in image models. Never use them:
 
 ---
 
-## Character-intensity knobs (Taste-style)
+## The Taste dials — Kymbo's baseline values
 
-Every prompt dials these up on purpose:
+Kymbo installs `Leonxlnx/taste-skill` at `.claude/skills/taste-skill`. Taste exposes three dials — DESIGN_VARIANCE, MOTION_INTENSITY, VISUAL_DENSITY — with a website baseline of `8 / 6 / 4`. For editorial scene photography the register is different; Kymbo's baseline is:
 
-- **DESIGN_VARIANCE: 9/10** — no two frames in a scene look interchangeable. Different angles, different corners, different light angles.
-- **VISUAL_DENSITY: 8/10** — real desks are full of small character objects. Include work items; don't over-stage.
-- **LIGHTING_CHARACTER: 9/10** — hard directional light with a named angle, not soft even daylight.
-- **IMPERFECTION_INDEX: 8/10** — visible wear, coffee marks, natural chaos. Do NOT clean up the scene.
-- **NATIVE_ASPECT: strict 4:5** — never letterbox, never extend, never outpaint.
+- **DESIGN_VARIANCE: 9** — asymmetric, off-center, no two frames in a scene look interchangeable. Different angles, different corners, different light angles per slide.
+- **MOTION_INTENSITY: 1** — still photograph, no implied motion, no motion blur, no time-lapse suggestion. If the subject moves, freeze it.
+- **VISUAL_DENSITY: 3** — one hero subject per frame, generous negative space. Muji-electronics / Kraftwerk / Dieter Rams restraint. NOT "cockpit / packed data." The Kymbo scene is CLOSE to Taste's "art gallery / airy" end of the dial.
+
+Two extensions Kymbo adds on top of Taste's three:
+
+- **LIGHTING_CHARACTER: 9** — hard directional light with a named angle (upper-left morning key, right-side afternoon rake, etc.), never soft even daylight.
+- **IMPERFECTION_INDEX: 8** — visible wear, coffee marks, machining scratches, use-natural chaos. Do NOT clean up the scene.
+- **NATIVE_ASPECT: strict** — 4:5, never letterbox, never extend, never outpaint.
+
+The "Design Read" practice, borrowed verbatim from `taste-skill` §0.B — before writing or accepting an image, state the read in one line:
+
+> *"Reading this as \<piece kind> for \<audience>, with a \<vibe> language, leaning toward \<reference genre>."*
+
+Example: *"Reading this as: scene-21 s6 CTA for e-commerce operators, with a machine-dignity language, leaning toward Teenage Engineering + Dieter Rams."* If the read is wrong, the frame is wrong before it's rendered.
 
 ---
 

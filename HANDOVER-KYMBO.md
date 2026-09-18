@@ -200,6 +200,35 @@ Optional but recommended (from Impeccable's detector list):
 - **No colored gradient behind text.** Legibility scrims on scene photos are black-to-transparent only.
 - **No emoji as icons anywhere.** Pixel squares and hand-drawn SVGs only.
 
+### 5b.2 Rules adopted from Leonxlnx/taste-skill
+
+Installed at `.claude/skills/taste-skill` and `.claude/skills/imagegen-frontend-web`. The full anti-slop catalog is at `.claude/taste-skill-repo/skills/imagegen-frontend-web/SKILL.md` §8. The rules that apply to Kymbo across the whole system:
+
+**Content slop — banned words.** These are AI-copywriting tells; strip them the moment they appear in any draft:
+
+- ❌ unleash · elevate · revolutionize · next-gen · seamless · powerful solution · transformative platform · streamline · synergy · leverage · game-changer · world-class · cutting-edge · unlock
+
+**Fake brand names.** For any placeholder brand or property in a mockup, never use these AI-slop wordmarks:
+
+- ❌ Acme · Nexus · Flowbit · Quantumly · NovaCore · Novalytics · Corely · any obvious nonsense wordmark
+
+Use short, believable, design-friendly names (`yourhotel.com`, `example-hotel.com`, or a real Kymbo client name with permission).
+
+**Layout slop (design-side rules):**
+- ❌ Endless centered sections / cloned left-text/right-image blocks / perfect but lifeless symmetry everywhere.
+- ❌ Empty decorative space with no purpose. Every negative-space region should serve composition, not fill.
+
+**Visual slop:**
+- ❌ Default purple/blue AI gradients · too many glowing edges · floating spheres/blobs · glassmorphism stacked without reason · over-rendered noise that hides the layout · random futuristic details with no structure.
+
+**Typography slop:**
+- ❌ Giant heading + weak tiny subcopy · too many font moods on one page · awkward line breaks · lazy all-caps everywhere · gradient headline as shortcut for "premium."
+
+**Density slop:**
+- ❌ Over-packed sections · card overload · tiny spacing between major sections · walls-of-content.
+
+**The Design Read discipline (taste-skill §0.B).** Before drafting any new carousel, state the read in one line: *"Reading this as \<piece kind> for \<audience>, with a \<vibe> language, leaning toward \<reference genre>."* If you can't complete the sentence, the draft isn't ready.
+
 ---
 
 ## 6. Batch 01v2 — current state
