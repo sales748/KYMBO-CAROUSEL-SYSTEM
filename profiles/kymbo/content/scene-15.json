@@ -8,64 +8,70 @@
   "primaryTrigger": "loss-aversion",
   "category": "educational",
   "title": "They didn't take 18%. They took the guest.",
-  "styleLine": "ONE CONSISTENT LINE ACROSS ALL IMAGES (critical). Cinematic editorial photography, shot as if by the SAME photographer on the SAME 35mm lens, natural white-balance (5200-5500K), rich but neutral grade — deep near-black shadows, clean daylight highlights (NO warm cream cast, NO heavy Instagram filter, NOT washed-out, NOT HDR). Modern boutique-hotel world: walnut wood, cream plaster, greenery, contemporary fixtures. Slight teal-to-neutral color palette overall — reads as a tech/engineering studio's photography, not a wellness/agency mood board. NO dated props (no key racks, service bells, fountain pens, paper ledgers, cash). Elegant, quiet, expensive. 4:5 aspect (1080x1350), designed for Instagram feed carousels (full frame visible) and TikTok photo carousels. SAFE ZONES: (a) Instagram profile grid crops to CENTER 1:1 — the top ~135px and bottom ~135px are cropped in the grid view, so keep the hero subject center-frame. (b) TikTok photo mode overlays a caption/UI region across the bottom ~340px on the visible feed — keep any critical visual detail above that band. (c) The lower ~40% of the frame (roughly y=810 to y=1350 on a 1080x1350 canvas) is reserved for on-slide type — compose the subject in the upper ~55-60% but fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area. A CSS gradient handles text legibility. No text, no logos, no clearly identifiable faces.",
-  "note": "Path B. All six slides are pure photos. No device composite in this one.",
+  "styleLine": "Kymbo scene photography for FYM (hotel) — see profiles/kymbo/build/prompts/VISUAL.md. World: a specific corner of a real modern boutique hotel. Walls are off-white/warm-cream plaster (#EDEAE4-adjacent, but NEVER pastel, NEVER teal, NEVER sage), or actual textured stone. Floor is dark oak or specific stone — NEVER jute, NEVER sisal. Walnut wood, brass or matte-black fixtures (NEVER gold, NEVER champagne). Real hotel objects with visible use: linen bedding with natural wrinkles (NOT perfectly ironed), leather-bound guest register with cracked binding, brass room key with a leather tag, folded newspaper (non-readable), a MATURE OLIVE TREE or LEMON TREE in a terracotta planter (NEVER a succulent, NEVER a fiddle-leaf, NEVER in a round white pot). Palette: warm-neutral but restrained — a real expensive hotel that is SPECIFIC, not decorated. Modern rollerball pens only (NEVER fountain pens, NEVER quills). Documentary, unposed — Apartamento or The Gentlewoman feel, NOT resort brochure stock, NOT dated grand-hotel cliché. 35mm color negative, ONE dominant morning warm-cool side-window key (~8am), clear light side, deep near-black shadow side. Composition: off-center, asymmetric weight, one object cropped by the frame edge. UNIVERSALLY PROHIBITED: succulents, round white ceramic pots, fiddle-leaf figs, monstera, jute or sisal rugs, terrazzo or marble slabs, perfectly stacked photogenic books, fresh-cut flowers in clear glass vases, motivational wall art, pastel walls (teal/sage/blush cast), symmetric three-object triangles, centered composition, soft even daylight, blown-out backlit windows, dated hotel props (key racks, service bells, fountain pens, paper ledgers, cash boxes, welcome-mat signs). 4:5 native (1080x1350), do NOT letterbox / pad / extend / outpaint. Fill the ENTIRE 4:5 frame — CSS overlay handles text; NO dark band or vignette. No visible text on any surface, no logos, no clearly identifiable faces (hands are fine).",
+  "note": "Path B. All six pure editorial photos — no composites.",
   "assetDir": "assets/scene-15",
   "slides": [
     {
       "scene": true,
       "layout": "cover",
+      "scrim": "fade",
       "bg": "assets/scene-15/s1.png",
       "imageId": "empty-lobby-warm-morning",
-      "imagePrompt": "A calm modern boutique-hotel lobby in warm morning light, walnut furniture, cream plaster, a large plant, layered lighting. Empty of people. A single guest has just walked past, out of frame. Editorial and quiet. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "imagePrompt": "A specific corner of a modern boutique-hotel lobby in warm morning side-light (~8am). LEFT third: a walnut console table with a folded morning newspaper (non-readable headlines) and a leather-bound guest register closed at the moment; a modern rollerball pen with a small ink mark rests diagonally across the register. RIGHT third breathes: a MATURE OLIVE TREE in a terracotta planter beside a textured stone wall. Foreground: dark oak floorboards with visible grain. A brass room key with a leather tag hangs on a hook by the register. Behind: cream plaster wall (warm-neutral, not pastel). Hard side-window key from left, morning warm-cool light. Deep near-black shadow on the right face of the console. PROHIBITED IN THIS FRAME: no succulents, no round white pots, no fiddle-leaf figs, no jute rug, no dated key rack, no service bell, no fountain pen, no paper ledger with quill, no cash, no pastel wall, no symmetric arrangement, no soft even light. [STYLE LINE applies.]",
       "headline": "They didn't take ==18%==.\nThey took the ==guest==.",
       "sub": "The commission is the line item you see. The guest you'll never re-book is the one you don't."
     },
     {
       "scene": true,
       "layout": "point",
+      "scrim": "fade",
       "bg": "assets/scene-15/s2.png",
       "imageId": "invoice-desk-detail",
-      "imagePrompt": "A single closed folder or plain paper on a walnut desk beside a warm lamp, a fountain-pen-free desk (a modern rollerball only if any pen at all), a small plant. Editorial, no readable text on the paper. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "imagePrompt": "Overhead 45° angle onto a walnut hotel-office desk: a plain leather portfolio folder closed on the desk (LEFT third of frame), a modern mechanical rollerball pen resting diagonally across it (small ink mark on the barrel). RIGHT third: an empty ceramic teacup with a chipped rim intrudes from the edge, tea residue at the bottom. Foreground: a coffee ring visible on the desk near the folder. Background out of focus: a stone-wall corner and a small brass reading lamp turned off. Hard morning side-window key from upper-left, deep near-black shadow on the folder's right edge. PROHIBITED: no succulents, no round white pots, no fresh flowers, no fountain pen, no motivational sign, no service bell, no paper ledger with quill, no pastel wall. [STYLE LINE applies.]",
       "title": "You saw ==the invoice==",
-      "body": "The line item labeled 'commission.' Fifty dollars on every two-hundred-dollar booking. Painful, countable, easy to explain to yourself."
+      "body": "The line item on your P&L is the number they took. That number is finite and named. The name they took with them isn't on any invoice."
     },
     {
       "scene": true,
       "layout": "point",
+      "scrim": "fade",
       "bg": "assets/scene-15/s3.png",
       "imageId": "guestroom-personal-details",
-      "imagePrompt": "A boutique-hotel guestroom detail: linen sheet, a small welcome card on the pillow (blank, no readable text), a plant, warm side light. Nothing on the card can be read. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "imagePrompt": "A close still-life of a boutique-hotel guestroom pillow-corner: linen sheet with visible natural wrinkles (NOT perfectly ironed), a plain cream welcome card (blank, non-readable, no text) rests OFF-CENTER at the LEFT of the pillow, a specific hand-thrown ceramic bud vase with a single eucalyptus branch (a real leafy stem, NOT a fresh flower, NOT in a clear glass vase) sits behind. Foreground: pillow texture with a slight coffee-cup indentation from someone having placed a cup down earlier. Hard morning side-window key from upper-right — clear light on the linen, deep near-black shadow on the pillow's left recess. PROHIBITED: no succulents, no round white pots, no fresh cut flowers in clear glass, no perfectly ironed sheets, no motivational card, no pastel wall, no symmetric composition. [STYLE LINE applies.]",
       "title": "You didn't see ==the profile==",
-      "body": "Their email. Their preferences. Their birthday. The room they liked. The reason they came. Booking kept all of it. You got a booking reference."
+      "body": "The OTA has their email, their preferences, the reason they booked. You have a room number and a night. Next year they get an OTA discount promo. You get a re-acquisition cost."
     },
     {
       "scene": true,
       "layout": "point",
+      "scrim": "fade",
       "bg": "assets/scene-15/s4.png",
       "imageId": "empty-corridor-warm",
-      "imagePrompt": "A calm corridor in a boutique hotel, walnut floor, cream plaster, a plant on a console, warm indirect light. No people, no signs. Quiet architectural photograph. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "imagePrompt": "A calm boutique-hotel corridor: walnut floor, cream plaster walls (warm-neutral), a brass wall sconce in soft focus at the RIGHT of the frame. LEFT third of frame carries mass: a small walnut console with a single lit candle (no fresh flower) and a folded linen napkin on top. Foreground: dark oak floorboards with visible grain, a coffee ring on the console's edge. No people. Hard morning warm side-window key from a doorway at the far end of the corridor — corridor recedes into deep near-black shadow at the back-right. PROHIBITED: no succulents, no jute rug, no pastel wall, no signs with visible text, no doorway wreath, no service bell, no fresh flowers, no symmetric perspective, no dated 'grand hotel' props. [STYLE LINE applies.]",
       "title": "So next year, you ==buy them back==",
-      "body": "Same guest, same room, another eighteen percent. That's not a commission, it's a subscription to a customer who was already yours."
+      "body": "That same guest goes back to Booking or Airbnb because that's who has them in a re-marketing pool. The commission on that second booking is what the first one really cost."
     },
     {
       "scene": true,
       "layout": "point",
+      "scrim": "fade",
       "bg": "assets/scene-15/s5.png",
       "imageId": "handwritten-list-warm",
-      "imagePrompt": "A small notebook opened on a walnut desk, blank pages, a pen resting on top, warm morning light through a window, a plant in soft focus. The notebook pages are completely blank — no writing. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "imagePrompt": "A small paper notebook opened on a walnut hotel-office desk, blank pages (no writing, but the paper has a USED quality — a fingerprint smudge, a slight crease, a coffee stain on the corner). A modern rollerball pen (NOT a fountain pen) rests diagonally across the pages with a small ink mark on the barrel. Right of the notebook, in soft focus: an olive-branch stem lying on the desk (NOT in a vase). Foreground: coffee ring on the desk. Behind: cream plaster wall in soft focus. Hard morning side-window key from left. Deep near-black shadow on the notebook's right page. PROHIBITED: no succulents, no round white pots, no fresh flowers in glass vases, no fountain pen, no dated ledger, no pastel wall. [STYLE LINE applies.]",
       "title": "A direct booking is a ==profile==",
-      "body": "Email in your CRM. Preference in your record. Birthday in your calendar. A person you can write to before the next season."
+      "body": "Name, email, the room they preferred, the wine they asked about. Not to spam them — to know them when they come back. Or to remind them to."
     },
     {
       "scene": true,
       "layout": "cta",
+      "scrim": "fade",
       "bg": "assets/scene-15/s6.png",
       "imageId": "guestbook-open-page",
-      "imagePrompt": "An open leather-bound guest register on a walnut console, pages blank, warm lamp behind, a plant. No readable text. Compose the subject in the UPPER ~55-60% of the frame. CRITICAL: fill the ENTIRE frame with natural scene content — NO dark band, NO black rectangle, NO artificial dark area at the bottom. A CSS overlay handles text readability. [Apply the STYLE LINE.]",
+      "imagePrompt": "An open leather-bound guest register on a walnut hotel console, pages BLANK (no readable text, no writing at all — the pages have a used-but-empty quality, slight indentations from a pen resting elsewhere). A modern mechanical rollerball pen (NOT fountain) rests to the RIGHT of the pages, cap off, small ink mark on the barrel. Foreground: dark oak floor. Behind the console: cream plaster wall in soft focus, a real olive branch in a wall-mounted terracotta holder (NOT a vase, NOT a round white pot). Hard morning warm side-window key from left, brass fitting on the register catches a small specular highlight. Deep near-black shadow on the console's right edge. PROHIBITED: no succulents, no round white pots, no fresh flowers in clear glass, no fountain pen, no pastel wall, no dated 'welcome' sign, no key rack, no cash box. [STYLE LINE applies.]",
       "headline": "What do you ==know== about your\nlast direct guest?",
-      "sub": "And what do you know about your last OTA one? Same question, two very different answers.",
-      "action": "Comment GUEST"
+      "sub": "If the answer is a room number and a night, the OTA won that guest — even if you got the booking.",
+      "action": "Comment PROFILE"
     }
   ]
 }
