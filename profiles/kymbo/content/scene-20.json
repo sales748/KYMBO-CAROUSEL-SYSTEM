@@ -17,8 +17,8 @@
       "layout": "cover",
       "scrim": "fade",
       "bg": "assets/scene-20/s1.png",
-      "imageId": "studio-keys-handover",
-      "imagePrompt": "A specific corner of a walnut desk in the ~5pm late-afternoon side-window slice: a set of three modern brass keys on a small dark leather tray, placed OFF-CENTER LEFT on the desk (NOT ceremonial, NOT posed). RIGHT third breathes: a chipped ceramic mug intrudes from the edge with coffee at 2/3 level. Foreground: a coffee ring on the desk near the tray. Behind: unpainted concrete wall with visible texture, no decoration. Hard warm-cool side-window key from left; the topmost brass key catches a small specular highlight. Deep near-black shadow on the tray's right side. PROHIBITED IN THIS FRAME: no succulents, no plants, no round white pots, no jute rug, no pastel wall, no symmetric key arrangement, no ceremonial 'handover' pose. [STYLE LINE applies.]",
+      "imageId": "three-brass-keys-black",
+      "imagePrompt": "A set of three modern brass keys arrayed OFF-CENTER LEFT on a matte-black anodized surface (NOT wood, NOT leather), at ~5pm late-afternoon side-window light. Each key has a different bit profile (hand-cut, specific \u2014 NOT identical stamped keys). Small brass tags on two of the three, blank (no readable text). RIGHT third breathes: matte-black surface catching a slice of cool light. Foreground: the black surface itself, mirror-quiet, one small handling scratch. Hard warm-cool directional key from left; the topmost brass key catches a specular highlight along its shaft; deep near-black shadow to the right of the keys. PROHIBITED: no wood, no leather tray, no succulents, no plants, no coffee, no notebook, no jute rug, no pastel wall, no ceremonial 'handover' pose, no styled 'realtor's desk' aesthetic. 4:5 native, no outpaint, fill entire frame. Brass on matte black \u2014 Kraftwerk / Muji-electronics precision. Ownership as physical object.",
       "headline": "We build it.\n==You own it.==",
       "sub": "Source code. Hosting. Domain. Fire us tomorrow and nothing breaks."
     },
@@ -35,8 +35,8 @@
       "layout": "point",
       "scrim": "fade",
       "bg": "assets/scene-20/s4.png",
-      "imageId": "single-chair-window",
-      "imagePrompt": "A single dark leather accent chair (visibly worn \u2014 a crease on the seat, a small scuff on the arm) positioned at the LEFT third of a Kymbo studio room, cool morning side-window light streaming from the RIGHT third. Foreground: dark polished concrete floor. On a small walnut side-table beside the chair: a chipped ceramic mug with coffee at 2/3 level, and a matte-black hardcover book with a torn dust jacket. Behind the chair, out of focus: an unpainted concrete wall. NO plant in the frame at all \u2014 this is a room about independence, not decoration. Hard side-window key from right, the chair's seat catches direct light, the back-left recess goes near-black. PROHIBITED: no succulents, no plants, no round white pots, no jute rug, no pastel wall, no throw blanket, no styled 'reading nook' clich\u00e9. [STYLE LINE applies.]",
+      "imageId": "padlock-open-mechanism",
+      "imagePrompt": "A single steel padlock at the CENTER of a matte-black anodized surface, its shackle OPEN (bent up ~30\u00b0, revealing that the mechanism inside is exposed). A brushed-steel key is inserted into the keyhole and rests at the RIGHT of the padlock, extending into the right third of the frame \u2014 the key becomes the composition's diagonal. Foreground: a scatter of small metal shavings on the matte-black surface. Hard cool side-window key from left; specular highlights on the padlock's shackle and the key's shaft; deep near-black shadow to the right of the assembly. PROHIBITED: no wood, no succulents, no plants, no coffee, no notebook, no jute rug, no pastel wall, no styled 'security stock' clich\u00e9, no 'unlock success' pose. 4:5 native, no outpaint, fill entire frame. Engineering-editorial: a lock as a MECHANISM, not decoration.",
       "title": "Why ==lock-in== exists",
       "body": "Proprietary systems are the vendor's leverage over you. A page builder that only their team can edit is a dependency dressed up as a feature."
     },
@@ -45,8 +45,8 @@
       "layout": "point",
       "scrim": "fade",
       "bg": "assets/scene-20/s5.png",
-      "imageId": "hands-coffee-conversation",
-      "imagePrompt": "Overhead 45\u00b0 angle onto a walnut table between two seats: two chipped ceramic mugs, one on each side of the frame, positioned OFF-CENTER (the LEFT mug slightly closer to the camera than the RIGHT). Both have coffee at DIFFERENT levels \u2014 LEFT mug at 1/2, RIGHT mug at 2/3 (the conversation has been going a while, one drinks faster). Between them: a small notebook open, pen resting across it, abstract non-readable marks. Coffee rings on the table. No plants, no props. Hard warm side-window key from upper-left, deep near-black shadow between the two mugs. PROHIBITED: no succulents, no round white pots, no fresh flowers, no styled cheek-to-cheek symmetric placement, no pastel wall. [STYLE LINE applies.]",
+      "imageId": "two-calipers-equal",
+      "imagePrompt": "Overhead 45\u00b0 angle onto a matte-black anodized surface between two positions: two brushed-steel machinist's calipers, one at each side of the frame, positioned OFF-CENTER (LEFT caliper slightly closer to camera than RIGHT). Both calipers have their jaws set to SLIGHTLY DIFFERENT measurements \u2014 jaws open into empty air, measuring nothing. Between them: matte-black surface, no other objects. Foreground: matte-black surface catching one raking cool side-light. PROHIBITED: no wood, no ceramic mugs (that was the old direction), no succulents, no plants, no coffee, no notebook, no jute rug, no pastel wall, no styled 'handshake / partnership' clich\u00e9. 4:5 native, no outpaint, fill entire frame. Two precision instruments, both calibrated \u2014 the relationship is between two engineers, not between vendor and client.",
       "title": "The ==relationship== after launch",
       "body": "Care Plan is a monthly conversation, not a subscription trap. If you don't need us next month, you cancel and everything you own stays yours."
     },
@@ -55,8 +55,8 @@
       "layout": "cta",
       "scrim": "fade",
       "bg": "assets/scene-20/s6.png",
-      "imageId": "open-door-light",
-      "imagePrompt": "A specific OPEN door in the wall of a Kymbo studio, morning warm side-light flooding in from beyond the door and casting a long light rectangle on the dark polished concrete floor inside. LEFT third of the frame: the interior of the studio in near-black shadow (a chair silhouette visible). RIGHT third: the door open at ~40\u00b0 angle to the interior, hard rim-light on the door edge and jamb. Foreground: the concrete floor with visible grain. NO trailing plant, NO stagey door-frame decoration. Composition is asymmetric \u2014 most of the frame is dark interior, the door and light spill occupy the right third. Hard directional morning light from beyond the door. PROHIBITED: no succulents, no plants, no round white pots, no jute rug, no pastel wall, no welcome mat, no styled 'exit sign' or motivational metaphor prop. [STYLE LINE applies.]",
+      "imageId": "industrial-door-open",
+      "imagePrompt": "A specific OPEN industrial door in a raw concrete wall, warm morning side-light flooding in from beyond and casting a hard-edged light rectangle on the polished-concrete floor inside. LEFT third of frame: the interior of the space in near-black shadow, one small silhouette of a chair back barely visible. RIGHT third: the door open at ~45\u00b0 angle to the interior, hard rim-light on the door edge and jamb \u2014 the door is STEEL-FRAMED with a matte-black finish (NOT a wooden domestic door). Foreground: polished-concrete floor with visible grain and one small chip. Hard directional key from beyond the door \u2014 most of the frame is dark, the door and light spill occupy the right third. PROHIBITED: no succulents, no plants, no coffee, no notebook, no jute rug, no pastel wall, no welcome mat, no styled 'exit sign' or motivational metaphor prop, no wooden domestic door \u2014 this is INDUSTRIAL. 4:5 native, no outpaint, fill entire frame. Architectural editorial: the door is a THRESHOLD, engineered, not decorated.",
       "headline": "The door is\n==always open.==",
       "sub": "Care Plan month-to-month. Cancel any time. Take everything with you.",
       "action": "Comment OWN"

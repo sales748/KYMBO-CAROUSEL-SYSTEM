@@ -21,8 +21,8 @@
       "layout": "point",
       "scrim": "fade",
       "bg": "assets/scene-21/s2.png",
-      "imageId": "phone-checkout-composite",
-      "imagePrompt": "A used matte-black phone lying face-up in the CENTER-LEFT of a walnut desk, PERFECTLY STRAIGHT AND FRONT-ON (zero rotation, zero tilt) \u2014 screen is BLANK WHITE (Kymbo UI composites on top later). Right of the phone, out of focus: a hand resting on the desk (wrist down only, no face). Right-third of frame breathes with a chipped ceramic mug (coffee at 2/3 level). Foreground: a coffee ring on the desk near the phone's left corner. Hard side-window key from left \u2014 clear natural light on the phone screen (no artificial glow), shadow side going near-black on the desk's right edge. PROHIBITED: no succulents, no plants, no round white pots, no jute rug, no pastel wall, no symmetric layout, no artificial screen glow (the screen is blank white but naturally lit), no soft even light. [STYLE LINE applies.]",
+      "imageId": "phone-caliper-measuring",
+      "imagePrompt": "A phone lying face-up on a matte-black anodized panel (NOT a wooden desk), PERFECTLY STRAIGHT AND FRONT-ON, zero rotation, zero tilt \u2014 the screen is BLANK WHITE, naturally lit, no UI, no artificial glow (Kymbo booking-app UI composites on top later). The phone sits OFF-CENTER LEFT. RIGHT third breathes: a brushed-steel machinist's caliper rests parallel to the phone, jaws slightly open \u2014 the tool reads as MEASURING the interface. Foreground: hair-thin metal shavings on the matte-black surface (not clean). Hard cool side-window key from left; specular highlights on the caliper's brushed steel and on the phone bezel; deep near-black shadow to the right of the phone. PROHIBITED: no wood grain, no coffee mug, no notebook, no succulents, no plants, no round white pots, no jute rug, no pastel wall, no warm cream light, no craft/artisan aesthetic, no soft even light. 4:5 native, no outpaint, fill entire frame \u2014 CSS handles text later, no dark band. Tech-editorial precision instrument photograph. Teenage Engineering / Dieter Rams reference genre.",
       "title": "Count the ==required== fields.",
       "body": "Address, city, state, zip, country, phone, email, first, last. Nine minimum. Every one that doesn't need to be there deletes 1-3% of conversion \u2014 run the math on your own store, not ours."
     },
@@ -35,8 +35,8 @@
       "layout": "point",
       "scrim": "fade",
       "bg": "assets/scene-21/s4.png",
-      "imageId": "hands-phone-thumb-hover",
-      "imagePrompt": "A hand holds a matte-black phone at chest level in front of a walnut desk (torso and hand cropped from above wrist only, no face). Phone screen is BLANK WHITE, no UI. The thumb hovers OVER the screen mid-decision, not touching it. Background out of focus: the desk carrying the closed laptop and the chipped ceramic mug (partially visible). Hard side-window key from behind-left \u2014 the phone's top bezel catches a small specular highlight, the thumb's side has a rim-light. PROHIBITED: no succulents, no plants, no round white pots, no pastel wall, no soft even light, no symmetric layout, no manicured/glossy 'model hand' \u2014 this is a working hand. [STYLE LINE applies.]",
+      "imageId": "thumbprint-smudge-macro",
+      "imagePrompt": "Extreme macro of a single thumbprint smudge on a glossy glass surface, positioned LEFT-CENTER of the frame. The ridges and whorls of the print visible in raking cool side-light \u2014 a physical trace of hesitation. Behind the glass, deeply out of focus: a matte-black anodized surface. RIGHT third breathes as clean glass reflecting a slice of the light. NO hand in frame \u2014 just the print left behind. Hard directional cool side-key emphasizes the print's texture; deep near-black shadow beyond the print's edge. PROHIBITED: no wood, no notebook, no coffee, no mug, no plants, no succulents, no jute, no pastel wall, no warm cream, no soft even light, no 'lifestyle mobile' clich\u00e9. 4:5 native, no outpaint, fill entire frame \u2014 no dark band. Tech-editorial macro. The friction is tactile and isolated \u2014 one print, no context.",
       "title": "The fields aren't the point. The ==friction== is.",
       "body": "Every keystroke on mobile is a moment the thumb hovers over the back button. Our job on Shopify and Woo builds isn't to add fields you might want \u2014 it's to hold the line against them."
     },
@@ -49,8 +49,8 @@
       "layout": "cta",
       "scrim": "fade",
       "bg": "assets/scene-21/s6.png",
-      "imageId": "clean-desk-closed-laptop",
-      "imagePrompt": "A walnut desk in the ~5pm late-afternoon side-window slice, AT REST after work. LEFT third: a closed matte-black laptop with a small scratch on the lid; a used notebook rests on top of it, closed with a rubber band around it. RIGHT third breathes: an empty chipped ceramic mug at the edge, coffee dregs visible at the bottom. Foreground: coffee rings on the desk from an earlier moment. Background wall: off-white plaster, unadorned. Behind the desk in soft focus: a chair pushed back from the desk. Hard side-window key from left, warm-cool afternoon slant. Deep near-black shadow on the desk's right face. PROHIBITED: no succulents, no plants, no round white pots, no jute rug, no pastel wall, no symmetric layout, no 'clean desk end of day' clich\u00e9 \u2014 this desk shows a day of work. [STYLE LINE applies.]",
+      "imageId": "machined-block-one-hole",
+      "imagePrompt": "A single machined aluminum block (approx 30mm \u00d7 20mm \u00d7 10mm, brushed finish, precision-milled edges) at the LEFT-CENTER of a matte-black anodized surface. ONE precision-drilled circular hole passes through the block \u2014 empty, no pin, no fastener. RIGHT two-thirds breathes as matte-black surface catching a slice of cool late-afternoon side-window light. Foreground: the surface itself, mirror-quiet, one small handling scratch visible. Hard directional key from upper-left; the block catches a specular highlight along its top edge; deep near-black shadow to its right. PROHIBITED: no wood, no notebook, no coffee, no mug, no plants, no succulents, no jute, no pastel wall, no craft/artisan aesthetic, no 'lifestyle workspace' clich\u00e9. 4:5 native, no outpaint, fill entire frame. Kraftwerk / Muji-electronics reference. Reduction as endpoint \u2014 one object, one hole, one accent of light.",
       "headline": "We ship checkouts by what you ==remove==.",
       "sub": "Nine fields is a starting number. Not a ceiling.",
       "action": "Comment CHECKOUT"

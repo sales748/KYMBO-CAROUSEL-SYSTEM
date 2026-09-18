@@ -17,8 +17,8 @@
       "layout": "cover",
       "scrim": "fade",
       "bg": "assets/scene-22/s1.png",
-      "imageId": "quiet-desk-closed-laptop-slow",
-      "imagePrompt": "A walnut desk in the ~5pm late-afternoon side-window slice, deliberately STILL. Center-left of frame: a closed matte-black laptop with a small scratch on the lid, a paper notebook closed on top of it, an old-style brass-and-black desk lamp turned OFF beside them. Right-third breathes: a chipped ceramic mug at the edge, coffee at 1/3 level (running low, unfinished). Foreground: coffee rings and a small ink stain on the desk. Background: off-white plaster wall, unadorned. Hard side-window key from left, deep shadow side on the right face of the lamp. PROHIBITED IN THIS FRAME: no succulents, no plants of any kind, no round white pots, no jute rug, no pastel wall, no motivational quote, no AI-robot prop, no glowing screen \u2014 this is the OPPOSITE of AI-flashy. [STYLE LINE applies.]",
+      "imageId": "kettlebell-weight-concrete",
+      "imagePrompt": "A single heavy black cast-iron kettlebell (about 16kg, matte finish with visible use marks \u2014 small chips at the base, one scuff on the handle) at the CENTER-LEFT of a raw polished-concrete floor. Cool late-afternoon side-window light from the left. RIGHT third breathes: concrete texture, one small crack visible in the surface. Foreground: concrete floor with a natural chip near the base of the kettlebell. Hard directional key from upper-left \u2014 deep near-black shadow cast to the right of the kettlebell. NO scale, NO measuring device (those live in other slides), NO labels, NO logos. PROHIBITED: no wood, no notebook, no desk, no coffee, no mug, no plants, no succulents, no jute, no pastel wall, no soft even light, no craft/artisan aesthetic, no 'gym stock' clich\u00e9. 4:5 native, no outpaint, fill entire frame. Machine dignity. The weight is the subject, in a systems-engineering shop's floor \u2014 not a fitness photograph.",
       "headline": "The AI feature you don't need is why your site is ==slow==.",
       "sub": "Every \"AI Assistant\" script is 300KB of JavaScript and one more thing that can break."
     },
@@ -35,8 +35,8 @@
       "layout": "point",
       "scrim": "fade",
       "bg": "assets/scene-22/s4.png",
-      "imageId": "hand-toggle-off",
-      "imagePrompt": "A hand near a small mechanical toggle switch on a walnut desk (an analog audio-toggle style switch \u2014 brushed steel body, matte black switch head). The switch is in the DOWN/OFF position. Hand from wrist down only, index finger has just left the switch. Background out of focus: a closed matte-black laptop, a chipped ceramic mug. Foreground: coffee ring visible on the desk near the switch. Hard side-window key from left \u2014 the switch head catches a small specular highlight on its top curve. PROHIBITED: no succulents, no plants, no round white pots, no pastel wall, no digital screen or LED anywhere in the frame \u2014 this is analog, mechanical, OFF. [STYLE LINE applies.]",
+      "imageId": "industrial-toggle-off",
+      "imagePrompt": "A single industrial bat-toggle switch mounted on a matte-black anodized control-panel face, occupying the CENTER-LEFT of the frame. The toggle is brushed-steel with a black bat, in the DOWN/OFF position. Beside it, a small engraved (non-readable) indicator marking. RIGHT third breathes: more matte-black panel with two other empty indicator holes (no lights, no LEDs, no labels). Foreground: the panel edge visible at bottom, precision-milled bevel. Hard cool directional side-key from left; brushed steel of the toggle catches a specular highlight along its top curve; deep near-black shadow to the right of the toggle. PROHIBITED: no hand in frame, no wood, no notebook, no coffee, no mug, no plants, no succulents, no jute, no pastel wall, no soft even light, no digital LED, no glowing screen, no display of any kind. 4:5 native, no outpaint, fill entire frame. Industrial control-panel photographed with editorial care \u2014 machine tool aesthetic.",
       "title": "Turn every AI feature ==off== for a week.",
       "body": "Measure your bounce rate before and after. If nothing changes, the feature was scenery. If bounce goes up, we can talk about the right AI to put back."
     },
@@ -49,8 +49,8 @@
       "layout": "cta",
       "scrim": "fade",
       "bg": "assets/scene-22/s6.png",
-      "imageId": "empty-chair-desk-reserved",
-      "imagePrompt": "A walnut chair pulled up to a desk, cool late-afternoon side-window light coming from behind the chair (backlight). The chair is empty. On the desk (foreground): a chipped ceramic mug half-full of coffee, a closed notebook, a coffee ring near the mug. LEFT of the chair, in soft focus: a MATURE LEMON TREE or an OLIVE TREE in a terracotta planter (NOT a succulent, NOT a fiddle-leaf, NOT in a round white pot) \u2014 the plant is real, established, tall. Hard side-window key from behind \u2014 chair silhouette rim-lit, desk in half-shadow. PROHIBITED: no succulents, no small houseplants, no round white pots, no jute rug, no pastel wall, no motivational sign, no perfect symmetric layout. [STYLE LINE applies.]",
+      "imageId": "balance-beam-scale-empty",
+      "imagePrompt": "A precision beam-balance scale (mid-century industrial design, brushed-steel arm with matte-black base and pans) at the CENTER of the frame, arms PERFECTLY LEVEL. Both pans are EMPTY \u2014 nothing on either side. The right pan has a small etched glyph (non-readable at slide scale) engraved on its rim. Behind the scale: matte-black surface. Cool late-afternoon side-window light from the right; the beam catches a specular highlight along its axis; deep near-black shadow to the left of the base. Foreground: the scale sits on a raw polished-concrete slab, one small chip visible. PROHIBITED: no wood, no notebook, no coffee, no mug, no plants, no succulents, no jute, no pastel wall, no soft even light, no craft aesthetic, no styled 'weighing objects' pose. 4:5 native, no outpaint, fill entire frame. The scale waits \u2014 no verdict yet, both sides empty.",
       "headline": "We put AI in when it ==earns== its weight.",
       "sub": "Not when the client saw a demo.",
       "action": "Comment AI"
